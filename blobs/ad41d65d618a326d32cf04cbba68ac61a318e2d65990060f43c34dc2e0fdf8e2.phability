@@ -1,0 +1,20 @@
+anchor_context = object_anchor/v1
+cooldown_context = actor_projectile/v1
+executor_context = actor/v1
+id = ability.a_context_practice.interact
+kind = ability
+object_context = public_interaction/v1
+resource_context = actor_bounded_int/v1
+schema_version = 2
+
+[program]
+ai_eligible = false
+capture = exact_public_reference_at_press/v1
+cooldown_ms = 700
+cost = 4
+execution = encounter_world_action/v1
+failure = preserve_committed_prefix/v1
+object = public_object/v1
+operation = interact_object/v1
+progress = 1
+support = canonical_destination/v1

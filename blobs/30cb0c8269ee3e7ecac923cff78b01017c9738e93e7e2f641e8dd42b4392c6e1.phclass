@@ -1,0 +1,23 @@
+eligibility = private
+id = class.a_context_practice.sentry
+kind = class
+schema_version = 11
+
+[resource]
+initial = 12
+key = reserve
+maximum = 96
+reset = initial
+type = bounded_int
+
+[action]
+cooldown_group = projectile/v1
+definition = player/channel
+key = pressure
+resource = reserve
+
+[action]
+cooldown_group = none
+definition = ability.a_context_practice.recover
+key = recover
+resource = reserve

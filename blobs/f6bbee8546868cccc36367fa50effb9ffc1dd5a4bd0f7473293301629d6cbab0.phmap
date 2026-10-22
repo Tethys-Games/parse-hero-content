@@ -1,0 +1,85 @@
+schema_version = 2
+kind = map
+id = map.a_context_practice.practice
+
+[ground_region]
+key = ground.practice
+top_height_mm = 0
+
+[ground_point]
+region = ground.practice
+order = 0
+x_mm = -12000
+z_mm = -8000
+
+[ground_point]
+region = ground.practice
+order = 1
+x_mm = 12000
+z_mm = -8000
+
+[ground_point]
+region = ground.practice
+order = 2
+x_mm = 12000
+z_mm = 8000
+
+[ground_point]
+region = ground.practice
+order = 3
+x_mm = -12000
+z_mm = 8000
+
+[obstacle]
+key = obstacle.practice_cover
+x_mm = 0
+z_mm = 2500
+half_extent_x_mm = 650
+half_extent_z_mm = 500
+height_mm = 1200
+navigation_impact = carve_when_stationary
+
+[spawn]
+key = spawn.trainee_one
+x_mm = -600
+y_mm = 0
+z_mm = 6500
+yaw_centi_deg = 0
+
+[spawn]
+key = spawn.trainee_two
+x_mm = 600
+y_mm = 0
+z_mm = 6500
+yaw_centi_deg = 0
+
+[encounter_placement]
+key = encounter_placement.advancer
+encounter_id = encounter.a_context_practice.practice
+x_mm = -7500
+y_mm = 0
+z_mm = -3500
+yaw_centi_deg = 27000
+trigger = trigger.practice
+
+[encounter_placement]
+key = encounter_placement.left_sentry
+encounter_id = encounter.a_context_practice.practice
+x_mm = -4500
+y_mm = 0
+z_mm = -1500
+yaw_centi_deg = 0
+trigger = trigger.practice
+
+[encounter_placement]
+key = encounter_placement.right_sentry
+encounter_id = encounter.a_context_practice.practice
+x_mm = 4500
+y_mm = 0
+z_mm = -1500
+yaw_centi_deg = 0
+trigger = trigger.practice
+
+[trigger]
+key = trigger.practice
+kind = encounter_start

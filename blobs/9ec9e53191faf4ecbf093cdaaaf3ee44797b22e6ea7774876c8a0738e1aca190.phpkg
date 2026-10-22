@@ -1,0 +1,34 @@
+schema_version = 13
+kind = package
+id = package.c_range_scout
+role = class
+root = class.c_range_scout.scout
+
+[dependency]
+alias = practice
+id = package.range_player_b1
+hash = sha256:735b0fe31ae34071950b81b64720cb85e7314cae7d13c041d9353b3bc721ff19
+
+[artifact]
+id = ability.c_range_scout.quick_lock
+kind = ability
+path = abilities/quick_lock.phability
+hash = sha256:bda0a43eb50ddd9a996199b1f8511c7e3b29f1e9e13973843f65ca97fafc6172
+
+[artifact]
+id = ability.c_range_scout.recharge
+kind = ability
+path = abilities/recharge.phability
+hash = sha256:18f1752f7bf0489a1cbd227485f437dbf03eb8a3e77571bf92bb30ff9d20ff6f
+
+[artifact]
+id = ability.c_range_scout.sidearm
+kind = ability
+path = abilities/sidearm.phability
+hash = sha256:c5fe54acaf66022f71b26760aa42b2852a6d5058d9cd51ef05f17e1efb4cf962
+
+[artifact]
+id = class.c_range_scout.scout
+kind = class
+path = classes/scout.phclass
+hash = sha256:128e5cbda57573ab4f78f6b74428aad4b8912040ba96cc3250e38064ebb93de4

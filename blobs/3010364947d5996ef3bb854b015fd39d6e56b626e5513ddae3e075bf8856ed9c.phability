@@ -1,0 +1,13 @@
+cooldown_context = actor_projectile/v1
+defaults = combat_defaults/v1
+id = ability.range_player_b1.ranged
+kind = ability
+resource_context = actor_bounded_int/v1
+schema_version = 1
+
+[program]
+amount = 24
+cast_ms = 700
+cooldown_ms = 1000
+cost = 18
+preset = ranged_starter/v1

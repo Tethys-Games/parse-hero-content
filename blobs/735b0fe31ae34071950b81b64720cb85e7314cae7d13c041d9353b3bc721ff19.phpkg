@@ -1,0 +1,45 @@
+schema_version = 13
+kind = package
+id = package.range_player_b1
+role = class
+root = class.range_player_b1.trainee
+
+[export]
+name = channel
+kind = ability
+target = ability.range_player_b1.channel
+
+[export]
+name = trainee
+kind = class
+target = class.range_player_b1.trainee
+
+[artifact]
+id = ability.range_player_b1.channel
+kind = ability
+path = abilities/channel.phability
+hash = sha256:8178374cf921e555d448fbee7feb2da18637d233f4427c2c3b394358e5d4c8f0
+
+[artifact]
+id = ability.range_player_b1.ranged
+kind = ability
+path = abilities/ranged.phability
+hash = sha256:3010364947d5996ef3bb854b015fd39d6e56b626e5513ddae3e075bf8856ed9c
+
+[artifact]
+id = ability.range_player_b1.recover
+kind = ability
+path = abilities/recover.phability
+hash = sha256:5f03c5160c559ab84dee6181eed2c892a21341c68976771ad39487ea7a98bae1
+
+[artifact]
+id = ability.range_player_b1.tracking
+kind = ability
+path = abilities/tracking.phability
+hash = sha256:2a5eb3525b86bc58526201bb7880f1c3f9de276a4019f85e81645488656c9254
+
+[artifact]
+id = class.range_player_b1.trainee
+kind = class
+path = classes/trainee.phclass
+hash = sha256:156d482af9bcf092462f0a57ea3baadff469ec99026bcab4376b5ec280704c37

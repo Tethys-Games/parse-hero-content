@@ -1,0 +1,29 @@
+cooldown_context = binding_single/v1
+defaults = combat_defaults/v1
+executor_context = actor_or_encounter/v1
+id = ability.a_context_practice.tracking
+kind = ability
+origin_context = world_point/v1
+query_context = live_body_query/v1
+resource_context = binding_bounded_int/v1
+schema_version = 2
+
+[program]
+ai_eligible = true
+amount = 1
+application = ground_circle_damage/v1
+area_height_mm = 2400
+area_maximum_targets = 1
+area_radius_mm = 1000
+cast_ms = 2000
+commitment = application/v1
+cooldown_ms = 1500
+cost = 28
+empty_query = reject_unpaid/v1
+execution = tracking_ground_area/v1
+lock_ms = 900
+miss = commit/v1
+movement_permille = 1000
+post_lock_loss = retain_ground/v1
+pre_lock_loss = cancel/v1
+target_range_mm = 9000

@@ -1,0 +1,51 @@
+eligibility = player
+id = class.c_range_scout.scout
+kind = class
+schema_version = 11
+
+[resource]
+initial = 60
+key = charge
+maximum = 60
+reset = initial
+type = bounded_int
+
+[action]
+cooldown_group = projectile/v1
+definition = ability.c_range_scout.sidearm
+key = sidearm
+resource = charge
+
+[action]
+cooldown_group = none
+definition = ability.c_range_scout.recharge
+key = recharge
+resource = charge
+
+[action]
+cooldown_group = projectile/v1
+definition = ability.c_range_scout.quick_lock
+key = quick_lock
+resource = charge
+
+[action]
+cooldown_group = projectile/v1
+definition = practice/channel
+key = channel
+resource = charge
+
+[binding]
+action = sidearm
+slot = 1
+
+[binding]
+action = recharge
+slot = 2
+
+[binding]
+action = quick_lock
+slot = 3
+
+[binding]
+action = channel
+slot = 4
