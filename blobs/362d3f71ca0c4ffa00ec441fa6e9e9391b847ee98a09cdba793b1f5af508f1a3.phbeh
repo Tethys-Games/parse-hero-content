@@ -1,6 +1,6 @@
 schema_version = 3
 kind = behavior
-id = behavior.a_context_a44r2.sentry
+id = behavior.a_context_practice.sentry
 behavior_kind = finite_modes
 target_x_mm = -4500
 target_z_mm = -1500

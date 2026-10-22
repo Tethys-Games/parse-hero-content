@@ -1,7 +1,7 @@
 cooldown_context = binding_single/v1
 defaults = combat_defaults/v1
 executor_context = actor_or_encounter/v1
-id = ability.a_context_a44r2.tracking
+id = ability.a_context_practice.tracking
 kind = ability
 origin_context = world_point/v1
 query_context = live_body_query/v1

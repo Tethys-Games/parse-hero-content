@@ -1,5 +1,5 @@
 eligibility = private
-id = class.a_context_a44r2.advancer
+id = class.a_context_practice.advancer
 kind = class
 schema_version = 11
 
@@ -12,18 +12,18 @@ type = bounded_int
 
 [action]
 cooldown_group = projectile/v1
-definition = ability.a_context_a44r2.tracking
+definition = ability.a_context_practice.tracking
 key = tracking
 resource = charge
 
 [action]
 cooldown_group = none
-definition = ability.a_context_a44r2.recover
+definition = ability.a_context_practice.recover
 key = recover
 resource = charge
 
 [action]
 cooldown_group = projectile/v1
-definition = ability.a_context_a44r2.create_beacon
+definition = ability.a_context_practice.create_beacon
 key = raise_beacon
 resource = charge
