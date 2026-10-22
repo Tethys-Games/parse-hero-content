@@ -1,5 +1,5 @@
 eligibility = private
-id = class.a_context_a44r2.sentry
+id = class.a_context_practice.sentry
 kind = class
 schema_version = 11
 
@@ -18,6 +18,6 @@ resource = reserve
 
 [action]
 cooldown_group = none
-definition = ability.a_context_a44r2.recover
+definition = ability.a_context_practice.recover
 key = recover
 resource = reserve
