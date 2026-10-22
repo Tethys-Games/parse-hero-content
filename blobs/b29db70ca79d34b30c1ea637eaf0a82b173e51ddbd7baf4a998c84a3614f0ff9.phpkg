@@ -1,0 +1,87 @@
+schema_version = 15
+kind = package
+id = package.a_context_practice
+role = encounter
+root = encounter.a_context_practice.practice
+
+[dependency]
+alias = player
+id = package.range_player_b1
+hash = sha256:735b0fe31ae34071950b81b64720cb85e7314cae7d13c041d9353b3bc721ff19
+
+[export]
+name = recover
+kind = ability
+target = ability.a_context_practice.recover
+
+[artifact]
+id = ability.a_context_practice.create_beacon
+kind = ability
+path = abilities/create_beacon.phability
+hash = sha256:ab283de564bbcf59bf2b925bdfdfad5529e655acc2b11e8569ee9249566106ee
+
+[artifact]
+id = ability.a_context_practice.interact
+kind = ability
+path = abilities/interact.phability
+hash = sha256:ad41d65d618a326d32cf04cbba68ac61a318e2d65990060f43c34dc2e0fdf8e2
+
+[artifact]
+id = ability.a_context_practice.recover
+kind = ability
+path = abilities/recover.phability
+hash = sha256:fd81102ce8fa56a7d3231d195a9f4d4cfde19f77a006c68367d21b7836796bb5
+
+[artifact]
+id = ability.a_context_practice.tracking
+kind = ability
+path = abilities/tracking.phability
+hash = sha256:9270662b6612d38b18410af47b0774f19e07ef6432dfd96a9a86b201de354f0d
+
+[artifact]
+id = behavior.a_context_practice.advancer
+kind = behavior
+path = behaviors/advancer.phbeh
+hash = sha256:e81c289da0f140abd96ee3c8e7c92df9220a9bbf53e51a84eb901e962fc6c0ed
+
+[artifact]
+id = behavior.a_context_practice.sentry
+kind = behavior
+path = behaviors/sentry.phbeh
+hash = sha256:362d3f71ca0c4ffa00ec441fa6e9e9391b847ee98a09cdba793b1f5af508f1a3
+
+[artifact]
+id = class.a_context_practice.advancer
+kind = class
+path = classes/advancer.phclass
+hash = sha256:3c792c4d4afe3f096b28759a169ef5a5bb419c9f2b5f69c91e94385ff1437745
+
+[artifact]
+id = class.a_context_practice.sentry
+kind = class
+path = classes/sentry.phclass
+hash = sha256:30cb0c8269ee3e7ecac923cff78b01017c9738e93e7e2f641e8dd42b4392c6e1
+
+[artifact]
+id = encounter.a_context_practice.practice
+kind = encounter
+path = encounters/practice.phenc
+hash = sha256:46aec60697c2e6b94dfd20b3e489dfd99b8ce19e240d2b9c16656d5c03a73e7c
+
+[artifact]
+id = map.a_context_practice.practice
+kind = map
+path = maps/practice.phmap
+hash = sha256:f6bbee8546868cccc36367fa50effb9ffc1dd5a4bd0f7473293301629d6cbab0
+
+[artifact]
+id = npc.a_context_practice.advancer
+kind = npc
+path = npcs/advancer.phnpc
+hash = sha256:bcfc3c1a0200697f746731c3b5c63c5378f409bdf9b6fa65b8acf1125c2e0a0d
+
+[artifact]
+id = npc.a_context_practice.sentry
+kind = npc
+path = npcs/sentry.phnpc
+hash = sha256:3521c3e98f22b0cebb2b1d90ccbae995e5569e4571074c4179d30dddc9902681

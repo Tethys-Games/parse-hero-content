@@ -1,10 +1,10 @@
 schema_version = 2
 kind = npc
-id = npc.a_context_a44r2.advancer
+id = npc.a_context_practice.advancer
 archetype_key = installed.npc.basic_walker_pool
-behavior = behavior.a_context_a44r2.advancer
+behavior = behavior.a_context_practice.advancer
 radius_mm = 700
 height_mm = 2400
 stop_distance_mm = 120
-kit = class.a_context_a44r2.advancer
+kit = class.a_context_practice.advancer
 health = 420
