@@ -1,0 +1,87 @@
+schema_version = 15
+kind = package
+id = package.a_context_a44r2
+role = encounter
+root = encounter.a_context_a44r2.practice
+
+[dependency]
+alias = player
+id = package.range_player_b1
+hash = sha256:735b0fe31ae34071950b81b64720cb85e7314cae7d13c041d9353b3bc721ff19
+
+[export]
+name = recover
+kind = ability
+target = ability.a_context_a44r2.recover
+
+[artifact]
+id = ability.a_context_a44r2.create_beacon
+kind = ability
+path = abilities/create_beacon.phability
+hash = sha256:312ac250cf3c15e21cd1bdb248ef0e9f02e9bd4f6a2ce39cf70cef3bc831f66c
+
+[artifact]
+id = ability.a_context_a44r2.interact
+kind = ability
+path = abilities/interact.phability
+hash = sha256:04b5403cca2d20ff9f4826e81bd4a1042a69d7cf59e18f7715433053d737d04d
+
+[artifact]
+id = ability.a_context_a44r2.recover
+kind = ability
+path = abilities/recover.phability
+hash = sha256:5f4c340450aecab8f5ed08a7e0bdc58e511e71d868d20a026593ef1c275a1bd0
+
+[artifact]
+id = ability.a_context_a44r2.tracking
+kind = ability
+path = abilities/tracking.phability
+hash = sha256:2dddaf0089e7d49ae0fdbfc3c5a4f75aed4b8f546ea32340649bfdb0b1d4f7b6
+
+[artifact]
+id = behavior.a_context_a44r2.advancer
+kind = behavior
+path = behaviors/advancer.phbeh
+hash = sha256:211441d32ff253d557e070d2b0aa37cc839a02061ebfdcbeb74a4fafaf11299a
+
+[artifact]
+id = behavior.a_context_a44r2.sentry
+kind = behavior
+path = behaviors/sentry.phbeh
+hash = sha256:feef92570b37f86269f75ac8d112be458bb3aad5202ff88a9e21a1ba1c327d4d
+
+[artifact]
+id = class.a_context_a44r2.advancer
+kind = class
+path = classes/advancer.phclass
+hash = sha256:c4c56232b59889b14ba383c4fa2f1624352ba2a7ef5676c67a77174a2a5a1736
+
+[artifact]
+id = class.a_context_a44r2.sentry
+kind = class
+path = classes/sentry.phclass
+hash = sha256:122444d6f1edb57caa931ff5ade1d37e1a7abf630b10149c234cc5f45973cfca
+
+[artifact]
+id = encounter.a_context_a44r2.practice
+kind = encounter
+path = encounters/practice.phenc
+hash = sha256:b6eebd4a8811989b5f5352a9e677e5cb2120b15f85ab6bfd53391387956d2ae9
+
+[artifact]
+id = map.a_context_a44r2.practice
+kind = map
+path = maps/practice.phmap
+hash = sha256:f96f25832aa0fe6579dba0c058305c310db1b6e35b377ed1e540d86bd3659245
+
+[artifact]
+id = npc.a_context_a44r2.advancer
+kind = npc
+path = npcs/advancer.phnpc
+hash = sha256:316141d837ff8b3a1f3a5b798a7b9eda53c46eb44b59253077e6d76b69e49bd7
+
+[artifact]
+id = npc.a_context_a44r2.sentry
+kind = npc
+path = npcs/sentry.phnpc
+hash = sha256:2a1e6b66605607e5875670e3e262434bfdf035bee826429048067a7044898150
