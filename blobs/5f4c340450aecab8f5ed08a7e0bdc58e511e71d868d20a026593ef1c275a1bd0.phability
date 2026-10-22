@@ -1,11 +1,11 @@
 cooldown_context = none
 defaults = combat_defaults/v1
-id = ability.a_context_practice.recover
+id = ability.a_context_a44r2.recover
 kind = ability
 resource_context = actor_bounded_int/v1
 schema_version = 1
 
 [program]
 ai_eligible = true
-amount = 36
+amount = 37
 preset = recovery_starter/v1
