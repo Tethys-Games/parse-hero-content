@@ -1,6 +1,6 @@
 cooldown_context = actor_projectile/v1
 defaults = combat_defaults/v1
-id = ability.range_player_b1.channel
+id = ability.range_player_b1_1a2.channel
 kind = ability
 resource_context = actor_bounded_int/v1
 schema_version = 1

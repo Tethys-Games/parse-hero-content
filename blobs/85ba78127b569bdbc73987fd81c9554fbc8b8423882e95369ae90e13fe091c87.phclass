@@ -1,5 +1,5 @@
 eligibility = player
-id = class.c_range_scout.scout
+id = class.c_range_scout_1a2.scout
 kind = class
 schema_version = 11
 
@@ -12,19 +12,19 @@ type = bounded_int
 
 [action]
 cooldown_group = projectile/v1
-definition = ability.c_range_scout.sidearm
+definition = ability.c_range_scout_1a2.sidearm
 key = sidearm
 resource = charge
 
 [action]
 cooldown_group = none
-definition = ability.c_range_scout.recharge
+definition = ability.c_range_scout_1a2.recharge
 key = recharge
 resource = charge
 
 [action]
 cooldown_group = projectile/v1
-definition = ability.c_range_scout.quick_lock
+definition = ability.c_range_scout_1a2.quick_lock
 key = quick_lock
 resource = charge
 

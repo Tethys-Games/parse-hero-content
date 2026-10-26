@@ -1,0 +1,40 @@
+schema_version = 15
+kind = package
+id = package.a_range_encounter_b1_1a2
+role = encounter
+root = encounter.a_range_encounter_b1_1a2.training
+
+[dependency]
+alias = player
+id = package.range_player_b1_1a2
+hash = sha256:ceb585ee8b68b1c76914a82267f7804f26cac4675c6960b096d4ce2f243e78b0
+
+[artifact]
+id = behavior.a_range_encounter_b1_1a2.guard
+kind = behavior
+path = behaviors/guard.phbeh
+hash = sha256:ca5d0c69cac2ccc34530b54bcabc73bb7e2289d960639fa2a6f78fbbe1978e27
+
+[artifact]
+id = class.a_range_encounter_b1_1a2.guard
+kind = class
+path = classes/guard.phclass
+hash = sha256:7ab1d8b44249d9205026d8f4b00221d17b7fc90cf54e29924831f282a2b49874
+
+[artifact]
+id = encounter.a_range_encounter_b1_1a2.training
+kind = encounter
+path = encounters/training.phenc
+hash = sha256:76d3dd78dfd082c2ad6a5f61d3e370d615dac7bc1307a123b69dbe1ccfb95c45
+
+[artifact]
+id = map.a_range_encounter_b1_1a2.range
+kind = map
+path = maps/range.phmap
+hash = sha256:94b47ff692ddc0379b9e74b65d997cec76f89c1757b61de4edffb24f3b5d9df1
+
+[artifact]
+id = npc.a_range_encounter_b1_1a2.guard
+kind = npc
+path = npcs/guard.phnpc
+hash = sha256:e4eda36beaa9307fa3456841311c2e1b4d314d5b9c1a12c55e3ecf30c2195f42

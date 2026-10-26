@@ -1,10 +1,11 @@
 cooldown_context = none
 defaults = combat_defaults/v1
-id = ability.c_range_scout.recharge
+id = ability.a_context_practice_1a2.recover
 kind = ability
 resource_context = actor_bounded_int/v1
 schema_version = 1
 
 [program]
-amount = 17
+ai_eligible = true
+amount = 36
 preset = recovery_starter/v1

@@ -1,10 +1,13 @@
-schema_version = 7
+schema_version = 9
 kind = encounter
-id = encounter.a_range_encounter_b1.training
+id = encounter.a_range_encounter_b1_1a2.training
 action_kind = spawn_npc
-npc_template = npc.a_range_encounter_b1.guard
-stable_actor_key = actor.range_guard
 reset = repeat
+
+[spawn]
+placement = encounter_placement.guard
+npc_template = npc.a_range_encounter_b1_1a2.guard
+stable_actor_key = actor.range_guard
 
 [state]
 key = pulses
@@ -21,7 +24,7 @@ key = pressure
 initial = true
 duration_ms = 60000
 next = pressure
-npc_placement = 1
+npc_placement = encounter_placement.guard
 npc_ability = pressure
 start_after_ms = 2500
 restart_after_ms = 6500

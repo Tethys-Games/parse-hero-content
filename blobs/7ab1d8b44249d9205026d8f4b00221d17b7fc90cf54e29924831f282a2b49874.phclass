@@ -1,12 +1,12 @@
 eligibility = private
-id = class.a_context_practice.sentry
+id = class.a_range_encounter_b1_1a2.guard
 kind = class
 schema_version = 11
 
 [resource]
-initial = 12
+initial = 480
 key = reserve
-maximum = 96
+maximum = 480
 reset = initial
 type = bounded_int
 
@@ -14,10 +14,4 @@ type = bounded_int
 cooldown_group = projectile/v1
 definition = player/channel
 key = pressure
-resource = reserve
-
-[action]
-cooldown_group = none
-definition = ability.a_context_practice.recover
-key = recover
 resource = reserve

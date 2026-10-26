@@ -1,6 +1,6 @@
 cooldown_context = actor_projectile/v1
 executor_context = actor/v1
-id = ability.a_context_practice.create_beacon
+id = ability.a_context_practice_1a2.create_beacon
 kind = ability
 object_context = public_object/v1
 resource_context = actor_bounded_int/v1

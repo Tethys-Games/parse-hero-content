@@ -1,25 +1,25 @@
 cooldown_context = actor_projectile/v1
 defaults = combat_defaults/v1
-id = ability.c_range_scout.quick_lock
+id = ability.range_player_b1_1a2.tracking
 kind = ability
 resource_context = actor_bounded_int/v1
 schema_version = 1
 
 [program]
-amount = 52
+amount = 38
 application = ground_circle_damage/v1
 area_height_mm = 1800
 area_maximum_targets = 1
-area_radius_mm = 700
-cast_ms = 1200
+area_radius_mm = 1200
+cast_ms = 2400
 commitment = application/v1
-cooldown_ms = 1800
-cost = 30
+cooldown_ms = 1600
+cost = 24
 empty_query = reject_unpaid/v1
 execution = tracking_ground_area/v1
-lock_ms = 400
+lock_ms = 1200
 miss = commit/v1
 movement_permille = 1000
 post_lock_loss = retain_ground/v1
 pre_lock_loss = cancel/v1
-target_range_mm = 9000
+target_range_mm = 12000
