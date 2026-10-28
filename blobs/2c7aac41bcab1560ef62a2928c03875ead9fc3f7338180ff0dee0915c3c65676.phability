@@ -1,11 +1,11 @@
 anchor_context = object_anchor/v1
 cooldown_context = actor_projectile/v1
 executor_context = actor/v1
-id = ability.a_context_practice_1a2.interact
+id = ability.a_context_practice_1a2_u27.interact
 kind = ability
 object_context = public_interaction/v1
 resource_context = actor_bounded_int/v1
-schema_version = 2
+schema_version = 3
 
 [program]
 ai_eligible = false

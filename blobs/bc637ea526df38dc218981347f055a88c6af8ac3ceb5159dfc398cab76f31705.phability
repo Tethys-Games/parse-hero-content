@@ -1,9 +1,9 @@
 cooldown_context = none
 defaults = combat_defaults/v1
-id = ability.range_player_b1_1a2.recover
+id = ability.range_player_b1_1a2_u27.recover
 kind = ability
 resource_context = actor_bounded_int/v1
-schema_version = 1
+schema_version = 3
 
 [program]
 amount = 30

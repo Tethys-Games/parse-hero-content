@@ -1,15 +1,13 @@
 cooldown_context = actor_projectile/v1
 defaults = combat_defaults/v1
-id = ability.c_range_scout_1a2.sidearm
+id = ability.range_player_b1_1a2_u27.ranged
 kind = ability
 resource_context = actor_bounded_int/v1
-schema_version = 1
+schema_version = 3
 
 [program]
-amount = 11
-cast_ms = 300
-cooldown_ms = 600
-cost = 8
-lifetime_ms = 600
+amount = 24
+cast_ms = 700
+cooldown_ms = 1000
+cost = 18
 preset = ranged_starter/v1
-speed_mm_per_second = 18000

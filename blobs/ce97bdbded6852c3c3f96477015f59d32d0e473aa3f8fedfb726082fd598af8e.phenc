@@ -1,22 +1,21 @@
-schema_version = 9
+schema_version = 12
 kind = encounter
-id = encounter.a_context_practice_1a2.practice
+id = encounter.a_context_practice_1a2_u27.practice
 action_kind = spawn_npc
-reset = repeat
 
 [spawn]
 placement = encounter_placement.advancer
-npc_template = npc.a_context_practice_1a2.advancer
+npc_template = npc.a_context_practice_1a2_u27.advancer
 stable_actor_key = actor.practice_advancer
 
 [spawn]
 placement = encounter_placement.left_sentry
-npc_template = npc.a_context_practice_1a2.sentry
+npc_template = npc.a_context_practice_1a2_u27.sentry
 stable_actor_key = actor.practice_left_sentry
 
 [spawn]
 placement = encounter_placement.right_sentry
-npc_template = npc.a_context_practice_1a2.sentry
+npc_template = npc.a_context_practice_1a2_u27.sentry
 stable_actor_key = actor.practice_right_sentry
 
 [resource]
@@ -73,7 +72,7 @@ initial = false
 
 [grant]
 key = tracking
-definition = ability.a_context_practice_1a2.tracking
+definition = ability.a_context_practice_1a2_u27.tracking
 scope = participant
 slot = 4
 eligibility = avatar_only
@@ -85,7 +84,7 @@ initial = false
 
 [grant]
 key = secure_beacon
-definition = ability.a_context_practice_1a2.interact
+definition = ability.a_context_practice_1a2_u27.interact
 scope = participant
 slot = 4
 eligibility = avatar_only
@@ -156,7 +155,7 @@ exit = retire_unfinished_owned/v1
 phase = pressure
 order = 1
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.a_context_practice_1a2.sentry
+behavior = behavior.a_context_practice_1a2_u27.sentry
 mode = recover
 after_ms = 3000
 
@@ -164,7 +163,7 @@ after_ms = 3000
 phase = pressure
 order = 2
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.a_context_practice_1a2.sentry
+behavior = behavior.a_context_practice_1a2_u27.sentry
 mode = recover
 after_ms = 9300
 
@@ -172,7 +171,7 @@ after_ms = 9300
 phase = rest
 order = 1
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.a_context_practice_1a2.sentry
+behavior = behavior.a_context_practice_1a2_u27.sentry
 mode = pressure
 after_ms = 1000
 
@@ -222,12 +221,12 @@ x_mm = 0
 z_mm = -7500
 
 [class_context]
-class = class.a_context_practice_1a2.advancer
+class = class.a_context_practice_1a2_u27.advancer
 object = beacon
 
 [executor]
 cooldown_group = encounter_single/v1
-definition = ability.a_context_practice_1a2.tracking
+definition = ability.a_context_practice_1a2_u27.tracking
 key = ground_pressure
 origin_anchor = pressure_origin
 origin_y_mm = 0

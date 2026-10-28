@@ -1,7 +1,7 @@
 eligibility = private
-id = class.a_range_encounter_b1_1a2.guard
+id = class.a_range_encounter_b1_1a2_u27.guard
 kind = class
-schema_version = 11
+schema_version = 13
 
 [resource]
 initial = 480
