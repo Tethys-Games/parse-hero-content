@@ -1,3 +1,4 @@
+# Cast time and cooldown are expressed in milliseconds.
 schema_version = 3
 kind = ability
 id = ability.range_player_b1_1a2_u27.ranged
