@@ -1,9 +1,0 @@
-schema_version = 3
-kind = npc
-id = npc.a_range_encounter_b1_1a2_u27.guard
-archetype_key = installed.npc.basic_walker_pool
-behavior = behavior.a_range_encounter_b1_1a2_u27.guard
-radius_mm = 500
-height_mm = 1800
-kit = class.a_range_encounter_b1_1a2_u27.guard
-health = 320

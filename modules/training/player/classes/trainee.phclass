@@ -1,0 +1,51 @@
+schema_version = 13
+kind = class
+id = class.range_player_b1_1a2_u27.trainee
+eligibility = player
+
+[resource]
+key = focus
+type = bounded_int
+maximum = 100
+initial = 100
+reset = initial
+
+[action]
+key = ranged
+definition = ability.range_player_b1_1a2_u27.ranged
+resource = focus
+cooldown_group = projectile/v1
+
+[action]
+key = recover
+definition = ability.range_player_b1_1a2_u27.recover
+resource = focus
+cooldown_group = none
+
+[action]
+key = tracking
+definition = ability.range_player_b1_1a2_u27.tracking
+resource = focus
+cooldown_group = projectile/v1
+
+[action]
+key = channel
+definition = ability.range_player_b1_1a2_u27.channel
+resource = focus
+cooldown_group = projectile/v1
+
+[binding]
+slot = 1
+action = ranged
+
+[binding]
+slot = 2
+action = recover
+
+[binding]
+slot = 3
+action = tracking
+
+[binding]
+slot = 4
+action = channel

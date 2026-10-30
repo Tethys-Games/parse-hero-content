@@ -1,0 +1,17 @@
+schema_version = 13
+kind = class
+id = class.a_range_encounter_b1_1a2_u27.guard
+eligibility = private
+
+[resource]
+key = reserve
+type = bounded_int
+maximum = 480
+initial = 480
+reset = initial
+
+[action]
+key = pressure
+definition = player/channel
+resource = reserve
+cooldown_group = projectile/v1

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "training",
+      "workspace": "training.json"
+    },
+    {
+      "id": "context",
+      "workspace": "context.json"
+    },
+    {
+      "id": "context-shared",
+      "workspace": "context-shared.json"
+    },
+    {
+      "id": "outpost",
+      "workspace": "outpost.json"
+    }
+  ]
+}

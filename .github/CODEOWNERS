@@ -1,0 +1,12 @@
+# Ownership is effective only with the maintained required-review rules.
+/.github/ @Ixl-irl
+/ph-content.py @Ixl-irl
+/ph-content.cmd @Ixl-irl
+/tools/ @Ixl-irl
+/.gitattributes @Ixl-irl
+/release-workspace.json @Ixl-irl
+/docs/maintainers.md @Ixl-irl
+/CONTRIBUTING.md @Ixl-irl
+/NOTICE.md @Ixl-irl
+/LICENSE @Ixl-irl
+/docs/tool-licenses/ @Ixl-irl

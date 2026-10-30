@@ -1,0 +1,37 @@
+# This class is maintained independently of Channel Range Training.
+schema_version = 18
+kind = package
+id = package.c_range_scout_1a2_u27
+role = class
+root = class.c_range_scout_1a2_u27.scout
+
+# Reuse the admitted public definition, never the trainee's live resource state.
+
+[dependency]
+alias = practice
+id = package.range_player_b1_1a2_u27
+hash = sha256:4d10238fe8d138e0b8cb2cb7c846b6ed4294808af8251c110533445621f68177
+
+[artifact]
+id = ability.c_range_scout_1a2_u27.sidearm
+kind = ability
+path = abilities/sidearm.phability
+hash = sha256:0c36957f2f157e77f6505fbe280c89c65b0b76dae640c13f06471589103f32d8
+
+[artifact]
+id = ability.c_range_scout_1a2_u27.recharge
+kind = ability
+path = abilities/recharge.phability
+hash = sha256:c332367c29f48aebf7ddf9c3cd605f1bb067a097d2e0146730f6cbabb13750fd
+
+[artifact]
+id = ability.c_range_scout_1a2_u27.quick_lock
+kind = ability
+path = abilities/quick_lock.phability
+hash = sha256:f6dba9c00d0bb9a55d9e39e10d45e17e58b870471c8cda3facee81a125e703eb
+
+[artifact]
+id = class.c_range_scout_1a2_u27.scout
+kind = class
+path = classes/scout.phclass
+hash = sha256:d8b29a513f8e634180c23e1ee69cf52fbcb411cc402ed98176ee2122dcbae3d2

@@ -1,0 +1,9 @@
+{
+  "schema_version": 3,
+  "modules": [
+    "modules/training/player/package.phpkg",
+    "modules/training/encounter/package.phpkg"
+  ],
+  "player": "package.range_player_b1_1a2_u27",
+  "encounter": "package.a_range_encounter_b1_1a2_u27"
+}
