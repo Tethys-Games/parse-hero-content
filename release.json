@@ -327,8 +327,8 @@
           "hash": "sha256:b36378eed470b1b856bff57f209320ec1776af677428e94279e4b2e2c10bb5e8",
           "blob": {
             "path": "modules/training/player/abilities/ranged.phability",
-            "length": 280,
-            "sha256": "6dcee6d7ac449e6a5c87b22cc10360665114d5b463a159831fe7695334dec3e9"
+            "length": 336,
+            "sha256": "a2a4bfac4844b53cde0ace0035bed1bb80e536e191874c432ce57ef545c6521d"
           }
         },
         {
