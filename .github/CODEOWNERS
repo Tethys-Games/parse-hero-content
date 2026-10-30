@@ -1,8 +1,8 @@
-# Proposed ownership; requires separately configured branch/environment protection.
+# Ownership is effective only with the maintained required-review rules.
 /.github/ @Ixl-irl
 /ph-content.py @Ixl-irl
 /ph-content.cmd @Ixl-irl
-/tools/validator.json @Ixl-irl
+/tools/ @Ixl-irl
 /.gitattributes @Ixl-irl
 /release-workspace.json @Ixl-irl
 /docs/maintainers.md @Ixl-irl

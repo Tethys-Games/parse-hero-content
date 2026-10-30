@@ -1,24 +1,26 @@
-name: Content preparation
+name: Trusted content integration
 on:
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened]
+  merge_group:
+    types: [checks_requested]
 permissions:
   contents: read
+  pull-requests: read
 jobs:
   content:
     runs-on: windows-2025
     timeout-minutes: 15
-    env:
-      CANDIDATE: ${{ github.event.pull_request.head.sha }}
-      PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
-      # No checkout, candidate script, hook, filter, secret or private artifact.
-      # PR-controlled success is feedback; the protected maintainer rebuild is required.
-      - name: Prepare exact PR source with the selected public validator
+      # An organization required-workflow rule pins this file at a reviewed SHA.
+      # A same-named candidate job is not integration authority. No checkout.
+      - name: Strictly validate the complete proposed Git tree
         shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           $ErrorActionPreference = 'Stop'
-          if ($env:CANDIDATE -cnotmatch '^[0-9a-f]{40}$' -or $env:PR_NUMBER -notmatch '^[1-9][0-9]*$') { throw 'Invalid exact PR input' }
           $env:GIT_CONFIG_NOSYSTEM = '1'
           $env:GIT_CONFIG_GLOBAL = 'NUL'
           $env:GIT_NO_REPLACE_OBJECTS = '1'
@@ -26,25 +28,34 @@ jobs:
           $env:COMPlus_DbgEnableMiniDump = '0'
           $kit = Join-Path $env:RUNNER_TEMP 'ph-content'
           $archive = Join-Path $env:RUNNER_TEMP 'ph-content.zip'
-          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-d99398293acc/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
-          if ((Get-Item -LiteralPath $archive).Length -ne 140153259 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne '8cc218b73817021ed8e5105603fb20000d4d678029117ad82b97f98f6b6201af') { throw 'Validator archive differs' }
+          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-a9065caeda7f/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
+          if ((Get-Item -LiteralPath $archive).Length -ne 140159245 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne '9ab9b01dc1b226e4c2464d712ff851dab4c553f4efe1da22a7c55e4d534af692') { throw 'Validator archive differs' }
           Expand-Archive -LiteralPath $archive -DestinationPath $kit
-          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne '4843a195faac478860fb3864c06afe7847306b3bc5aea7dcf1ac41db201a352b') { throw 'Validator manifest differs' }
+          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne '8ddeb7434a0dcd8ceff385aa35c1cacc59dffdf1e1b51fe9fef3ac3faadcbe10') { throw 'Validator manifest differs' }
           $repo = Join-Path $env:RUNNER_TEMP 'candidate.git'
           git -c init.templateDir= init --bare $repo
           if ($LASTEXITCODE) { throw 'Git init failed' }
-          python -I -B (Join-Path $kit 'ph-content.py') prepare --repository $repo --pr $env:PR_NUMBER --tree $env:CANDIDATE --output (Join-Path $env:RUNNER_TEMP 'content-preparation')
-          if ($LASTEXITCODE) { throw 'Source preparation failed; inspect retained diagnostics' }
-      - name: Require strict validity of the actual committed tree
-        shell: pwsh
-        run: |
-          $record = Get-Content -Raw -LiteralPath (Join-Path $env:RUNNER_TEMP 'content-preparation/preparation.json') | ConvertFrom-Json
-          if (-not $record.committed_tree_valid) { throw 'Source preparation succeeded, but committed release metadata is stale or invalid. Review proposal.diff; run ph-content.cmd prepare locally or request protected maintainer preparation. Integration is blocked.' }
-      - name: Retain preparation diagnostics and ordinary proposed diff
+          # Source diagnostics cannot issue workflow commands.
+          $guard = [Guid]::NewGuid().ToString('N')
+          Write-Output "::stop-commands::$guard"
+          try {
+            if ($env:GITHUB_EVENT_NAME -ceq 'pull_request') {
+              python -I -B (Join-Path $kit 'ph-content.py') web-prepare --repository $repo --event-file $env:GITHUB_EVENT_PATH --event-name $env:GITHUB_EVENT_NAME --output (Join-Path $env:RUNNER_TEMP 'content-preview')
+              if ($LASTEXITCODE) { throw 'Source preparation failed; inspect content-preview diagnostics' }
+            }
+            python -I -B (Join-Path $kit 'ph-content.py') web-check --repository $repo --event-file $env:GITHUB_EVENT_PATH --event-name $env:GITHUB_EVENT_NAME --output (Join-Path $env:RUNNER_TEMP 'content-check')
+            $result = $LASTEXITCODE
+          } finally { Write-Output "::$guard::" }
+          if ($result) { throw 'Committed merge tree is invalid or stale. Inspect content-check/web.json. A successful prepared proposal cannot satisfy this gate.' }
+          'The complete committed merge tree passed strict production validation. Preparation never substitutes for this check.' | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+      - name: Retain strict diagnostics and exact tree receipt
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: content-preparation-${{ github.event.pull_request.head.sha }}
-          path: ${{ runner.temp }}/content-preparation
+          name: content-check-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/content-check
+            ${{ runner.temp }}/content-preview
+          include-hidden-files: true
           retention-days: 14
           if-no-files-found: error

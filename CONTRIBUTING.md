@@ -58,13 +58,27 @@ exact Git head without running your branch's scripts. Its report distinguishes:
   bytes and generated index. A successful proposal cannot make a stale commit pass
   this check or grant final integration approval.
 
-For web-only edits, ask a maintainer to run **Maintainer content preparation** with
-the PR number, exact head and expected main. It independently rebuilds the proposal
-with protected tooling and creates an upstream review branch; fork write access is
-not required. The maintainer can open that branch as the successor PR and link your
-original PR. Review it before integration. A changed PR head/main rejects preparation
-or requires a fresh rebuild. The complete prepared tree must land atomically using
-the exact-candidate ordinary-successor procedure in [maintainers](docs/maintainers.md).
+**Prepare content for review** runs automatically from protected upstream main.
+If generated files need changes, it independently rebuilds the complete proposal
+and opens a prepared PR linked to yours, crediting you. Fork write access is not
+required. Review that PR's ordinary diff. If no generated changes are needed, use
+your original PR. Neither route requires a local checkout or manually selected hashes.
+
+The prepared PR may show GitHub's **Approve workflows to run** button; a maintainer
+clicks it to start the checks. **Trusted content integration** strictly checks the
+actual committed files. After checks and human review pass, the maintainer uses
+**Merge when ready** / **Add to merge queue** on GitHub. The queue checks the complete
+result against current main, then squash-merges the source and index atomically.
+Do not use a protection bypass. Application workshop PR #527 is unrelated to this
+merge action and remains open.
+
+If your source head or main changes during preparation, that run fails as stale.
+Push your corrected edit to restart it, or ask a maintainer to select **Actions →
+Prepare content for review → Run workflow**, on **main**, with only your PR number.
+No exact SHA entry is needed. A merge conflict names the files to resolve in GitHub.
+Changing workflow/tool files needs separate maintainer review in the original PR;
+automation will not copy those changes into a privileged upstream branch.
+See the [maintainer procedure](docs/maintainers.md) for the enforcement requirements.
 
 An invalid edit reports the affected file/span and associated entry where the
 production reader can identify them. Correct that source and rerun; do not edit raw
@@ -76,7 +90,8 @@ also apply to new entries; no application allowlist grants membership.
 The first Windows validator is publicly available as an immutable release, with free
 validator use, MIT helper terms and MIT authored content; see [NOTICE.md](NOTICE.md).
 The convenience command downloads and verifies the exact URL and hashes in the pin.
-An actual public-fork run, protected contributor settings and compatible
-content/application rollout remain pending. Local reviewers can also select the same
+The repository's active rules and Actions runs establish whether the web workflow
+is enabled; installing these files alone does not enable it. Compatible application/
+content rollout remains separately selected. Local reviewers can also select the same
 archive with `--kit-archive <path>`; all digest checks remain.
 See [validator provenance](tools/validator.json) and [maintainers](docs/maintainers.md).
