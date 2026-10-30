@@ -1,0 +1,9 @@
+schema_version = 3
+kind = npc
+id = npc.a_context_practice_1a2_u27.sentry
+archetype_key = installed.npc.basic_walker_pool
+behavior = behavior.a_context_practice_1a2_u27.sentry
+kit = class.a_context_practice_1a2_u27.sentry
+health = 240
+radius_mm = 450
+height_mm = 1600

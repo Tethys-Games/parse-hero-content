@@ -1,0 +1,90 @@
+name: Maintainer content preparation
+on:
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: Pull request number to prepare independently
+        required: true
+      head:
+        description: Expected full PR head commit
+        required: true
+      main:
+        description: Expected full approved main commit
+        required: true
+permissions:
+  contents: read
+jobs:
+  prepare:
+    if: github.repository == 'Tethys-Games/parse-hero-content' && github.ref == 'refs/heads/main'
+    environment: content-preparation
+    permissions:
+      contents: write
+    runs-on: windows-2025
+    timeout-minutes: 15
+    env:
+      PR_NUMBER: ${{ inputs.pr }}
+      CANDIDATE: ${{ inputs.head }}
+      EXPECTED_MAIN: ${{ inputs.main }}
+    steps:
+      # This workflow and its tool pin must be protected on upstream main. It does
+      # not check out a candidate, run its scripts, or download a PR job artifact.
+      - name: Independently rebuild and validate the exact ordinary successor
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:CANDIDATE -cnotmatch '^[0-9a-f]{40}$' -or $env:EXPECTED_MAIN -cnotmatch '^[0-9a-f]{40}$' -or $env:PR_NUMBER -notmatch '^[1-9][0-9]*$') { throw 'Invalid exact inputs' }
+          $env:GIT_CONFIG_NOSYSTEM = '1'
+          $env:GIT_CONFIG_GLOBAL = 'NUL'
+          $env:GIT_NO_REPLACE_OBJECTS = '1'
+          $env:DOTNET_DbgEnableMiniDump = '0'
+          $env:COMPlus_DbgEnableMiniDump = '0'
+          $kit = Join-Path $env:RUNNER_TEMP 'ph-content'
+          $archive = Join-Path $env:RUNNER_TEMP 'ph-content.zip'
+          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-d99398293acc/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
+          if ((Get-Item -LiteralPath $archive).Length -ne 140153259 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne '8cc218b73817021ed8e5105603fb20000d4d678029117ad82b97f98f6b6201af') { throw 'Validator archive differs' }
+          Expand-Archive -LiteralPath $archive -DestinationPath $kit
+          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne '4843a195faac478860fb3864c06afe7847306b3bc5aea7dcf1ac41db201a352b') { throw 'Validator manifest differs' }
+          $repo = Join-Path $env:RUNNER_TEMP 'candidate.git'
+          git -c init.templateDir= init --bare $repo
+          if ($LASTEXITCODE) { throw 'Git init failed' }
+          python -I -B (Join-Path $kit 'ph-content.py') maintain --repository $repo --pr $env:PR_NUMBER --tree $env:CANDIDATE --expected-main $env:EXPECTED_MAIN --output (Join-Path $env:RUNNER_TEMP 'maintainer-preparation')
+          if ($LASTEXITCODE) { throw 'Independent maintainer preparation failed' }
+      - name: Create a maintainer review branch without modifying main
+        shell: pwsh
+        env:
+          REVIEW_BRANCH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $recordPath = Join-Path $env:RUNNER_TEMP 'maintainer-preparation/maintainer.json'
+          $kit = Join-Path $env:RUNNER_TEMP 'ph-content'
+          python -I -B (Join-Path $kit 'tools/content_maintainer.py') verify $recordPath
+          if ($LASTEXITCODE) { throw 'PR or main changed; rebuild with new expected inputs' }
+          $record = Get-Content -Raw -LiteralPath $recordPath | ConvertFrom-Json
+          $env:GIT_CONFIG_NOSYSTEM = '1'
+          $env:GIT_CONFIG_GLOBAL = 'NUL'
+          $env:GIT_CONFIG_COUNT = '1'
+          $env:GIT_CONFIG_KEY_0 = 'http.https://github.com/.extraheader'
+          $env:GIT_CONFIG_VALUE_0 = 'AUTHORIZATION: basic ' + [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('x-access-token:' + $env:REVIEW_BRANCH_TOKEN))
+          $existing = @(git --no-replace-objects --git-dir=$($record.repository) -c core.hooksPath=NUL ls-remote --heads https://github.com/Tethys-Games/parse-hero-content.git $record.branch)
+          if ($LASTEXITCODE -or $existing.Count -gt 1) { throw 'Cannot verify review branch identity' }
+          $pushExit = 0
+          if ($existing.Count) {
+            if (($existing[0] -split '\s+')[0] -cne $record.candidate) { throw 'Review branch already differs; preserve the other writer' }
+          } else {
+            # Ordinary non-force push; main is never the destination.
+            git --no-replace-objects --git-dir=$($record.repository) -c core.hooksPath=NUL push https://github.com/Tethys-Games/parse-hero-content.git "$($record.candidate):$($record.branch)"
+            $pushExit = $LASTEXITCODE
+          }
+          Remove-Item Env:GIT_CONFIG_COUNT,Env:GIT_CONFIG_KEY_0,Env:GIT_CONFIG_VALUE_0
+          if ($pushExit) { throw 'Review branch creation failed; no force update is allowed' }
+          python -I -B (Join-Path $kit 'tools/content_maintainer.py') verify $recordPath
+          if ($LASTEXITCODE) { throw 'PR/main changed during branch creation: branch is stale and cannot integrate; rebuild independently' }
+          "Review branch: $($record.branch) at $($record.candidate). This action has not approved or published main." | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+      - name: Retain independently produced exact candidate and diff
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: maintainer-content-${{ inputs.head }}
+          path: ${{ runner.temp }}/maintainer-preparation
+          retention-days: 14
+          if-no-files-found: error

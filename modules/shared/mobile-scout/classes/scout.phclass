@@ -1,0 +1,56 @@
+# Original mobile-scout practice kit: quick casts, tighter tracking, smaller reserve.
+schema_version = 13
+kind = class
+id = class.c_range_scout_1a2_u27.scout
+eligibility = player
+
+[resource]
+key = charge
+type = bounded_int
+maximum = 60
+initial = 60
+reset = initial
+
+# Action order is also installed action identity; formatting must preserve it.
+
+[action]
+key = sidearm
+definition = ability.c_range_scout_1a2_u27.sidearm
+resource = charge
+cooldown_group = projectile/v1
+
+[action]
+key = recharge
+definition = ability.c_range_scout_1a2_u27.recharge
+resource = charge
+cooldown_group = none
+
+# A faster lock is paired with a smaller hit circle and costly committed miss.
+
+[action]
+key = quick_lock
+definition = ability.c_range_scout_1a2_u27.quick_lock
+resource = charge
+cooldown_group = projectile/v1
+
+[action]
+key = channel
+definition = practice/channel # Same immutable definition, this actor's charge and cooldown.
+resource = charge
+cooldown_group = projectile/v1
+
+[binding]
+slot = 1
+action = sidearm
+
+[binding]
+slot = 2
+action = recharge
+
+[binding]
+slot = 3
+action = quick_lock
+
+[binding]
+slot = 4
+action = channel

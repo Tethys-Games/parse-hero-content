@@ -1,0 +1,33 @@
+schema_version = 13
+kind = class
+id = class.a_context_practice_1a2_u27.advancer
+eligibility = private
+
+[resource]
+key = charge
+type = bounded_int
+maximum = 84
+initial = 84
+reset = initial
+
+[action]
+key = tracking
+definition = ability.a_context_practice_1a2_u27.tracking
+resource = charge
+cooldown_group = projectile/v1
+
+# Exactly the sentry's accessible recovery definition, applied to this actor's charge.
+
+[action]
+key = recover
+definition = ability.a_context_practice_1a2_u27.recover
+resource = charge
+cooldown_group = none
+
+# The encounter supplies the public object; the kit owns this action's actor context.
+
+[action]
+key = raise_beacon
+definition = ability.a_context_practice_1a2_u27.create_beacon
+resource = charge
+cooldown_group = projectile/v1

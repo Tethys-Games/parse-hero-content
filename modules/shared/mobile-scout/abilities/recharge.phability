@@ -1,0 +1,10 @@
+schema_version = 3
+kind = ability
+id = ability.c_range_scout_1a2_u27.recharge
+defaults = combat_defaults/v1
+resource_context = actor_bounded_int/v1
+cooldown_context = none
+
+[program]
+preset = recovery_starter/v1
+amount = 17 # Charge recovery is not health restoration.
