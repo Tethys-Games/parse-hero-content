@@ -6,4 +6,4 @@
 *.phbeh -text -ident !eol !filter !working-tree-encoding
 *.phenc -text -ident !eol !filter !working-tree-encoding
 *.phmap -text -ident !eol !filter !working-tree-encoding
-release.json -text -ident !eol !filter !working-tree-encoding
+*.json -text -ident !eol !filter !working-tree-encoding

@@ -1,9 +1,20 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "modules": [
-    "modules/training/player/package.phpkg",
-    "modules/training/encounter/package.phpkg"
+    {
+      "name": "training_player",
+      "path": "modules/training/player/package.phpkg"
+    },
+    {
+      "name": "training_encounter",
+      "path": "modules/training/encounter/package.phpkg",
+      "bindings": {
+        "player": {
+          "module": "training_player"
+        }
+      }
+    }
   ],
-  "player": "package.range_player_b1_1a2_u27",
-  "encounter": "package.a_range_encounter_b1_1a2_u27"
+  "player": "training_player",
+  "encounter": "training_encounter"
 }

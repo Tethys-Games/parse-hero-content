@@ -1,6 +1,6 @@
 schema_version = 3
 kind = ability
-id = ability.a_context_practice_1a2_u27.tracking
+id = ability.tracking
 defaults = combat_defaults/v1
 executor_context = actor_or_encounter/v1
 origin_context = world_point/v1

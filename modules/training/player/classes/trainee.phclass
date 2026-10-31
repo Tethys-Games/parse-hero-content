@@ -1,6 +1,6 @@
 schema_version = 13
 kind = class
-id = class.range_player_b1_1a2_u27.trainee
+id = class.trainee
 eligibility = player
 
 [resource]
@@ -12,25 +12,25 @@ reset = initial
 
 [action]
 key = ranged
-definition = ability.range_player_b1_1a2_u27.ranged
+definition = ability.ranged
 resource = focus
 cooldown_group = projectile/v1
 
 [action]
 key = recover
-definition = ability.range_player_b1_1a2_u27.recover
+definition = ability.recover
 resource = focus
 cooldown_group = none
 
 [action]
 key = tracking
-definition = ability.range_player_b1_1a2_u27.tracking
+definition = ability.tracking
 resource = focus
 cooldown_group = projectile/v1
 
 [action]
 key = channel
-definition = ability.range_player_b1_1a2_u27.channel
+definition = ability.channel
 resource = focus
 cooldown_group = projectile/v1
 

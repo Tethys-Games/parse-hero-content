@@ -1,7 +1,7 @@
 # Short commitment and short projectile flight support a closer positioning choice.
 schema_version = 3
 kind = ability
-id = ability.c_range_scout_1a2_u27.sidearm
+id = ability.sidearm
 defaults = combat_defaults/v1
 resource_context = actor_bounded_int/v1
 cooldown_context = actor_projectile/v1
