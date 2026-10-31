@@ -1,7 +1,7 @@
 # Original mobile-scout practice kit: quick casts, tighter tracking, smaller reserve.
 schema_version = 13
 kind = class
-id = class.c_range_scout_1a2_u27.scout
+id = class.scout
 eligibility = player
 
 [resource]
@@ -15,13 +15,13 @@ reset = initial
 
 [action]
 key = sidearm
-definition = ability.c_range_scout_1a2_u27.sidearm
+definition = ability.sidearm
 resource = charge
 cooldown_group = projectile/v1
 
 [action]
 key = recharge
-definition = ability.c_range_scout_1a2_u27.recharge
+definition = ability.recharge
 resource = charge
 cooldown_group = none
 
@@ -29,7 +29,7 @@ cooldown_group = none
 
 [action]
 key = quick_lock
-definition = ability.c_range_scout_1a2_u27.quick_lock
+definition = ability.quick_lock
 resource = charge
 cooldown_group = projectile/v1
 

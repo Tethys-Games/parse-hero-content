@@ -1,9 +1,10 @@
 # Contributing content
 
-Edit the descriptive files under `modules/`. Entries are declared in the root
-`release-workspace.json` and their root-level workspace JSON files. Shared modules
-have one physical owner. Keep comments and meaningful ordering; the production
-updater changes only required IDs, references, dependency pins and generated metadata.
+Edit the descriptive files under `modules/`. `release-workspace.json` lists entries;
+each workspace names its modules, roots and exact dependency bindings. Shared modules
+have one physical owner. Keep local symbols and meaningful ordering. Paths, comments
+and whitespace do not change a revision; gameplay and exact dependency changes do.
+Do not enter generated IDs, hashes or a revision argument, or commit `release.json`.
 
 ## Contribution rights
 
@@ -22,76 +23,54 @@ non-corpus game assets and branding remain separately scoped in [NOTICE.md](NOTI
 
 ## Local editing on Windows
 
-Install Python 3.11 or later and Git for Windows. Clone this repository, edit your
-source, then run these commands from its root:
+Install Python 3.11 or later and Git for Windows, clone the repository, and edit source.
+Run this optional check from the repository root:
 
 ```powershell
-.\ph-content.cmd prepare
 .\ph-content.cmd check
 git diff
 ```
 
-`prepare` obtains and verifies the pinned public validator, captures approved upstream
-history once, chooses an unpublished revision when needed, stages and strictly validates
-the complete result, and only then applies changes. You do not install a kit manually,
-capture history yourself, choose a revision label, or repair hashes. A repeat run with
-unchanged input makes no unnecessary changes. Check remains read-only. Both commands
-print the retained output location; preparation includes `proposal.diff`, entry hashes
-and diagnostics. Failures preserve the original edit and staged/recovery files.
-If another writer changes the checkout or main, review the reported difference and
-prepare again; do not overwrite that writer or reuse a stale proposal.
+The helper downloads and verifies the exact pinned validator, captures your original
+files, and validates them read-only. It does not allocate names from release history,
+rewrite source, or prepare a replacement PR. Commit your source edits and open one PR.
+Failures identify the captured file and source span where the reader can locate them;
+correct that source and rerun. Retained output is printed. Concurrent edits are
+preserved and reported; check the new capture rather than overwriting another writer.
 
-Commit the authored files and matching generated `release.json` together. Review the
-ordinary diff, then propose a PR. There is one authored tree and no distribution copy.
-Physical directory moves preserve canonical meaning; logical paths and gameplay edits
-can require revised immutable identities. The updater makes that decision with the
-production compiler and complete approved history.
+The pin is trusted distribution metadata, not a contributor-selected executable.
+Offline users may pass `--kit-archive <path>`; all exact archive/manifest checks remain.
+No local kit installation or Godot installation is needed for this validator.
 
-## Editing in the GitHub web editor or a fork
+## GitHub web editor or fork
 
-Edit source and open a PR. Windows PR CI runs the same preparation operation on your
-exact Git head without running your branch's scripts. Its report distinguishes:
+Edit source and open a PR. The externally pinned **Trusted content integration**
+workflow validates your exact original head without executing its scripts or workflows.
+A comment-only edit and a gameplay edit both use this same route. No generated commit
+or maintainer-authored replacement is required. Stale main/head captures fail visibly;
+resolve conflicts or update your source PR and run the newly selected candidate.
 
-- **Source prepared:** the proposal and every advertised entry validate. Review the
-  generated changes in `proposal.diff` and the accompanying proposal files.
-- **Committed tree valid:** your actual commit already contains the correct authored
-  bytes and generated index. A successful proposal cannot make a stale commit pass
-  this check or grant final integration approval.
+After human review, the separately authorized merge queue validates its exact combined
+candidate against captured current main. A candidate-controlled green status cannot
+replace this trusted gate. This procedure does not itself authorize merging a PR.
 
-**Prepare content for review** runs automatically from protected upstream main.
-If generated files need changes, it independently rebuilds the complete proposal
-and opens a prepared PR linked to yours, crediting you. Fork write access is not
-required. Review that PR's ordinary diff. If no generated changes are needed, use
-your original PR. Neither route requires a local checkout or manually selected hashes.
+## Native M5 and exact dependencies
 
-The prepared PR may show GitHub's **Approve workflows to run** button; a maintainer
-clicks it to start the checks. **Trusted content integration** strictly checks the
-actual committed files. After checks and human review pass, the maintainer uses
-**Merge when ready** / **Add to merge queue** on GitHub. The queue checks the complete
-result against current main, then squash-merges the source and index atomically.
-Do not use a protection bypass. Application workshop PR #527 is unrelated to this
-merge action and remains open.
+Select the authored workspace or module inside the native application. Copy its local
+dependency closure too, or supply exactly matching portable library bindings. For a
+class contribution, select **Contribute** and use the captured match player baseline
+when the workspace explicitly binds that role. The Dependencies control supplies local
+modules or imports/exports portable exact bindings. A cache locates selected bytes;
+it never chooses a dependency version or interprets a missing name as latest.
 
-If your source head or main changes during preparation, that run fails as stale.
-Push your corrected edit to restart it, or ask a maintainer to select **Actions →
-Prepare content for review → Run workflow**, on **main**, with only your PR number.
-No exact SHA entry is needed. A merge conflict names the files to resolve in GitHub.
-Changing workflow/tool files needs separate maintainer review in the original PR;
-automation will not copy those changes into a privileged upstream branch.
-See the [maintainer procedure](docs/maintainers.md) for the enforcement requirements.
+Matching modules and exact dependency revisions produce identical canonical artifact
+bytes in M4 and M5. Complete session equality additionally requires the same roots,
+roles, additional classes and preparation options. Ordinary receiving needs no author
+permission or origin access. Verified cached bytes can be reused in both directions.
 
-An invalid edit reports the affected file/span and associated entry where the
-production reader can identify them. Correct that source and rerun; do not edit raw
-hashes or bypass the validator. Catalog bounds, immutable IDs, safe paths and limits
-also apply to new entries; no application allowlist grants membership.
+## Migration availability
 
-## Current availability
-
-The first Windows validator is publicly available as an immutable release, with free
-validator use, MIT helper terms and MIT authored content; see [NOTICE.md](NOTICE.md).
-The convenience command downloads and verifies the exact URL and hashes in the pin.
-The repository's active rules and Actions runs establish whether the web workflow
-is enabled; installing these files alone does not enable it. Compatible application/
-content rollout remains separately selected. Local reviewers can also select the same
-archive with `--kit-archive <path>`; all digest checks remain.
-See [validator provenance](tools/validator.json) and [maintainers](docs/maintainers.md).
+The earlier public validator/workflow remains available. This automatic-revision
+candidate requires a compatible application, validator, content tree and trusted
+workflow pin before public cutover; [maintainers](docs/maintainers.md) owns that sequence.
+The currently published legacy validator cannot validate this migrated grammar.

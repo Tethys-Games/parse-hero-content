@@ -1,21 +1,21 @@
-schema_version = 12
+schema_version = 13
 kind = encounter
-id = encounter.a_context_practice_1a2_u27.practice
+id = encounter.practice
 action_kind = spawn_npc
 
 [spawn]
 placement = encounter_placement.advancer
-npc_template = npc.a_context_practice_1a2_u27.advancer
+npc_template = npc.advancer
 stable_actor_key = actor.practice_advancer
 
 [spawn]
 placement = encounter_placement.left_sentry
-npc_template = npc.a_context_practice_1a2_u27.sentry
+npc_template = npc.sentry
 stable_actor_key = actor.practice_left_sentry
 
 [spawn]
 placement = encounter_placement.right_sentry
-npc_template = npc.a_context_practice_1a2_u27.sentry
+npc_template = npc.sentry
 stable_actor_key = actor.practice_right_sentry
 
 # The ordinary encounter-action selector grants Possess; class binding restores the bar.
@@ -129,7 +129,7 @@ exit = retire_unfinished_owned/v1
 phase = pressure
 order = 1
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.a_context_practice_1a2_u27.sentry
+behavior = behavior.sentry
 mode = recover
 after_ms = 3000
 
@@ -137,7 +137,7 @@ after_ms = 3000
 phase = pressure
 order = 2
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.a_context_practice_1a2_u27.sentry
+behavior = behavior.sentry
 mode = recover
 after_ms = 9300
 
@@ -145,7 +145,7 @@ after_ms = 9300
 phase = rest
 order = 1
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.a_context_practice_1a2_u27.sentry
+behavior = behavior.sentry
 mode = pressure
 after_ms = 1000
 
@@ -170,7 +170,7 @@ ownership = encounter
 
 [grant]
 key = tracking
-definition = ability.a_context_practice_1a2_u27.tracking
+definition = ability.tracking
 scope = participant
 slot = 4
 eligibility = avatar_only
@@ -182,7 +182,7 @@ initial = false
 
 [grant]
 key = secure_beacon
-definition = ability.a_context_practice_1a2_u27.interact
+definition = ability.interact
 object = beacon
 anchor = beacon_anchor
 scope = participant
@@ -205,7 +205,7 @@ reset = settle_owned_then_fresh_attempt/v1
 # Exact public capability for the real advancing actor; no fifth kit or actor.
 
 [class_context]
-class = class.a_context_practice_1a2_u27.advancer
+class = class.advancer
 object = beacon
 
 [object]
@@ -240,7 +240,7 @@ missing = reject_no_retarget/v1
 
 [executor]
 key = ground_pressure
-definition = ability.a_context_practice_1a2_u27.tracking
+definition = ability.tracking
 origin_anchor = pressure_origin
 origin_y_mm = 0
 target_query = nearest_live_player_class_body/v1

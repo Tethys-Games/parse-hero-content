@@ -1,119 +1,86 @@
-# Website contribution and atomic integration
+# Trusted contribution and compatible cutover
 
-The contributor command and Windows automation use one pinned production updater
-and validator. Preparation success is a proposal; strict committed-tree validity is
-the merge requirement. A candidate-controlled green job or downloaded PR artifact
-cannot authorize integration.
+The original authored PR and exact merge-queue candidate validate read-only through
+one pinned managed semantic preparer. The existing public corpus, validator release
+and protected workflow are live. This candidate replaces their generated-identity
+and prepared-replacement-PR requirement; it does not publish or enable itself.
 
-## Normal website flow
+## Trusted gate
 
-1. A contributor opens a PR with descriptive source edits.
-2. **Prepare content for review**, from protected upstream main, captures current
-   main and the source head once. It obtains the pinned public kit and prepares exact
-   Git objects in isolation without candidate scripts, hooks, filters or artifacts.
-3. Already complete PRs need no replacement. If generated changes are needed, the
-   same job independently validates the full successor and opens a maintainer-owned
-   `codex/content-pr-*` PR. Its body identifies and credits the source PR.
-4. If GitHub requests **Approve workflows to run** on the bot-created PR, a maintainer
-   clicks it. The trusted required workflow must then pass on that committed tree.
-5. Ixl-irl reviews the complete diff and uses the website merge queue. The queue
-   validates the exact result against current main and squash-merges one PR at a time.
+An organization required-workflow rule selects `.github/workflows/content.yml` at an
+externally reviewed immutable SHA. The workflow contains literal validator URL,
+archive length/SHA-256 and manifest SHA-256 outside candidate control. It runs for
+`pull_request` and `merge_group` with read-only contents/PR permissions and no candidate
+checkout. Exact Git objects are data. Candidate scripts, hooks, filters, workflows,
+validator overrides and downloaded candidate artifacts never execute with credentials.
 
-No checkout, manual kit installation, hash entry or routine protection bypass is
-needed. Preparation never approves, merges or advances main. It creates no persistent
-credential. Its short-lived GITHUB_TOKEN can create review branches/PRs but cannot
-bypass main rules. Automation does not approve its own PRs.
+The gate captures main and the source head, validates the original source head, and
+fences both after validation. A queue run also checks that the exact queue tree equals
+the Git merge of captured main and its single PR, then validates that queue tree.
+A stale head or conflict rejects. No complete release-history scan, generated-index
+equality, namespace allocation, source pin rewrite or prepared branch is involved.
+A local Git merge witness is data for comparing queue trees and is never pushed.
 
-Failed preparation retains file/entry diagnostics and `proposal.diff`. A changed
-source head/main rejects the run; restart **Prepare content for review** on main with
-only the PR number to explicitly capture new inputs. A newer main is merged as data,
-preserving unrelated changes; conflicts require source correction. Repeating identical
-inputs produces the same proposed files and review commit. Existing differing branches
-are preserved. Old prepared PRs identify their captured source; close superseded ones
-after reviewing their replacement, rather than treating them as the latest source.
+Keep the required workflow pinned independently of candidate YAML. Preserve current
+PR review, CODEOWNERS, stale-review dismissal, last-push approval, resolved discussions,
+linear history, no force pushes/deletions and admin enforcement. Preserve the one-PR
+squash queue, concurrency one, group size one and existing 15-minute check timeout.
+Repository ID is 1428699425, target `Tethys-Games/parse-hero-content`, `refs/heads/main`.
+No bot/owner bypass or elevated fork token is needed. Retire the privileged
+`prepare-content.yml` workflow and its write-token helper; do not create replacement PRs.
+Leave trial PRs #2 and #3 intact and unmerged under this assignment.
 
-Automatic preparation refuses changes to `.github/`, `tools/`, `ph-content.py` or
-`ph-content.cmd` when it would create an upstream replacement branch. Those changes
-stay in the original PR for explicit maintainer review. This prevents promoting
-fork-controlled automation into a repository context with write-token access.
+## Concrete rollout sequence
 
-## Trusted final gate and ancestry
+Prepare and review these exact candidates first: application/compiler29/protocol33,
+authored catalog1/workspace4/source3 content migration, self-contained Windows
+validator package with producer/file hashes and notices, and trusted workflow with
+that package's immutable release URL/hash/length. The candidate application source
+record contains their exact producers and local evidence. No moving `latest` pin.
 
-An **organization required-workflow rule** selects
-`.github/workflows/content.yml` at an externally reviewed immutable commit SHA.
-Its literal public kit URL and archive/manifest hashes are outside candidate control.
-A same-named Actions status is insufficient. The rule has no bypass actors and does
-not exempt branch creation. The workflow handles both `pull_request` and `merge_group`.
+Under separate publication/settings authority:
 
-The gate captures approved main, the PR head and (for queue runs) the queue head,
-fetches those exact objects, and fences them again after validation. A queue tree
-must equal the Git merge of captured main and that single PR. Repository files and
-modes, all published identity history, conversion policy and isolated selected payloads
-are independently checked with the production reader. No updater or repair runs in
-the final gate; a successful prepared proposal cannot make an inconsistent tree pass.
+1. Hold merges and new configured assignments for the coordinated cutover. Record
+   the current application/content/validator/workflow set and preserve its exact bytes.
+   Existing compatible sessions retain their ordinary release lifecycle.
+2. Publish and anonymously verify the immutable validator archive at its recorded
+   release tag. Confirm exact archive and manifest hashes; never replace existing bytes.
+3. Advance the externally enforced required-workflow SHA from the current reviewed
+   `b602e87` producer to the exact reviewed content migration commit. Preserve all
+   protections and the one-PR queue settings above. Candidate YAML alone is insufficient.
+   Exercise real fork/source-PR and exact merge-group routing while assignment remains held.
+4. Integrate compatible authored content and application artifacts under the separately
+   selected integration/deployment authority. Verify published content head, installed
+   validator pins, workflow enforcement and every assigned authority/client contract
+   together before enabling new assignments. Old compiler28/protocol32 products reject
+   this content/protocol; do not expose a mixed cutover as a supported operating state.
+5. Resume merges and assignments only after the compatible set and the Git-object trust /
+   shared-NAT availability decisions below are accepted. An assigned authority prepares
+   its exact pin or fails; clients may visibly select a complete compatible known-good/M3
+   fallback. Never relabel historical bytes. Workshop freeze remains a separate decision.
 
-For this website route, identity is the **validated complete Git tree plus exact
-expected base**, not GitHub's final squash commit metadata. The gate derives a local
-single-parent validation witness of that tree to reuse the existing exact publisher.
-The witness is never pushed. The queue publishes a single-parent squash commit with
-that complete tree. Its temporary two-parent merge-group object is not published
-ancestry. Queue admission binds these checks to current main; movement requires a new
-group/check. Source and generated index land together, never in a source-first repair.
+M4 uses trusted HTTPS Git-object metadata: exact commit to selected trees to expected
+Git SHA-1 blob ID and length, then raw-byte verification. Semantic revisions and
+canonical hashes remain SHA-256. A post-download SHA-256 is not a predeclared raw
+commitment. Selected-module subtree requests, coalescing and bounded retained caches
+reduce repeat traffic. Anonymous REST remains limited to 60 requests/hour/IP. Cold
+outpost is budgeted at 10 REST plus 26 raw requests before later freshness checks;
+shared-NAT cold-start availability and this trust boundary require an explicit rollout
+decision. A single-client success cannot establish supported shared-NAT availability.
+Do not add client credentials, a proxy/index service or an unchecked fallback.
 
-The legacy local exact-commit publisher still requires its exact ordinary parent
-and non-force advancement. Neither path indexes the enclosing commit or descriptor
-hash. Application PR #527 must remain unmerged; it is not a content merge prerequisite.
-Compatible application rollout and workshop freeze remain separate decisions.
+Rollback means restoring a reviewed compatible application/content/validator/workflow
+set through ordinary forward commits and explicit external pin updates. Existing exact
+pins and compatible known-good cache entries remain valid for their original contract.
+Do not rewrite history, reuse a new revision label for old bytes, downgrade receiving
+checks, or silently assign an old release to a compiler29 authority.
 
-## Enforcement setup and safe transition
+## Distribution and terms
 
-These files describe the required configuration; they do not apply settings themselves.
-Before replacing the old `main-owner-publication` update restriction:
-
-- Publish/verify the new immutable Windows kit. Put the reviewed workflow in a public
-  immutable Git commit and record that exact SHA outside the candidate.
-- At organization level, target only repository ID **1428699425**
-  (`Tethys-Games/parse-hero-content`) and `refs/heads/main`. Require that workflow,
-  pinned by `sha` (not a moving branch), with no bypass actors.
-- At repository level, require merge queue: **Squash**, build concurrency **1**,
-  minimum and maximum merge group size **1**, all entries green, check timeout
-  **15 minutes**. The queue rule must also have no bypass actors.
-- Retain PR review, CODEOWNERS, stale-review dismissal, last-push approval, resolved
-  conversations, linear history, no force pushes/deletions and admin enforcement.
-  The `content` status can remain a useful visible check, but cannot replace the
-  externally pinned required workflow.
-- Enable GitHub Actions and allow its token to create pull requests. Keep the default
-  token read-only, fork tokens read-only, and fork secrets disabled. The protected
-  preparation job alone requests contents/PR write. If organization policy filters
-  `pull_request_target`, explicitly permit this protected workflow for this repository.
-- Verify the replacement rules are active and the exact candidate passes. Only then
-  retire the old owner-only update restriction/PR bypass that forced website users to
-  bypass protection. Do not add an owner or bot bypass to the replacement gate/queue.
-
-The first migration PR may need one new event/rerun after required-workflow activation.
-Keep it blocked until the pinned gate has actually run. Do not merge a candidate whose
-checks only passed under its own editable workflow. Once enabled, review website
-behavior on a real fork and a generated PR; preserve exact run/head/tree identities.
-The merge queue itself is exercised only by a separately authorized content merge.
-
-Protect workflows, all tools/pins, entry point, this procedure, `.gitattributes`,
-`LICENSE`, `NOTICE.md`, `docs/tool-licenses/` and CODEOWNERS itself. Public helper
-changes originate in the maintained application tooling; kit production and publisher
-changes require trusted application review. When updating a gate/kit, validate and
-publish its new immutable source first, then deliberately change the external workflow
-pin. A candidate cannot select its own authority.
-
-## Validator distribution and terms
-
-The versioned GitHub Release and exact archive/manifest hashes are recorded in
-`tools/validator.json`. First-party binaries use Parse Hero Content Validator License
-1.0; helpers, workflows and authored content use MIT. Contributors retain copyright
-and contribute under MIT without a separate agreement. Preserve notices. Application
-implementation, other assets and branding remain outside the content grant.
-
-For a new kit, confirm release immutability, upload and verify draft assets, then
-publish and verify anonymous downloads. Never replace pinned bytes or use a moving
-`latest` URL. Record the public release tag target separately from the private
-application producer. Tool publication does not advance content main or deploy the
-application. Historical schema1 commits remain provenance, not runnable rollback for
-descriptor2 readers. Compatible correction/restoration evidence remains at its producer.
+Protect workflows, tools/pins, entry points, this guide, `.gitattributes`, licenses,
+notices and CODEOWNERS itself. Helper changes originate in reviewed application tooling.
+The engine-free validator packages the shared semantic core and its pinned runtime;
+first-party binaries retain Parse Hero Content Validator License 1.0. Helpers,
+workflows, authored definitions, generated content and documentation retain MIT.
+Preserve all runtime and Clipper2 notices. Application implementation, other assets
+and branding remain outside the corpus grant. Identity derivation changes no license.

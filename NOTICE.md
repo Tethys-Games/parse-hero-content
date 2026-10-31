@@ -1,7 +1,7 @@
 # Content and contributor tooling licenses
 
 The textual authored gameplay definitions under `modules/`, their module and root
-workspace manifests, generated `release.json`, and accompanying documentation are
+workspace manifests, authored catalog, generated representations and accompanying documentation are
 licensed under [MIT](LICENSE). This permits use, modification and redistribution
 outside Parse Hero, including commercial projects. Preserve copyright and permission
 notices in copies or substantial portions, including generated distributions.
@@ -9,8 +9,8 @@ notices in copies or substantial portions, including generated distributions.
 Contributors retain copyright and submit content under the same MIT terms; see
 [Contributing](CONTRIBUTING.md#contribution-rights). No copyright assignment is required.
 
-The public `ph-content.py` and `ph-content.cmd` helpers and the two workflow files
-`.github/workflows/content.yml` and `.github/workflows/prepare-content.yml` are
+The public `ph-content.py` and `ph-content.cmd` helpers and the workflow
+`.github/workflows/content.yml` are
 licensed under [MIT](docs/tool-licenses/MIT.md). Preserve that license and its
 copyright notice when sharing or modifying those helpers.
 

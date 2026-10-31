@@ -1,6 +1,6 @@
 schema_version = 4
 kind = map
-id = map.a_context_practice_1a2_u27.practice
+id = map.practice
 
 [ground_region]
 key = ground.practice
@@ -55,7 +55,7 @@ yaw_centi_deg = 0
 
 [encounter_placement]
 key = encounter_placement.advancer
-encounter_id = encounter.a_context_practice_1a2_u27.practice
+encounter_id = encounter.practice
 x_mm = -7500
 y_mm = 0
 z_mm = -3500
@@ -64,7 +64,7 @@ trigger = trigger.practice
 
 [encounter_placement]
 key = encounter_placement.left_sentry
-encounter_id = encounter.a_context_practice_1a2_u27.practice
+encounter_id = encounter.practice
 x_mm = -4500
 y_mm = 0
 z_mm = -1500
@@ -73,7 +73,7 @@ trigger = trigger.practice
 
 [encounter_placement]
 key = encounter_placement.right_sentry
-encounter_id = encounter.a_context_practice_1a2_u27.practice
+encounter_id = encounter.practice
 x_mm = 4500
 y_mm = 0
 z_mm = -1500

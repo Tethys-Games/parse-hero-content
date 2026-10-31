@@ -1,13 +1,32 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "modules": [
-    "modules/training/player/package.phpkg",
-    "modules/context/encounter/package.phpkg",
-    "modules/shared/mobile-scout/package.phpkg"
+    {
+      "name": "training_player",
+      "path": "modules/training/player/package.phpkg"
+    },
+    {
+      "name": "context_encounter",
+      "path": "modules/context/encounter/package.phpkg",
+      "bindings": {
+        "player": {
+          "module": "training_player"
+        }
+      }
+    },
+    {
+      "name": "shared_mobile_scout",
+      "path": "modules/shared/mobile-scout/package.phpkg",
+      "bindings": {
+        "practice": {
+          "module": "training_player"
+        }
+      }
+    }
   ],
-  "player": "package.c_range_scout_1a2_u27",
-  "encounter": "package.a_context_practice_1a2_u27",
+  "player": "shared_mobile_scout",
+  "encounter": "context_encounter",
   "additional_classes": [
-    "package.range_player_b1_1a2_u27"
+    "training_player"
   ]
 }

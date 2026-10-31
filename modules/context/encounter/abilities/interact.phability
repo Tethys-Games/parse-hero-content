@@ -1,6 +1,6 @@
 schema_version = 3
 kind = ability
-id = ability.a_context_practice_1a2_u27.interact
+id = ability.interact
 executor_context = actor/v1
 resource_context = actor_bounded_int/v1
 cooldown_context = actor_projectile/v1
