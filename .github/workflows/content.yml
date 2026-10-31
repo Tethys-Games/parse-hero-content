@@ -28,10 +28,10 @@ jobs:
           $env:COMPlus_DbgEnableMiniDump = '0'
           $kit = Join-Path $env:RUNNER_TEMP 'ph-content'
           $archive = Join-Path $env:RUNNER_TEMP 'ph-content.zip'
-          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-a9065caeda7f/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
-          if ((Get-Item -LiteralPath $archive).Length -ne 140159245 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne '9ab9b01dc1b226e4c2464d712ff851dab4c553f4efe1da22a7c55e4d534af692') { throw 'Validator archive differs' }
+          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-beed9bb2e255/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
+          if ((Get-Item -LiteralPath $archive).Length -ne 37881907 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne '1a4c227f27e091f0dbd22aaae88016bcd894bfb9cf4756e0ccc2c7ebd43cbc6d') { throw 'Validator archive differs' }
           Expand-Archive -LiteralPath $archive -DestinationPath $kit
-          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne '8ddeb7434a0dcd8ceff385aa35c1cacc59dffdf1e1b51fe9fef3ac3faadcbe10') { throw 'Validator manifest differs' }
+          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne 'efb9993bd992a2ab1b839f0def16f2b74ec31cd06ad0587615d781066cd0b51a') { throw 'Validator manifest differs' }
           $repo = Join-Path $env:RUNNER_TEMP 'candidate.git'
           git -c init.templateDir= init --bare $repo
           if ($LASTEXITCODE) { throw 'Git init failed' }
@@ -39,15 +39,11 @@ jobs:
           $guard = [Guid]::NewGuid().ToString('N')
           Write-Output "::stop-commands::$guard"
           try {
-            if ($env:GITHUB_EVENT_NAME -ceq 'pull_request') {
-              python -I -B (Join-Path $kit 'ph-content.py') web-prepare --repository $repo --event-file $env:GITHUB_EVENT_PATH --event-name $env:GITHUB_EVENT_NAME --output (Join-Path $env:RUNNER_TEMP 'content-preview')
-              if ($LASTEXITCODE) { throw 'Source preparation failed; inspect content-preview diagnostics' }
-            }
             python -I -B (Join-Path $kit 'ph-content.py') web-check --repository $repo --event-file $env:GITHUB_EVENT_PATH --event-name $env:GITHUB_EVENT_NAME --output (Join-Path $env:RUNNER_TEMP 'content-check')
             $result = $LASTEXITCODE
           } finally { Write-Output "::$guard::" }
-          if ($result) { throw 'Committed merge tree is invalid or stale. Inspect content-check/web.json. A successful prepared proposal cannot satisfy this gate.' }
-          'The complete committed merge tree passed strict production validation. Preparation never substitutes for this check.' | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          if ($result) { throw 'Original candidate is invalid or stale. Inspect content-check/web.json.' }
+          'The original authored candidate passed read-only production validation.' | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
       - name: Retain strict diagnostics and exact tree receipt
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -55,7 +51,6 @@ jobs:
           name: content-check-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             ${{ runner.temp }}/content-check
-            ${{ runner.temp }}/content-preview
           include-hidden-files: true
           retention-days: 14
           if-no-files-found: error

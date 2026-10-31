@@ -19,7 +19,7 @@ import time
 import urllib.request
 import zipfile
 
-PIN = {'schema_version': 1, 'platform': 'win-x64', 'url': 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-a9065caeda7f/ph-content-win-x64.zip', 'sha256': '9ab9b01dc1b226e4c2464d712ff851dab4c553f4efe1da22a7c55e4d534af692', 'bytes': 140159245, 'kit_manifest_sha256': '8ddeb7434a0dcd8ceff385aa35c1cacc59dffdf1e1b51fe9fef3ac3faadcbe10', 'producer': 'a9065caeda7feac9900701506ac4b4b48c2912be', 'producer_source_files_sha256': 'ed8d1996485ead30e727543e6e8352345cc4205c01a49ad238587feb75bec976', 'prerequisites': ['Python >=3.11', 'Git for Windows'], 'first_party_publication_terms': 'LicenseRef-ParseHero-Validator-1.0', 'public_helper_license': 'MIT', 'authored_content_license': 'MIT'}
+PIN = {'schema_version': 1, 'platform': 'win-x64', 'url': 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-beed9bb2e255/ph-content-win-x64.zip', 'sha256': '1a4c227f27e091f0dbd22aaae88016bcd894bfb9cf4756e0ccc2c7ebd43cbc6d', 'bytes': 37881907, 'kit_manifest_sha256': 'efb9993bd992a2ab1b839f0def16f2b74ec31cd06ad0587615d781066cd0b51a', 'producer': 'beed9bb2e255ebf64650169d70fd655c2cfcdacd', 'producer_source_files_sha256': 'f194eb2c3019ff819224c09a20ed404a46dfb7c28e5e173c93490d4f8814fcf3', 'prerequisites': ['Python >=3.11', 'Git for Windows'], 'first_party_publication_terms': 'LicenseRef-ParseHero-Validator-1.0', 'public_helper_license': 'MIT', 'authored_content_license': 'MIT'}
 MAX_ARCHIVE = 256 * 1024 * 1024
 MAX_EXTRACTED = 512 * 1024 * 1024
 MAX_FILES = 4096
@@ -124,7 +124,7 @@ def main(pin=PIN):
         archive = arguments[index + 1]; del arguments[index:index + 2]
     cache = Path(os.environ.get("LOCALAPPDATA", tempfile.gettempdir())) / "ParseHero/content-validator"
     kit = obtain_kit(pin, cache, archive)
-    return subprocess.call([sys.executable, "-I", "-B", str(kit / "ph-content.py"), *(arguments or ["prepare"])])
+    return subprocess.call([sys.executable, "-I", "-B", str(kit / "ph-content.py"), *(arguments or ["check"])])
 
 
 if __name__ == "__main__":

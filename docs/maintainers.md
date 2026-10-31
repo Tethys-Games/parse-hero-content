@@ -40,18 +40,24 @@ record contains their exact producers and local evidence. No moving `latest` pin
 
 Under separate publication/settings authority:
 
-1. Publish and anonymously verify the immutable validator archive at its recorded
+1. Hold merges and new configured assignments for the coordinated cutover. Record
+   the current application/content/validator/workflow set and preserve its exact bytes.
+   Existing compatible sessions retain their ordinary release lifecycle.
+2. Publish and anonymously verify the immutable validator archive at its recorded
    release tag. Confirm exact archive and manifest hashes; never replace existing bytes.
-2. Advance the externally enforced required-workflow SHA to the reviewed read-only
-   workflow, preserving all protections. Exercise real fork/original-PR and exact
-   merge-group routing. A local simulated event does not prove public enforcement.
-3. Advance compatible authored content and application artifacts in a coordinated
-   cutover. Old compiler28/protocol32 products reject this content/protocol. An assigned
-   authority must prepare the selected exact pin or fail; a client may visibly choose
-   a complete compatible known-good/M3 fallback. Do not relabel historical bytes.
-4. Verify the actual published heads, installed workflow pin and deployed products
-   independently. Application PR #527 and content candidates remain unmerged until
-   integration is selected; deployment and workshop freeze remain separate decisions.
+3. Advance the externally enforced required-workflow SHA from the current reviewed
+   `b602e87` producer to the exact reviewed content migration commit. Preserve all
+   protections and the one-PR queue settings above. Candidate YAML alone is insufficient.
+   Exercise real fork/source-PR and exact merge-group routing while assignment remains held.
+4. Integrate compatible authored content and application artifacts under the separately
+   selected integration/deployment authority. Verify published content head, installed
+   validator pins, workflow enforcement and every assigned authority/client contract
+   together before enabling new assignments. Old compiler28/protocol32 products reject
+   this content/protocol; do not expose a mixed cutover as a supported operating state.
+5. Resume merges and assignments only after the compatible set and the Git-object trust /
+   shared-NAT availability decisions below are accepted. An assigned authority prepares
+   its exact pin or fails; clients may visibly select a complete compatible known-good/M3
+   fallback. Never relabel historical bytes. Workshop freeze remains a separate decision.
 
 M4 uses trusted HTTPS Git-object metadata: exact commit to selected trees to expected
 Git SHA-1 blob ID and length, then raw-byte verification. Semantic revisions and
