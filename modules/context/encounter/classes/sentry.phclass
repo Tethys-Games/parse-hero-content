@@ -1,6 +1,6 @@
 schema_version = 13
 kind = class
-id = class.a_context_practice_1a2_u27.sentry
+id = class.sentry
 eligibility = private
 
 [resource]
@@ -20,6 +20,6 @@ cooldown_group = projectile/v1
 
 [action]
 key = recover
-definition = ability.a_context_practice_1a2_u27.recover
+definition = ability.recover
 resource = reserve
 cooldown_group = none

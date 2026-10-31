@@ -1,22 +1,22 @@
 # Parse Hero content
 
-This repository owns the editable M4 content. Descriptive source under `modules/`
-is also the exact source served by the generated root `release.json`. Root workspace
-files declare entries and references to shared modules. There is no second blob tree.
+This repository owns the editable M4 catalog and modules. Contributors maintain
+descriptive paths, local definition symbols, roots and explicit dependency bindings.
+The application derives immutable revisions and canonical artifacts; generated
+manifests and release indexes are not contributor files.
 
-On Windows, edit source, run `ph-content.cmd prepare`, run `ph-content.cmd check`,
-review `git diff`, and commit the complete tree. The convenience command verifies the
-pinned validator and prepares metadata automatically. Web/fork contributors edit
-source and open a PR. Protected automation opens a prepared PR if generated changes
-are needed. After trusted checks and review, maintainers use GitHub's merge queue;
-no local checkout or manual hash entry is required. See [Contributing](CONTRIBUTING.md)
-and [Maintainers](docs/maintainers.md), including the required enforcement setup.
+Edit source and open one PR. Trusted CI validates that original candidate read-only.
+On Windows, `ph-content.cmd check` is the optional local convenience command using
+the same pinned managed preparer. Native M5 accepts these same authored modules and
+their dependency closure, or the same exact portable/baseline bindings. See
+[Contributing](CONTRIBUTING.md) and [Maintainers](docs/maintainers.md).
 
-The selected Windows kit distribution is a versioned public GitHub Release in this
-repository. Its validator-use and helper licenses are described in [NOTICE.md](NOTICE.md).
-The first Windows kit is published as an immutable release; the exact URL and hashes
-are in `tools/validator.json`. Active GitHub rules/runs establish workflow enablement;
-compatible content/application rollout remains a separate decision. Authored
-definitions and their generated representations use [MIT](LICENSE); contributors
-retain copyright and submit under the same terms. Commercial reuse outside Parse Hero
-is permitted. The application implementation and branding remain separately scoped.
+The previous public corpus, validator and protected contribution workflow are
+already live. This branch is a coordinated automatic-revision migration candidate;
+its new validator pin and required workflow need separate rollout authorization.
+Candidate files do not establish public enablement. See the maintainer cutover.
+
+Authored definitions, generated representations, documentation and helpers retain
+[MIT](LICENSE) terms. Contributors retain copyright; commercial reuse outside
+Parse Hero is permitted. Validator binaries retain their scoped free-use terms in
+[NOTICE.md](NOTICE.md). Application implementation and branding remain separate.

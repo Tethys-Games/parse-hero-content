@@ -1,6 +1,6 @@
 schema_version = 4
 kind = map
-id = map.a_range_encounter_b1_1a2_u27.range
+id = map.range
 
 [ground_region]
 key = ground.range
@@ -55,7 +55,7 @@ yaw_centi_deg = 0
 
 [encounter_placement]
 key = encounter_placement.guard
-encounter_id = encounter.a_range_encounter_b1_1a2_u27.training
+encounter_id = encounter.training
 x_mm = -9000
 y_mm = 0
 z_mm = 0
