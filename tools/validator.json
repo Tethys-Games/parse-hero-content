@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "platform": "win-x64",
-  "url": "https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-beed9bb2e255/ph-content-win-x64.zip",
-  "sha256": "1a4c227f27e091f0dbd22aaae88016bcd894bfb9cf4756e0ccc2c7ebd43cbc6d",
-  "bytes": 37881907,
-  "kit_manifest_sha256": "efb9993bd992a2ab1b839f0def16f2b74ec31cd06ad0587615d781066cd0b51a",
-  "producer": "beed9bb2e255ebf64650169d70fd655c2cfcdacd",
-  "producer_source_files_sha256": "f194eb2c3019ff819224c09a20ed404a46dfb7c28e5e173c93490d4f8814fcf3",
+  "url": "https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-7f9181cae504/ph-content-win-x64.zip",
+  "sha256": "5e0f780f536803b57d373a43a9590432e8f575fc5538f8a5dd8d23d95c48a078",
+  "bytes": 37883109,
+  "kit_manifest_sha256": "40c941f84613ec19df8df6d7e23118e4ea7cdf9cf6611000b590d31417eeab39",
+  "producer": "7f9181cae504395dc2dd1c78c866d97c638b4f2e",
+  "producer_source_files_sha256": "4d69beb45f627c9e03a4af47a612fa4bc75275ee1b7c625e6d8e698b7ee07a46",
   "prerequisites": [
     "Python >=3.11",
     "Git for Windows"
