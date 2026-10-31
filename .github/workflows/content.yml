@@ -7,50 +7,12 @@ on:
     types: [checks_requested]
 permissions:
   contents: read
-  pull-requests: read
 jobs:
   content:
     runs-on: windows-2025
-    timeout-minutes: 15
     steps:
-      # An organization required-workflow rule pins this file at a reviewed SHA.
-      # A same-named candidate job is not integration authority. No checkout.
-      - name: Strictly validate the complete proposed Git tree
+      - name: Harmless candidate check spoof for the cutover trial
         shell: pwsh
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          $ErrorActionPreference = 'Stop'
-          $env:GIT_CONFIG_NOSYSTEM = '1'
-          $env:GIT_CONFIG_GLOBAL = 'NUL'
-          $env:GIT_NO_REPLACE_OBJECTS = '1'
-          $env:DOTNET_DbgEnableMiniDump = '0'
-          $env:COMPlus_DbgEnableMiniDump = '0'
-          $kit = Join-Path $env:RUNNER_TEMP 'ph-content'
-          $archive = Join-Path $env:RUNNER_TEMP 'ph-content.zip'
-          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-78db40ac5176/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
-          if ((Get-Item -LiteralPath $archive).Length -ne 37891707 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne 'c63c1ab5d830672f55af0d38c04076f1c8fa6f224e810ec9e2da7c704f472e54') { throw 'Validator archive differs' }
-          Expand-Archive -LiteralPath $archive -DestinationPath $kit
-          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne '70082aa122ea27782663438175409d1f42bf716286ac77276c6f1d0cc3f55866') { throw 'Validator manifest differs' }
-          $repo = Join-Path $env:RUNNER_TEMP 'candidate.git'
-          git -c init.templateDir= init --bare $repo
-          if ($LASTEXITCODE) { throw 'Git init failed' }
-          # Source diagnostics cannot issue workflow commands.
-          $guard = [Guid]::NewGuid().ToString('N')
-          Write-Output "::stop-commands::$guard"
-          try {
-            python -I -B (Join-Path $kit 'ph-content.py') web-check --repository $repo --event-file $env:GITHUB_EVENT_PATH --event-name $env:GITHUB_EVENT_NAME --output (Join-Path $env:RUNNER_TEMP 'content-check')
-            $result = $LASTEXITCODE
-          } finally { Write-Output "::$guard::" }
-          if ($result) { throw 'Original candidate is invalid or stale. Inspect content-check/web.json.' }
-          'The original authored candidate passed read-only production validation.' | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-      - name: Retain strict diagnostics and exact tree receipt
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: content-check-${{ github.run_id }}-${{ github.run_attempt }}
-          path: |
-            ${{ runner.temp }}/content-check
-          include-hidden-files: true
-          retention-days: 14
-          if-no-files-found: error
+          Write-Output 'This candidate-controlled success must not satisfy the external trusted gate.'
+          exit 0

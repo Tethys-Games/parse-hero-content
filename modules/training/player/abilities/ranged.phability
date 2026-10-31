@@ -1,4 +1,4 @@
-# Cast time and cooldown are expressed in milliseconds.
+# Deliberately invalid fork gate fixture; never merge.
 schema_version = 3
 kind = ability
 id = ability.ranged
@@ -8,7 +8,7 @@ cooldown_context = actor_projectile/v1
 
 [program]
 preset = ranged_starter/v1
-cast_ms = 700
+cast_ms = not_an_integer
 cost = 18
 cooldown_ms = 1000
 amount = 24
