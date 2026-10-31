@@ -38,6 +38,15 @@ Failures identify the captured file and source span where the reader can locate 
 correct that source and rerun. Retained output is printed. Concurrent edits are
 preserved and reported; check the new capture rather than overwriting another writer.
 
+The same check preflights every catalog entry for public M4 acquisition. A module may
+be relocated to a bounded directory such as `player/`; update its workspace path and
+keep its authored contents unchanged to preserve revisions and canonical bytes.
+Public modules need a containing directory. Keep large notes/unowned trees outside
+selected module subtrees and avoid excessive ancestor depth. Selected metadata and
+cold HTTP/reserved-I/O limits include the browser's possible CORS preflights; the
+diagnostic names the affected path and bound. Unrelated unselected subtrees are not
+recursively acquired. Local M5 retains its ordinary folder capture behavior.
+
 The pin is trusted distribution metadata, not a contributor-selected executable.
 Offline users may pass `--kit-archive <path>`; all exact archive/manifest checks remain.
 No local kit installation or Godot installation is needed for this validator.

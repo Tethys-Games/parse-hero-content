@@ -11,6 +11,11 @@ the same pinned managed preparer. Native M5 accepts these same authored modules 
 their dependency closure, or the same exact portable/baseline bindings. See
 [Contributing](CONTRIBUTING.md) and [Maintainers](docs/maintainers.md).
 
+The public check includes selected-tree metadata and cold browser acquisition planning.
+It validates the complete original candidate inventory without querying a moving main.
+Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
+with a source diagnostic before public acceptance. Rate-limit availability is separate.
+
 The previous public corpus, validator and protected contribution workflow are
 already live. This branch is a coordinated automatic-revision migration candidate;
 its new validator pin and required workflow need separate rollout authorization.

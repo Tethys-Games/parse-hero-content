@@ -21,6 +21,15 @@ A stale head or conflict rejects. No complete release-history scan, generated-in
 equality, namespace allocation, source pin rewrite or prepared branch is involved.
 A local Git merge witness is data for comparing queue trees and is never pushed.
 
+The packaged managed check also applies the same public acquisition plan as M4 to
+each catalog entry's exact original inventory. It includes unowned selected-subtree
+metadata, nonrecursive ancestors, safe one-level module directories, metadata byte/
+entry bounds and cold browser HTTP/reserved-I/O limits. Metadata requests reserve
+the browser's possible CORS preflight. Cache warmth and Git-object deduplication
+cannot admit an otherwise invalid cold plan. Large unselected subtrees stay outside
+recursive traversal; local M5 retains its ordinary folder flexibility. Plan reports
+are conservative bounds, not observed transfers or a promise of provider availability.
+
 Keep the required workflow pinned independently of candidate YAML. Preserve current
 PR review, CODEOWNERS, stale-review dismissal, last-push approval, resolved discussions,
 linear history, no force pushes/deletions and admin enforcement. Preserve the one-PR
@@ -39,6 +48,13 @@ that package's immutable release URL/hash/length. The candidate application sour
 record contains their exact producers and local evidence. No moving `latest` pin.
 
 Under separate publication/settings authority:
+
+The October31 R1 correction requires a newly packaged immutable validator from its
+corrected application producer. The earlier `content-validator-7f9181cae504` candidate
+does not contain that correction and must not be published as the fixed kit. Regenerate
+workflow literals, `tools/validator.json` and the bootstrap's embedded pin together.
+Use the exact reviewed corrected PR4 head as the external workflow source. Preserve
+the previous pinned producer until the replacement archive is published and verified.
 
 1. Hold merges and new configured assignments for the coordinated cutover. Record
    the current application/content/validator/workflow set and preserve its exact bytes.
