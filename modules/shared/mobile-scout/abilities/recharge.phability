@@ -1,6 +1,5 @@
-schema_version = 3
-kind = ability
-id = ability.recharge
+ability/v3 recharge
+
 defaults = combat_defaults/v1
 resource_context = actor_bounded_int/v1
 cooldown_context = none

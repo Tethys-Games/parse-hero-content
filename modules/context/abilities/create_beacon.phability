@@ -1,0 +1,20 @@
+ability/v3 create_beacon
+
+executor_context = actor/v1
+resource_context = actor_bounded_int/v1
+cooldown_context = actor_projectile/v1
+object_context = public_object/v1
+
+[program]
+execution = encounter_world_action/v1
+operation = create_obstacle/v1
+object = public_object/v1
+template = 1
+x_mm = 0
+z_mm = -1000
+cost = 0
+cooldown_ms = 0
+ai_eligible = true
+capture = exact_public_reference_at_press/v1
+failure = preserve_committed_prefix/v1
+support = canonical_destination/v1

@@ -1,7 +1,6 @@
 # Watch the moving guard before choosing the shorter lock and narrower ground circle.
-schema_version = 3
-kind = ability
-id = ability.quick_lock
+ability/v3 quick_lock
+
 defaults = combat_defaults/v1
 resource_context = actor_bounded_int/v1
 cooldown_context = actor_projectile/v1

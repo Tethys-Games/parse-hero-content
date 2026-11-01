@@ -1,0 +1,6 @@
+# This class is maintained independently of Channel Range Training.
+# Reuse the admitted public definition, never the trainee's live resource state.
+module/v20 mobile_scout
+exports = [class.scout]
+
+[dependency practice]

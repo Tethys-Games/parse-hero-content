@@ -1,0 +1,49 @@
+class/v13 trainee
+
+eligibility = player
+
+[resource/bounded_int focus]
+
+maximum = 100
+initial = 100
+reset = initial
+
+[action ranged]
+
+definition = ability.ranged
+resource = focus
+cooldown_group = projectile/v1
+
+[action recover]
+
+definition = ability.recover
+resource = focus
+cooldown_group = none
+
+[action tracking]
+
+definition = ability.tracking
+resource = focus
+cooldown_group = projectile/v1
+
+[action channel]
+
+definition = ability.channel
+resource = focus
+cooldown_group = projectile/v1
+
+[binding 1]
+
+action = ranged
+
+[binding 2]
+
+action = recover
+
+[binding 3]
+
+action = tracking
+
+[binding 4]
+
+action = channel
