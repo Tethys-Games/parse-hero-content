@@ -16,10 +16,12 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-The previous public corpus, validator and protected contribution workflow are
-already live. This branch is a coordinated automatic-revision migration candidate;
-its new validator pin and required workflow need separate rollout authorization.
-Candidate files do not establish public enablement. See the maintainer cutover.
+The October31 automatic-revision cutover is integrated on public main. The corrected
+validator is published and the externally pinned trusted workflow is enforced. Native
+and shipping-AOT browser products acquired the public outpost entry, and a local
+Matchmaker/authority with ordinary receivers independently prepared and released it.
+This is the selected local-workshop scope, not application deployment or a guarantee
+of anonymous shared-NAT availability. See the [maintainer availability guidance](docs/maintainers.md).
 
 Authored definitions, generated representations, documentation and helpers retain
 [MIT](LICENSE) terms. Contributors retain copyright; commercial reuse outside

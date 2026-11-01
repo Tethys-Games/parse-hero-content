@@ -1,9 +1,19 @@
 # Trusted contribution and compatible cutover
 
 The original authored PR and exact merge-queue candidate validate read-only through
-one pinned managed semantic preparer. The existing public corpus, validator release
-and protected workflow are live. This candidate replaces their generated-identity
-and prepared-replacement-PR requirement; it does not publish or enable itself.
+one pinned managed semantic preparer. The October31 cutover integrated the authored
+tree at `36d51d27880df2dbc9482f28ca40e5f43ac10988` (tree
+`6082355e37c5d4cf7770a7f0aaba4bd3534e94c5`) through [PR4](https://github.com/Tethys-Games/parse-hero-content/pull/4).
+Its exact [merge-group receipt](https://github.com/Tethys-Games/parse-hero-content/actions/runs/41250662521)
+became public main. The immutable validator is `content-validator-78db40ac5176`;
+`tools/validator.json` records its archive/manifest hashes. Required workflow rule26232258
+is active at reviewed `f9f54422829b2e4ef9f53d94356a513923ce32c8`, using
+`refs/heads/codex/automatic-module-revisions`. Preserve that source reference and commit.
+The original-source check and real fork positive/negative/restoration proofs passed
+([PR5](https://github.com/Tethys-Games/parse-hero-content/pull/5), closed unmerged).
+Local public-origin native/shipping-browser and independent Matchmaker/authority/receiving
+observations passed; PR4 and application PR527 retain exact products and normal release receipts.
+Application PR527 remains Ready/open/unmerged; no provider deployment is implied.
 
 ## Trusted gate
 
@@ -35,54 +45,43 @@ PR review, CODEOWNERS, stale-review dismissal, last-push approval, resolved disc
 linear history, no force pushes/deletions and admin enforcement. Preserve the one-PR
 squash queue, concurrency one, group size one and existing 15-minute check timeout.
 Repository ID is 1428699425, target `Tethys-Games/parse-hero-content`, `refs/heads/main`.
-No bot/owner bypass or elevated fork token is needed. Retire the privileged
-`prepare-content.yml` workflow and its write-token helper; do not create replacement PRs.
-Leave trial PRs #2 and #3 intact and unmerged under this assignment.
+No bot/owner bypass or elevated fork token is needed. The privileged
+`prepare-content.yml` workflow and its write-token helper are retired; do not create replacement PRs.
+Trials [PR2](https://github.com/Tethys-Games/parse-hero-content/pull/2) and
+[PR3](https://github.com/Tethys-Games/parse-hero-content/pull/3) are closed as superseded,
+without merging. Their evidence commits `80ac9715477d6a5140e5756df26d7337c424f2ef` and
+`27cc7193492395521285c37ae2abae73866d6e77` and branch histories are retained.
 
-## Concrete rollout sequence
+## Availability and future cutovers
 
-Prepare and review these exact candidates first: application/compiler29/protocol33,
-authored catalog1/workspace4/source3 content migration, self-contained Windows
-validator package with producer/file hashes and notices, and trusted workflow with
-that package's immutable release URL/hash/length. The candidate application source
-record contains their exact producers and local evidence. No moving `latest` pin.
+The selected local workshop accepts the source3 trust and availability scope below.
+Public content, validator publication, external gate activation and PR4 integration are
+complete. Current compatible local products use compiler29/protocol33; earlier products
+reject this grammar/wire. Keep application integration/deployment separately selected.
+Documentation changes use an ordinary protected PR and the existing one-PR squash queue.
+Eligible owner/CODEOWNERS review is required; bot checks do not replace it.
 
-Under separate publication/settings authority:
-
-The October31 R1 correction requires a newly packaged immutable validator from its
-corrected application producer. The earlier `content-validator-7f9181cae504` candidate
-does not contain that correction and must not be published as the fixed kit. Regenerate
-workflow literals, `tools/validator.json` and the bootstrap's embedded pin together.
-Use the exact reviewed corrected PR4 head as the external workflow source. Preserve
-the previous pinned producer until the replacement archive is published and verified.
-
-1. Hold merges and new configured assignments for the coordinated cutover. Record
-   the current application/content/validator/workflow set and preserve its exact bytes.
-   Existing compatible sessions retain their ordinary release lifecycle.
-2. Publish and anonymously verify the immutable validator archive at its recorded
-   release tag. Confirm exact archive and manifest hashes; never replace existing bytes.
-3. Advance the externally enforced required-workflow SHA from the current reviewed
-   `b602e87` producer to the exact reviewed content migration commit. Preserve all
-   protections and the one-PR queue settings above. Candidate YAML alone is insufficient.
-   Exercise real fork/source-PR and exact merge-group routing while assignment remains held.
-4. Integrate compatible authored content and application artifacts under the separately
-   selected integration/deployment authority. Verify published content head, installed
-   validator pins, workflow enforcement and every assigned authority/client contract
-   together before enabling new assignments. Old compiler28/protocol32 products reject
-   this content/protocol; do not expose a mixed cutover as a supported operating state.
-5. Resume merges and assignments only after the compatible set and the Git-object trust /
-   shared-NAT availability decisions below are accepted. An assigned authority prepares
-   its exact pin or fails; clients may visibly select a complete compatible known-good/M3
-   fallback. Never relabel historical bytes. Workshop freeze remains a separate decision.
+For a future incompatible cutover, first prepare the exact compatible content, application,
+validator and enforcement set. Hold new assignments while publishing and anonymously
+verifying immutable validator bytes, advancing the external workflow pin under its authority,
+and exercising original-source/fork/queue routing. Integrate/deploy only the selected
+compatible products, then verify actual public acquisition and independent authority
+preparation before resuming assignments. Never publish the superseded uncorrected
+`content-validator-7f9181cae504` candidate as the R1 fix, overwrite an immutable release,
+or treat candidate YAML as activated enforcement.
 
 M4 uses trusted HTTPS Git-object metadata: exact commit to selected trees to expected
 Git SHA-1 blob ID and length, then raw-byte verification. Semantic revisions and
 canonical hashes remain SHA-256. A post-download SHA-256 is not a predeclared raw
 commitment. Selected-module subtree requests, coalescing and bounded retained caches
-reduce repeat traffic. Anonymous REST remains limited to 60 requests/hour/IP. Cold
-outpost is budgeted at 10 REST plus 26 raw requests before later freshness checks;
-shared-NAT cold-start availability and this trust boundary require an explicit rollout
-decision. A single-client success cannot establish supported shared-NAT availability.
+reduce repeat traffic. Anonymous REST remains limited to 60 requests/hour/IP. The public-origin
+witness observed 10 REST GETs plus 26 raw GETs (20,929 authored
+body bytes), and the shipping browser observed 10 CORS preflights. The cold browser plan
+reserves 46 HTTP slots; conservative reserved-I/O budgets are separate from real transfer
+and cache-I/O counters. Later freshness checks are additional. This finite local success
+does not establish supported shared-NAT cold-start availability. Treat provider rate-limit
+failures separately from deterministic public-layout rejection; a valid plan cannot
+guarantee provider availability. The selected scope is the local workshop.
 Do not add client credentials, a proxy/index service or an unchecked fallback.
 
 Rollback means restoring a reviewed compatible application/content/validator/workflow

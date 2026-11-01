@@ -77,9 +77,17 @@ bytes in M4 and M5. Complete session equality additionally requires the same roo
 roles, additional classes and preparation options. Ordinary receiving needs no author
 permission or origin access. Verified cached bytes can be reused in both directions.
 
-## Migration availability
+## Availability
 
-The earlier public validator/workflow remains available. This automatic-revision
-candidate requires a compatible application, validator, content tree and trusted
-workflow pin before public cutover; [maintainers](docs/maintainers.md) owns that sequence.
-The currently published legacy validator cannot validate this migrated grammar.
+The automatic-revision authored tree and original-candidate trusted gate are live.
+Use the current pinned validator and a compatible compiler29/protocol33 local product;
+older products cannot read this grammar. The application review branch remains unmerged
+and provider deployment is separate. The [maintainer guide](docs/maintainers.md) records
+the cutover and rollback boundary.
+
+Public M4 reads GitHub anonymously. A cold outpost selection uses 10 REST metadata
+GETs and 26 raw GETs; browsers may also perform 10 CORS preflights. REST is limited to
+60 requests/hour/IP, shared by users behind a NAT. Cached immutable objects reduce
+repeat traffic but do not guarantee cold-start availability. Wait for a reported rate
+limit to reset or use an explicitly selected compatible known-good/bundled payload.
+An assigned authority must acquire its exact pin or fail; it cannot use fallback.
