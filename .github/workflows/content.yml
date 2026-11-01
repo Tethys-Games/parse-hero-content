@@ -28,10 +28,10 @@ jobs:
           $env:COMPlus_DbgEnableMiniDump = '0'
           $kit = Join-Path $env:RUNNER_TEMP 'ph-content'
           $archive = Join-Path $env:RUNNER_TEMP 'ph-content.zip'
-          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-2f77938f5ed6/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
-          if ((Get-Item -LiteralPath $archive).Length -ne 37955949 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne '58ae2c4525aac4fb12662ebd209bf8594515e38f85f75b8e142d97bc7f84b2fa') { throw 'Validator archive differs' }
+          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-e20f5c5e3e5d/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
+          if ((Get-Item -LiteralPath $archive).Length -ne 37956041 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne '5ad2c947db97c756dd3918be930e7d268dcb3d1f70e6a999392e2c9e149564ee') { throw 'Validator archive differs' }
           Expand-Archive -LiteralPath $archive -DestinationPath $kit
-          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne '10c1ab7ccd52ab51437cf4b78ff8cbf5413791234523d19f134dbe73e2855c3c') { throw 'Validator manifest differs' }
+          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne '82f29025242269e1e828d664de287bc51430544e56b469818657025dfd6837ce') { throw 'Validator manifest differs' }
           $repo = Join-Path $env:RUNNER_TEMP 'candidate.git'
           git -c init.templateDir= init --bare $repo
           if ($LASTEXITCODE) { throw 'Git init failed' }
