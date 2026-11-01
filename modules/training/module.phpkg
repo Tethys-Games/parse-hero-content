@@ -1,0 +1,2 @@
+module/v20 training
+exports = [class.trainee, encounter.training, map.range, ability.channel]

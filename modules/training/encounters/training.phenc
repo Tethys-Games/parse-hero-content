@@ -1,0 +1,28 @@
+encounter/v13 training
+
+[spawn]
+placement = encounter_placement.guard
+npc_template = npc.guard
+stable_actor_key = actor.range_guard
+
+[state/bounded_int pulses]
+
+maximum = 65535
+initial = 0
+reset = encounter/v1
+
+[phase pressure]
+
+initial = true
+duration_ms = 60000
+next = pressure
+npc_placement = encounter_placement.guard
+npc_ability = pressure
+start_after_ms = 2500
+restart_after_ms = 6500
+
+[phase_event]
+event = channel_pulse/v1
+field = pulses
+
+amount = 1

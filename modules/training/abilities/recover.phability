@@ -1,0 +1,9 @@
+ability/v3 recover
+
+defaults = combat_defaults/v1
+resource_context = actor_bounded_int/v1
+cooldown_context = none
+
+[program]
+preset = recovery_starter/v1
+amount = 30

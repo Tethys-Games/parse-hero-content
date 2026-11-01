@@ -1,0 +1,59 @@
+{
+  "schema_version": 5,
+  "modules": [
+    {
+      "name": "training",
+      "path": "modules/training/module.phpkg"
+    },
+    {
+      "name": "context",
+      "path": "modules/context/module.phpkg",
+      "bindings": {
+        "player": {
+          "module": "training"
+        }
+      }
+    },
+    {
+      "name": "mobile_scout",
+      "path": "modules/shared/mobile-scout/module.phpkg",
+      "bindings": {
+        "practice": {
+          "module": "training"
+        }
+      }
+    }
+  ],
+  "plays": [
+    {
+      "name": "training",
+      "player": "training/class.trainee",
+      "encounter": "training/encounter.training",
+      "map": "training/map.range"
+    },
+    {
+      "name": "context",
+      "player": "training/class.trainee",
+      "encounter": "context/encounter.practice",
+      "map": "context/map.practice_map"
+    },
+    {
+      "name": "context-shared",
+      "player": "mobile_scout/class.scout",
+      "encounter": "context/encounter.practice",
+      "map": "context/map.practice_map",
+      "additional_classes": [
+        "training/class.trainee"
+      ]
+    },
+    {
+      "name": "outpost",
+      "player": "training/class.trainee",
+      "encounter": "context/encounter.practice",
+      "map": "context/map.practice_map",
+      "additional_classes": [
+        "mobile_scout/class.scout"
+      ]
+    }
+  ]
+}

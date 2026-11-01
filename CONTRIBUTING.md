@@ -1,10 +1,24 @@
 # Contributing content
 
 Edit the descriptive files under `modules/`. `release-workspace.json` lists entries;
-each workspace names its modules, roots and exact dependency bindings. Shared modules
+`workspace.json` names its modules, plays and exact dependency bindings. Shared modules
 have one physical owner. Keep local symbols and meaningful ordering. Paths, comments
 and whitespace do not change a revision; gameplay and exact dependency changes do.
 Do not enter generated IDs, hashes or a revision argument, or commit `release.json`.
+
+Start a definition with its kind/version and local name, for example `ability/v3 channel`.
+Use schema-defined named sections, such as `[resource/bounded_int focus]` and `[action channel]`.
+A `module/v20` manifest declares exports and dependency slots. Recognized files below
+its directory belong to that module unless a child module starts a new boundary.
+Private unused definitions are still checked and retained; do not hide invalid work by
+omitting an export. Duplicate names in the same scope reject. Class-local names, typed
+artifact references, action bindings and stable actor keys keep their separate meanings.
+
+A play selects explicit exported roots, for example `training/class.trainee`,
+`training/encounter.training` and `training/map.range`. Two distinct eligible classes
+from one module may participate; repeated aliases resolving to the same root reject.
+See the [Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
+for the grammar, fixed encounter policy omissions and executable examples.
 
 ## Contribution rights
 
@@ -38,7 +52,8 @@ Failures identify the captured file and source span where the reader can locate 
 correct that source and rerun. Retained output is printed. Concurrent edits are
 preserved and reported; check the new capture rather than overwriting another writer.
 
-The same check preflights every catalog entry for public M4 acquisition. A module may
+The same check validates every declared module and play, and preflights each catalog
+selection for public M4 acquisition. A module may
 be relocated to a bounded directory such as `player/`; update its workspace path and
 keep its authored contents unchanged to preserve revisions and canonical bytes.
 Public modules need a containing directory. Keep large notes/unowned trees outside
@@ -71,6 +86,9 @@ class contribution, select **Contribute** and use the captured match player base
 when the workspace explicitly binds that role. The Dependencies control supplies local
 modules or imports/exports portable exact bindings. A cache locates selected bytes;
 it never chooses a dependency version or interprets a missing name as latest.
+The Roots control selects a named play or exported typed roots. Its named-play route
+captures only that play's complete closure; explicit root choices retain the selected
+module pins. A contribution preserves the exact match encounter, map and required classes.
 
 Matching modules and exact dependency revisions produce identical canonical artifact
 bytes in M4 and M5. Complete session equality additionally requires the same roots,
@@ -79,14 +97,15 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-The automatic-revision authored tree and original-candidate trusted gate are live.
-Use the current pinned validator and a compatible compiler29/protocol33 local product;
-older products cannot read this grammar. The application review branch remains unmerged
+The compiler29 authored tree and original-candidate trusted gate remain live.
+This compact-language review candidate requires compiler30 and the prepared compatible
+validator. The live compiler29 check may reject it until the coordinated cutover; do not
+disable or bypass that gate. Candidate validation is a separate measured result. The application review branch remains unmerged
 and provider deployment is separate. The [maintainer guide](docs/maintainers.md) records
 the cutover and rollback boundary.
 
-Public M4 reads GitHub anonymously. A cold outpost selection uses 10 REST metadata
-GETs and 26 raw GETs; browsers may also perform 10 CORS preflights. REST is limited to
+Public M4 reads GitHub anonymously. The selected validator reports each play's cold
+metadata/raw/CORS request plan and mandatory archive reservation. REST is limited to
 60 requests/hour/IP, shared by users behind a NAT. Cached immutable objects reduce
 repeat traffic but do not guarantee cold-start availability. Wait for a reported rate
 limit to reset or use an explicitly selected compatible known-good/bundled payload.

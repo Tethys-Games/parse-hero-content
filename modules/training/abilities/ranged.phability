@@ -1,0 +1,12 @@
+ability/v3 ranged
+
+defaults = combat_defaults/v1
+resource_context = actor_bounded_int/v1
+cooldown_context = actor_projectile/v1
+
+[program]
+preset = ranged_starter/v1
+cast_ms = 700
+cost = 18
+cooldown_ms = 1000
+amount = 24

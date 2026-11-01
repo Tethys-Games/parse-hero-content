@@ -1,0 +1,31 @@
+class/v13 advancer
+
+eligibility = private
+
+[resource/bounded_int charge]
+
+maximum = 84
+initial = 84
+reset = initial
+
+[action tracking]
+
+definition = ability.tracking
+resource = charge
+cooldown_group = projectile/v1
+
+# Exactly the sentry's accessible recovery definition, applied to this actor's charge.
+
+[action recover]
+
+definition = ability.recover
+resource = charge
+cooldown_group = none
+
+# The encounter supplies the public object; the kit owns this action's actor context.
+
+[action raise_beacon]
+
+definition = ability.create_beacon
+resource = charge
+cooldown_group = projectile/v1

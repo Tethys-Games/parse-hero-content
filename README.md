@@ -1,7 +1,7 @@
 # Parse Hero content
 
 This repository owns the editable M4 catalog and modules. Contributors maintain
-descriptive paths, local definition symbols, roots and explicit dependency bindings.
+descriptive paths, local definition names, explicit exports and exact dependency bindings.
 The application derives immutable revisions and canonical artifacts; generated
 manifests and release indexes are not contributor files.
 
@@ -16,12 +16,22 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-The October31 automatic-revision cutover is integrated on public main. The corrected
+This review candidate uses compact declarations such as `class/v13 trainee`, named
+sections such as `[action channel]`, and generic `module/v20` manifests. Adding a
+definition needs no source-list edit. Training owns its player, guard, encounter and
+range map together; context and mobile-scout keep separate owners. `workspace.json`
+contains the four explicit plays, and `release-workspace.json` selects their names.
+The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
+is the maintained language reference.
+
+The October31 compiler29 cutover remains integrated on public main. The corrected
 validator is published and the externally pinned trusted workflow is enforced. Native
 and shipping-AOT browser products acquired the public outpost entry, and a local
 Matchmaker/authority with ordinary receivers independently prepared and released it.
 This is the selected local-workshop scope, not application deployment or a guarantee
 of anonymous shared-NAT availability. See the [maintainer availability guidance](docs/maintainers.md).
+The new compiler30 validator, workflow and content form a pending coordinated cutover.
+Candidate pins/YAML are review payloads; they do not activate the external trusted gate.
 
 Authored definitions, generated representations, documentation and helpers retain
 [MIT](LICENSE) terms. Contributors retain copyright; commercial reuse outside

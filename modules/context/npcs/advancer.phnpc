@@ -1,0 +1,8 @@
+npc/v4 advancer
+
+archetype_key = installed.npc.basic_walker_pool
+behavior = behavior.advancer
+kit = class.advancer
+health = 420
+radius_mm = 700
+height_mm = 2400
