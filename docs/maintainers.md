@@ -15,6 +15,32 @@ Local public-origin native/shipping-browser and independent Matchmaker/authority
 observations passed; PR4 and application PR527 retain exact products and normal release receipts.
 Application PR527 remains Ready/open/unmerged; no provider deployment is implied.
 
+## November1 compact-module candidate — pending
+
+The selected implementation requires compiler30, package20, module identity algorithm2,
+workspace5 named plays, catalog2 and mandatory capture/archive3. Protocol33 and the
+unchanged definition-family versions retain their meanings. The application Authoring
+Manual owns the exact language; this guide owns coordinated distribution.
+
+The migration branch combines training's former player and encounter owners, keeps
+context and mobile-scout separate, and preserves all four play roles. Candidate source
+is validated through the compatible measured kit. The current external compiler29 gate
+may reject this new format until the separately authorized coordinated cutover. Keep
+that result visible; candidate YAML and a local passing validator cannot replace the gate.
+
+Prepare immutable candidate validator bytes, archive/manifest SHA-256 pins, exact content
+and application heads, the trusted-workflow YAML and its future immutable commit pin.
+Review these together. Publication, external pin advancement, repository integration and
+application deployment are pending actions with distinct authority. Existing releases
+remain immutable. The review record identifies the exact prepared payloads and rollback
+set; no instructions here activate them.
+
+Rollback payloads retain the live compatible compiler29 validator/workflow and original
+content tree. If a future cutover is rolled back, restore that compatible set through
+reviewed forward commits and explicit pin updates. Keep new compiler30 local products
+on their compatible known-good selection until compatible assignments resume; never
+silently pair an old content pin with an incompatible authority.
+
 ## Trusted gate
 
 An organization required-workflow rule selects `.github/workflows/content.yml` at an
@@ -31,12 +57,16 @@ A stale head or conflict rejects. No complete release-history scan, generated-in
 equality, namespace allocation, source pin rewrite or prepared branch is involved.
 A local Git merge witness is data for comparing queue trees and is never pushed.
 
-The packaged managed check also applies the same public acquisition plan as M4 to
-each catalog entry's exact original inventory. It includes unowned selected-subtree
+The packaged managed check validates every declared module and named play, then applies
+the same public acquisition plan as M4 to each catalog selection's exact original
+inventory. M4 captures only the selected play's closure. The plan includes unowned selected-subtree
 metadata, nonrecursive ancestors, safe one-level module directories, metadata byte/
 entry bounds and cold browser HTTP/reserved-I/O limits. Metadata requests reserve
 the browser's possible CORS preflight. Cache warmth and Git-object deduplication
-cannot admit an otherwise invalid cold plan. Large unselected subtrees stay outside
+cannot admit an otherwise invalid cold plan. Complete selected-tree inventory and child
+module boundaries are mandatory cache evidence; missing private source or truncated
+metadata rejects replay. Required evidence is reserved with raw bodies under the archive
+bound and cannot be dropped for size. Large unselected subtrees stay outside
 recursive traversal; local M5 retains its ordinary folder flexibility. Plan reports
 are conservative bounds, not observed transfers or a promise of provider availability.
 
@@ -55,8 +85,8 @@ without merging. Their evidence commits `80ac9715477d6a5140e5756df26d7337c424f2e
 ## Availability and future cutovers
 
 The selected local workshop accepts the source3 trust and availability scope below.
-Public content, validator publication, external gate activation and PR4 integration are
-complete. Current compatible local products use compiler29/protocol33; earlier products
+The October31 public content, validator publication, external gate activation and PR4 integration are
+complete. Live compatible local products use compiler29/protocol33; earlier products
 reject this grammar/wire. Keep application integration/deployment separately selected.
 Documentation changes use an ordinary protected PR and the existing one-PR squash queue.
 Eligible owner/CODEOWNERS review is required; bot checks do not replace it.
