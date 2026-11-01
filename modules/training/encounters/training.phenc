@@ -26,4 +26,3 @@ event = channel_pulse/v1
 field = pulses
 
 amount = 1
-

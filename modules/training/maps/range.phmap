@@ -1,6 +1,6 @@
 map/v4 range
 
-[ground_region range]
+[ground_region ground.range]
 
 top_height_mm = 0
 
@@ -28,7 +28,7 @@ order = 3
 x_mm = -12000
 z_mm = 8000
 
-[obstacle range_end]
+[obstacle obstacle.range_end]
 
 x_mm = 6500
 z_mm = 3000
@@ -37,21 +37,21 @@ half_extent_z_mm = 1200
 height_mm = 1200
 navigation_impact = carve_when_stationary
 
-[spawn trainee_one]
+[spawn spawn.trainee_one]
 
 x_mm = -600
 y_mm = 0
 z_mm = 6500
 yaw_centi_deg = 0
 
-[spawn trainee_two]
+[spawn spawn.trainee_two]
 
 x_mm = 600
 y_mm = 0
 z_mm = 6500
 yaw_centi_deg = 0
 
-[encounter_placement guard]
+[encounter_placement encounter_placement.guard]
 
 encounter_id = encounter.training
 x_mm = -9000
@@ -60,6 +60,6 @@ z_mm = 0
 yaw_centi_deg = 27000
 trigger = trigger.training
 
-[trigger training]
+[trigger trigger.training]
 
 kind = encounter_start
