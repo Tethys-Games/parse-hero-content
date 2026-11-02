@@ -79,6 +79,19 @@ The pin is trusted distribution metadata, not a contributor-selected executable.
 Offline users may pass `--kit-archive <path>`; all exact archive/manifest checks remain.
 No local kit installation or Godot installation is needed for this validator.
 
+In the application checkout, workshop authors can instead run `python tools/workshop.py check`.
+It incrementally builds the same shared validator and checks the configured content checkout;
+`--no-build` reuses a current build. Editing supported content needs no validator release.
+Parser, semantic or supported-capacity changes require a compatible reader and coordinated
+public promotion. Keep the published historical kits for exact pins and rollback.
+
+A complete selected closure may contain at most 256 canonical source records and 384 KiB.
+Private definitions, module manifests and the generated descriptor all count. This is a
+combined count/byte limit, not permission for 256 maximum-sized files or new asset kinds.
+Current outpost/context-shared plays use 32 records and leave 224 record slots; active gameplay
+limits are unchanged. Public planning also checks 320 HTTP slots, 8 MiB charged I/O and
+a complete 896 KiB archive, including mandatory inventory.
+
 ## GitHub web editor or fork
 
 Edit source and open a PR. The externally pinned **Trusted content integration**
@@ -113,7 +126,7 @@ permission or origin access. Verified cached bytes can be reused in both directi
 ## Availability
 
 The compiler29 authored tree and original-candidate trusted gate remain live.
-This compact-language review candidate requires compiler31 and the prepared compatible
+This compact-language review candidate requires capability32 and the prepared compatible
 validator. The live compiler29 check may reject it until the coordinated cutover; do not
 disable or bypass that gate. Candidate validation is a separate measured result. The application review branch remains unmerged
 and provider deployment is separate. The [maintainer guide](docs/maintainers.md) records

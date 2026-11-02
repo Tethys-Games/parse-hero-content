@@ -35,8 +35,16 @@ and shipping-AOT browser products acquired the public outpost entry, and a local
 Matchmaker/authority with ordinary receivers independently prepared and released it.
 This is the selected local-workshop scope, not application deployment or a guarantee
 of anonymous shared-NAT availability. See the [maintainer availability guidance](docs/maintainers.md).
-The new compiler31 validator, workflow and content form a pending coordinated cutover.
+The capability32 validator, workflow and content form the selected pending coordinated cutover.
 Candidate pins/YAML are review payloads; they do not activate the external trusted gate.
+
+The supported closure is at most 256 canonical source records and 384 KiB, including
+all private definitions, module manifests and the selected descriptor. The current
+largest plays use 32 records, leaving 224 record slots subject to the same byte bounds.
+Ordinary content edits reuse a compatible validator. Application workshop authors can
+use `python tools/workshop.py check` to build the shared reader incrementally and check
+their configured content checkout without publishing a kit. Existing published kits remain
+available for public contributors and exact rollback.
 
 Authored definitions, generated representations, documentation and helpers retain
 [MIT](LICENSE) terms. Contributors retain copyright; commercial reuse outside

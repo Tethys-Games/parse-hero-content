@@ -15,9 +15,9 @@ Local public-origin native/shipping-browser and independent Matchmaker/authority
 observations passed; PR4 and application PR527 retain exact products and normal release receipts.
 Application PR527 remains Ready/open/unmerged; no provider deployment is implied.
 
-## November1 authoring-completion candidate — pending
+## November2 capacity and workshop closeout — pending
 
-The selected implementation requires compiler31, package20, module identity algorithm2,
+The selected implementation requires capability32, semantic contract31, package20, module identity algorithm2,
 workspace5 named plays, catalog2 and mandatory capture/archive3. Class14, ability4
 and encounter14 version the shared program and normalized binding contract. NPC4,
 behavior4, map4 and protocol33 retain their meanings. The application Authoring
@@ -26,29 +26,53 @@ Manual owns the exact language; this guide owns coordinated distribution.
 The migration branch combines training's former player and encounter owners, keeps
 context and mobile-scout separate, and preserves all four play roles. Candidate source
 is validated through the compatible measured kit. The current external compiler29 gate
-may reject this new format until the separately authorized coordinated cutover. Keep
+may reject this new format until the selected coordinated cutover completes. Keep
 that result visible; candidate YAML and a local passing validator cannot replace the gate.
 
 Prepare immutable candidate validator bytes, archive/manifest SHA-256 pins, exact content
 and application heads, the trusted-workflow YAML and its future immutable commit pin.
-Review these together. Publication, external pin advancement, repository integration and
-application deployment are pending actions with distinct authority. Existing releases
+Review these together. The selected cutover publishes one compatible set and advances the
+external workflow pin before original-PR/fork/queue verification and protected content integration.
+Normal eligible review remains required. Application integration/deployment and workshop freeze
+remain separate. Existing releases
 remain immutable. The review record identifies the exact prepared payloads and rollback
 set; no instructions here activate them.
 
 The complete outpost and context-shared closures now retain exactly 32 canonical source
 records: 28 definitions, three module manifests and the generated selection descriptor.
-This reaches the existing source-record ceiling with zero remaining records. Training
+The supported 256-record ceiling leaves 224 records of count headroom. Training
 retains 12 records and context retains 27. Private possession and return definitions
-remain in that proof even when inactive; do not omit them or raise limits to fit an
-example. Byte, acquisition, inventory and exchange bounds apply independently. The six
+remain in that proof even when inactive. Canonical bytes remain bounded to 384 KiB and
+exchange to 512 KiB; 256 maximum-sized files are not promised. Public acquisition admits
+320 HTTP slots and a complete archive of at most 896 KiB, with 256 body records plus
+the catalog and a 128 KiB header reservation. Mandatory inventory cannot be dropped.
+The original 45-second operation, 12-second request, two-body concurrency and 8 MiB I/O
+bounds remain. Byte, acquisition, inventory and exchange bounds apply independently. The six
 current definition kinds are admitted; future asset kinds require their own contracts.
 
 Rollback payloads retain the live compatible compiler29 validator/workflow and original
 content tree. If a future cutover is rolled back, restore that compatible set through
-reviewed forward commits and explicit pin updates. Keep new compiler31 local products
+reviewed forward commits and explicit pin updates. Keep new capability32 local products
 on their compatible known-good selection until compatible assignments resume; never
 silently pair an old content pin with an incompatible authority.
+
+## Local authoring and validator promotion
+
+Ordinary source edits reuse the compatible validator; public helper downloads are cached
+by their exact archive hash. In the application checkout, `python tools/workshop.py check`
+incrementally builds the shared source validator and checks the configured content repository
+read-only. `--no-build` reuses that build. No ZIP or release is needed for this edit/check loop.
+
+Promote a new kit when parser/compiler semantics, schemas or supported capacity change.
+The maintained application `tools/content_validator_promote.py` composes selected tests,
+exact-producer packaging, immutable publication and anonymous verification. Its package receipt
+feeds `content_contributor_files.py`, which generates all validator pins and the workflow together.
+The promotion `pins` command verifies the committed candidate and prepares an exact expected
+workflow-pin replacement plus compatible rollback. Applying that replacement and protected
+integration remain explicit cutover actions; candidate code never chooses its authoritative validator.
+Retain historical kits and rollback pins. Do not copy application implementation or compiled ZIPs
+into this repository. Capability32 changes the runtime compiler auxiliary; semantic31 module R/H
+and canonical bytes remain stable for unchanged source/dependencies.
 
 ## Trusted gate
 
