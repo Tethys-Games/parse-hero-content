@@ -5,7 +5,7 @@ eligibility = player
 [resource/bounded_int focus]
 
 maximum = 100
-initial = 101
+initial = 100
 reset = initial
 
 [action ranged]

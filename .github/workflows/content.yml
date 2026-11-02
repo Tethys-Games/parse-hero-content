@@ -13,10 +13,44 @@ jobs:
     runs-on: windows-2025
     timeout-minutes: 15
     steps:
-      # Deliberate candidate-only trust-boundary probe: no validation or checkout.
-      # The externally pinned required workflow must still reject invalid source.
-      - name: Candidate-controlled success marker
+      # An organization required-workflow rule pins this file at a reviewed SHA.
+      # A same-named candidate job is not integration authority. No checkout.
+      - name: Strictly validate the complete proposed Git tree
         shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          'UNTRUSTED_CANDIDATE_SUCCESS: compiler32 negative fork proof only'
-          exit 0
+          $ErrorActionPreference = 'Stop'
+          $env:GIT_CONFIG_NOSYSTEM = '1'
+          $env:GIT_CONFIG_GLOBAL = 'NUL'
+          $env:GIT_NO_REPLACE_OBJECTS = '1'
+          $env:DOTNET_DbgEnableMiniDump = '0'
+          $env:COMPlus_DbgEnableMiniDump = '0'
+          $kit = Join-Path $env:RUNNER_TEMP 'ph-content'
+          $archive = Join-Path $env:RUNNER_TEMP 'ph-content.zip'
+          Invoke-WebRequest 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-f83502bb5890/ph-content-win-x64.zip' -OutFile $archive -TimeoutSec 120
+          if ((Get-Item -LiteralPath $archive).Length -ne 37968585 -or (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -cne '33e19ed9e67f0ff7d8738f59475a9d5aeb6b761d0879059bcb50a30ed753da35') { throw 'Validator archive differs' }
+          Expand-Archive -LiteralPath $archive -DestinationPath $kit
+          if ((Get-FileHash -LiteralPath (Join-Path $kit 'validator-kit.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne '663b4a099d21c3b97900ffb3b854132658c7d954af2d7f8cfb016513a615bb5c') { throw 'Validator manifest differs' }
+          $repo = Join-Path $env:RUNNER_TEMP 'candidate.git'
+          git -c init.templateDir= init --bare $repo
+          if ($LASTEXITCODE) { throw 'Git init failed' }
+          # Source diagnostics cannot issue workflow commands.
+          $guard = [Guid]::NewGuid().ToString('N')
+          Write-Output "::stop-commands::$guard"
+          try {
+            python -I -B (Join-Path $kit 'ph-content.py') web-check --repository $repo --event-file $env:GITHUB_EVENT_PATH --event-name $env:GITHUB_EVENT_NAME --output (Join-Path $env:RUNNER_TEMP 'content-check')
+            $result = $LASTEXITCODE
+          } finally { Write-Output "::$guard::" }
+          if ($result) { throw 'Original candidate is invalid or stale. Inspect content-check/web.json.' }
+          'The original authored candidate passed read-only production validation.' | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+      - name: Retain strict diagnostics and exact tree receipt
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: content-check-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/content-check
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
