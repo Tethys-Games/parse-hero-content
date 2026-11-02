@@ -1,4 +1,4 @@
-encounter/v13 practice
+encounter/v14 practice
 
 [spawn]
 placement = encounter_placement.advancer
@@ -17,29 +17,9 @@ stable_actor_key = actor.practice_right_sentry
 
 # The ordinary encounter-action selector grants Possess; class binding restores the bar.
 
-[ability possess]
-
-execution = controlled_domination/v1
-target = nearest_opponent/v1
-cost = 0
-cooldown_ms = 0
-duration_ms = 6000
-range_mm = 12000
-source_linked = false
-
-[ability return]
-
-execution = end_domination/v1
-target = own_override/v1
-cost = 0
-cooldown_ms = 0
-duration_ms = 0
-range_mm = 0
-source_linked = false
-
 [grant possess]
 
-ability = possess
+definition = ability.possess
 scope = participant
 slot = 4
 eligibility = avatar_only
@@ -51,7 +31,7 @@ initial = false
 
 [grant return]
 
-ability = return
+definition = ability.return
 scope = override
 slot = 4
 eligibility = npc_only
@@ -227,7 +207,6 @@ origin_anchor = pressure_origin
 origin_y_mm = 0
 target_query = nearest_live_player_class_body/v1
 resource = pressure_charge
-cooldown_group = encounter_single/v1
 
 [executor_schedule]
 executor = ground_pressure

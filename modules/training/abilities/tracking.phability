@@ -1,8 +1,5 @@
-ability/v3 tracking
+ability/v4 tracking
 
-defaults = combat_defaults/v1
-resource_context = actor_bounded_int/v1
-cooldown_context = actor_projectile/v1
 
 [program]
 execution = tracking_ground_area/v1

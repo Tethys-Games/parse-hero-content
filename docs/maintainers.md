@@ -15,11 +15,12 @@ Local public-origin native/shipping-browser and independent Matchmaker/authority
 observations passed; PR4 and application PR527 retain exact products and normal release receipts.
 Application PR527 remains Ready/open/unmerged; no provider deployment is implied.
 
-## November1 compact-module candidate — pending
+## November1 authoring-completion candidate — pending
 
-The selected implementation requires compiler30, package20, module identity algorithm2,
-workspace5 named plays, catalog2 and mandatory capture/archive3. Protocol33 and the
-unchanged definition-family versions retain their meanings. The application Authoring
+The selected implementation requires compiler31, package20, module identity algorithm2,
+workspace5 named plays, catalog2 and mandatory capture/archive3. Class14, ability4
+and encounter14 version the shared program and normalized binding contract. NPC4,
+behavior4, map4 and protocol33 retain their meanings. The application Authoring
 Manual owns the exact language; this guide owns coordinated distribution.
 
 The migration branch combines training's former player and encounter owners, keeps
@@ -37,7 +38,7 @@ set; no instructions here activate them.
 
 Rollback payloads retain the live compatible compiler29 validator/workflow and original
 content tree. If a future cutover is rolled back, restore that compatible set through
-reviewed forward commits and explicit pin updates. Keep new compiler30 local products
+reviewed forward commits and explicit pin updates. Keep new compiler31 local products
 on their compatible known-good selection until compatible assignments resume; never
 silently pair an old content pin with an incompatible authority.
 

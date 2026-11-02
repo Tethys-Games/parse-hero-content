@@ -6,13 +6,26 @@ have one physical owner. Keep local symbols and meaningful ordering. Paths, comm
 and whitespace do not change a revision; gameplay and exact dependency changes do.
 Do not enter generated IDs, hashes or a revision argument, or commit `release.json`.
 
-Start a definition with its kind/version and local name, for example `ability/v3 channel`.
+Start a definition with its kind/version and local name, for example `ability/v4 channel`.
 Use schema-defined named sections, such as `[resource/bounded_int focus]` and `[action channel]`.
 A `module/v20` manifest declares exports and dependency slots. Recognized files below
 its directory belong to that module unless a child module starts a new boundary.
 Private unused definitions are still checked and retained; do not hide invalid work by
 omitting an export. Duplicate names in the same scope reject. Class-local names, typed
 artifact references, action bindings and stable actor keys keep their separate meanings.
+
+Public exports may expose class, encounter, map, ability, NPC and behavior definitions.
+Use `alias/export_name` only in a typed consumer that admits that kind. Exports must
+be owned locally; dependencies cannot be re-exported. A public NPC or behavior library
+needs no default play. Class `eligibility` and encounter grants are separate permissions.
+
+Write programs in `.phability` files and bind a class action with `definition`.
+Its single resource and actor-action cooldown infer their unique binding. Optional
+matching assertions normalize identically; contradictory assertions reject. Tracking's
+explicit actor-or-encounter permission and encounter access choices remain meaningful.
+Possess and return live in private files while the encounter keeps finite grants and
+state. The former encounter `[ability]` spelling is retired. Moving a program into a
+new file intentionally changes module identity; validation/import do not make that edit.
 
 A play selects explicit exported roots, for example `training/class.trainee`,
 `training/encounter.training` and `training/map.range`. Two distinct eligible classes
@@ -83,7 +96,9 @@ replace this trusted gate. This procedure does not itself authorize merging a PR
 Select the authored workspace or module inside the native application. Copy its local
 dependency closure too, or supply exactly matching portable library bindings. For a
 class contribution, select **Contribute** and use the captured match player baseline
-when the workspace explicitly binds that role. The Dependencies control supplies local
+when the workspace explicitly binds `baseline_role = player`. Root enumeration and named
+plays resolve that exact retained owner automatically, without a second native alias selection.
+Cancellation, failure or stale inputs preserve the previous chooser state. The Dependencies control supplies local
 modules or imports/exports portable exact bindings. A cache locates selected bytes;
 it never chooses a dependency version or interprets a missing name as latest.
 The Roots control selects a named play or exported typed roots. Its named-play route
@@ -98,7 +113,7 @@ permission or origin access. Verified cached bytes can be reused in both directi
 ## Availability
 
 The compiler29 authored tree and original-candidate trusted gate remain live.
-This compact-language review candidate requires compiler30 and the prepared compatible
+This compact-language review candidate requires compiler31 and the prepared compatible
 validator. The live compiler29 check may reject it until the coordinated cutover; do not
 disable or bypass that gate. Candidate validation is a separate measured result. The application review branch remains unmerged
 and provider deployment is separate. The [maintainer guide](docs/maintainers.md) records

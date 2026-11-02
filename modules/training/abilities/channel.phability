@@ -1,8 +1,5 @@
-ability/v3 channel
+ability/v4 channel
 
-defaults = combat_defaults/v1
-resource_context = actor_bounded_int/v1
-cooldown_context = actor_projectile/v1
 
 [program]
 execution = paid_channel/v1

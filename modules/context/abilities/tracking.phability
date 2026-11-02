@@ -1,11 +1,8 @@
-ability/v3 tracking
+ability/v4 tracking
 
-defaults = combat_defaults/v1
 executor_context = actor_or_encounter/v1
 origin_context = world_point/v1
 query_context = live_body_query/v1
-resource_context = binding_bounded_int/v1
-cooldown_context = binding_single/v1
 
 [program]
 execution = tracking_ground_area/v1

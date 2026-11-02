@@ -16,11 +16,16 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This review candidate uses compact declarations such as `class/v13 trainee`, named
+This review candidate uses compact declarations such as `class/v14 trainee`, named
 sections such as `[action channel]`, and generic `module/v20` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
 range map together; context and mobile-scout keep separate owners. `workspace.json`
 contains the four explicit plays, and `release-workspace.json` selects their names.
+Abilities are ordinary `.phability` definitions, including private possess/return.
+Classes bind them with concise actions; encounters own grants, state and schedules.
+All six admitted definition kinds can be public exports: class, encounter, map,
+ability, NPC and behavior. Exporting a definition does not grant play eligibility,
+activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
@@ -30,7 +35,7 @@ and shipping-AOT browser products acquired the public outpost entry, and a local
 Matchmaker/authority with ordinary receivers independently prepared and released it.
 This is the selected local-workshop scope, not application deployment or a guarantee
 of anonymous shared-NAT availability. See the [maintainer availability guidance](docs/maintainers.md).
-The new compiler30 validator, workflow and content form a pending coordinated cutover.
+The new compiler31 validator, workflow and content form a pending coordinated cutover.
 Candidate pins/YAML are review payloads; they do not activate the external trusted gate.
 
 Authored definitions, generated representations, documentation and helpers retain

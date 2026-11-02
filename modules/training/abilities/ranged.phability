@@ -1,8 +1,5 @@
-ability/v3 ranged
+ability/v4 ranged
 
-defaults = combat_defaults/v1
-resource_context = actor_bounded_int/v1
-cooldown_context = actor_projectile/v1
 
 [program]
 preset = ranged_starter/v1

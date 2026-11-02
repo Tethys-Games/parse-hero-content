@@ -1,8 +1,6 @@
-ability/v3 interact
+ability/v4 interact
 
 executor_context = actor/v1
-resource_context = actor_bounded_int/v1
-cooldown_context = actor_projectile/v1
 object_context = public_interaction/v1
 anchor_context = object_anchor/v1
 

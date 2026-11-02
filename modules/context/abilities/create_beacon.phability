@@ -1,8 +1,6 @@
-ability/v3 create_beacon
+ability/v4 create_beacon
 
 executor_context = actor/v1
-resource_context = actor_bounded_int/v1
-cooldown_context = actor_projectile/v1
 object_context = public_object/v1
 
 [program]

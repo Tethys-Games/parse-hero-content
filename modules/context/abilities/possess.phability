@@ -1,0 +1,6 @@
+ability/v4 possess
+
+[program]
+execution = controlled_domination/v1
+duration_ms = 6000
+range_mm = 12000

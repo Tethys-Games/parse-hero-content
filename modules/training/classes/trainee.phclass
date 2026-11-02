@@ -1,4 +1,4 @@
-class/v13 trainee
+class/v14 trainee
 
 eligibility = player
 
@@ -11,26 +11,18 @@ reset = initial
 [action ranged]
 
 definition = ability.ranged
-resource = focus
-cooldown_group = projectile/v1
 
 [action recover]
 
 definition = ability.recover
-resource = focus
-cooldown_group = none
 
 [action tracking]
 
 definition = ability.tracking
-resource = focus
-cooldown_group = projectile/v1
 
 [action channel]
 
 definition = ability.channel
-resource = focus
-cooldown_group = projectile/v1
 
 [binding 1]
 

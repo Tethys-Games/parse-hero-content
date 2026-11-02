@@ -1,9 +1,6 @@
 # Watch the moving guard before choosing the shorter lock and narrower ground circle.
-ability/v3 quick_lock
+ability/v4 quick_lock
 
-defaults = combat_defaults/v1
-resource_context = actor_bounded_int/v1
-cooldown_context = actor_projectile/v1
 
 [program]
 execution = tracking_ground_area/v1

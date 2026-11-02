@@ -1,4 +1,4 @@
-class/v13 guard
+class/v14 guard
 
 eligibility = private
 
@@ -11,5 +11,3 @@ reset = initial
 [action pressure]
 
 definition = ability.channel
-resource = reserve
-cooldown_group = projectile/v1

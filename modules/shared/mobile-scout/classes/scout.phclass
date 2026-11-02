@@ -1,5 +1,5 @@
 # Original mobile-scout practice kit: quick casts, tighter tracking, smaller reserve.
-class/v13 scout
+class/v14 scout
 
 eligibility = player
 
@@ -14,28 +14,20 @@ reset = initial
 [action sidearm]
 
 definition = ability.sidearm
-resource = charge
-cooldown_group = projectile/v1
 
 [action recharge]
 
 definition = ability.recharge
-resource = charge
-cooldown_group = none
 
 # A faster lock is paired with a smaller hit circle and costly committed miss.
 
 [action quick_lock]
 
 definition = ability.quick_lock
-resource = charge
-cooldown_group = projectile/v1
 
 [action channel]
 
 definition = practice/channel # Same immutable definition, this actor's charge and cooldown.
-resource = charge
-cooldown_group = projectile/v1
 
 [binding 1]
 
