@@ -77,7 +77,10 @@ recursively acquired. Local M5 retains its ordinary folder capture behavior.
 
 The pin is trusted distribution metadata, not a contributor-selected executable.
 Offline users may pass `--kit-archive <path>`; all exact archive/manifest checks remain.
-No local kit installation or Godot installation is needed for this validator.
+If the selected kit has not been published, use its exact reviewed local archive or
+the application workshop check below. [PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7)
+records publication and activation status. No local kit installation or Godot
+installation is needed for this validator.
 
 In the application checkout, workshop authors can instead run `python tools/workshop.py check`.
 It incrementally builds the same shared validator and checks the configured content checkout;
@@ -125,12 +128,14 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-The compiler29 authored tree and original-candidate trusted gate remain live.
-This compact-language review candidate requires capability32 and the prepared compatible
-validator. The live compiler29 check may reject it until the coordinated cutover; do not
-disable or bypass that gate. Candidate validation is a separate measured result. The application review branch remains unmerged
-and provider deployment is separate. The [maintainer guide](docs/maintainers.md) records
-the cutover and rollback boundary.
+This source revision requires compiler/capability32 and the compatible validator
+identified by `tools/validator.json`. [PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7)
+records the coordinated transition's review and activation status. An externally
+selected older validator can reject newer content until its reviewed pin changes;
+keep that result visible and do not disable or bypass the gate. Local candidate
+validation is a separate result. Application integration, deployment and workshop
+freeze remain separate. The [maintainer guide](docs/maintainers.md) defines compatible
+preparation and rollback; the application workshop runbook records completed activation.
 
 Public M4 reads GitHub anonymously. The selected validator reports each play's cold
 metadata/raw/CORS request plan and mandatory archive reservation. REST is limited to

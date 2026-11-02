@@ -1,21 +1,14 @@
 # Trusted contribution and compatible cutover
 
 The original authored PR and exact merge-queue candidate validate read-only through
-one pinned managed semantic preparer. The October31 cutover integrated the authored
-tree at `36d51d27880df2dbc9482f28ca40e5f43ac10988` (tree
-`6082355e37c5d4cf7770a7f0aaba4bd3534e94c5`) through [PR4](https://github.com/Tethys-Games/parse-hero-content/pull/4).
-Its exact [merge-group receipt](https://github.com/Tethys-Games/parse-hero-content/actions/runs/41250662521)
-became public main. The immutable validator is `content-validator-78db40ac5176`;
-`tools/validator.json` records its archive/manifest hashes. Required workflow rule26232258
-is active at reviewed `f9f54422829b2e4ef9f53d94356a513923ce32c8`, using
-`refs/heads/codex/automatic-module-revisions`. Preserve that source reference and commit.
-The original-source check and real fork positive/negative/restoration proofs passed
-([PR5](https://github.com/Tethys-Games/parse-hero-content/pull/5), closed unmerged).
-Local public-origin native/shipping-browser and independent Matchmaker/authority/receiving
-observations passed; PR4 and application PR527 retain exact products and normal release receipts.
-Application PR527 remains Ready/open/unmerged; no provider deployment is implied.
+one externally pinned managed semantic preparer. This guide defines compatibility,
+distribution and rollback. [PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7)
+records the compiler32 transition's review and activation status. Completed publication,
+external-pin, protected-integration and public-acquisition receipts belong in the
+[application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
+Neither these generated docs nor candidate YAML establish what is currently active.
 
-## November2 capacity and workshop closeout — pending
+## Compiler32 compatibility
 
 The selected implementation requires capability32, semantic contract31, package20, module identity algorithm2,
 workspace5 named plays, catalog2 and mandatory capture/archive3. Class14, ability4
@@ -23,20 +16,21 @@ and encounter14 version the shared program and normalized binding contract. NPC4
 behavior4, map4 and protocol33 retain their meanings. The application Authoring
 Manual owns the exact language; this guide owns coordinated distribution.
 
-The migration branch combines training's former player and encounter owners, keeps
-context and mobile-scout separate, and preserves all four play roles. Candidate source
-is validated through the compatible measured kit. The current external compiler29 gate
-may reject this new format until the selected coordinated cutover completes. Keep
-that result visible; candidate YAML and a local passing validator cannot replace the gate.
+The corpus combines training's former player and encounter owners, keeps context
+and mobile-scout separate, and preserves all four play roles. `tools/validator.json`
+identifies this revision's compatible validator, while the organization rule independently
+selects the authoritative workflow. An older externally selected validator can reject
+newer content until the coordinated pin change. Keep that result visible; candidate
+YAML and a local passing validator cannot replace the gate.
 
 Prepare immutable candidate validator bytes, archive/manifest SHA-256 pins, exact content
 and application heads, the trusted-workflow YAML and its future immutable commit pin.
-Review these together. The selected cutover publishes one compatible set and advances the
-external workflow pin before original-PR/fork/queue verification and protected content integration.
-Normal eligible review remains required. Application integration/deployment and workshop freeze
-remain separate. Existing releases
-remain immutable. The review record identifies the exact prepared payloads and rollback
-set; no instructions here activate them.
+Review these together. Execute the compatible cutover through immutable publication,
+the independently authorized workflow-pin update, original-PR/fork/queue verification
+and normal protected content integration. Eligible review remains required. Application
+integration/deployment and workshop freeze remain separate. Existing releases remain
+immutable. PR7 identifies the exact reviewed payloads and their actual disposition;
+these preparation instructions do not establish that an external change occurred.
 
 The complete outpost and context-shared closures now retain exactly 32 canonical source
 records: 28 definitions, three module manifests and the generated selection descriptor.
@@ -50,11 +44,30 @@ The original 45-second operation, 12-second request, two-body concurrency and 8 
 bounds remain. Byte, acquisition, inventory and exchange bounds apply independently. The six
 current definition kinds are admitted; future asset kinds require their own contracts.
 
-Rollback payloads retain the live compatible compiler29 validator/workflow and original
-content tree. If a future cutover is rolled back, restore that compatible set through
-reviewed forward commits and explicit pin updates. Keep new capability32 local products
-on their compatible known-good selection until compatible assignments resume; never
-silently pair an old content pin with an incompatible authority.
+## Retained compiler29 baseline and rollback
+
+The October31 cutover integrated authored content at
+`36d51d27880df2dbc9482f28ca40e5f43ac10988` (tree
+`6082355e37c5d4cf7770a7f0aaba4bd3534e94c5`) through
+[PR4](https://github.com/Tethys-Games/parse-hero-content/pull/4) and its exact
+[merge-group receipt](https://github.com/Tethys-Games/parse-hero-content/actions/runs/41250662521).
+Its immutable validator is `content-validator-78db40ac5176`. That historical workflow
+selection used rule26232258, SHA `f9f54422829b2e4ef9f53d94356a513923ce32c8`
+and `refs/heads/codex/automatic-module-revisions`. Preserve those identities in the
+rollback payload; this revision's `tools/validator.json` selects the compiler32 kit.
+
+The retained rollback content commit is `1237af57596d9f3f295045aef201d01c359ac96f`
+(tree `f5d6e5d50e1199b70accf2996048f35d5038e0d8`). The prepared rollback retains its
+original entry points, compiler29 archive/manifest pins and trusted-workflow selection
+byte-for-byte. The original-source and real fork positive/negative/restoration proofs
+remain at [PR5](https://github.com/Tethys-Games/parse-hero-content/pull/5), closed unmerged;
+PR4 and application PR527 retain the historical public-origin native/browser and
+independent authority/receiving products and normal-release receipts.
+
+If rollback is selected, restore that compatible set through reviewed forward commits
+and explicit external pin updates. Keep capability32 local products on a compatible
+known-good selection until compatible assignments resume; never silently pair an old
+content pin with an incompatible authority.
 
 ## Local authoring and validator promotion
 
@@ -66,7 +79,14 @@ read-only. `--no-build` reuses that build. No ZIP or release is needed for this 
 Promote a new kit when parser/compiler semantics, schemas or supported capacity change.
 The maintained application `tools/content_validator_promote.py` composes selected tests,
 exact-producer packaging, immutable publication and anonymous verification. Its package receipt
-feeds `content_contributor_files.py`, which generates all validator pins and the workflow together.
+feeds `content_contributor_files.py`, which generates validator pins, contributor guides
+and the workflow together. A documentation-only template change reuses the exact compatible
+package receipt; it does not relabel or republish the validator's producer. Regenerate and
+review the contributor files, then finalize the content commit before preparing the external
+workflow replacement. Keep the final content SHA in that task-local payload and PR7, rather
+than embedding the commit's own hash or an activation assertion in its generated docs.
+Record completed activation in the application runbook after the event. This avoids changing
+the content tree merely to update its own publication status.
 The promotion `pins` command verifies the committed candidate and prepares an exact expected
 workflow-pin replacement plus compatible rollback. Applying that replacement and protected
 integration remain explicit cutover actions; candidate code never chooses its authoritative validator.
@@ -117,12 +137,12 @@ without merging. Their evidence commits `80ac9715477d6a5140e5756df26d7337c424f2e
 
 ## Availability and future cutovers
 
-The selected local workshop accepts the source3 trust and availability scope below.
-The October31 public content, validator publication, external gate activation and PR4 integration are
-complete. Live compatible local products use compiler29/protocol33; earlier products
-reject this grammar/wire. Keep application integration/deployment separately selected.
-Documentation changes use an ordinary protected PR and the existing one-PR squash queue.
-Eligible owner/CODEOWNERS review is required; bot checks do not replace it.
+The supported local workshop uses the source3 trust and availability scope below.
+Match application, validator and authored-content compatibility before making an assignment;
+an incompatible reader rejects the content. PR7 and the application workshop runbook identify
+review and completed activation respectively. Application integration/deployment remains
+separately selected. Documentation changes use an ordinary protected PR and the existing
+one-PR squash queue. Eligible owner/CODEOWNERS review is required; bot checks do not replace it.
 
 For a future incompatible cutover, first prepare the exact compatible content, application,
 validator and enforcement set. Hold new assignments while publishing and anonymously
@@ -137,10 +157,10 @@ M4 uses trusted HTTPS Git-object metadata: exact commit to selected trees to exp
 Git SHA-1 blob ID and length, then raw-byte verification. Semantic revisions and
 canonical hashes remain SHA-256. A post-download SHA-256 is not a predeclared raw
 commitment. Selected-module subtree requests, coalescing and bounded retained caches
-reduce repeat traffic. Anonymous REST remains limited to 60 requests/hour/IP. The public-origin
-witness observed 10 REST GETs plus 26 raw GETs (20,929 authored
-body bytes), and the shipping browser observed 10 CORS preflights. The cold browser plan
-reserves 46 HTTP slots; conservative reserved-I/O budgets are separate from real transfer
+reduce repeat traffic. Anonymous REST remains limited to 60 requests/hour/IP. The historical
+compiler29 public-origin witness observed 10 REST GETs plus 26 raw GETs (20,929 authored
+body bytes), and its shipping browser observed 10 CORS preflights. That witness's cold
+browser plan reserved 46 HTTP slots; conservative reserved-I/O budgets are separate from real transfer
 and cache-I/O counters. Later freshness checks are additional. This finite local success
 does not establish supported shared-NAT cold-start availability. Treat provider rate-limit
 failures separately from deterministic public-layout rejection; a valid plan cannot
@@ -151,7 +171,7 @@ Rollback means restoring a reviewed compatible application/content/validator/wor
 set through ordinary forward commits and explicit external pin updates. Existing exact
 pins and compatible known-good cache entries remain valid for their original contract.
 Do not rewrite history, reuse a new revision label for old bytes, downgrade receiving
-checks, or silently assign an old release to a compiler29 authority.
+checks, or silently assign an old release to an incompatible authority.
 
 ## Distribution and terms
 

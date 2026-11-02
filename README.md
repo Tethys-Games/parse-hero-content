@@ -16,7 +16,8 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This review candidate uses compact declarations such as `class/v14 trainee`, named
+This content revision requires compiler/capability32 and uses compact declarations
+such as `class/v14 trainee`, named
 sections such as `[action channel]`, and generic `module/v20` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
 range map together; context and mobile-scout keep separate owners. `workspace.json`
@@ -29,14 +30,17 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-The October31 compiler29 cutover remains integrated on public main. The corrected
-validator is published and the externally pinned trusted workflow is enforced. Native
-and shipping-AOT browser products acquired the public outpost entry, and a local
-Matchmaker/authority with ordinary receivers independently prepared and released it.
-This is the selected local-workshop scope, not application deployment or a guarantee
-of anonymous shared-NAT availability. See the [maintainer availability guidance](docs/maintainers.md).
-The capability32 validator, workflow and content form the selected pending coordinated cutover.
-Candidate pins/YAML are review payloads; they do not activate the external trusted gate.
+Use an application and validator compatible with compiler/capability32, semantic
+contract31 and protocol33. `tools/validator.json` identifies this revision's exact
+validator distribution; its presence does not establish publication or activation.
+[PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7) records review and
+activation status for the coordinated validator, trusted-workflow and content transition.
+The externally selected workflow remains the required validation gate; candidate YAML
+and local validation cannot replace it. Completed activation receipts belong in the
+[application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
+Application deployment and workshop freeze remain separate. See the
+[maintainer availability guidance](docs/maintainers.md) for the local-workshop and
+anonymous shared-NAT limits.
 
 The supported closure is at most 256 canonical source records and 384 KiB, including
 all private definitions, module manifests and the selected descriptor. The current
