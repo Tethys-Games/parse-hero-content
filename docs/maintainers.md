@@ -36,6 +36,14 @@ application deployment are pending actions with distinct authority. Existing rel
 remain immutable. The review record identifies the exact prepared payloads and rollback
 set; no instructions here activate them.
 
+The complete outpost and context-shared closures now retain exactly 32 canonical source
+records: 28 definitions, three module manifests and the generated selection descriptor.
+This reaches the existing source-record ceiling with zero remaining records. Training
+retains 12 records and context retains 27. Private possession and return definitions
+remain in that proof even when inactive; do not omit them or raise limits to fit an
+example. Byte, acquisition, inventory and exchange bounds apply independently. The six
+current definition kinds are admitted; future asset kinds require their own contracts.
+
 Rollback payloads retain the live compatible compiler29 validator/workflow and original
 content tree. If a future cutover is rolled back, restore that compatible set through
 reviewed forward commits and explicit pin updates. Keep new compiler31 local products
