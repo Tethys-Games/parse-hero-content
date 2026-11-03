@@ -1,7 +1,0 @@
-schema_version = 4
-kind = behavior
-id = behavior.guard
-behavior_kind = move_to_point
-target_x_mm = 9000
-target_z_mm = 0
-stop_distance_mm = 80

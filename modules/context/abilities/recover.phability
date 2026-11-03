@@ -1,0 +1,7 @@
+ability/v4 recover
+
+
+[program]
+preset = recovery_starter/v1
+amount = 36
+ai_eligible = true

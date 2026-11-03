@@ -1,0 +1,19 @@
+class/v14 sentry
+
+eligibility = private
+
+[resource/bounded_int reserve]
+
+maximum = 96
+initial = 12
+reset = initial
+
+# Both placements share this definition, never a resource, target or activation.
+
+[action pressure]
+
+definition = player/channel
+
+[action recover]
+
+definition = ability.recover

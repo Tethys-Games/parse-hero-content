@@ -1,0 +1,13 @@
+class/v14 guard
+
+eligibility = private
+
+[resource/bounded_int reserve]
+
+maximum = 480
+initial = 480
+reset = initial
+
+[action pressure]
+
+definition = ability.channel

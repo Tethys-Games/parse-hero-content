@@ -1,9 +1,5 @@
-schema_version = 3
-kind = ability
-id = ability.recharge
-defaults = combat_defaults/v1
-resource_context = actor_bounded_int/v1
-cooldown_context = none
+ability/v4 recharge
+
 
 [program]
 preset = recovery_starter/v1

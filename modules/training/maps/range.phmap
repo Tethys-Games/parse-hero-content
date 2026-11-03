@@ -1,0 +1,65 @@
+map/v4 range
+
+[ground_region ground.range]
+
+top_height_mm = 0
+
+[ground_point]
+region = ground.range
+order = 0
+x_mm = -12000
+z_mm = -8000
+
+[ground_point]
+region = ground.range
+order = 1
+x_mm = 12000
+z_mm = -8000
+
+[ground_point]
+region = ground.range
+order = 2
+x_mm = 12000
+z_mm = 8000
+
+[ground_point]
+region = ground.range
+order = 3
+x_mm = -12000
+z_mm = 8000
+
+[obstacle obstacle.range_end]
+
+x_mm = 6500
+z_mm = 3000
+half_extent_x_mm = 500
+half_extent_z_mm = 1200
+height_mm = 1200
+navigation_impact = carve_when_stationary
+
+[spawn spawn.trainee_one]
+
+x_mm = -600
+y_mm = 0
+z_mm = 6500
+yaw_centi_deg = 0
+
+[spawn spawn.trainee_two]
+
+x_mm = 600
+y_mm = 0
+z_mm = 6500
+yaw_centi_deg = 0
+
+[encounter_placement encounter_placement.guard]
+
+encounter_id = encounter.training
+x_mm = -9000
+y_mm = 0
+z_mm = 0
+yaw_centi_deg = 27000
+trigger = trigger.training
+
+[trigger trigger.training]
+
+kind = encounter_start

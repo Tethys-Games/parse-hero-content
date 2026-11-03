@@ -1,0 +1,9 @@
+ability/v4 ranged
+
+
+[program]
+preset = ranged_starter/v1
+cast_ms = 700
+cost = 18
+cooldown_ms = 1000
+amount = 24

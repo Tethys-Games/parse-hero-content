@@ -1,0 +1,41 @@
+class/v14 trainee
+
+eligibility = player
+
+[resource/bounded_int focus]
+
+maximum = 100
+initial = 100
+reset = initial
+
+[action ranged]
+
+definition = ability.ranged
+
+[action recover]
+
+definition = ability.recover
+
+[action tracking]
+
+definition = ability.tracking
+
+[action channel]
+
+definition = ability.channel
+
+[binding 1]
+
+action = ranged
+
+[binding 2]
+
+action = recover
+
+[binding 3]
+
+action = tracking
+
+[binding 4]
+
+action = channel

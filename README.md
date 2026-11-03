@@ -1,7 +1,7 @@
 # Parse Hero content
 
 This repository owns the editable M4 catalog and modules. Contributors maintain
-descriptive paths, local definition symbols, roots and explicit dependency bindings.
+descriptive paths, local definition names, explicit exports and exact dependency bindings.
 The application derives immutable revisions and canonical artifacts; generated
 manifests and release indexes are not contributor files.
 
@@ -16,12 +16,39 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-The October31 automatic-revision cutover is integrated on public main. The corrected
-validator is published and the externally pinned trusted workflow is enforced. Native
-and shipping-AOT browser products acquired the public outpost entry, and a local
-Matchmaker/authority with ordinary receivers independently prepared and released it.
-This is the selected local-workshop scope, not application deployment or a guarantee
-of anonymous shared-NAT availability. See the [maintainer availability guidance](docs/maintainers.md).
+This content revision requires compiler/capability32 and uses compact declarations
+such as `class/v14 trainee`, named
+sections such as `[action channel]`, and generic `module/v20` manifests. Adding a
+definition needs no source-list edit. Training owns its player, guard, encounter and
+range map together; context and mobile-scout keep separate owners. `workspace.json`
+contains the four explicit plays, and `release-workspace.json` selects their names.
+Abilities are ordinary `.phability` definitions, including private possess/return.
+Classes bind them with concise actions; encounters own grants, state and schedules.
+All six admitted definition kinds can be public exports: class, encounter, map,
+ability, NPC and behavior. Exporting a definition does not grant play eligibility,
+activate it or authorize execution.
+The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
+is the maintained language reference.
+
+Use an application and validator compatible with compiler/capability32, semantic
+contract31 and protocol33. `tools/validator.json` identifies this revision's exact
+validator distribution; its presence does not establish publication or activation.
+[PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7) records review and
+activation status for the coordinated validator, trusted-workflow and content transition.
+The externally selected workflow remains the required validation gate; candidate YAML
+and local validation cannot replace it. Completed activation receipts belong in the
+[application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
+Application deployment and workshop freeze remain separate. See the
+[maintainer availability guidance](docs/maintainers.md) for the local-workshop and
+anonymous shared-NAT limits.
+
+The supported closure is at most 256 canonical source records and 384 KiB, including
+all private definitions, module manifests and the selected descriptor. The current
+largest plays use 32 records, leaving 224 record slots subject to the same byte bounds.
+Ordinary content edits reuse a compatible validator. Application workshop authors can
+use `python tools/workshop.py check` to build the shared reader incrementally and check
+their configured content checkout without publishing a kit. Existing published kits remain
+available for public contributors and exact rollback.
 
 Authored definitions, generated representations, documentation and helpers retain
 [MIT](LICENSE) terms. Contributors retain copyright; commercial reuse outside
