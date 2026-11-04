@@ -16,9 +16,9 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This content revision requires compiler/capability32 and uses compact declarations
-such as `class/v14 trainee`, named
-sections such as `[action channel]`, and generic `module/v20` manifests. Adding a
+This content revision requires compiler/capability33 and uses compact declarations
+such as `class/v15 trainee`, named
+sections such as `[action.channel]`, and generic `module/v21` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
 range map together; context and mobile-scout keep separate owners. `workspace.json`
 contains the four explicit plays, and `release-workspace.json` selects their names.
@@ -30,11 +30,11 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use an application and validator compatible with compiler/capability32, semantic
-contract31 and protocol33. `tools/validator.json` identifies this revision's exact
+Use an application and validator compatible with compiler/capability33, semantic
+contract33 and protocol33. `tools/validator.json` identifies this revision's exact
 validator distribution; its presence does not establish publication or activation.
-[PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7) records review and
-activation status for the coordinated validator, trusted-workflow and content transition.
+[Draft PR9](https://github.com/Tethys-Games/parse-hero-content/pull/9) records review and
+candidate status for the coordinated validator, trusted-workflow and content transition.
 The externally selected workflow remains the required validation gate; candidate YAML
 and local validation cannot replace it. Completed activation receipts belong in the
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
@@ -54,3 +54,8 @@ Authored definitions, generated representations, documentation and helpers retai
 [MIT](LICENSE) terms. Contributors retain copyright; commercial reuse outside
 Parse Hero is permitted. Validator binaries retain their scoped free-use terms in
 [NOTICE.md](NOTICE.md). Application implementation and branding remain separate.
+
+Use `dependencies = [training]` to declare the exact module alias. An external name such as
+`training/class.trainee` always includes the exported kind. A class declares Boolean
+`player_selectable`. Encounter and map can both export `practice`. Edit
+`modules/context/encounters/practice.phenc` and explicitly restage the `context` play.
