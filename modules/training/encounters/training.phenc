@@ -1,18 +1,16 @@
-encounter/v14 training
+encounter/v15 training
 
 [spawn]
 placement = encounter_placement.guard
-npc_template = npc.guard
+npc_template = guard
 stable_actor_key = actor.range_guard
 
-[state/bounded_int pulses]
-
+[state.pulses/bounded_int]
 maximum = 65535
 initial = 0
 reset = encounter/v1
 
-[phase pressure]
-
+[phase.pressure]
 initial = true
 duration_ms = 60000
 next = pressure

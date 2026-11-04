@@ -9,16 +9,16 @@
       "name": "context",
       "path": "modules/context/module.phpkg",
       "bindings": {
-        "player": {
+        "training": {
           "module": "training"
         }
       }
     },
     {
       "name": "mobile_scout",
-      "path": "modules/shared/mobile-scout/module.phpkg",
+      "path": "modules/shared/mobile_scout/module.phpkg",
       "bindings": {
-        "practice": {
+        "training": {
           "module": "training"
         }
       }
@@ -35,13 +35,13 @@
       "name": "context",
       "player": "training/class.trainee",
       "encounter": "context/encounter.practice",
-      "map": "context/map.practice_map"
+      "map": "context/map.practice"
     },
     {
       "name": "context-shared",
       "player": "mobile_scout/class.scout",
       "encounter": "context/encounter.practice",
-      "map": "context/map.practice_map",
+      "map": "context/map.practice",
       "additional_classes": [
         "training/class.trainee"
       ]
@@ -50,7 +50,7 @@
       "name": "outpost",
       "player": "training/class.trainee",
       "encounter": "context/encounter.practice",
-      "map": "context/map.practice_map",
+      "map": "context/map.practice",
       "additional_classes": [
         "mobile_scout/class.scout"
       ]

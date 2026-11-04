@@ -1,8 +1,8 @@
-npc/v4 guard
+npc/v5 guard
 
 archetype_key = installed.npc.basic_walker_pool
-behavior = behavior.guard
-kit = class.guard
+behavior = guard
+kit = guard
 health = 320
 radius_mm = 500
 height_mm = 1800
