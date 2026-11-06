@@ -1,13 +1,11 @@
-class/v14 guard
+class/v15 guard
 
-eligibility = private
+player_selectable = false
 
-[resource/bounded_int reserve]
-
+[resource.reserve/bounded_int]
 maximum = 480
 initial = 480
 reset = initial
 
-[action pressure]
-
+[action.pressure]
 definition = ability.channel

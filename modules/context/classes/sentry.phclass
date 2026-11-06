@@ -1,19 +1,16 @@
-class/v14 sentry
+class/v15 sentry
 
-eligibility = private
+player_selectable = false
 
-[resource/bounded_int reserve]
-
+[resource.reserve/bounded_int]
 maximum = 96
 initial = 12
 reset = initial
 
 # Both placements share this definition, never a resource, target or activation.
 
-[action pressure]
+[action.pressure]
+definition = training/ability.channel
 
-definition = player/channel
-
-[action recover]
-
+[action.recover]
 definition = ability.recover

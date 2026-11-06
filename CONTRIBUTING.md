@@ -6,9 +6,9 @@ have one physical owner. Keep local symbols and meaningful ordering. Paths, comm
 and whitespace do not change a revision; gameplay and exact dependency changes do.
 Do not enter generated IDs, hashes or a revision argument, or commit `release.json`.
 
-Start a definition with its kind/version and local name, for example `ability/v4 channel`.
-Use schema-defined named sections, such as `[resource/bounded_int focus]` and `[action channel]`.
-A `module/v20` manifest declares exports and dependency slots. Recognized files below
+Start a definition with its kind/version and local name, for example `ability/v5 channel`.
+Use schema-defined named sections, such as `[resource.focus/bounded_int]` and `[action.channel]`.
+A `module/v21` manifest declares exports and dependency slots. Recognized files below
 its directory belong to that module unless a child module starts a new boundary.
 Private unused definitions are still checked and retained; do not hide invalid work by
 omitting an export. Duplicate names in the same scope reject. Class-local names, typed
@@ -17,7 +17,7 @@ artifact references, action bindings and stable actor keys keep their separate m
 Public exports may expose class, encounter, map, ability, NPC and behavior definitions.
 Use `alias/export_name` only in a typed consumer that admits that kind. Exports must
 be owned locally; dependencies cannot be re-exported. A public NPC or behavior library
-needs no default play. Class `eligibility` and encounter grants are separate permissions.
+needs no default play. Class `player_selectable` and encounter grants are separate permissions.
 
 Write programs in `.phability` files and bind a class action with `definition`.
 Its single resource and actor-action cooldown infer their unique binding. Optional
@@ -128,7 +128,7 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-This source revision requires compiler/capability32 and the compatible validator
+This source revision requires compiler/capability33 and the compatible validator
 identified by `tools/validator.json`. [PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7)
 records the coordinated transition's review and activation status. An externally
 selected older validator can reject newer content until its reviewed pin changes;
@@ -143,3 +143,8 @@ metadata/raw/CORS request plan and mandatory archive reservation. REST is limite
 repeat traffic but do not guarantee cold-start availability. Wait for a reported rate
 limit to reset or use an explicitly selected compatible known-good/bundled payload.
 An assigned authority must acquire its exact pin or fail; it cannot use fallback.
+
+Use `dependencies = [training]` to declare the exact module alias. An external name such as
+`training/class.trainee` always includes the exported kind. A class declares Boolean
+`player_selectable`. Encounter and map can both export `practice`. Edit
+`modules/context/encounters/practice.phenc` and explicitly restage the `context` play.

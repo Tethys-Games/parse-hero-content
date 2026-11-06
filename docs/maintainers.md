@@ -8,12 +8,12 @@ external-pin, protected-integration and public-acquisition receipts belong in th
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
 Neither these generated docs nor candidate YAML establish what is currently active.
 
-## Compiler32 compatibility
+## Compiler33 candidate compatibility
 
-The selected implementation requires capability32, semantic contract31, package20, module identity algorithm2,
-workspace5 named plays, catalog2 and mandatory capture/archive3. Class14, ability4
-and encounter14 version the shared program and normalized binding contract. NPC4,
-behavior4, map4 and protocol33 retain their meanings. The application Authoring
+The selected implementation requires capability33, semantic contract33, package21, module identity algorithm3,
+workspace5 named plays, catalog2 and mandatory capture/archive3. Class15, ability5
+and encounter15 version the shared program and normalized binding contract. NPC5,
+behavior5, map5 and protocol33 retain their meanings. The application Authoring
 Manual owns the exact language; this guide owns coordinated distribution.
 
 The corpus combines training's former player and encounter owners, keeps context
@@ -54,7 +54,7 @@ The October31 cutover integrated authored content at
 Its immutable validator is `content-validator-78db40ac5176`. That historical workflow
 selection used rule26232258, SHA `f9f54422829b2e4ef9f53d94356a513923ce32c8`
 and `refs/heads/codex/automatic-module-revisions`. Preserve those identities in the
-rollback payload; this revision's `tools/validator.json` selects the compiler32 kit.
+rollback payload; the public compiler32 kit remains active until compatible publication and gate activation.
 
 The retained rollback content commit is `1237af57596d9f3f295045aef201d01c359ac96f`
 (tree `f5d6e5d50e1199b70accf2996048f35d5038e0d8`). The prepared rollback retains its

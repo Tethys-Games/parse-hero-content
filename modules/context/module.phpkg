@@ -1,8 +1,4 @@
 # Recovery is explicitly accessible and AI-eligible; both private NPC kits bind it.
-module/v20 context
-exports = [ability.recover, encounter.practice]
-
-[export/map practice_map]
-target = map.practice
-
-[dependency player]
+module/v21 context
+dependencies = [training]
+exports = [ability.recover, encounter.practice, map.practice]

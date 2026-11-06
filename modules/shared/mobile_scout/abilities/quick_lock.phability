@@ -1,6 +1,5 @@
 # Watch the moving guard before choosing the shorter lock and narrower ground circle.
-ability/v4 quick_lock
-
+ability/v5 quick_lock
 
 [program]
 execution = tracking_ground_area/v1

@@ -1,25 +1,24 @@
-encounter/v14 practice
+encounter/v15 practice
 
 [spawn]
 placement = encounter_placement.advancer
-npc_template = npc.advancer
+npc_template = advancer
 stable_actor_key = actor.practice_advancer
 
 [spawn]
 placement = encounter_placement.left_sentry
-npc_template = npc.sentry
+npc_template = sentry
 stable_actor_key = actor.practice_left_sentry
 
 [spawn]
 placement = encounter_placement.right_sentry
-npc_template = npc.sentry
+npc_template = sentry
 stable_actor_key = actor.practice_right_sentry
 
 # The ordinary encounter-action selector grants Possess; class binding restores the bar.
 
-[grant possess]
-
-definition = ability.possess
+[grant.possess]
+definition = possess
 scope = participant
 slot = 4
 eligibility = avatar_only
@@ -29,9 +28,8 @@ context_access = none
 lifetime = encounter
 initial = false
 
-[grant return]
-
-definition = ability.return
+[grant.return]
+definition = return
 scope = override
 slot = 4
 eligibility = npc_only
@@ -41,16 +39,14 @@ context_access = none
 lifetime = override
 initial = false
 
-[state/bounded_int phase_pulses]
-
+[state.phase_pulses/bounded_int]
 maximum = 65535
 initial = 0
 reset = encounter/v1
 
 # Players can escape two anchored tracking applications before any NPC has spawned.
 
-[phase prelude]
-
+[phase.prelude]
 initial = true
 duration_ms = 20000
 next = pressure
@@ -61,8 +57,7 @@ restart_after_ms = 0
 
 # A phase and a sentry mode request the same immutable channel from the same actor.
 
-[phase pressure]
-
+[phase.pressure]
 initial = false
 duration_ms = 12000
 next = rest
@@ -77,8 +72,7 @@ npc_ability = pressure
 start_after_ms = 700
 restart_after_ms = 6000
 
-[phase rest]
-
+[phase.rest]
 initial = false
 duration_ms = 8000
 next = pressure
@@ -93,7 +87,7 @@ restart_after_ms = 0
 phase = pressure
 order = 1
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.sentry
+behavior = sentry
 mode = recover
 after_ms = 3000
 
@@ -101,7 +95,7 @@ after_ms = 3000
 phase = pressure
 order = 2
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.sentry
+behavior = sentry
 mode = recover
 after_ms = 9300
 
@@ -109,7 +103,7 @@ after_ms = 9300
 phase = rest
 order = 1
 npc_placement = encounter_placement.left_sentry
-behavior = behavior.sentry
+behavior = sentry
 mode = pressure
 after_ms = 1000
 
@@ -121,8 +115,7 @@ amount = 1
 
 # One finite encounter pool. Phase changes do not refill it; Retry does.
 
-[resource/bounded_int pressure_charge]
-
+[resource.pressure_charge/bounded_int]
 maximum = 168
 initial = 168
 reset = initial
@@ -130,9 +123,8 @@ ownership = encounter
 
 # Slot 4 alternatives replace each other atomically; no additional initial grant.
 
-[grant tracking]
-
-definition = ability.tracking
+[grant.tracking]
+definition = tracking
 scope = participant
 slot = 4
 eligibility = avatar_only
@@ -142,9 +134,8 @@ context_access = none
 lifetime = encounter
 initial = false
 
-[grant secure_beacon]
-
-definition = ability.interact
+[grant.secure_beacon]
+definition = interact
 object = beacon
 anchor = beacon_anchor
 scope = participant
@@ -167,15 +158,13 @@ reset = settle_owned_then_fresh_attempt/v1
 # Exact public capability for the real advancing actor; no fifth kit or actor.
 
 [class_context]
-class = class.advancer
+class = advancer
 object = beacon
 
-[object beacon]
-
+[object.beacon]
 phase = pressure
 after_ms = 1000
-x_mm = 0
-z_mm = -1000
+position_xz_mm = (0, -1000)
 range_mm = 2000
 required_progress = 3
 anchor = beacon_anchor
@@ -184,25 +173,20 @@ access = public_interaction/v1
 eligibility = live_avatar_in_range/v1
 link_lifetime = exact_owned_generation/v1
 
-[anchor beacon_anchor]
-
-x_mm = 0
-z_mm = -1000
+[anchor.beacon_anchor]
+position_xz_mm = (0, -1000)
 capture = immutable_world_position/v1
 support = canonical_destination/v1
 missing = reject_no_retarget/v1
 
-[anchor pressure_origin]
-
-x_mm = 0
-z_mm = -7500
+[anchor.pressure_origin]
+position_xz_mm = (0, -7500)
 capture = immutable_world_position/v1
 support = canonical_destination/v1
 missing = reject_no_retarget/v1
 
-[executor ground_pressure]
-
-definition = ability.tracking
+[executor.ground_pressure]
+definition = tracking
 origin_anchor = pressure_origin
 origin_y_mm = 0
 target_query = nearest_live_player_class_body/v1
