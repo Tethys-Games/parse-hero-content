@@ -1,8 +1,8 @@
-ability/v5 channel
+ability/v6 channel
 
 [program]
 execution = paid_channel/v1
-target = nearest_hostile/v1
+target = actor/v1
 cost = 12
 cooldown_ms = 2400
 category = spell/v1

@@ -1,5 +1,15 @@
 # Trusted contribution and compatible cutover
 
+The explicit-targeting review candidate uses compiler/capability34, semantic compiler34,
+class16/ability6 and protocol34, retaining identity3. Its application source is PR527.
+The published compiler33 validator and active workflow remain unchanged and reject this
+candidate. Use the rebuilt application workshop check for candidate validation. Later
+activation must review compatible immutable validator bytes and pins, the trusted workflow,
+original-source/queue proof and protected content integration together. Keep the complete
+compiler33 set at content main `a241066437d237a382557265bf82175073f575fb` as the public
+incumbent until that separately authorized cutover. The existing compiler32 rollback and
+historical receipts below retain their original scope.
+
 The original authored PR and exact merge-queue candidate validate read-only through
 one externally pinned managed semantic preparer. This guide defines compatibility,
 distribution and rollback. [PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7)

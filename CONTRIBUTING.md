@@ -6,7 +6,7 @@ have one physical owner. Keep local symbols and meaningful ordering. Paths, comm
 and whitespace do not change a revision; gameplay and exact dependency changes do.
 Do not enter generated IDs, hashes or a revision argument, or commit `release.json`.
 
-Start a definition with its kind/version and local name, for example `ability/v5 channel`.
+Start a definition with its kind/version and local name, for example `ability/v6 channel`.
 Use schema-defined named sections, such as `[resource.focus/bounded_int]` and `[action.channel]`.
 A `module/v21` manifest declares exports and dependency slots. Recognized files below
 its directory belong to that module unless a child module starts a new boundary.
