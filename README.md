@@ -16,7 +16,7 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This review candidate requires compiler/capability34 and uses compact declarations
+This content revision requires compiler/capability34 and uses compact declarations
 such as `class/v16 trainee`, named
 sections such as `[action.channel]`, and generic `module/v21` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
@@ -30,18 +30,12 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Actor-targeted programs use `target = actor/v1` or `actor_execution/v1` in ability6
-and class16. Human input captures the selected body; existing automated producers
-query once and submit an exact target. Direct encounter queries remain unchanged.
-
-Use the application PR527 candidate with compiler/capability34, semantic contract34,
-identity3 and protocol34. `tools/validator.json` and the active trusted workflow still
-identify the published compiler33 validator, which is incompatible with this candidate.
-Validate locally with the rebuilt application workshop checker. A compatible validator
-publication, independent trusted-workflow activation and protected content-main integration
-require later review; this branch performs none of those actions.
-[Draft PR9](https://github.com/Tethys-Games/parse-hero-content/pull/9) records review and
-candidate status for the coordinated validator, trusted-workflow and content transition.
+Use an application and validator compatible with compiler/capability34, semantic
+contract34 and identity algorithm3. Transport compatibility is owned by the application.
+`tools/validator.json` identifies this revision's exact
+validator distribution; its presence does not establish publication or activation.
+The selected content PR records review and candidate status for the coordinated
+validator, trusted-workflow and content transition.
 The externally selected workflow remains the required validation gate; candidate YAML
 and local validation cannot replace it. Completed activation receipts belong in the
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).

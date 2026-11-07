@@ -15,7 +15,7 @@ omitting an export. Duplicate names in the same scope reject. Class-local names,
 artifact references, action bindings and stable actor keys keep their separate meanings.
 
 Public exports may expose class, encounter, map, ability, NPC and behavior definitions.
-Use `alias/export_name` only in a typed consumer that admits that kind. Exports must
+Use `alias/kind.export_name` only in a typed consumer that admits that kind. Exports must
 be owned locally; dependencies cannot be re-exported. A public NPC or behavior library
 needs no default play. Class `player_selectable` and encounter grants are separate permissions.
 
@@ -78,8 +78,8 @@ recursively acquired. Local M5 retains its ordinary folder capture behavior.
 The pin is trusted distribution metadata, not a contributor-selected executable.
 Offline users may pass `--kit-archive <path>`; all exact archive/manifest checks remain.
 If the selected kit has not been published, use its exact reviewed local archive or
-the application workshop check below. [PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7)
-records publication and activation status. No local kit installation or Godot
+the application workshop check below. The application workshop runbook
+records completed publication and activation. No local kit installation or Godot
 installation is needed for this validator.
 
 In the application checkout, workshop authors can instead run `python tools/workshop.py check`.
@@ -128,9 +128,9 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-This source revision requires compiler/capability33 and the compatible validator
-identified by `tools/validator.json`. [PR7](https://github.com/Tethys-Games/parse-hero-content/pull/7)
-records the coordinated transition's review and activation status. An externally
+This source revision requires compiler/capability34 and the compatible validator
+identified by `tools/validator.json`. The selected content PR records the coordinated
+transition's review and activation status. An externally
 selected older validator can reject newer content until its reviewed pin changes;
 keep that result visible and do not disable or bypass the gate. Local candidate
 validation is a separate result. Application integration, deployment and workshop
