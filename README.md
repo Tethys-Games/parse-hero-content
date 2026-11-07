@@ -16,8 +16,8 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This content revision requires compiler/capability33 and uses compact declarations
-such as `class/v15 trainee`, named
+This content revision requires compiler/capability34 and uses compact declarations
+such as `class/v16 trainee`, named
 sections such as `[action.channel]`, and generic `module/v21` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
 range map together; context and mobile-scout keep separate owners. `workspace.json`
@@ -30,11 +30,12 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use an application and validator compatible with compiler/capability33, semantic
-contract33 and protocol33. `tools/validator.json` identifies this revision's exact
+Use an application and validator compatible with compiler/capability34, semantic
+contract34 and identity algorithm3. Transport compatibility is owned by the application.
+`tools/validator.json` identifies this revision's exact
 validator distribution; its presence does not establish publication or activation.
-[Draft PR9](https://github.com/Tethys-Games/parse-hero-content/pull/9) records review and
-candidate status for the coordinated validator, trusted-workflow and content transition.
+The selected content PR records review and candidate status for the coordinated
+validator, trusted-workflow and content transition.
 The externally selected workflow remains the required validation gate; candidate YAML
 and local validation cannot replace it. Completed activation receipts belong in the
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).

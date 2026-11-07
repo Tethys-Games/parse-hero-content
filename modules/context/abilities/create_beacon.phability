@@ -1,4 +1,4 @@
-ability/v5 create_beacon
+ability/v6 create_beacon
 
 executor_context = actor/v1
 object_context = public_object/v1
