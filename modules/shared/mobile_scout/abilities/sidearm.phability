@@ -1,5 +1,5 @@
 # Short commitment and short projectile flight support a closer positioning choice.
-ability/v5 sidearm
+ability/v6 sidearm
 
 [program]
 preset = ranged_starter/v1
