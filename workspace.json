@@ -58,6 +58,12 @@
       "additional_classes": [
         "mobile_scout/class.scout"
       ]
+    },
+    {
+      "name": "training-dummy-quick",
+      "player": "training/class.trainee",
+      "encounter": "training_dummy/encounter.training_dummy_quick",
+      "map": "training_dummy/map.training_dummy_quick"
     }
   ]
 }

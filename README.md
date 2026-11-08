@@ -16,12 +16,15 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This content revision requires compiler/capability34 and uses compact declarations
+This Draft candidate requires compiler/capability36 and uses compact declarations
 such as `class/v16 trainee`, named
 sections such as `[action.channel]`, and generic `module/v21` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
 range map together; context and mobile-scout keep separate owners. `workspace.json`
-contains the four explicit plays, and `release-workspace.json` selects their names.
+preserves the four catalog plays and adds `training-dummy-quick`, an explicit 100-health
+respawn fixture using the existing trainee kit. The production dummy remains at 60,000
+health; both named roles use a three-second death respawn delay. Basic Classes and
+their two final plays are still being implemented in application PR527.
 Abilities are ordinary `.phability` definitions, including private possess/return.
 Classes bind them with concise actions; encounters own grants, state and schedules.
 All six admitted definition kinds can be public exports: class, encounter, map,
@@ -30,10 +33,11 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use an application and validator compatible with compiler/capability34, semantic
-contract34 and identity algorithm3. Transport compatibility is owned by the application.
-`tools/validator.json` identifies this revision's exact
-validator distribution; its presence does not establish publication or activation.
+Use the current application workshop reader compatible with compiler/capability36,
+semantic contract36 and identity algorithm3. Encounter source is `encounter/v16`.
+Transport compatibility is owned by the application. Public main, `tools/validator.json`
+and the trusted workflow remain on compiler34. That published validator is expected
+to reject this Draft grammar until a separately authorized public cutover.
 The selected content PR records review and candidate status for the coordinated
 validator, trusted-workflow and content transition.
 The externally selected workflow remains the required validation gate; candidate YAML
