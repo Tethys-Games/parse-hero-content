@@ -15,6 +15,10 @@
       }
     },
     {
+      "name": "basic_training",
+      "path": "modules/basic_training/module.phpkg"
+    },
+    {
       "name": "mobile_scout",
       "path": "modules/shared/mobile_scout/module.phpkg",
       "bindings": {

@@ -1,0 +1,9 @@
+# Explicit low-health fixture for bounded repeated death/respawn checks.
+# The production training_dummy remains at 60000 health.
+npc/v5 training_dummy_quick
+
+archetype_key = installed.npc.basic_walker_pool
+behavior = stationary
+health = 100
+radius_mm = 500
+height_mm = 1800

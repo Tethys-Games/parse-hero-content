@@ -1,0 +1,6 @@
+encounter/v15 training_dummy
+
+[spawn]
+placement = encounter_placement.dummy
+npc_template = training_dummy
+stable_actor_key = actor.training_dummy

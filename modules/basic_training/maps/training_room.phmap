@@ -1,0 +1,27 @@
+map/v5 training_room
+
+[ground_region.training_room]
+top_height_mm = 0
+points_xz_mm = [
+    (-16000, -16000),
+    (16000, -16000),
+    (16000, 16000),
+    (-16000, 16000),
+]
+
+[spawn.player_one]
+position_xyz_mm = (-600, 0, 2000)
+yaw_centi_deg = 0
+
+[spawn.player_two]
+position_xyz_mm = (600, 0, 2000)
+yaw_centi_deg = 0
+
+[encounter_placement.dummy]
+encounter_id = training_dummy
+position_xyz_mm = (0, 0, 0)
+yaw_centi_deg = 0
+trigger = trigger.training
+
+[trigger.training]
+kind = encounter_start
