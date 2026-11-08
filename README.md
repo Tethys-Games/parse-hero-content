@@ -16,7 +16,7 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This Draft candidate requires compiler/capability36 and uses compact declarations
+This Draft candidate requires compiler/capability37 and uses compact declarations
 such as `class/v16 trainee`, named
 sections such as `[action.channel]`, and generic `module/v21` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
@@ -33,8 +33,10 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use the current application workshop reader compatible with compiler/capability36,
-semantic contract36 and identity algorithm3. Encounter source is `encounter/v16`.
+Use the current application workshop reader compatible with compiler/capability37,
+semantic contract37 and identity algorithm3. Encounter source is `encounter/v16`.
+Committed linear projectiles now retain their own captured binding and survive a later
+foreground cast; rich interactions and source completion keep their existing owners.
 Transport compatibility is owned by the application. Public main, `tools/validator.json`
 and the trusted workflow remain on compiler34. That published validator is expected
 to reject this Draft grammar until a separately authorized public cutover.
