@@ -15,8 +15,8 @@
       }
     },
     {
-      "name": "basic_training",
-      "path": "modules/basic_training/module.phpkg"
+      "name": "training_dummy",
+      "path": "modules/training_dummy/module.phpkg"
     },
     {
       "name": "mobile_scout",

@@ -1,3 +1,0 @@
-module/v21 basic_training
-
-exports = [encounter.training_dummy, map.training_room]
