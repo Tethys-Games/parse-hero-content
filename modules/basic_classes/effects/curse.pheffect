@@ -1,0 +1,16 @@
+effect/v1 curse
+
+[periodic]
+duration_ms = 8000
+pulse_ms = 2000
+pulse_amount = 10
+grouping = source_target_definition/v1
+refresh = preserve_cadence_capture/v1
+source_lifetime = target_owned/v1
+periodic_cost = application_paid/v1
+
+[presentation]
+persistent = ring/v1
+pulse = flash/v1
+removal = fade/v1
+tint = violet/v1

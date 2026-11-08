@@ -1,4 +1,4 @@
-class/v16 sentry
+class/v17 sentry
 
 player_selectable = false
 
@@ -11,6 +11,7 @@ reset = initial
 
 [action.pressure]
 definition = training/ability.channel
+cooldown_group = shared_actor/v1
 
 [action.recover]
 definition = ability.recover

@@ -1,4 +1,4 @@
-class/v16 advancer
+class/v17 advancer
 
 player_selectable = false
 
@@ -9,6 +9,7 @@ reset = initial
 
 [action.tracking]
 definition = ability.tracking
+cooldown_group = shared_actor/v1
 
 # Exactly the sentry's accessible recovery definition, applied to this actor's charge.
 
@@ -19,3 +20,4 @@ definition = ability.recover
 
 [action.raise_beacon]
 definition = ability.create_beacon
+cooldown_group = shared_actor/v1

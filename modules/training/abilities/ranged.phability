@@ -1,8 +1,26 @@
-ability/v6 ranged
+ability/v7 ranged
 
 [program]
-preset = ranged_starter/v1
+execution = staged/v1
+category = spell/v1
+potency = definition_only/v1
+
+[activation]
+kind = cast/v1
 cast_ms = 700
 cost = 18
 cooldown_ms = 1000
+locomotion = interrupt_voluntary/v1
+
+[target]
+kind = facing_trajectory/v1
+
+[delivery]
+kind = linear/v1
+speed_mm_per_second = 12000
+radius_mm = 150
+lifetime_ms = 3000
+
+[payload]
+operation = damage/v1
 amount = 24

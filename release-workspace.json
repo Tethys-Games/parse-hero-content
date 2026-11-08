@@ -20,6 +20,16 @@
       "id": "outpost",
       "workspace": "workspace.json",
       "play": "outpost"
+    },
+    {
+      "id": "training-dummy-melee",
+      "workspace": "workspace.json",
+      "play": "training-dummy-melee"
+    },
+    {
+      "id": "training-dummy-ranged",
+      "workspace": "workspace.json",
+      "play": "training-dummy-ranged"
     }
   ]
 }

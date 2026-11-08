@@ -1,5 +1,21 @@
-ability/v6 recharge
+ability/v7 recharge
 
 [program]
-preset = recovery_starter/v1
+execution = staged/v1
+category = utility/v1
+potency = definition_only/v1
+
+[activation]
+kind = instant/v1
+cost = 0
+cooldown_ms = 0
+
+[target]
+kind = self/v1
+
+[delivery]
+kind = direct/v1
+
+[payload]
+operation = recover_resource/v1
 amount = 17 # Charge recovery is not health restoration.

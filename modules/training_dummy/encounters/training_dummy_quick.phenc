@@ -1,5 +1,5 @@
 # Explicit 100-health fixture; production uses training_dummy and 60000 health.
-encounter/v16 training_dummy_quick
+encounter/v17 training_dummy_quick
 
 [spawn]
 placement = encounter_placement.dummy

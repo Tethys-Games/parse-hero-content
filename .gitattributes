@@ -2,6 +2,7 @@
 *.phpkg -text -ident !eol !filter !working-tree-encoding
 *.phclass -text -ident !eol !filter !working-tree-encoding
 *.phability -text -ident !eol !filter !working-tree-encoding
+*.pheffect -text -ident !eol !filter !working-tree-encoding
 *.phnpc -text -ident !eol !filter !working-tree-encoding
 *.phbeh -text -ident !eol !filter !working-tree-encoding
 *.phenc -text -ident !eol !filter !working-tree-encoding

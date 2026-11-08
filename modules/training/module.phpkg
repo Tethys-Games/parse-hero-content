@@ -1,2 +1,2 @@
-module/v21 training
+module/v22 training
 exports = [class.trainee, encounter.training, map.range, ability.channel]

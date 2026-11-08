@@ -1,4 +1,4 @@
-class/v16 guard
+class/v17 guard
 
 player_selectable = false
 
@@ -9,3 +9,4 @@ reset = initial
 
 [action.pressure]
 definition = ability.channel
+cooldown_group = shared_actor/v1
