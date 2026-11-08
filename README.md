@@ -16,18 +16,16 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This Draft candidate requires compiler/capability38 and uses compact declarations
+This content revision requires compiler/capability38 and uses compact declarations
 such as `class/v17 trainee`, named
 sections such as `[action.channel]`, and generic `module/v22` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
-range map together; context and mobile-scout keep separate owners. `workspace.json`
-preserves the four existing catalog plays and adds `training-dummy-melee` and
-`training-dummy-ranged`. Each admits both Basic Classes with independent action
-cooldowns. Existing practice kits explicitly retain their shared timing; recovery
-remains self-bound resource recovery. The production dummy has 60,000 health and a
-three-second death respawn delay. Separately named `training-dummy-quick` workspace
-fixtures use 100 health for bounded lifecycle checks. Application PR527 still owns
-the unfinished presentation, migration regression and current-product qualification work.
+range map together; context and mobile-scout keep separate owners. Basic Classes owns
+the Melee/Ranged classes and reusable Curse; Training Dummy owns its health-only targets,
+encounters and maps. `workspace.json` names all nine plays across these five modules.
+`release-workspace.json` exposes six: training, context, context-shared, outpost,
+training-dummy-melee and training-dummy-ranged. The three quick workspace fixtures remain
+local selections; the public dummy has 60,000 health and a three-second respawn.
 Abilities are ordinary `.phability` definitions, including private possess/return.
 Classes bind them with concise actions; encounters own grants, state and schedules.
 All seven admitted definition kinds can be public exports: class, encounter, map,
@@ -36,14 +34,10 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use the current application workshop reader compatible with compiler/capability38,
-semantic contract38 and identity algorithm3. Encounter source is `encounter/v17`;
-abilities use `ability/v7` and reusable effects use `effect/v1`.
-Committed linear projectiles now retain their own captured binding and survive a later
-foreground cast; rich interactions and source completion keep their existing owners.
-Transport compatibility is owned by the application. Public main, `tools/validator.json`
-and the trusted workflow remain on compiler34. That published validator is expected
-to reject this Draft grammar until a separately authorized public cutover.
+Use an application and validator compatible with compiler/capability38, semantic
+contract38 and identity algorithm3. Transport compatibility is owned by the application.
+`tools/validator.json` identifies this revision's exact
+validator distribution; its presence does not establish publication or activation.
 The selected content PR records review and candidate status for the coordinated
 validator, trusted-workflow and content transition.
 The externally selected workflow remains the required validation gate; candidate YAML
@@ -54,8 +48,8 @@ Application deployment and workshop freeze remain separate. See the
 anonymous shared-NAT limits.
 
 The supported closure is at most 256 canonical source records and 384 KiB, including
-all private definitions, module manifests and the selected descriptor. The current
-largest plays retain their complete private inventories within those same bounds.
+all private definitions, module manifests and the selected descriptor. Inspect each
+play's complete closure to measure its remaining capacity under the same byte bounds.
 Ordinary content edits reuse a compatible validator. Application workshop authors can
 use `python tools/workshop.py check` to build the shared reader incrementally and check
 their configured content checkout without publishing a kit. Existing published kits remain
@@ -70,14 +64,3 @@ Use `dependencies = [training]` to declare the exact module alias. An external n
 `training/class.trainee` always includes the exported kind. A class declares Boolean
 `player_selectable`. Encounter and map can both export `practice`. Edit
 `modules/context/encounters/practice.phenc` and explicitly restage the `context` play.
-
-From the configured application checkout, prepare either play with the maintained
-author command, then build/play its emitted selection using the workshop runbook:
-
-```powershell
-python tools/workshop.py author emit --play training-dummy-melee --output C:/dev/parse-hero-workshop-data/basic-melee-payload
-python tools/workshop.py author emit --play training-dummy-ranged --output C:/dev/parse-hero-workshop-data/basic-ranged-payload
-```
-
-Choose fresh output directories. These commands use the configured editable content
-checkout; published compiler34 tooling cannot read this Draft grammar.

@@ -6,21 +6,26 @@ have one physical owner. Keep local symbols and meaningful ordering. Paths, comm
 and whitespace do not change a revision; gameplay and exact dependency changes do.
 Do not enter generated IDs, hashes or a revision argument, or commit `release.json`.
 
-Start a definition with its kind/version and local name, for example `ability/v6 channel`.
+Start a definition with its kind/version and local name, for example `ability/v7 channel`.
 Use schema-defined named sections, such as `[resource.focus/bounded_int]` and `[action.channel]`.
-A `module/v21` manifest declares exports and dependency slots. Recognized files below
+A `module/v22` manifest declares exports and dependency slots. Recognized files below
 its directory belong to that module unless a child module starts a new boundary.
 Private unused definitions are still checked and retained; do not hide invalid work by
 omitting an export. Duplicate names in the same scope reject. Class-local names, typed
 artifact references, action bindings and stable actor keys keep their separate meanings.
 
-Public exports may expose class, encounter, map, ability, NPC and behavior definitions.
+Public exports may expose class, encounter, map, ability, effect, NPC and behavior definitions.
 Use `alias/kind.export_name` only in a typed consumer that admits that kind. Exports must
 be owned locally; dependencies cannot be re-exported. A public NPC or behavior library
 needs no default play. Class `player_selectable` and encounter grants are separate permissions.
 
 Write programs in `.phability` files and bind a class action with `definition`.
-Its single resource and actor-action cooldown infer their unique binding. Optional
+Staged plans serve ordinary actions; specialized plans retain their channel, tracking,
+release, world and grant behavior. Reusable `effect/v1` definitions in `.pheffect`
+files own periodic, mark or modifier payloads and resolve in their definition owner's
+typed module context. Explicit typed support slots bind shared effects.
+An action's resource binding is inferred when unique. Its action cooldown and any
+explicitly bound cooldown group keep independent readiness. Optional
 matching assertions normalize identically; contradictory assertions reject. Tracking's
 explicit actor-or-encounter permission and encounter access choices remain meaningful.
 Possess and return live in private files while the encounter keeps finite grants and
@@ -91,8 +96,8 @@ public promotion. Keep the published historical kits for exact pins and rollback
 A complete selected closure may contain at most 256 canonical source records and 384 KiB.
 Private definitions, module manifests and the generated descriptor all count. This is a
 combined count/byte limit, not permission for 256 maximum-sized files or new asset kinds.
-Current outpost/context-shared plays use 32 records and leave 224 record slots; active gameplay
-limits are unchanged. Public planning also checks 320 HTTP slots, 8 MiB charged I/O and
+Inspect each play's complete closure and active gameplay limits before adding content.
+Public planning also checks 320 HTTP slots, 8 MiB charged I/O and
 a complete 896 KiB archive, including mandatory inventory.
 
 ## GitHub web editor or fork
@@ -128,7 +133,7 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-This source revision requires compiler/capability34 and the compatible validator
+This source revision requires compiler/capability38 and the compatible validator
 identified by `tools/validator.json`. The selected content PR records the coordinated
 transition's review and activation status. An externally
 selected older validator can reject newer content until its reviewed pin changes;
