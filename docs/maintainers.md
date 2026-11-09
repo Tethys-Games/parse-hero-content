@@ -8,11 +8,12 @@ external-pin, protected-integration and public-acquisition receipts belong in th
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
 Neither these generated docs nor candidate YAML establish what is currently active.
 
-## Compiler38 candidate compatibility
+## Local edition candidate and public compiler38 compatibility
 
-The selected implementation requires capability38, semantic contract38, package22, module identity algorithm3,
-workspace5 named plays, catalog2 and mandatory capture/archive4. Class17, ability7
-and encounter17 version the shared program and normalized binding contract. Effect1
+The local edition candidate requires capability39, semantic contract39, package23,
+module identity algorithm4 and one immutable `edition = workshop_1` per authored module.
+Class18 and ability8 retire the separate combat-default assertion. Workspace5 named plays,
+catalog2, mandatory capture/archive4 and encounter17 retain their contracts. Effect1
 provides reusable typed periodic, rich mark and modifier definitions. NPC5,
 behavior5 and map5 retain their meanings. Transport compatibility remains application-owned; a compiler revision does not select a wire revision. The application Authoring
 Manual owns the exact language; this guide owns coordinated distribution.
@@ -22,8 +23,9 @@ and `mobile_scout` separate, and adds `basic_classes` and `training_dummy` owner
 catalog plays are training, context, context-shared, outpost, training-dummy-melee and
 training-dummy-ranged. All nine workspace plays are validated, including the three
 local quick fixtures; they do not add public catalog entries. `tools/validator.json`
-identifies this revision's compatible validator, while the organization rule independently
-selects the authoritative workflow. An older externally selected validator can reject
+retains the public compiler38 validator, while the organization rule independently
+selects its authoritative workflow. This local candidate needs the application's compiler39
+reader; the public helper/gate cannot qualify its newer grammar. An older externally selected validator can reject
 newer content until the coordinated pin change. Keep that result visible; candidate
 YAML and a local passing validator cannot replace the gate.
 
@@ -36,11 +38,12 @@ integration/deployment and workshop freeze remain separate. Existing releases re
 immutable. The cutover PR identifies the exact reviewed payloads and their actual disposition;
 these preparation instructions do not establish that an external change occurred.
 
-The reviewed corpus has these complete closure counts and cold browser plans. The source
+The retained compiler38 corpus had these complete closure counts and cold browser plans. The source
 record count includes every private definition, module manifest and the generated
 selection descriptor; runtime compiler auxiliaries are separate. The browser request
 count includes possible metadata CORS preflights. These are measured corpus facts,
-not extra admission limits; rerun the shared check after source or layout changes.
+not extra admission limits. Preserve them as compiler38 producer evidence; the local edition
+candidate's current shared check supplies its own plan and byte results.
 
 | Catalog selection | Canonical source records | Cold browser requests | Original source bytes | Mandatory archive bytes |
 | --- | ---: | ---: | ---: | ---: |
@@ -61,11 +64,13 @@ bounds remain. Byte, acquisition, inventory and exchange bounds apply independen
 current definition kinds are class, ability, effect, NPC, behavior, encounter and map;
 future asset kinds require their own contracts.
 
-## Immediate compiler34 reverse set
+## Public compiler38 transition's immediate compiler34 reverse set
 
-The compiler38 transition preserves the complete November7 compiler34 set as its
-immediate rollback. This table records the predecessor, not a claim that this
-candidate's publication, workflow activation or integration has completed.
+The completed compiler38 transition preserves the complete November7 compiler34 set as its
+immediate rollback. Its active compiler38 pins and full receipts remain in the application
+workshop runbook. That complete active compiler38 set is the prospective edition transition's
+immediate reverse set. The table below retains compiler38's historical predecessor;
+no edition-compatible publication, workflow activation or integration is selected here.
 
 | Boundary | Compatible predecessor |
 | --- | --- |
