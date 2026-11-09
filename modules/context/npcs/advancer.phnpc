@@ -1,4 +1,4 @@
-npc/v5 advancer
+npc advancer
 
 archetype_key = installed.npc.basic_walker_pool
 behavior = advancer

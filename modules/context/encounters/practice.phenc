@@ -1,4 +1,4 @@
-encounter/v17 practice
+encounter practice
 
 [spawn]
 placement = encounter_placement.advancer
@@ -23,7 +23,7 @@ scope = participant
 slot = 4
 eligibility = avatar_only
 retirement = cancel_now
-resource_owner = actor_class/v1
+resource_owner = actor_class
 context_access = none
 lifetime = encounter
 initial = false
@@ -34,7 +34,7 @@ scope = override
 slot = 4
 eligibility = npc_only
 retirement = cancel_now
-resource_owner = actor_class/v1
+resource_owner = actor_class
 context_access = none
 lifetime = override
 initial = false
@@ -42,7 +42,7 @@ initial = false
 [state.phase_pulses/bounded_int]
 maximum = 65535
 initial = 0
-reset = encounter/v1
+reset = encounter
 
 # Players can escape two anchored tracking applications before any NPC has spawned.
 
@@ -63,7 +63,7 @@ duration_ms = 12000
 next = rest
 spawn_placements = [encounter_placement.advancer, encounter_placement.left_sentry, encounter_placement.right_sentry]
 spawn_after_ms = 1000
-spawn_lifetime = encounter/v1
+spawn_lifetime = encounter
 world_ability = raise_beacon
 world_after_ms = 1400
 world_placement = encounter_placement.advancer
@@ -108,7 +108,7 @@ mode = pressure
 after_ms = 1000
 
 [phase_event]
-event = channel_pulse/v1
+event = channel_pulse
 field = phase_pulses
 
 amount = 1
@@ -129,7 +129,7 @@ scope = participant
 slot = 4
 eligibility = avatar_only
 retirement = cancel_now
-resource_owner = actor_class/v1
+resource_owner = actor_class
 context_access = none
 lifetime = encounter
 initial = false
@@ -142,18 +142,18 @@ scope = participant
 slot = 4
 eligibility = avatar_only
 retirement = cancel_now
-resource_owner = actor_class/v1
+resource_owner = actor_class
 context_access = public_object
 lifetime = encounter
 initial = false
 
 [composition]
 deadline_ms = 90000
-completion = completed_object/v1
+completion = completed_object
 completion_object = beacon
-after_completion = retain_for_retry/v1
-failure = deadline_or_avatar_death/v1
-reset = settle_owned_then_fresh_attempt/v1
+after_completion = retain_for_retry
+failure = deadline_or_avatar_death
+reset = settle_owned_then_fresh_attempt
 
 # Exact public capability for the real advancing actor; no fifth kit or actor.
 
@@ -169,27 +169,27 @@ range_mm = 2000
 required_progress = 3
 anchor = beacon_anchor
 completed_next = rest
-access = public_interaction/v1
-eligibility = live_avatar_in_range/v1
-link_lifetime = exact_owned_generation/v1
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
 
 [anchor.beacon_anchor]
 position_xz_mm = (0, -1000)
-capture = immutable_world_position/v1
-support = canonical_destination/v1
-missing = reject_no_retarget/v1
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
 
 [anchor.pressure_origin]
 position_xz_mm = (0, -7500)
-capture = immutable_world_position/v1
-support = canonical_destination/v1
-missing = reject_no_retarget/v1
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
 
 [executor.ground_pressure]
 definition = tracking
 origin_anchor = pressure_origin
 origin_y_mm = 0
-target_query = nearest_live_player_class_body/v1
+target_query = nearest_live_player_class_body
 resource = pressure_charge
 
 [executor_schedule]

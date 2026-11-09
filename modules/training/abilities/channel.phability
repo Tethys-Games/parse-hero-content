@@ -1,23 +1,23 @@
-ability/v7 channel
+ability channel
 
 [program]
-execution = paid_channel/v1
-target = actor/v1
+execution = paid_channel
+target = actor
 cost = 12
 cooldown_ms = 2400
-category = spell/v1
+category = spell
 ai_eligible = true
-capture = exact_target_at_press/v1
-origin_capture = activation_position/v1
-revalidation = each_pulse_exact_target_range/v1
-payment = per_pulse_actor_class/v1
-cooldown_commitment = first_successful_pulse/v1
-input = press_start_cancel/v1
-foreground = one/v1
-interruption = cancel_control_grant_actor_attempt_phase/v1
-failure = stop_preserve_committed/v1
-end = retire_no_outcome/v1
-events = channel_pulse_and_interrupted/v1
+capture = exact_target_at_press
+origin_capture = activation_position
+revalidation = each_pulse_exact_target_range
+payment = per_pulse_actor_class
+cooldown_commitment = first_successful_pulse
+input = press_start_cancel
+foreground = one
+interruption = cancel_control_grant_actor_attempt_phase
+failure = stop_preserve_committed
+end = retire_no_outcome
+events = channel_pulse_and_interrupted
 duration_ms = 4033
 pulse_count = 4
 first_pulse_ms = 1000

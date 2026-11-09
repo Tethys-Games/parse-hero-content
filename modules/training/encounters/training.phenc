@@ -1,4 +1,4 @@
-encounter/v17 training
+encounter training
 
 [spawn]
 placement = encounter_placement.guard
@@ -8,7 +8,7 @@ stable_actor_key = actor.range_guard
 [state.pulses/bounded_int]
 maximum = 65535
 initial = 0
-reset = encounter/v1
+reset = encounter
 
 [phase.pressure]
 initial = true
@@ -20,7 +20,7 @@ start_after_ms = 2500
 restart_after_ms = 6500
 
 [phase_event]
-event = channel_pulse/v1
+event = channel_pulse
 field = pulses
 
 amount = 1

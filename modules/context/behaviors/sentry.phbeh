@@ -1,4 +1,4 @@
-behavior/v5 sentry
+behavior sentry
 
 behavior_kind = finite_modes
 target_xz_mm = (-4500, -1500)
@@ -23,7 +23,7 @@ repeat_after_ms = 1000
 [transition]
 mode = pressure
 order = 1
-condition = own_resource/v1
+condition = own_resource
 comparison = lt
 value = 12
 after_ms = 100
@@ -32,7 +32,7 @@ next = recover
 [transition]
 mode = recover
 order = 1
-condition = own_resource/v1
+condition = own_resource
 comparison = ge
 value = 72
 after_ms = 2000

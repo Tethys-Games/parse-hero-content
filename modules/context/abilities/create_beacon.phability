@@ -1,17 +1,17 @@
-ability/v7 create_beacon
+ability create_beacon
 
-executor_context = actor/v1
-object_context = public_object/v1
+executor_context = actor
+object_context = public_object
 
 [program]
-execution = encounter_world_action/v1
-operation = create_obstacle/v1
-object = public_object/v1
+execution = encounter_world_action
+operation = create_obstacle
+object = public_object
 template = 1
 position_xz_mm = (0, -1000)
 cost = 0
 cooldown_ms = 0
 ai_eligible = true
-capture = exact_public_reference_at_press/v1
-failure = preserve_committed_prefix/v1
-support = canonical_destination/v1
+capture = exact_public_reference_at_press
+failure = preserve_committed_prefix
+support = canonical_destination

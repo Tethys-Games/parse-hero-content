@@ -1,3 +1,4 @@
-module/v22 basic_classes
+module basic_classes
+edition = workshop_1
 
 exports = [class.melee, class.ranged]

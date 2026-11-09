@@ -16,9 +16,10 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This content revision requires compiler/capability38 and uses compact declarations
-such as `class/v17 trainee`, named
-sections such as `[action.channel]`, and generic `module/v22` manifests. Adding a
+This candidate requires compiler/capability39. Each module declares the immutable
+`edition = workshop_1` once; owned files use declarations such as `class trainee`
+and typed policy names such as `staged`, `cast` and `root_translation`. Named
+sections such as `[action.channel]` remain unchanged. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
 range map together; context and mobile-scout keep separate owners. Basic Classes owns
 the Melee/Ranged classes and reusable Curse; Training Dummy owns its health-only targets,
@@ -34,10 +35,12 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use an application and validator compatible with compiler/capability38, semantic
-contract38 and identity algorithm3. Transport compatibility is owned by the application.
-`tools/validator.json` identifies this revision's exact
-validator distribution; its presence does not establish publication or activation.
+Use a locally built application and validator compatible with compiler/capability39,
+semantic contract39 and identity algorithm4. The module edition selects package23,
+class18 and ability8; the other definition contracts and transport are unchanged.
+The public validator and required gate remain compiler38. `tools/validator.json`
+retains that exact published distribution and cannot validate this newer candidate.
+Its expected incompatibility stays pending the separately authorized compatible cutover.
 The selected content PR records review and candidate status for the coordinated
 validator, trusted-workflow and content transition.
 The externally selected workflow remains the required validation gate; candidate YAML
