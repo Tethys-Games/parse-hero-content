@@ -1,0 +1,3 @@
+module/v22 basic_classes
+
+exports = [class.melee, class.ranged]

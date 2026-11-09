@@ -1,5 +1,5 @@
 # Original mobile-scout practice kit: quick casts, tighter tracking, smaller reserve.
-class/v16 scout
+class/v17 scout
 
 player_selectable = true
 
@@ -12,6 +12,7 @@ reset = initial
 
 [action.sidearm]
 definition = ability.sidearm
+cooldown_group = shared_actor/v1
 
 [action.recharge]
 definition = ability.recharge
@@ -20,9 +21,11 @@ definition = ability.recharge
 
 [action.quick_lock]
 definition = ability.quick_lock
+cooldown_group = shared_actor/v1
 
 [action.channel]
 definition = training/ability.channel # Same immutable definition, this actor's charge and cooldown.
+cooldown_group = shared_actor/v1
 
 [binding.1]
 action = sidearm

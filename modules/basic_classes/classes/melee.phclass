@@ -1,0 +1,20 @@
+class/v17 melee
+
+player_selectable = true
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.melee_attack]
+definition = ability.melee_attack
+
+[action.cleave]
+definition = ability.cleave
+
+[binding.1]
+action = melee_attack
+
+[binding.2]
+action = cleave

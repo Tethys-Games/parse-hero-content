@@ -1,4 +1,4 @@
-ability/v6 interact
+ability/v7 interact
 
 executor_context = actor/v1
 object_context = public_interaction/v1

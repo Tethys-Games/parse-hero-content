@@ -15,6 +15,10 @@
       }
     },
     {
+      "name": "training_dummy",
+      "path": "modules/training_dummy/module.phpkg"
+    },
+    {
       "name": "mobile_scout",
       "path": "modules/shared/mobile_scout/module.phpkg",
       "bindings": {
@@ -22,6 +26,10 @@
           "module": "training"
         }
       }
+    },
+    {
+      "name": "basic_classes",
+      "path": "modules/basic_classes/module.phpkg"
     }
   ],
   "plays": [
@@ -53,6 +61,48 @@
       "map": "context/map.practice",
       "additional_classes": [
         "mobile_scout/class.scout"
+      ]
+    },
+    {
+      "name": "training-dummy-quick",
+      "player": "training/class.trainee",
+      "encounter": "training_dummy/encounter.training_dummy_quick",
+      "map": "training_dummy/map.training_dummy_quick"
+    },
+    {
+      "name": "training-dummy-melee",
+      "player": "basic_classes/class.melee",
+      "encounter": "training_dummy/encounter.training_dummy",
+      "map": "training_dummy/map.training_dummy",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "training-dummy-ranged",
+      "player": "basic_classes/class.ranged",
+      "encounter": "training_dummy/encounter.training_dummy",
+      "map": "training_dummy/map.training_dummy",
+      "additional_classes": [
+        "basic_classes/class.melee"
+      ]
+    },
+    {
+      "name": "training-dummy-quick-melee",
+      "player": "basic_classes/class.melee",
+      "encounter": "training_dummy/encounter.training_dummy_quick",
+      "map": "training_dummy/map.training_dummy_quick",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "training-dummy-quick-ranged",
+      "player": "basic_classes/class.ranged",
+      "encounter": "training_dummy/encounter.training_dummy_quick",
+      "map": "training_dummy/map.training_dummy_quick",
+      "additional_classes": [
+        "basic_classes/class.melee"
       ]
     }
   ]

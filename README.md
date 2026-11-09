@@ -16,22 +16,26 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This content revision requires compiler/capability34 and uses compact declarations
-such as `class/v16 trainee`, named
-sections such as `[action.channel]`, and generic `module/v21` manifests. Adding a
+This content revision requires compiler/capability38 and uses compact declarations
+such as `class/v17 trainee`, named
+sections such as `[action.channel]`, and generic `module/v22` manifests. Adding a
 definition needs no source-list edit. Training owns its player, guard, encounter and
-range map together; context and mobile-scout keep separate owners. `workspace.json`
-contains the four explicit plays, and `release-workspace.json` selects their names.
+range map together; context and mobile-scout keep separate owners. Basic Classes owns
+the Melee/Ranged classes and reusable Curse; Training Dummy owns its health-only targets,
+encounters and maps. `workspace.json` names all nine plays across these five modules.
+`release-workspace.json` exposes six: training, context, context-shared, outpost,
+training-dummy-melee and training-dummy-ranged. The three quick workspace fixtures remain
+local selections; the public dummy has 60,000 health and a three-second respawn.
 Abilities are ordinary `.phability` definitions, including private possess/return.
 Classes bind them with concise actions; encounters own grants, state and schedules.
-All six admitted definition kinds can be public exports: class, encounter, map,
-ability, NPC and behavior. Exporting a definition does not grant play eligibility,
+All seven admitted definition kinds can be public exports: class, encounter, map,
+ability, effect, NPC and behavior. Exporting a definition does not grant play eligibility,
 activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use an application and validator compatible with compiler/capability34, semantic
-contract34 and identity algorithm3. Transport compatibility is owned by the application.
+Use an application and validator compatible with compiler/capability38, semantic
+contract38 and identity algorithm3. Transport compatibility is owned by the application.
 `tools/validator.json` identifies this revision's exact
 validator distribution; its presence does not establish publication or activation.
 The selected content PR records review and candidate status for the coordinated
@@ -44,8 +48,8 @@ Application deployment and workshop freeze remain separate. See the
 anonymous shared-NAT limits.
 
 The supported closure is at most 256 canonical source records and 384 KiB, including
-all private definitions, module manifests and the selected descriptor. The current
-largest plays use 32 records, leaving 224 record slots subject to the same byte bounds.
+all private definitions, module manifests and the selected descriptor. Inspect each
+play's complete closure to measure its remaining capacity under the same byte bounds.
 Ordinary content edits reuse a compatible validator. Application workshop authors can
 use `python tools/workshop.py check` to build the shared reader incrementally and check
 their configured content checkout without publishing a kit. Existing published kits remain

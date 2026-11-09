@@ -1,4 +1,4 @@
-class/v16 trainee
+class/v17 trainee
 
 player_selectable = true
 
@@ -9,15 +9,18 @@ reset = initial
 
 [action.ranged]
 definition = ability.ranged
+cooldown_group = shared_actor/v1
 
 [action.recover]
 definition = ability.recover
 
 [action.tracking]
 definition = ability.tracking
+cooldown_group = shared_actor/v1
 
 [action.channel]
 definition = ability.channel
+cooldown_group = shared_actor/v1
 
 [binding.1]
 action = ranged

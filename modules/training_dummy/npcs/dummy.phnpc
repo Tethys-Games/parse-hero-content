@@ -1,0 +1,7 @@
+npc/v5 dummy
+
+archetype_key = installed.npc.basic_walker_pool
+behavior = stationary
+health = 60000
+radius_mm = 500
+height_mm = 1800

@@ -8,16 +8,20 @@ external-pin, protected-integration and public-acquisition receipts belong in th
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
 Neither these generated docs nor candidate YAML establish what is currently active.
 
-## Compiler34 candidate compatibility
+## Compiler38 candidate compatibility
 
-The selected implementation requires capability34, semantic contract34, package21, module identity algorithm3,
-workspace5 named plays, catalog2 and mandatory capture/archive4. Class16, ability6
-and encounter15 version the shared program and normalized binding contract. NPC5,
+The selected implementation requires capability38, semantic contract38, package22, module identity algorithm3,
+workspace5 named plays, catalog2 and mandatory capture/archive4. Class17, ability7
+and encounter17 version the shared program and normalized binding contract. Effect1
+provides reusable typed periodic, rich mark and modifier definitions. NPC5,
 behavior5 and map5 retain their meanings. Transport compatibility remains application-owned; a compiler revision does not select a wire revision. The application Authoring
 Manual owns the exact language; this guide owns coordinated distribution.
 
-The corpus combines training's former player and encounter owners, keeps context
-and mobile-scout separate, and preserves all four play roles. `tools/validator.json`
+The five-module corpus combines training's player and encounter owners, keeps context
+and `mobile_scout` separate, and adds `basic_classes` and `training_dummy` owners. The six
+catalog plays are training, context, context-shared, outpost, training-dummy-melee and
+training-dummy-ranged. All nine workspace plays are validated, including the three
+local quick fixtures; they do not add public catalog entries. `tools/validator.json`
 identifies this revision's compatible validator, while the organization rule independently
 selects the authoritative workflow. An older externally selected validator can reject
 newer content until the coordinated pin change. Keep that result visible; candidate
@@ -32,38 +36,51 @@ integration/deployment and workshop freeze remain separate. Existing releases re
 immutable. The cutover PR identifies the exact reviewed payloads and their actual disposition;
 these preparation instructions do not establish that an external change occurred.
 
-The complete outpost and context-shared closures now retain exactly 32 canonical source
-records: 28 definitions, three module manifests and the generated selection descriptor.
-The supported 256-record ceiling leaves 224 records of count headroom. Training
-retains 12 records and context retains 27. Private possession and return definitions
-remain in that proof even when inactive. Canonical bytes remain bounded to 384 KiB and
+The reviewed corpus has these complete closure counts and cold browser plans. The source
+record count includes every private definition, module manifest and the generated
+selection descriptor; runtime compiler auxiliaries are separate. The browser request
+count includes possible metadata CORS preflights. These are measured corpus facts,
+not extra admission limits; rerun the shared check after source or layout changes.
+
+| Catalog selection | Canonical source records | Cold browser requests | Original source bytes | Mandatory archive bytes |
+| --- | ---: | ---: | ---: | ---: |
+| training | 12 | 23 | 7,638 | 140,323 |
+| context | 27 | 40 | 18,223 | 151,912 |
+| context-shared / outpost (each) | 32 | 49 | 20,702 | 154,846 |
+| training-dummy-melee / training-dummy-ranged (each) | 17 | 30 | 8,259 | 141,317 |
+
+The largest closure retains 28 definitions, three module manifests and one descriptor;
+the Basic Classes closures retain 14 definitions, two manifests and one descriptor.
+Private possession, return and quick-fixture definitions remain present even when
+inactive. Canonical bytes remain bounded to 384 KiB and
 exchange to 512 KiB; 256 maximum-sized files are not promised. Public acquisition admits
 320 HTTP slots and a complete archive of at most 896 KiB, with 256 body records plus
 the catalog and a 128 KiB header reservation. Mandatory inventory cannot be dropped.
 The original 45-second operation, 12-second request, two-body concurrency and 8 MiB I/O
-bounds remain. Byte, acquisition, inventory and exchange bounds apply independently. The six
-current definition kinds are admitted; future asset kinds require their own contracts.
+bounds remain. Byte, acquisition, inventory and exchange bounds apply independently. The seven
+current definition kinds are class, ability, effect, NPC, behavior, encounter and map;
+future asset kinds require their own contracts.
 
-## Immediate compiler33 reverse set
+## Immediate compiler34 reverse set
 
-The compiler34 transition preserves the complete November6 compiler33 set as its
+The compiler38 transition preserves the complete November7 compiler34 set as its
 immediate rollback. This table records the predecessor, not a claim that this
 candidate's publication, workflow activation or integration has completed.
 
 | Boundary | Compatible predecessor |
 | --- | --- |
-| Content main / tree | `a241066437d237a382557265bf82175073f575fb` / `14215a842d49059f0b0529b1f49e1806aa97701d` |
-| Validator producer / tag | `969377628c1b617dc9b2b1a11d1644849238783d` / `content-validator-969377628c1b` |
-| ZIP bytes / SHA256 | 37,977,865 / `f2ecfd1cf490afc63edde94a8fe12b494c45602c7569bd6a436103956471a91e` |
-| Separate manifest SHA256 | `e8c00f1fa65f96da3dd78d44c5be7cce51e5e6c56024079919d2175ec954ae9a` |
-| Producer inventory SHA256 | `b8c7a7a43b75583c3e66e23a2298ab66a645f348ddcc22a538136fe393e200a9` |
-| Workflow SHA / ref | `94e6d2386d37ba58d313046b6d42d0f5cd6995d3` / `refs/heads/codex/typed-symbols-structured-authoring` |
+| Content main / tree | `d55efac86ac5da7b48d2faa02a0c03d79fe2f9af` / `a8a42301567e9f082b0ad643d0d0501cffc896da` |
+| Validator producer / tag | `656aa24126d577d9beaf2a796d7b3f51dc517ac2` / `content-validator-656aa24126d5` |
+| ZIP bytes / SHA256 | 37,990,618 / `99f43f23322dd5f0ecae27c2e659bbded90a44fc78249b2112b6963a51ad3d43` |
+| Separate manifest SHA256 | `be88047d74a5a2e3785b2a72a199a372da809ca58026b36f3f28ac86e94f43dd` |
+| Producer inventory SHA256 | `f02bef6d5067a05bb2e49a88dd353abdae7cadcd59e9b8284f1f859b75e2b1f0` |
+| Workflow SHA / ref | `c513cfb193600daf966809aa46dcb9d50a830212` / `refs/heads/codex/explicit-actor-targets` |
 
 The workflow belongs to repository1428699425 at `.github/workflows/content.yml`
 under organization ruleset26232258. Its pre-squash workflow commit differs from
-the integrated content ancestor; rollback content uses `a2410664`, not `94e6d238`.
+the integrated content ancestor; rollback content uses `d55efac8`, not `c513cfb`.
 Restore the complete compatible set through normal protected forward commits and
-an explicitly selected external workflow update. Older compiler32 and compiler29
+an explicitly selected external workflow update. Older compiler33, compiler32 and compiler29
 sets remain historical in the application workshop record. Existing original-source
 and real-fork proofs retain their actual producers; repeat a trust-boundary proof
 only when that boundary changes. An old content pin cannot serve an incompatible authority.

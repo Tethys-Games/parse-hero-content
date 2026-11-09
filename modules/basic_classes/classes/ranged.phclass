@@ -1,0 +1,20 @@
+class/v17 ranged
+
+player_selectable = true
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.ranged_attack]
+definition = ability.ranged_attack
+
+[action.curse]
+definition = ability.curse
+
+[binding.1]
+action = ranged_attack
+
+[binding.2]
+action = curse
