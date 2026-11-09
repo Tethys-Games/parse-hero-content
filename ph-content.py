@@ -19,7 +19,7 @@ import time
 import urllib.request
 import zipfile
 
-PIN = {'schema_version': 1, 'platform': 'win-x64', 'url': 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-dd6bb0a3fd7d/ph-content-win-x64.zip', 'sha256': '93061b1a4ad652a420a8ca2e0382d2c737e1040cf54fd4d55608fbee110ab319', 'bytes': 38080852, 'kit_manifest_sha256': '022ce9112a54969fab395cb8c0a018643d02370a5e4c18fb40bef228c50b69bd', 'producer': 'dd6bb0a3fd7d3ffe8938c3a2a973bcd8953f05b6', 'producer_source_files_sha256': '4998badd3671ad7a6c3f4de5d9495d8b20cdc0bceaf62a6e54f8ee993711fe78', 'prerequisites': ['Python >=3.11', 'Git for Windows'], 'first_party_publication_terms': 'LicenseRef-ParseHero-Validator-1.0', 'public_helper_license': 'MIT', 'authored_content_license': 'MIT'}
+PIN = {'schema_version': 1, 'platform': 'win-x64', 'url': 'https://github.com/Tethys-Games/parse-hero-content/releases/download/content-validator-dd6bb0a3fd7d/ph-content-win-x64.zip', 'sha256': 'f1e18e833c70358dc3203893f15616bec86553b70d40434202ff00fee71dc914', 'bytes': 36900829, 'kit_manifest_sha256': 'c86a616406dc369372271324999d76bbc0dee035f3d7a5ef05b1beafd61142f0', 'producer': 'dd6bb0a3fd7d3ffe8938c3a2a973bcd8953f05b6', 'producer_source_files_sha256': 'a474c1b3a76a5c7aed1a3ee55c75e6225edcfdf65cd1eccfb5f3c979eedcac8e', 'prerequisites': ['Python >=3.11', 'Git for Windows'], 'first_party_publication_terms': 'LicenseRef-ParseHero-Validator-1.0', 'public_helper_license': 'MIT', 'authored_content_license': 'MIT'}
 MAX_ARCHIVE = 256 * 1024 * 1024
 MAX_EXTRACTED = 512 * 1024 * 1024
 MAX_FILES = 4096
