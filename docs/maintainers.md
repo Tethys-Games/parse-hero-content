@@ -8,24 +8,31 @@ external-pin, protected-integration and public-acquisition receipts belong in th
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
 Neither these generated docs nor candidate YAML establish what is currently active.
 
-## Local edition candidate and public compiler38 compatibility
+## Compiler39 candidate compatibility
 
-The local edition candidate requires capability39, semantic contract39, package23,
-module identity algorithm4 and one immutable `edition = workshop_1` per authored module.
-Class18 and ability8 retire the separate combat-default assertion. Workspace5 named plays,
-catalog2, mandatory capture/archive4 and encounter17 retain their contracts. Effect1
+The selected implementation requires capability39, semantic contract39, package23, module identity algorithm4,
+workspace5 named plays, catalog2 and mandatory capture/archive4. Class18, ability8
+and encounter17 version the shared program and normalized binding contract. Effect1
 provides reusable typed periodic, rich mark and modifier definitions. NPC5,
 behavior5 and map5 retain their meanings. Transport compatibility remains application-owned; a compiler revision does not select a wire revision. The application Authoring
 Manual owns the exact language; this guide owns coordinated distribution.
+
+Every source-owning module declares immutable `workshop_1`. Its registry-derived profile
+fingerprint is retained with the exact edition in canonical source and identity4 revision
+frames. Session preserves exact children without overriding their editions. Ordinary
+loading rejects compiler38-authored source; the explicit application `migrate-edition`
+operation captures that predecessor, writes fresh output and compares complete typed
+effective semantics. Old external pins remain unchanged unless complete migration inputs
+or an explicitly selected compatible replacement are supplied. Public compiler38 main and
+its trusted gate remain a separate compatible set until an authorized cutover.
 
 The five-module corpus combines training's player and encounter owners, keeps context
 and `mobile_scout` separate, and adds `basic_classes` and `training_dummy` owners. The six
 catalog plays are training, context, context-shared, outpost, training-dummy-melee and
 training-dummy-ranged. All nine workspace plays are validated, including the three
 local quick fixtures; they do not add public catalog entries. `tools/validator.json`
-retains the public compiler38 validator, while the organization rule independently
-selects its authoritative workflow. This local candidate needs the application's compiler39
-reader; the public helper/gate cannot qualify its newer grammar. An older externally selected validator can reject
+identifies this revision's compatible validator, while the organization rule independently
+selects the authoritative workflow. An older externally selected validator can reject
 newer content until the coordinated pin change. Keep that result visible; candidate
 YAML and a local passing validator cannot replace the gate.
 
@@ -64,7 +71,7 @@ bounds remain. Byte, acquisition, inventory and exchange bounds apply independen
 current definition kinds are class, ability, effect, NPC, behavior, encounter and map;
 future asset kinds require their own contracts.
 
-## Public compiler38 transition's immediate compiler34 reverse set
+## Historical compiler38 transition's compiler34 reverse set
 
 The completed compiler38 transition preserves the complete November7 compiler34 set as its
 immediate rollback. Its active compiler38 pins and full receipts remain in the application

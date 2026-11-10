@@ -8,7 +8,7 @@ Do not enter generated IDs, hashes or a revision argument, or commit `release.js
 
 Start a definition with its kind and local name, for example `ability channel`.
 Use schema-defined named sections, such as `[resource.focus/bounded_int]` and `[action.channel]`.
-A `module` manifest declares `edition = workshop_1` exactly once, exports and dependency slots. Recognized files below
+A `module` manifest declares `edition = workshop_1`, exports and dependency slots. Recognized files below
 its directory belong to that module unless a child module starts a new boundary.
 Private unused definitions are still checked and retained; do not hide invalid work by
 omitting an export. Duplicate names in the same scope reject. Class-local names, typed
@@ -56,11 +56,7 @@ non-corpus game assets and branding remain separately scoped in [NOTICE.md](NOTI
 ## Local editing on Windows
 
 Install Python 3.11 or later and Git for Windows, clone the repository, and edit source.
-This edition candidate requires the application's local compiler39 reader. Run
-`python tools/workshop.py check` from the configured application checkout. The public
-helper below still selects the exact compiler38 kit and cannot validate this candidate;
-keep that incompatibility visible until the separately selected compatible cutover.
-After a compatible kit is published and pinned, the ordinary optional check is:
+Run this optional check from the repository root:
 
 ```powershell
 .\ph-content.cmd check
@@ -137,10 +133,9 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-This source revision requires compiler/capability39, semantic39 and identity4.
-`tools/validator.json` intentionally retains the published compiler38 distribution;
-local candidate validation uses the compatible application reader. The selected content PR
-records review and candidate status. An externally
+This source revision requires compiler/capability39 and the compatible validator
+identified by `tools/validator.json`. The selected content PR records the coordinated
+transition's review and activation status. An externally
 selected older validator can reject newer content until its reviewed pin changes;
 keep that result visible and do not disable or bypass the gate. Local candidate
 validation is a separate result. Application integration, deployment and workshop
