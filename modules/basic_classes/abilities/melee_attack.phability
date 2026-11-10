@@ -1,27 +1,27 @@
-ability/v7 melee_attack
+ability melee_attack
 
 [program]
-execution = staged/v1
-category = melee/v1
+execution = staged
+category = melee
 
 [activation]
-kind = instant/v1
+kind = instant
 cost = 0
 cooldown_ms = 2000
 
 [target]
-kind = actor/v1
-range_metric = body_midpoint_3d/v1
+kind = actor
+range_metric = body_midpoint_3d
 range_mm = 2500
 facing_degrees = 90
 
 [delivery]
-kind = direct/v1
+kind = direct
 
 [payload]
-operation = damage/v1
+operation = damage
 amount = 50
 
 [presentation]
-impact = flash/v1
-tint = amber/v1
+impact = flash
+tint = amber

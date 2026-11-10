@@ -1,17 +1,17 @@
-ability/v7 interact
+ability interact
 
-executor_context = actor/v1
-object_context = public_interaction/v1
-anchor_context = object_anchor/v1
+executor_context = actor
+object_context = public_interaction
+anchor_context = object_anchor
 
 [program]
-execution = encounter_world_action/v1
-operation = interact_object/v1
-object = public_object/v1
+execution = encounter_world_action
+operation = interact_object
+object = public_object
 progress = 1
 cost = 4
 cooldown_ms = 700
 ai_eligible = false
-capture = exact_public_reference_at_press/v1
-failure = preserve_committed_prefix/v1
-support = canonical_destination/v1
+capture = exact_public_reference_at_press
+failure = preserve_committed_prefix
+support = canonical_destination

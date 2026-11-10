@@ -1,4 +1,4 @@
-npc/v5 guard
+npc guard
 
 archetype_key = installed.npc.basic_walker_pool
 behavior = guard

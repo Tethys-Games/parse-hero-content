@@ -1,4 +1,4 @@
-map/v5 training_dummy
+map training_dummy
 
 [ground_region.training_room]
 top_height_mm = 0

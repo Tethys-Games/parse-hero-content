@@ -1,4 +1,4 @@
-ability/v7 return
+ability return
 
 [program]
-execution = end_domination/v1
+execution = end_domination

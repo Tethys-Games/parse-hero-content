@@ -1,30 +1,30 @@
-ability/v7 cleave
+ability cleave
 
 [program]
-execution = staged/v1
-category = melee/v1
+execution = staged
+category = melee
 
 [activation]
-kind = cast/v1
+kind = cast
 cast_ms = 1000
 cost = 0
 cooldown_ms = 8500
-locomotion = root_translation/v1
+locomotion = root_translation
 
 [target]
-kind = facing_cone/v1
+kind = facing_cone
 range_mm = 4000
 facing_degrees = 90
 maximum_targets = 16
 
 [delivery]
-kind = direct/v1
+kind = direct
 
 [payload]
-operation = damage/v1
+operation = damage
 amount = 75
 
 [presentation]
-windup = cone_sector/v1
-impact = flash/v1
-tint = amber/v1
+windup = cone_sector
+impact = flash
+tint = amber

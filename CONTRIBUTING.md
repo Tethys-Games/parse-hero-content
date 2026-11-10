@@ -6,9 +6,9 @@ have one physical owner. Keep local symbols and meaningful ordering. Paths, comm
 and whitespace do not change a revision; gameplay and exact dependency changes do.
 Do not enter generated IDs, hashes or a revision argument, or commit `release.json`.
 
-Start a definition with its kind/version and local name, for example `ability/v7 channel`.
+Start a definition with its kind and local name, for example `ability channel`.
 Use schema-defined named sections, such as `[resource.focus/bounded_int]` and `[action.channel]`.
-A `module/v22` manifest declares exports and dependency slots. Recognized files below
+A `module` manifest declares `edition = workshop_1`, exports and dependency slots. Recognized files below
 its directory belong to that module unless a child module starts a new boundary.
 Private unused definitions are still checked and retained; do not hide invalid work by
 omitting an export. Duplicate names in the same scope reject. Class-local names, typed
@@ -21,7 +21,7 @@ needs no default play. Class `player_selectable` and encounter grants are separa
 
 Write programs in `.phability` files and bind a class action with `definition`.
 Staged plans serve ordinary actions; specialized plans retain their channel, tracking,
-release, world and grant behavior. Reusable `effect/v1` definitions in `.pheffect`
+release, world and grant behavior. Reusable `effect` definitions in `.pheffect`
 files own periodic, mark or modifier payloads and resolve in their definition owner's
 typed module context. Explicit typed support slots bind shared effects.
 An action's resource binding is inferred when unique. Its action cooldown and any
@@ -133,7 +133,7 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-This source revision requires compiler/capability38 and the compatible validator
+This source revision requires compiler/capability39 and the compatible validator
 identified by `tools/validator.json`. The selected content PR records the coordinated
 transition's review and activation status. An externally
 selected older validator can reject newer content until its reviewed pin changes;

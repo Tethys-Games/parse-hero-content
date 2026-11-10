@@ -1,4 +1,4 @@
-npc/v5 dummy
+npc dummy
 
 archetype_key = installed.npc.basic_walker_pool
 behavior = stationary

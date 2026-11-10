@@ -1,26 +1,26 @@
-ability/v7 curse
+ability curse
 
 [program]
-execution = staged/v1
-category = spell/v1
+execution = staged
+category = spell
 
 [activation]
-kind = instant/v1
+kind = instant
 cost = 0
 cooldown_ms = 1000
 
 [target]
-kind = actor/v1
-range_metric = body_midpoint_3d/v1
+kind = actor
+range_metric = body_midpoint_3d
 range_mm = 12000
 
 [delivery]
-kind = direct/v1
+kind = direct
 
 [payload]
-operation = apply_effect/v1
+operation = apply_effect
 effect = effect.curse
 
 [presentation]
-impact = flash/v1
-tint = violet/v1
+impact = flash
+tint = violet

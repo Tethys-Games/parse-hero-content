@@ -1,34 +1,34 @@
-ability/v7 ranged_attack
+ability ranged_attack
 
 [program]
-execution = staged/v1
-category = spell/v1
+execution = staged
+category = spell
 
 [activation]
-kind = cast/v1
+kind = cast
 cast_ms = 2000
 cost = 0
 cooldown_ms = 0
-locomotion = interrupt_voluntary/v1
+locomotion = interrupt_voluntary
 
 [target]
-kind = actor/v1
-range_metric = body_midpoint_3d/v1
+kind = actor
+range_metric = body_midpoint_3d
 range_mm = 12000
 facing_degrees = 90
 
 [delivery]
-kind = seeking/v1
+kind = seeking
 speed_mm_per_second = 3000
 radius_mm = 100
 lifetime_ms = 10000
 
 [payload]
-operation = damage/v1
+operation = damage
 amount = 40
 
 [presentation]
-windup = beam/v1
-flight = orb/v1
-impact = flash/v1
-tint = cyan/v1
+windup = beam
+flight = orb
+impact = flash
+tint = cyan

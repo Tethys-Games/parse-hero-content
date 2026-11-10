@@ -1,5 +1,5 @@
 # Original mobile-scout practice kit: quick casts, tighter tracking, smaller reserve.
-class/v17 scout
+class scout
 
 player_selectable = true
 

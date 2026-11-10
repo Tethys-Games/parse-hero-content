@@ -1,4 +1,4 @@
-behavior/v5 advancer
+behavior advancer
 
 behavior_kind = finite_modes
 target_xz_mm = (-1500, -3500)
@@ -27,7 +27,7 @@ repeat_after_ms = 1200
 [transition]
 mode = advance
 order = 1
-condition = arrived/v1
+condition = arrived
 comparison = eq
 value = true
 after_ms = 100
@@ -38,7 +38,7 @@ next = pressure
 [transition]
 mode = pressure
 order = 1
-condition = own_resource/v1
+condition = own_resource
 comparison = lt
 value = 28
 after_ms = 100
@@ -47,7 +47,7 @@ next = recover
 [transition]
 mode = pressure
 order = 2
-condition = elapsed/v1
+condition = elapsed
 comparison = eq
 value = true
 after_ms = 18000
@@ -56,7 +56,7 @@ next = recover
 [transition]
 mode = recover
 order = 1
-condition = own_resource/v1
+condition = own_resource
 comparison = ge
 value = 84
 after_ms = 2000
