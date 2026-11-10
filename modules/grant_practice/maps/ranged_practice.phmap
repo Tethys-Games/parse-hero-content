@@ -1,0 +1,22 @@
+map ranged_practice
+
+[ground_region.practice]
+top_height_mm = 0
+points_xz_mm = [(-18000, -18000), (18000, -18000), (18000, 18000), (-18000, 18000)]
+
+[spawn.player_one]
+position_xyz_mm = (-600, 0, 8000)
+yaw_centi_deg = 0
+
+[spawn.player_two]
+position_xyz_mm = (600, 0, 8000)
+yaw_centi_deg = 0
+
+[encounter_placement.opponent]
+encounter_id = ranged_practice
+position_xyz_mm = (0, 0, -7000)
+yaw_centi_deg = 18000
+trigger = trigger.practice
+
+[trigger.practice]
+kind = encounter_start

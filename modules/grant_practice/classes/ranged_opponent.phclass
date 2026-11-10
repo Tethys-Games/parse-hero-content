@@ -1,0 +1,13 @@
+class ranged_opponent
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.curse]
+definition = basics/ability.npc_curse
+
+[action.ranged_attack]
+definition = basics/ability.npc_ranged_attack

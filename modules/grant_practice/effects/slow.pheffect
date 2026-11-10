@@ -1,0 +1,16 @@
+effect slow
+disposition = harmful
+dispel_category = magic
+
+[movement]
+duration_ms = 5000
+movement_permille = 500
+group = 1
+grouping = strongest_source
+refresh = same_source
+source_lifetime = target_owned
+
+[presentation]
+persistent = ring
+removal = fade
+tint = cyan

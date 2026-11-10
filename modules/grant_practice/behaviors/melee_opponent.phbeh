@@ -1,0 +1,8 @@
+behavior melee_opponent
+behavior_kind = reactive
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+reactive_actions = [cleave, melee_attack]
+retreat_distance_mm = 0
+retreat_region_radius_mm = 14000
+retreat_stall_ms = 1000

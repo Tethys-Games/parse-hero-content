@@ -1,0 +1,7 @@
+npc melee_opponent
+archetype_key = installed.npc.basic_walker_pool
+behavior = melee_opponent
+kit = class.melee_opponent
+health = 1000
+radius_mm = 400
+height_mm = 1800

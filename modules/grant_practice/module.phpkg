@@ -1,0 +1,4 @@
+module grant_practice
+edition = workshop_1
+dependencies = [basics]
+exports = [encounter.melee_practice, map.melee_practice, encounter.ranged_practice, map.ranged_practice, ability.drifting_frost]

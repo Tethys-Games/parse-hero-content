@@ -30,6 +30,16 @@
       "id": "training-dummy-ranged",
       "workspace": "workspace.json",
       "play": "training-dummy-ranged"
+    },
+    {
+      "id": "grant-practice-melee",
+      "workspace": "workspace.json",
+      "play": "grant-practice-melee"
+    },
+    {
+      "id": "grant-practice-ranged",
+      "workspace": "workspace.json",
+      "play": "grant-practice-ranged"
     }
   ]
 }

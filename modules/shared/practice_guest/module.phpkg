@@ -1,0 +1,5 @@
+# Independently authored contributor. No encounter utility is in its base bar.
+module practice_guest
+edition = workshop_1
+dependencies = [basics, practice]
+exports = [class.visitor]

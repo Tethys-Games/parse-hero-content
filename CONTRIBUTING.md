@@ -22,7 +22,7 @@ needs no default play. Class `player_selectable` and encounter grants are separa
 Write programs in `.phability` files and bind a class action with `definition`.
 Staged plans serve ordinary actions; specialized plans retain their channel, tracking,
 release, world and grant behavior. Reusable `effect` definitions in `.pheffect`
-files own periodic, mark or modifier payloads and resolve in their definition owner's
+files own periodic, mark, modifier or movement payloads and resolve in their definition owner's
 typed module context. Explicit typed support slots bind shared effects.
 An action's resource binding is inferred when unique. Its action cooldown and any
 explicitly bound cooldown group keep independent readiness. Optional
@@ -31,6 +31,12 @@ explicit actor-or-encounter permission and encounter access choices remain meani
 Possess and return live in private files while the encounter keeps finite grants and
 state. The former encounter `[ability]` spelling is retired. Moving a program into a
 new file intentionally changes module identity; validation/import do not make that edit.
+
+The grant-practice candidate adds direct encounter ability grants, interaction-only
+acquisition, entitlement cooldowns, explicit friendly/self targeting, held protection,
+Interrupt, Dispel and reactive NPC priorities. It requires the local compiler40 reader.
+Keep the published compiler39 validator and trusted workflow pins unchanged during
+candidate review; use the application workshop's `check` and strict author emission route.
 
 A play selects explicit exported roots, for example `training/class.trainee`,
 `training/encounter.training` and `training/map.range`. Two distinct eligible classes

@@ -1,0 +1,28 @@
+# Ordinary NPC timing and AI eligibility variant.
+ability npc_curse
+
+[program]
+execution = staged
+ai_eligible = true
+category = spell
+
+[activation]
+kind = instant
+cost = 0
+cooldown_ms = 12000
+
+[target]
+kind = actor
+range_metric = body_midpoint_3d
+range_mm = 12000
+
+[delivery]
+kind = direct
+
+[payload]
+operation = apply_effect
+effect = effect.curse
+
+[presentation]
+impact = flash
+tint = violet

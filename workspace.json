@@ -30,6 +30,27 @@
     {
       "name": "basic_classes",
       "path": "modules/basic_classes/module.phpkg"
+    },
+    {
+      "name": "grant_practice",
+      "path": "modules/grant_practice/module.phpkg",
+      "bindings": {
+        "basics": {
+          "module": "basic_classes"
+        }
+      }
+    },
+    {
+      "name": "practice_guest",
+      "path": "modules/shared/practice_guest/module.phpkg",
+      "bindings": {
+        "basics": {
+          "module": "basic_classes"
+        },
+        "practice": {
+          "module": "grant_practice"
+        }
+      }
     }
   ],
   "plays": [
@@ -103,6 +124,26 @@
       "map": "training_dummy/map.training_dummy_quick",
       "additional_classes": [
         "basic_classes/class.melee"
+      ]
+    },
+    {
+      "name": "grant-practice-melee",
+      "player": "practice_guest/class.visitor",
+      "encounter": "grant_practice/encounter.melee_practice",
+      "map": "grant_practice/map.melee_practice",
+      "additional_classes": [
+        "basic_classes/class.melee",
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "grant-practice-ranged",
+      "player": "practice_guest/class.visitor",
+      "encounter": "grant_practice/encounter.ranged_practice",
+      "map": "grant_practice/map.ranged_practice",
+      "additional_classes": [
+        "basic_classes/class.melee",
+        "basic_classes/class.ranged"
       ]
     }
   ]
