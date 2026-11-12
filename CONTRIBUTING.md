@@ -139,7 +139,7 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-This source revision requires compiler/capability39 and the compatible validator
+The retained public compiler39 source revision requires its compatible validator
 identified by `tools/validator.json`. The selected content PR records the coordinated
 transition's review and activation status. An externally
 selected older validator can reject newer content until its reviewed pin changes;

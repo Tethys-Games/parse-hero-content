@@ -53,7 +53,7 @@ Application deployment and workshop freeze remain separate. See the
 anonymous shared-NAT limits.
 
 Both grant practices start the player and enemy at 1,000 health. Right-click each
-pedestal to learn its utility on keys 5 and 6; the visitor's base actions remain on 1â€“4.
+pedestal to learn its utility on keys 5 and 6. Basic base actions remain on keys 1 and 2; keys 3 and 4 stay empty.
 Melee grants Slow (50% for five seconds; 12-second cooldown) and held Defend
 (one second, rooted and immune; 30-second cooldown). Ranged grants Interrupt
 (2,500 mm; six-second cooldown) and friendly/self Dispel (12,000 mm; eight-second cooldown).
