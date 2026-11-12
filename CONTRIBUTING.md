@@ -38,8 +38,8 @@ Interrupt, Dispel and reactive NPC priorities. It requires the local compiler40 
 Keep the published compiler39 validator and trusted workflow pins unchanged during
 candidate review; use the application workshop's `check` and strict author emission route.
 
-A play selects explicit exported roots, for example `training/class.trainee`,
-`training/encounter.training` and `training/map.range`. Two distinct eligible classes
+A play selects explicit exported roots, for example `basic_classes/class.melee`,
+`training_encounters/encounter.training_dummy` and `training_encounters/map.training_dummy`. Two distinct eligible classes
 from one module may participate; repeated aliases resolving to the same root reject.
 See the [Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 for the grammar, fixed encounter policy omissions and executable examples.
@@ -155,7 +155,7 @@ repeat traffic but do not guarantee cold-start availability. Wait for a reported
 limit to reset or use an explicitly selected compatible known-good/bundled payload.
 An assigned authority must acquire its exact pin or fail; it cannot use fallback.
 
-Use `dependencies = [training]` to declare the exact module alias. An external name such as
-`training/class.trainee` always includes the exported kind. A class declares Boolean
+Use `dependencies = [basics]` to declare the exact module alias. An external name such as
+`basic_classes/class.melee` always includes the exported kind. A class declares Boolean
 `player_selectable`. Encounter and map can both export `practice`. Edit
-`modules/context/encounters/practice.phenc` and explicitly restage the `context` play.
+`modules/training_encounters/encounters/melee_practice.phenc` and explicitly restage the `grant-practice-melee` play.

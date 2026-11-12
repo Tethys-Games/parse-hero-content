@@ -7,7 +7,7 @@ initial = 100
 reset = initial
 
 [action.curse]
-definition = basics/ability.npc_curse
+definition = ability.npc_curse
 
 [action.ranged_attack]
-definition = basics/ability.npc_ranged_attack
+definition = ability.npc_ranged_attack

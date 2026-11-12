@@ -8,33 +8,22 @@ external-pin, protected-integration and public-acquisition receipts belong in th
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
 Neither these generated docs nor candidate YAML establish what is currently active.
 
-## Compiler39 candidate compatibility
+## Unpublished practice candidate
 
-The selected implementation requires capability39, semantic contract39, package23, module identity algorithm4,
-workspace5 named plays, catalog2 and mandatory capture/archive4. Class18, ability8
-and encounter17 version the shared program and normalized binding contract. Effect1
-provides reusable typed periodic, rich mark and modifier definitions. NPC5,
-behavior5 and map5 retain their meanings. Transport compatibility remains application-owned; a compiler revision does not select a wire revision. The application Authoring
-Manual owns the exact language; this guide owns coordinated distribution.
+The selected candidate requires compiler/capability/semantic40, identity4,
+package23/class19/ability9/effect2/NPC5/behavior6/encounter18/map5 and `workshop_1`.
+Workspace5, catalog2 and capture/archive4 retain their contracts. The application
+manual owns the language and transport compatibility remains application-owned.
 
-Every source-owning module declares immutable `workshop_1`. Its registry-derived profile
-fingerprint is retained with the exact edition in canonical source and identity4 revision
-frames. Session preserves exact children without overriding their editions. Ordinary
-loading rejects compiler38-authored source; the explicit application `migrate-edition`
-operation captures that predecessor, writes fresh output and compares complete typed
-effective semantics. Old external pins remain unchanged unless complete migration inputs
-or an explicitly selected compatible replacement are supplied. Public compiler38 main and
-its trusted gate remain a separate compatible set until an authorized cutover.
+Exactly two modules, Basic Classes and Training Encounters, supply three public entries:
+`training-dummy`, `grant-practice-melee` and `grant-practice-ranged`. All private and
+inactive definitions validate; only each selected opponent activates alongside both
+Basics. Development composition and quick-dummy source is application-owned.
 
-The five-module corpus combines training's player and encounter owners, keeps context
-and `mobile_scout` separate, and adds `basic_classes` and `training_dummy` owners. The six
-catalog plays are training, context, context-shared, outpost, training-dummy-melee and
-training-dummy-ranged. All nine workspace plays are validated, including the three
-local quick fixtures; they do not add public catalog entries. `tools/validator.json`
-identifies this revision's compatible validator, while the organization rule independently
-selects the authoritative workflow. An older externally selected validator can reject
-newer content until the coordinated pin change. Keep that result visible; candidate
-YAML and a local passing validator cannot replace the gate.
+The active public main and enforced validator remain compiler39. `tools/validator.json`
+and the independently selected organization workflow have not changed. Keep this PR
+Draft until a separately authorized compatible cutover. A passing local current reader
+does not replace that public gate or authorize publication.
 
 Prepare immutable candidate validator bytes, archive/manifest SHA-256 pins, exact content
 and application heads, the trusted-workflow YAML and its future immutable commit pin.
@@ -59,10 +48,12 @@ candidate's current shared check supplies its own plan and byte results.
 | context-shared / outpost (each) | 32 | 49 | 20,702 | 154,846 |
 | training-dummy-melee / training-dummy-ranged (each) | 17 | 30 | 8,259 | 141,317 |
 
-The largest closure retains 28 definitions, three module manifests and one descriptor;
-the Basic Classes closures retain 14 definitions, two manifests and one descriptor.
-Private possession, return and quick-fixture definitions remain present even when
-inactive. Canonical bytes remain bounded to 384 KiB and
+That historical largest closure retained 28 definitions, three module manifests and one descriptor;
+those Basic Classes closures retained 14 definitions, two manifests and one descriptor.
+Their private possession, return and quick-fixture definitions were retained even when inactive.
+The current two-module candidate check measures each practice at 46 browser requests,
+13,233 original source bytes and 147,190 mandatory archive bytes. These candidate
+measurements do not relabel the historical table. Canonical bytes remain bounded to 384 KiB and
 exchange to 512 KiB; 256 maximum-sized files are not promised. Public acquisition admits
 320 HTTP slots and a complete archive of at most 896 KiB, with 256 body records plus
 the catalog and a 128 KiB header reservation. Mandatory inventory cannot be dropped.

@@ -7,7 +7,7 @@ initial = 100
 reset = initial
 
 [action.cleave]
-definition = basics/ability.npc_cleave
+definition = ability.npc_cleave
 
 [action.melee_attack]
-definition = basics/ability.npc_melee_attack
+definition = ability.npc_melee_attack

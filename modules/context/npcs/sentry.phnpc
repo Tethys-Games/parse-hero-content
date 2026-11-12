@@ -1,8 +1,0 @@
-npc sentry
-
-archetype_key = installed.npc.basic_walker_pool
-behavior = sentry
-kit = sentry
-health = 240
-radius_mm = 450
-height_mm = 1600

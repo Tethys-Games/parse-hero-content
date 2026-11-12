@@ -2,147 +2,44 @@
   "schema_version": 5,
   "modules": [
     {
-      "name": "training",
-      "path": "modules/training/module.phpkg"
-    },
-    {
-      "name": "context",
-      "path": "modules/context/module.phpkg",
-      "bindings": {
-        "training": {
-          "module": "training"
-        }
-      }
-    },
-    {
-      "name": "training_dummy",
-      "path": "modules/training_dummy/module.phpkg"
-    },
-    {
-      "name": "mobile_scout",
-      "path": "modules/shared/mobile_scout/module.phpkg",
-      "bindings": {
-        "training": {
-          "module": "training"
-        }
-      }
-    },
-    {
       "name": "basic_classes",
       "path": "modules/basic_classes/module.phpkg"
     },
     {
-      "name": "grant_practice",
-      "path": "modules/grant_practice/module.phpkg",
+      "name": "training_encounters",
+      "path": "modules/training_encounters/module.phpkg",
       "bindings": {
         "basics": {
           "module": "basic_classes"
-        }
-      }
-    },
-    {
-      "name": "practice_guest",
-      "path": "modules/shared/practice_guest/module.phpkg",
-      "bindings": {
-        "basics": {
-          "module": "basic_classes"
-        },
-        "practice": {
-          "module": "grant_practice"
         }
       }
     }
   ],
   "plays": [
     {
-      "name": "training",
-      "player": "training/class.trainee",
-      "encounter": "training/encounter.training",
-      "map": "training/map.range"
-    },
-    {
-      "name": "context",
-      "player": "training/class.trainee",
-      "encounter": "context/encounter.practice",
-      "map": "context/map.practice"
-    },
-    {
-      "name": "context-shared",
-      "player": "mobile_scout/class.scout",
-      "encounter": "context/encounter.practice",
-      "map": "context/map.practice",
-      "additional_classes": [
-        "training/class.trainee"
-      ]
-    },
-    {
-      "name": "outpost",
-      "player": "training/class.trainee",
-      "encounter": "context/encounter.practice",
-      "map": "context/map.practice",
-      "additional_classes": [
-        "mobile_scout/class.scout"
-      ]
-    },
-    {
-      "name": "training-dummy-quick",
-      "player": "training/class.trainee",
-      "encounter": "training_dummy/encounter.training_dummy_quick",
-      "map": "training_dummy/map.training_dummy_quick"
-    },
-    {
-      "name": "training-dummy-melee",
+      "name": "training-dummy",
       "player": "basic_classes/class.melee",
-      "encounter": "training_dummy/encounter.training_dummy",
-      "map": "training_dummy/map.training_dummy",
+      "encounter": "training_encounters/encounter.training_dummy",
+      "map": "training_encounters/map.training_dummy",
       "additional_classes": [
         "basic_classes/class.ranged"
-      ]
-    },
-    {
-      "name": "training-dummy-ranged",
-      "player": "basic_classes/class.ranged",
-      "encounter": "training_dummy/encounter.training_dummy",
-      "map": "training_dummy/map.training_dummy",
-      "additional_classes": [
-        "basic_classes/class.melee"
-      ]
-    },
-    {
-      "name": "training-dummy-quick-melee",
-      "player": "basic_classes/class.melee",
-      "encounter": "training_dummy/encounter.training_dummy_quick",
-      "map": "training_dummy/map.training_dummy_quick",
-      "additional_classes": [
-        "basic_classes/class.ranged"
-      ]
-    },
-    {
-      "name": "training-dummy-quick-ranged",
-      "player": "basic_classes/class.ranged",
-      "encounter": "training_dummy/encounter.training_dummy_quick",
-      "map": "training_dummy/map.training_dummy_quick",
-      "additional_classes": [
-        "basic_classes/class.melee"
       ]
     },
     {
       "name": "grant-practice-melee",
-      "player": "practice_guest/class.visitor",
-      "encounter": "grant_practice/encounter.melee_practice",
-      "map": "grant_practice/map.melee_practice",
+      "player": "basic_classes/class.melee",
+      "encounter": "training_encounters/encounter.melee_practice",
+      "map": "training_encounters/map.melee_practice",
       "additional_classes": [
-        "basic_classes/class.melee",
         "basic_classes/class.ranged"
       ]
     },
     {
       "name": "grant-practice-ranged",
-      "player": "practice_guest/class.visitor",
-      "encounter": "grant_practice/encounter.ranged_practice",
-      "map": "grant_practice/map.ranged_practice",
+      "player": "basic_classes/class.melee",
+      "encounter": "training_encounters/encounter.ranged_practice",
+      "map": "training_encounters/map.ranged_practice",
       "additional_classes": [
-        "basic_classes/class.melee",
         "basic_classes/class.ranged"
       ]
     }

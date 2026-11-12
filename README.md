@@ -20,18 +20,17 @@ This grant-practice candidate requires compiler/capability40. Each `module` mani
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
 named sections such as `[action.channel]`, and short policy names. Qualified current
 spellings assert the edition's contract and cannot override it. Adding a
-definition needs no source-list edit. Training owns its player, guard, encounter and
-range map together; context and mobile-scout keep separate owners. Basic Classes owns
-the Melee/Ranged classes and reusable Curse; Training Dummy owns its health-only targets,
-encounters and maps. Grant Practice owns two encounters, their NPC kits and optional
-grant objects; Practice Guest owns an independent four-action visitor class.
-`workspace.json` names eleven plays across seven modules.
-`release-workspace.json` selects eight: training, context, context-shared, outpost,
-training-dummy-melee, training-dummy-ranged, grant-practice-melee and grant-practice-ranged.
-The three quick workspace fixtures remain
-local selections; the public dummy has 60,000 health and a three-second respawn.
-Abilities are ordinary `.phability` definitions, including private possess/return.
-Classes bind them with concise actions; encounters own grants, state and schedules.
+definition needs no source-list edit. Exactly two production modules remain:
+`basic_classes` owns Melee/Ranged, their four reusable player abilities and shared Curse;
+`training_encounters` owns the dummy and both opponent practices, private NPC kits and
+variants, grant utilities and shared Slow. NPC Curse imports `basics/effect.curse`.
+The three workspace plays and public entries are `training-dummy` (Training Dummy),
+`grant-practice-melee` (Melee Opponent Practice) and `grant-practice-ranged` (Ranged
+Opponent Practice). Each retains both Basics in one immutable Session. A participant's
+personal choice does not change that Session's identity.
+The production dummy retains 60,000 health and a three-second respawn. Older Training,
+Context/Mobile Scout, Visitor/Frost and quick-dummy source now belongs to maintained
+application development fixtures, outside this production repository.
 All seven admitted definition kinds can be public exports: class, encounter, map,
 ability, effect, NPC and behavior. Exporting a definition does not grant play eligibility,
 activate it or authorize execution.
@@ -54,7 +53,7 @@ Application deployment and workshop freeze remain separate. See the
 anonymous shared-NAT limits.
 
 Both grant practices start the player and enemy at 1,000 health. Right-click each
-pedestal to learn its utility on keys 5 and 6; the visitor's base actions remain on 1–4.
+pedestal to learn its utility on keys 5 and 6; the visitor's base actions remain on 1â€“4.
 Melee grants Slow (50% for five seconds; 12-second cooldown) and held Defend
 (one second, rooted and immune; 30-second cooldown). Ranged grants Interrupt
 (2,500 mm; six-second cooldown) and friendly/self Dispel (12,000 mm; eight-second cooldown).
@@ -63,9 +62,9 @@ explicit friendly or self selection and consumes nothing when no eligible effect
 The ranged enemy's projectile casts for three seconds and cools down for four;
 Curse cools down for twelve. It retains a three-metre retreat goal only while both
 actions cool down. Invalid or stalled goals exhaust five candidates and hold.
-The visitor's Drifting Frost applies the same private movement effect through an ordinary
-seeking delivery. Both basics, the visitor and the selected enemy kit occupy exactly four
-installed kits; there is no support-only utility kit.
+The selected opponent and two Basics occupy three installed kits; the sibling opponent
+remains fully validated source but is inactive. The independent application fixture
+imports `practice/effect.slow` for its alternate delivery; no effect copy is required.
 
 The supported closure is at most 256 canonical source records and 384 KiB, including
 all private definitions, module manifests and the selected descriptor. Inspect each
@@ -80,7 +79,7 @@ Authored definitions, generated representations, documentation and helpers retai
 Parse Hero is permitted. Validator binaries retain their scoped free-use terms in
 [NOTICE.md](NOTICE.md). Application implementation and branding remain separate.
 
-Use `dependencies = [training]` to declare the exact module alias. An external name such as
-`training/class.trainee` always includes the exported kind. A class declares Boolean
-`player_selectable`. Encounter and map can both export `practice`. Edit
-`modules/context/encounters/practice.phenc` and explicitly restage the `context` play.
+Use `dependencies = [basics]` to declare the exact module alias. An external name such as
+`basics/effect.curse` includes its exported kind. A class declares Boolean
+`player_selectable`. Edit `modules/training_encounters/encounters/melee_practice.phenc`
+and explicitly restage the `grant-practice-melee` play.

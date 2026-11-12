@@ -21,7 +21,7 @@ kind = direct
 
 [payload]
 operation = apply_effect
-effect = effect.curse
+effect = basics/effect.curse
 
 [presentation]
 impact = flash

@@ -1,4 +1,0 @@
-module training_dummy
-edition = workshop_1
-
-exports = [encounter.training_dummy, map.training_dummy, encounter.training_dummy_quick, map.training_dummy_quick]

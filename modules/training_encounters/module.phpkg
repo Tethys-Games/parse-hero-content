@@ -1,0 +1,4 @@
+module training_encounters
+edition = workshop_1
+dependencies = [basics]
+exports = [encounter.training_dummy, map.training_dummy, encounter.melee_practice, map.melee_practice, encounter.ranged_practice, map.ranged_practice, effect.slow]

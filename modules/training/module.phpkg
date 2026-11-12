@@ -1,3 +1,0 @@
-module training
-edition = workshop_1
-exports = [class.trainee, encounter.training, map.range, ability.channel]
