@@ -34,7 +34,7 @@ new file intentionally changes module identity; validation/import do not make th
 
 The grant-practice candidate adds direct encounter ability grants, interaction-only
 acquisition, entitlement cooldowns, explicit friendly/self targeting, held protection,
-Interrupt, Dispel and reactive NPC priorities. It requires the local compiler40 reader.
+Interrupt, Dispel and reactive NPC priorities. It requires the local compiler41 reader.
 Keep the published compiler39 validator and trusted workflow pins unchanged during
 candidate review; use the application workshop's `check` and strict author emission route.
 

@@ -10,7 +10,7 @@ Neither these generated docs nor candidate YAML establish what is currently acti
 
 ## Unpublished practice candidate
 
-The selected candidate requires compiler/capability/semantic40, identity4,
+The selected candidate requires compiler/capability/semantic41, identity4,
 package23/class19/ability9/effect2/NPC5/behavior6/encounter18/map5 and `workshop_1`.
 Workspace5, catalog2 and capture/archive4 retain their contracts. The application
 manual owns the language and transport compatibility remains application-owned.
@@ -52,7 +52,7 @@ That historical largest closure retained 28 definitions, three module manifests 
 those Basic Classes closures retained 14 definitions, two manifests and one descriptor.
 Their private possession, return and quick-fixture definitions were retained even when inactive.
 The current two-module candidate check measures each practice at 46 browser requests,
-13,233 original source bytes and 147,190 mandatory archive bytes. These candidate
+13,159 original source bytes and 147,116 mandatory archive bytes. These candidate
 measurements do not relabel the historical table. Canonical bytes remain bounded to 384 KiB and
 exchange to 512 KiB; 256 maximum-sized files are not promised. Public acquisition admits
 320 HTTP slots and a complete archive of at most 896 KiB, with 256 body records plus
