@@ -16,7 +16,7 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This practice realignment candidate requires compiler/capability41. Each `module` manifest declares
+This content revision requires compiler/capability41. Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
 named sections such as `[action.channel]`, and short policy names. Qualified current
 spellings assert the edition's contract and cannot override it. Adding a
@@ -37,12 +37,11 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use an application and local validator compatible with compiler/capability41, semantic
+Use an application and validator compatible with compiler/capability41, semantic
 contract41 and identity algorithm4. Transport compatibility is owned by the application.
-The public validator in `tools/validator.json` and the enforced workflow still select
-compiler39. This candidate is intended for Draft review and strict unpublished local
-staging; it requires a separately authorized compatible publication and cutover before
-public-main acquisition. Local checks do not replace that gate.
+`tools/validator.json` identifies this revision's exact compatible validator distribution.
+Its presence does not establish publication or activation; the external workflow remains
+the required gate. Local checks do not replace that gate.
 The selected content PR records review and candidate status for the coordinated
 validator, trusted-workflow and content transition.
 The externally selected workflow remains the required validation gate; candidate YAML

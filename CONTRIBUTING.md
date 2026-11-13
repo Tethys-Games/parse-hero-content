@@ -32,11 +32,12 @@ Possess and return live in private files while the encounter keeps finite grants
 state. The former encounter `[ability]` spelling is retired. Moving a program into a
 new file intentionally changes module identity; validation/import do not make that edit.
 
-The grant-practice candidate adds direct encounter ability grants, interaction-only
-acquisition, entitlement cooldowns, explicit friendly/self targeting, held protection,
-Interrupt, Dispel and reactive NPC priorities. It requires the local compiler41 reader.
-Keep the published compiler39 validator and trusted workflow pins unchanged during
-candidate review; use the application workshop's `check` and strict author emission route.
+Grant practices use direct encounter ability grants, interaction-only acquisition,
+entitlement cooldowns, explicit friendly/self targeting, held protection, Interrupt,
+Dispel and reactive NPC priorities. They require the compatible compiler41 reader.
+Each play admits both Basic roots. Practice / Your class / Start practice selects a
+personal initial class without changing the shared Session identity; only its exact
+validated player and additional-class roots are offered.
 
 A play selects explicit exported roots, for example `basic_classes/class.melee`,
 `training_encounters/encounter.training_dummy` and `training_encounters/map.training_dummy`. Two distinct eligible classes
@@ -139,7 +140,7 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-The retained public compiler39 source revision requires its compatible validator
+This source revision requires compiler/capability41 and the compatible validator
 identified by `tools/validator.json`. The selected content PR records the coordinated
 transition's review and activation status. An externally
 selected older validator can reject newer content until its reviewed pin changes;
@@ -156,6 +157,6 @@ limit to reset or use an explicitly selected compatible known-good/bundled paylo
 An assigned authority must acquire its exact pin or fail; it cannot use fallback.
 
 Use `dependencies = [basics]` to declare the exact module alias. An external name such as
-`basic_classes/class.melee` always includes the exported kind. A class declares Boolean
+`basics/effect.curse` always includes the exported kind. A class declares Boolean
 `player_selectable`. Encounter and map can both export `practice`. Edit
 `modules/training_encounters/encounters/melee_practice.phenc` and explicitly restage the `grant-practice-melee` play.

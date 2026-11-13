@@ -8,9 +8,9 @@ external-pin, protected-integration and public-acquisition receipts belong in th
 [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md).
 Neither these generated docs nor candidate YAML establish what is currently active.
 
-## Unpublished practice candidate
+## Compiler41 compatibility
 
-The selected candidate requires compiler/capability/semantic41, identity4,
+The selected implementation requires compiler/capability41, semantic41, identity4,
 package23/class19/ability9/effect2/NPC5/behavior6/encounter18/map5 and `workshop_1`.
 Workspace5, catalog2 and capture/archive4 retain their contracts. The application
 manual owns the language and transport compatibility remains application-owned.
@@ -20,10 +20,9 @@ Exactly two modules, Basic Classes and Training Encounters, supply three public 
 inactive definitions validate; only each selected opponent activates alongside both
 Basics. Development composition and quick-dummy source is application-owned.
 
-The active public main and enforced validator remain compiler39. `tools/validator.json`
-and the independently selected organization workflow have not changed. Keep this PR
-Draft until a separately authorized compatible cutover. A passing local current reader
-does not replace that public gate or authorize publication.
+`tools/validator.json` identifies this revision's compatible distribution. The organization
+rule independently selects the required workflow. The content PR records review and
+activation status; generated pins and a passing local reader do not establish activation.
 
 Prepare immutable candidate validator bytes, archive/manifest SHA-256 pins, exact content
 and application heads, the trusted-workflow YAML and its future immutable commit pin.
@@ -38,8 +37,8 @@ The retained compiler38 corpus had these complete closure counts and cold browse
 record count includes every private definition, module manifest and the generated
 selection descriptor; runtime compiler auxiliaries are separate. The browser request
 count includes possible metadata CORS preflights. These are measured corpus facts,
-not extra admission limits. Preserve them as compiler38 producer evidence; the local edition
-candidate's current shared check supplies its own plan and byte results.
+not extra admission limits. Preserve them as compiler38 producer evidence; the current
+shared check supplies the three practices' own plan and byte results.
 
 | Catalog selection | Canonical source records | Cold browser requests | Original source bytes | Mandatory archive bytes |
 | --- | ---: | ---: | ---: | ---: |
@@ -51,9 +50,9 @@ candidate's current shared check supplies its own plan and byte results.
 That historical largest closure retained 28 definitions, three module manifests and one descriptor;
 those Basic Classes closures retained 14 definitions, two manifests and one descriptor.
 Their private possession, return and quick-fixture definitions were retained even when inactive.
-The current two-module candidate check measures each practice at 46 browser requests,
-13,159 original source bytes and 147,116 mandatory archive bytes. These candidate
-measurements do not relabel the historical table. Canonical bytes remain bounded to 384 KiB and
+The accepted two-module check at content `9df11871` measures each practice at 46 browser requests,
+13,159 original source bytes and 147,116 mandatory archive bytes. These measurements
+do not relabel the historical table; contributor-only pin changes preserve the gameplay closure. Canonical bytes remain bounded to 384 KiB and
 exchange to 512 KiB; 256 maximum-sized files are not promised. Public acquisition admits
 320 HTTP slots and a complete archive of at most 896 KiB, with 256 body records plus
 the catalog and a 128 KiB header reservation. Mandatory inventory cannot be dropped.
@@ -62,13 +61,35 @@ bounds remain. Byte, acquisition, inventory and exchange bounds apply independen
 current definition kinds are class, ability, effect, NPC, behavior, encounter and map;
 future asset kinds require their own contracts.
 
+## Compiler41 transition: complete compiler39 reverse set
+
+The compiler41 cutover preserves the active compiler39 set below as its immediate rollback.
+Keep content, validator and workflow identities together; the public squash and workflow
+source commits differ. Restore through a reviewed forward content commit and the exact
+previous external workflow entry, with ordinary protected review and queue enforcement.
+The application runbook owns live activation and all original evidence.
+
+| Boundary | Compatible compiler39 predecessor |
+| --- | --- |
+| Public content M0 / tree | `689a49d8a4e871f5b6ba0282061c7a76f82f0813` / `c79c19e06c1281b2aad25603aeb93059db505c31` |
+| Validator K0 / tree | `c078bc2e196def777a855cd5437657cb711f9eae` / `101047249d5b3ef05d8b5e9a75d0c2e9b6342135` |
+| Immutable release / target | `content-validator-c078bc2e196d` / `dab047c0e024d813f78b3acedc1de092df6213e5` |
+| ZIP bytes / SHA256 | 38,184,907 / `b010babb802b6b526937cef9d144fc7257cd7904a573efad4a077b2721f00034` |
+| Separate manifest SHA256 | `760c9ffbdc1673e446272c8412a89203c23d7d6d447079c9c353838edbd00f68` |
+| Producer inventory SHA256 | `f003caf7405e3f8f130ce2b7bb1c35b55a67f0ca36535b6876312ca1cc5f09d0` |
+| Workflow W0 / ref | `dab047c0e024d813f78b3acedc1de092df6213e5` / `refs/heads/codex/authoring-editions` |
+
+Organization rule26232258 selects repository1428699425, `.github/workflows/content.yml`.
+Repository rule26232299 retains its reviews, latest-push, stale-dismissal, resolved-thread,
+linear-history and single-PR squash-queue requirements. No bypass is part of this transition.
+
 ## Historical compiler38 transition's compiler34 reverse set
 
 The completed compiler38 transition preserves the complete November7 compiler34 set as its
 immediate rollback. Its active compiler38 pins and full receipts remain in the application
-workshop runbook. That complete active compiler38 set is the prospective edition transition's
-immediate reverse set. The table below retains compiler38's historical predecessor;
-no edition-compatible publication, workflow activation or integration is selected here.
+workshop runbook. Compiler38 was the completed compiler39 transition's immediate reverse
+set. The table below retains compiler38's historical predecessor; neither is the
+compiler41 transition's immediate rollback.
 
 | Boundary | Compatible predecessor |
 | --- | --- |
