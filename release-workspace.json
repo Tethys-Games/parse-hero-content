@@ -2,34 +2,19 @@
   "schema_version": 2,
   "entries": [
     {
-      "id": "training",
+      "id": "training-dummy",
       "workspace": "workspace.json",
-      "play": "training"
+      "play": "training-dummy"
     },
     {
-      "id": "context",
+      "id": "grant-practice-melee",
       "workspace": "workspace.json",
-      "play": "context"
+      "play": "grant-practice-melee"
     },
     {
-      "id": "context-shared",
+      "id": "grant-practice-ranged",
       "workspace": "workspace.json",
-      "play": "context-shared"
-    },
-    {
-      "id": "outpost",
-      "workspace": "workspace.json",
-      "play": "outpost"
-    },
-    {
-      "id": "training-dummy-melee",
-      "workspace": "workspace.json",
-      "play": "training-dummy-melee"
-    },
-    {
-      "id": "training-dummy-ranged",
-      "workspace": "workspace.json",
-      "play": "training-dummy-ranged"
+      "play": "grant-practice-ranged"
     }
   ]
 }

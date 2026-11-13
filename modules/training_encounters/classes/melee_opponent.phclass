@@ -1,0 +1,13 @@
+class melee_opponent
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.cleave]
+definition = ability.npc_cleave
+
+[action.melee_attack]
+definition = ability.npc_melee_attack

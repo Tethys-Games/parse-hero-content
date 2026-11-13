@@ -1,0 +1,53 @@
+encounter ranged_practice
+player_health = 1000
+
+[spawn]
+placement = encounter_placement.opponent
+npc_template = ranged_opponent
+stable_actor_key = actor.practice_opponent
+
+[grant.interrupt]
+definition = ability.interrupt
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.interrupt]
+grant = interrupt
+position_xz_mm = (-1500, 8500)
+range_mm = 2500
+after_ms = 0
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.dispel]
+definition = ability.dispel
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.dispel]
+grant = dispel
+position_xz_mm = (1500, 8500)
+range_mm = 2500
+after_ms = 0
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation

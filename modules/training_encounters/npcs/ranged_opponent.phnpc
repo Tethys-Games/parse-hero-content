@@ -1,0 +1,7 @@
+npc ranged_opponent
+archetype_key = installed.npc.basic_walker_pool
+behavior = ranged_opponent
+kit = class.ranged_opponent
+health = 1000
+radius_mm = 400
+height_mm = 1800

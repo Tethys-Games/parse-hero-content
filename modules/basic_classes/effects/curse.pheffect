@@ -1,4 +1,6 @@
 effect curse
+disposition = harmful
+dispel_category = magic
 
 [periodic]
 duration_ms = 8000

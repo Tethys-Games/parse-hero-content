@@ -1,0 +1,32 @@
+# Ordinary NPC timing and AI eligibility variant.
+ability npc_cleave
+
+[program]
+execution = staged
+ai_eligible = true
+category = melee
+
+[activation]
+kind = cast
+cast_ms = 1000
+cost = 0
+cooldown_ms = 8500
+locomotion = root_translation
+
+[target]
+kind = facing_cone
+range_mm = 4000
+facing_degrees = 90
+maximum_targets = 16
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 75
+
+[presentation]
+windup = cone_sector
+impact = flash
+tint = amber

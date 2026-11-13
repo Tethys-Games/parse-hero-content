@@ -22,7 +22,7 @@ needs no default play. Class `player_selectable` and encounter grants are separa
 Write programs in `.phability` files and bind a class action with `definition`.
 Staged plans serve ordinary actions; specialized plans retain their channel, tracking,
 release, world and grant behavior. Reusable `effect` definitions in `.pheffect`
-files own periodic, mark or modifier payloads and resolve in their definition owner's
+files own periodic, mark, modifier or movement payloads and resolve in their definition owner's
 typed module context. Explicit typed support slots bind shared effects.
 An action's resource binding is inferred when unique. Its action cooldown and any
 explicitly bound cooldown group keep independent readiness. Optional
@@ -32,8 +32,15 @@ Possess and return live in private files while the encounter keeps finite grants
 state. The former encounter `[ability]` spelling is retired. Moving a program into a
 new file intentionally changes module identity; validation/import do not make that edit.
 
-A play selects explicit exported roots, for example `training/class.trainee`,
-`training/encounter.training` and `training/map.range`. Two distinct eligible classes
+Grant practices use direct encounter ability grants, interaction-only acquisition,
+entitlement cooldowns, explicit friendly/self targeting, held protection, Interrupt,
+Dispel and reactive NPC priorities. They require the compatible compiler41 reader.
+Each play admits both Basic roots. Practice / Your class / Start practice selects a
+personal initial class without changing the shared Session identity; only its exact
+validated player and additional-class roots are offered.
+
+A play selects explicit exported roots, for example `basic_classes/class.melee`,
+`training_encounters/encounter.training_dummy` and `training_encounters/map.training_dummy`. Two distinct eligible classes
 from one module may participate; repeated aliases resolving to the same root reject.
 See the [Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 for the grammar, fixed encounter policy omissions and executable examples.
@@ -133,7 +140,7 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-This source revision requires compiler/capability39 and the compatible validator
+This source revision requires compiler/capability41 and the compatible validator
 identified by `tools/validator.json`. The selected content PR records the coordinated
 transition's review and activation status. An externally
 selected older validator can reject newer content until its reviewed pin changes;
@@ -149,7 +156,7 @@ repeat traffic but do not guarantee cold-start availability. Wait for a reported
 limit to reset or use an explicitly selected compatible known-good/bundled payload.
 An assigned authority must acquire its exact pin or fail; it cannot use fallback.
 
-Use `dependencies = [training]` to declare the exact module alias. An external name such as
-`training/class.trainee` always includes the exported kind. A class declares Boolean
+Use `dependencies = [basics]` to declare the exact module alias. An external name such as
+`basics/effect.curse` always includes the exported kind. A class declares Boolean
 `player_selectable`. Encounter and map can both export `practice`. Edit
-`modules/context/encounters/practice.phenc` and explicitly restage the `context` play.
+`modules/training_encounters/encounters/melee_practice.phenc` and explicitly restage the `grant-practice-melee` play.

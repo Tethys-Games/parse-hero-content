@@ -1,9 +1,0 @@
-# Explicit 100-health fixture; production uses training_dummy and 60000 health.
-encounter training_dummy_quick
-
-[spawn]
-placement = encounter_placement.dummy
-npc_template = dummy_quick
-stable_actor_key = actor.training_dummy
-respawn = on_death
-respawn_delay_ms = 3000
