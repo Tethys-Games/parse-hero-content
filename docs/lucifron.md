@@ -14,8 +14,8 @@ tools do not block Pull and do not receive automatic replacement coverage.
 
 Pull freezes actual human membership and admits Lucifron plus exactly two Protectors.
 Solo also gets one allied DPS proxy. Every selected body must finish installation before
-combat and the two-minute deadline start together. Lucifron starts at 2,200 health plus
-600 for each additional frozen human; each Protector starts at 650 plus 400. The proxy
+combat and the two-minute deadline start together. Lucifron starts at 1,600 health plus
+600 for each additional frozen human; each Protector starts at 450 plus 400. The proxy
 has 1,000 health, deals 20 damage per two-second strike and uses ordinary paid attacks
 and free resource recovery. It supplies no utility or healing, is not a human life or
 required objective, and never appears as a replacement for a dead/departed teammate.

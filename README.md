@@ -47,8 +47,8 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use the changed application reader for this candidate: compiler/capability42, semantic
-contract42 and identity algorithm4. Transport compatibility is owned by the application.
+Use the changed application reader for this candidate: compiler/capability44, semantic
+contract44 and identity algorithm4. Transport compatibility is owned by the application.
 `tools/validator.json` continues to identify the public compiler41 distribution.
 Its presence does not establish publication or activation; the external workflow remains
 the required gate. Local checks do not replace that gate.
