@@ -2,11 +2,12 @@ ability curse
 
 [program]
 execution = staged
+ai_eligible = true
 category = spell
 
 [activation]
 kind = instant
-cost = 0
+cost = 12
 cooldown_ms = 1000
 
 [target]

@@ -1,0 +1,32 @@
+ability shadow_shock
+
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+
+[activation]
+kind = cast
+cast_ms = 700
+cost = 0
+cooldown_ms = 6000
+locomotion = root_translation
+
+[target]
+kind = facing_cone
+relation = hostile
+range_mm = 3000
+facing_degrees = 360
+maximum_targets = 16
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 60
+
+[presentation]
+windup = cone_sector
+impact = flash
+tint = violet

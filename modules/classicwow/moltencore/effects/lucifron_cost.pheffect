@@ -1,0 +1,18 @@
+effect lucifron_cost
+disposition = harmful
+dispel_category = curse
+
+[modifier]
+boundary = actor_resource_cost
+operation = scale_permille
+value = 2000
+order = 1
+duration_ms = 12000
+units = permille
+quantization = truncate_toward_zero
+overflow = clamp_health_units
+
+[presentation]
+persistent = ring
+removal = fade
+tint = violet

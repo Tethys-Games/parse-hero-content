@@ -1,0 +1,14 @@
+effect dominate
+disposition = harmful
+dispel_category = magic
+
+[control]
+duration_ms = 6000
+maximum_concurrent = 2
+humans_per_slot = 2
+solo_destination_xz_mm = (0, 6500)
+
+[presentation]
+persistent = ring
+removal = fade
+tint = violet

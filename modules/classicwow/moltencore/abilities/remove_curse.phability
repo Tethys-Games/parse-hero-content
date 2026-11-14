@@ -1,0 +1,32 @@
+ability remove_curse
+
+[program]
+execution = staged
+category = utility
+
+
+[activation]
+kind = instant
+
+cost = 0
+cooldown_ms = 8000
+
+
+[target]
+kind = actor
+relation = base_friendly_or_self
+range_metric = body_midpoint_3d
+range_mm = 12000
+
+[delivery]
+kind = direct
+
+[payload]
+operation = cleanse
+maximum_count = 1
+dispel_category = curse
+
+[presentation]
+
+impact = flash
+tint = cyan

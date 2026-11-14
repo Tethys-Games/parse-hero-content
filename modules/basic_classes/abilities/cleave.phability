@@ -2,12 +2,13 @@ ability cleave
 
 [program]
 execution = staged
+ai_eligible = true
 category = melee
 
 [activation]
 kind = cast
 cast_ms = 1000
-cost = 0
+cost = 16
 cooldown_ms = 8500
 locomotion = root_translation
 

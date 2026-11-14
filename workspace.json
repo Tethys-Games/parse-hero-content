@@ -13,6 +13,10 @@
           "module": "basic_classes"
         }
       }
+    },
+    {
+      "name": "classicwow_moltencore",
+      "path": "modules/classicwow/moltencore/module.phpkg"
     }
   ],
   "plays": [
@@ -39,6 +43,24 @@
       "player": "basic_classes/class.melee",
       "encounter": "training_encounters/encounter.ranged_practice",
       "map": "training_encounters/map.ranged_practice",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "classicwow-moltencore-garr",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.garr",
+      "map": "classicwow_moltencore/map.garr",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "classicwow-moltencore-lucifron",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.lucifron",
+      "map": "classicwow_moltencore/map.lucifron",
       "additional_classes": [
         "basic_classes/class.ranged"
       ]

@@ -1,0 +1,13 @@
+class lucifron_proxy
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.proxy_strike]
+definition = ability.proxy_strike
+
+[action.proxy_recover]
+definition = ability.proxy_recover

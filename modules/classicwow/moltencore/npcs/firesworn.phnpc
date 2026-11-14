@@ -1,0 +1,7 @@
+npc firesworn
+archetype_key = installed.npc.basic_walker_pool
+behavior = elemental
+kit = class.elemental
+health = 150
+radius_mm = 400
+height_mm = 1800

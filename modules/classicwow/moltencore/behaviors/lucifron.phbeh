@@ -1,0 +1,34 @@
+behavior lucifron
+behavior_kind = reactive
+target_xz_mm = (0, 7000)
+stop_distance_mm = 150
+reactive_actions = [cost_curse, impending_doom, shadow_shock, lucifron_cleave]
+retreat_distance_mm = 0
+retreat_region_radius_mm = 17000
+retreat_stall_ms = 1000
+
+[reactive_action.cost_curse]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000
+first_after_ms = 6000
+absent_effect = effect.lucifron_cost
+
+[reactive_action.impending_doom]
+cohort = base_party
+order = cycling
+movement = hold
+range_mm = 12000
+first_after_ms = 14000
+absent_effect = effect.lucifron_doom
+
+[reactive_action.shadow_shock]
+cohort = base_party
+movement = hold
+first_after_ms = 4000
+
+[reactive_action.lucifron_cleave]
+cohort = enrolled_humans
+movement = hold
+first_after_ms = 2000

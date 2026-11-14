@@ -22,7 +22,7 @@ needs no default play. Class `player_selectable` and encounter grants are separa
 Write programs in `.phability` files and bind a class action with `definition`.
 Staged plans serve ordinary actions; specialized plans retain their channel, tracking,
 release, world and grant behavior. Reusable `effect` definitions in `.pheffect`
-files own periodic, mark, modifier or movement payloads and resolve in their definition owner's
+files own periodic, mark, modifier, movement or finite harmful-control payloads and resolve in their definition owner's
 typed module context. Explicit typed support slots bind shared effects.
 An action's resource binding is inferred when unique. Its action cooldown and any
 explicitly bound cooldown group keep independent readiness. Optional

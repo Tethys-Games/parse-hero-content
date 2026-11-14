@@ -2,11 +2,12 @@ ability melee_attack
 
 [program]
 execution = staged
+ai_eligible = true
 category = melee
 
 [activation]
 kind = instant
-cost = 0
+cost = 8
 cooldown_ms = 2000
 
 [target]

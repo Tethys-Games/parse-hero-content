@@ -1,0 +1,7 @@
+npc lucifron
+archetype_key = installed.npc.basic_walker_pool
+behavior = lucifron
+kit = class.lucifron_enemy
+health = 1600
+radius_mm = 600
+height_mm = 2400

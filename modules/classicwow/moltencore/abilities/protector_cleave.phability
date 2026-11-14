@@ -1,0 +1,32 @@
+ability protector_cleave
+
+[program]
+execution = staged
+category = melee
+ai_eligible = true
+
+[activation]
+kind = cast
+cast_ms = 1000
+cost = 0
+cooldown_ms = 5000
+locomotion = root_translation
+
+[target]
+kind = facing_cone
+relation = hostile
+range_mm = 4000
+facing_degrees = 90
+maximum_targets = 16
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 35
+
+[presentation]
+windup = cone_sector
+impact = flash
+tint = amber
