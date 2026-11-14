@@ -16,16 +16,17 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This Garr S01 candidate requires the unpublished compiler/capability42 application
+This Garr S01 / Lucifron S02 candidate requires the unpublished compiler/capability44 application
 reader. The public gate and `tools/validator.json` remain compiler41 and may reject
-the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md).
+the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md) or
+[play the Lucifron utility candidate](docs/lucifron.md).
 
 Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
 named sections such as `[action.channel]`, and short policy names. Qualified current
 spellings assert the edition's contract and cannot override it. Adding a
 definition needs no source-list edit. The three source modules are:
-`basic_classes` owns Melee/Ranged, their four reusable player abilities and shared Curse;
+`basic_classes` owns Melee/Ranged, their four paid offensive abilities, free recovery and shared Curse;
 `training_encounters` owns the dummy and both opponent practices, private NPC kits and
 variants, grant utilities and shared Slow. NPC Curse imports `basics/effect.curse`.
 `classicwow_moltencore` adds Garr and Firesworn with a private ordinary NPC kit at
@@ -34,7 +35,9 @@ The three retained public entries are `training-dummy` (Training Dummy),
 `grant-practice-melee` (Melee Opponent Practice) and `grant-practice-ranged` (Ranged
 Opponent Practice). Each retains both Basics in one immutable Session. A participant's
 personal choice does not change that Session's identity. The new candidate entry
-`classicwow-moltencore-garr` also admits both Basics in one Session.
+`classicwow-moltencore-garr` and `classicwow-moltencore-lucifron` also admit both Basics in one Session.
+Lucifron selects both Basics, one shared enemy kit and one solo-proxy kit; retained Garr
+definitions validate without occupying another active kit.
 The production dummy retains 60,000 health and a three-second respawn. Older Training,
 Context/Mobile Scout, Visitor/Frost and quick-dummy source now belongs to maintained
 application development fixtures, outside this production repository.
@@ -59,7 +62,11 @@ Application deployment and workshop freeze remain separate. See the
 anonymous shared-NAT limits.
 
 Both grant practices start the player and enemy at 1,000 health. Right-click each
-pedestal to learn its utility on keys 5 and 6. Basic base actions remain on keys 1 and 2; keys 3 and 4 stay empty.
+pedestal to learn its utility on keys 5 and 6. Basic offense remains on keys 1 and 2;
+key 3 now recovers 40 resource with a six-second cooldown, including from depletion.
+Melee Attack/Cleave cost 8/16; Ranged Attack/Curse cost 12/12. Key 4 stays empty.
+Basic Curse retains its eight-second, four-pulse Magic DoT. The imported NPC Curse
+still uses that exact shared effect; private training attacks and utility grants stay free.
 Melee grants Slow (50% for five seconds; 12-second cooldown) and held Defend
 (one second, rooted and immune; 30-second cooldown). Ranged grants Interrupt
 (2,500 mm; six-second cooldown) and friendly/self Dispel (12,000 mm; eight-second cooldown).

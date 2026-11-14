@@ -1,0 +1,22 @@
+class lucifron_enemy
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.cost_curse]
+definition = ability.cost_curse
+
+[action.impending_doom]
+definition = ability.impending_doom
+
+[action.shadow_shock]
+definition = ability.shadow_shock
+
+[action.lucifron_cleave]
+definition = ability.lucifron_cleave
+
+[action.protector_cleave]
+definition = ability.protector_cleave

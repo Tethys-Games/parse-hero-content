@@ -1,0 +1,17 @@
+behavior lucifron_proxy
+behavior_kind = reactive
+target_xz_mm = (0, 7000)
+stop_distance_mm = 150
+reactive_actions = [proxy_strike, proxy_recover]
+retreat_distance_mm = 0
+retreat_region_radius_mm = 17000
+retreat_stall_ms = 1000
+
+[reactive_action.proxy_strike]
+cohort = named_role
+role = encounter_placement.lucifron
+movement = approach
+
+[reactive_action.proxy_recover]
+cohort = self
+exclude_self = false

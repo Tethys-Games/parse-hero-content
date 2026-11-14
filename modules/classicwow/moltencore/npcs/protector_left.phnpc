@@ -1,0 +1,7 @@
+npc protector_left
+archetype_key = installed.npc.basic_walker_pool
+behavior = protector_left
+kit = class.lucifron_enemy
+health = 650
+radius_mm = 400
+height_mm = 2000

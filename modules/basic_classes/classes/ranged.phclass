@@ -18,3 +18,9 @@ action = ranged_attack
 
 [binding.2]
 action = curse
+
+[action.recover]
+definition = ability.recover
+
+[binding.3]
+action = recover

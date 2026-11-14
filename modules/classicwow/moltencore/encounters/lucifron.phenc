@@ -1,0 +1,91 @@
+encounter lucifron
+player_health = 1000
+
+[spawn]
+placement = encounter_placement.lucifron
+npc_template = lucifron
+stable_actor_key = actor.lucifron
+
+[spawn]
+placement = encounter_placement.protector_left
+npc_template = protector_left
+stable_actor_key = actor.protector_left
+
+[spawn]
+placement = encounter_placement.protector_right
+npc_template = protector_right
+stable_actor_key = actor.protector_right
+
+[spawn]
+placement = encounter_placement.lucifron_proxy
+npc_template = lucifron_proxy
+stable_actor_key = actor.lucifron_proxy
+
+[composition]
+start = pull_frozen_humans/v1
+roster_placements = [encounter_placement.lucifron, encounter_placement.protector_left, encounter_placement.protector_right, encounter_placement.lucifron_proxy]
+roster_min_humans = [1, 1, 1, 1]
+roster_max_humans = [100, 100, 100, 1]
+roster_required = [true, true, true, false]
+roster_alliances = [enemy, enemy, enemy, party]
+roster_health_per_additional_human = [600, 400, 400, 0]
+deadline_ms = 120000
+completion = required_roster_defeated/v1
+after_completion = retain_for_retry/v1
+failure = deadline_or_cohort_defeat/v1
+reset = settle_owned_then_fresh_attempt/v1
+
+[object.pull]
+purpose = pull/v1
+after_ms = 0
+position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.remove_curse]
+definition = ability.remove_curse
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.remove_curse]
+grant = remove_curse
+after_ms = 0
+position_xz_mm = (-1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.dispel_magic]
+definition = ability.dispel_magic
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.dispel_magic]
+grant = dispel_magic
+after_ms = 0
+position_xz_mm = (1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation

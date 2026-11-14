@@ -1,0 +1,13 @@
+behavior protector_left
+behavior_kind = reactive
+target_xz_mm = (0, 7000)
+stop_distance_mm = 150
+reactive_actions = [protector_cleave]
+retreat_distance_mm = 0
+retreat_region_radius_mm = 17000
+retreat_stall_ms = 1000
+
+[reactive_action.protector_cleave]
+cohort = enrolled_humans
+movement = approach
+first_after_ms = 1000

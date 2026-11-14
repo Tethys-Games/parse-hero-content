@@ -55,6 +55,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-lucifron",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.lucifron",
+      "map": "classicwow_moltencore/map.lucifron",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

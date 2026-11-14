@@ -6,7 +6,7 @@ category = spell
 
 [activation]
 kind = instant
-cost = 0
+cost = 12
 cooldown_ms = 1000
 
 [target]

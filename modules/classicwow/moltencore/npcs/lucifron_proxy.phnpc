@@ -1,0 +1,7 @@
+npc lucifron_proxy
+archetype_key = installed.npc.basic_walker_pool
+behavior = lucifron_proxy
+kit = class.lucifron_proxy
+health = 1000
+radius_mm = 350
+height_mm = 1800
