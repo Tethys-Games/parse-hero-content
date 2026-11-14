@@ -10,7 +10,12 @@ Neither these generated docs nor candidate YAML establish what is currently acti
 
 ## Compiler41 compatibility
 
-The selected implementation requires compiler/capability41, semantic41, identity4,
+The Garr S01 branch adds candidate compiler42 syntax and a fourth catalog entry.
+Use the application workshop's newly built reader for its local validation and
+installation. The compiler41 distribution, required workflow and public main stay
+unchanged. A compatible public cutover is not selected. See [Garr S01](garr.md).
+
+The public implementation requires compiler/capability41, semantic41, identity4,
 package23/class19/ability9/effect2/NPC5/behavior6/encounter18/map5 and `workshop_1`.
 Workspace5, catalog2 and capture/archive4 retain their contracts. The application
 manual owns the language and transport compatibility remains application-owned.

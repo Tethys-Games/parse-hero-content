@@ -16,18 +16,25 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This content revision requires compiler/capability41. Each `module` manifest declares
+This Garr S01 candidate requires the unpublished compiler/capability42 application
+reader. The public gate and `tools/validator.json` remain compiler41 and may reject
+the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md).
+
+Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
 named sections such as `[action.channel]`, and short policy names. Qualified current
 spellings assert the edition's contract and cannot override it. Adding a
-definition needs no source-list edit. Exactly two production modules remain:
+definition needs no source-list edit. The three source modules are:
 `basic_classes` owns Melee/Ranged, their four reusable player abilities and shared Curse;
 `training_encounters` owns the dummy and both opponent practices, private NPC kits and
 variants, grant utilities and shared Slow. NPC Curse imports `basics/effect.curse`.
-The three workspace plays and public entries are `training-dummy` (Training Dummy),
+`classicwow_moltencore` adds Garr and Firesworn with a private ordinary NPC kit at
+`modules/classicwow/moltencore`, without a dependency on Training Encounters.
+The three retained public entries are `training-dummy` (Training Dummy),
 `grant-practice-melee` (Melee Opponent Practice) and `grant-practice-ranged` (Ranged
 Opponent Practice). Each retains both Basics in one immutable Session. A participant's
-personal choice does not change that Session's identity.
+personal choice does not change that Session's identity. The new candidate entry
+`classicwow-moltencore-garr` also admits both Basics in one Session.
 The production dummy retains 60,000 health and a three-second respawn. Older Training,
 Context/Mobile Scout, Visitor/Frost and quick-dummy source now belongs to maintained
 application development fixtures, outside this production repository.
@@ -37,9 +44,9 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use an application and validator compatible with compiler/capability41, semantic
-contract41 and identity algorithm4. Transport compatibility is owned by the application.
-`tools/validator.json` identifies this revision's exact compatible validator distribution.
+Use the changed application reader for this candidate: compiler/capability42, semantic
+contract42 and identity algorithm4. Transport compatibility is owned by the application.
+`tools/validator.json` continues to identify the public compiler41 distribution.
 Its presence does not establish publication or activation; the external workflow remains
 the required gate. Local checks do not replace that gate.
 The selected content PR records review and candidate status for the coordinated

@@ -1,0 +1,7 @@
+npc garr
+archetype_key = installed.npc.basic_walker_pool
+behavior = elemental
+kit = class.elemental
+health = 600
+radius_mm = 600
+height_mm = 2400

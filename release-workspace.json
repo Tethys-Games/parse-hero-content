@@ -15,6 +15,11 @@
       "id": "grant-practice-ranged",
       "workspace": "workspace.json",
       "play": "grant-practice-ranged"
+    },
+    {
+      "id": "classicwow-moltencore-garr",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-garr"
     }
   ]
 }

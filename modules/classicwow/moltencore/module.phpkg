@@ -1,0 +1,3 @@
+module classicwow_moltencore
+edition = workshop_1
+exports = [encounter.garr, map.garr]

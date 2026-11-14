@@ -1,0 +1,66 @@
+encounter garr
+player_health = 1000
+
+[spawn]
+placement = encounter_placement.garr
+npc_template = garr
+stable_actor_key = actor.garr
+
+[spawn]
+placement = encounter_placement.firesworn_1
+npc_template = firesworn
+stable_actor_key = actor.firesworn_1
+
+[spawn]
+placement = encounter_placement.firesworn_2
+npc_template = firesworn
+stable_actor_key = actor.firesworn_2
+
+[spawn]
+placement = encounter_placement.firesworn_3
+npc_template = firesworn
+stable_actor_key = actor.firesworn_3
+
+[spawn]
+placement = encounter_placement.firesworn_4
+npc_template = firesworn
+stable_actor_key = actor.firesworn_4
+
+[spawn]
+placement = encounter_placement.firesworn_5
+npc_template = firesworn
+stable_actor_key = actor.firesworn_5
+
+[spawn]
+placement = encounter_placement.firesworn_6
+npc_template = firesworn
+stable_actor_key = actor.firesworn_6
+
+[spawn]
+placement = encounter_placement.firesworn_7
+npc_template = firesworn
+stable_actor_key = actor.firesworn_7
+
+[spawn]
+placement = encounter_placement.firesworn_8
+npc_template = firesworn
+stable_actor_key = actor.firesworn_8
+
+[composition]
+start = pull_frozen_humans/v1
+roster_placements = [encounter_placement.garr, encounter_placement.firesworn_1, encounter_placement.firesworn_2, encounter_placement.firesworn_3, encounter_placement.firesworn_4, encounter_placement.firesworn_5, encounter_placement.firesworn_6, encounter_placement.firesworn_7, encounter_placement.firesworn_8]
+roster_min_humans = [1, 1, 1, 1, 2, 3, 4, 5, 6]
+deadline_ms = 120000
+completion = required_roster_defeated/v1
+after_completion = retain_for_retry/v1
+failure = deadline_or_cohort_defeat/v1
+reset = settle_owned_then_fresh_attempt/v1
+
+[object.pull]
+purpose = pull/v1
+after_ms = 0
+position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
