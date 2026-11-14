@@ -10,12 +10,12 @@ Neither these generated docs nor candidate YAML establish what is currently acti
 
 ## Compiler41 compatibility
 
-The workshop branch adds candidate compiler44 syntax and two local catalog entries,
-Garr S01 and Lucifron S02, alongside the three practices.
+The workshop branch adds candidate compiler45 syntax and two local catalog entries,
+Garr S01 and Lucifron S03, alongside the three practices.
 Use the application workshop's newly built reader for its local validation and
 installation. The compiler41 distribution, required workflow and public main stay
 unchanged. A compatible public cutover is not selected. See [Garr S01](garr.md) and
-[Lucifron S02](lucifron.md). S03 control and its separate installation evidence remain pending.
+[Lucifron S03](lucifron.md). S02 utility installation passed at its recorded checkpoint; S03 installation evidence is maintained in application PR527.
 
 The public implementation requires compiler/capability41, semantic41, identity4,
 package23/class19/ability9/effect2/NPC5/behavior6/encounter18/map5 and `workshop_1`.

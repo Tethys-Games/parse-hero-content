@@ -20,3 +20,6 @@ definition = ability.lucifron_cleave
 
 [action.protector_cleave]
 definition = ability.protector_cleave
+
+[action.dominate]
+definition = ability.dominate

@@ -2,7 +2,7 @@ behavior protector_left
 behavior_kind = reactive
 target_xz_mm = (0, 7000)
 stop_distance_mm = 150
-reactive_actions = [protector_cleave]
+reactive_actions = [dominate, protector_cleave]
 retreat_distance_mm = 0
 retreat_region_radius_mm = 17000
 retreat_stall_ms = 1000
@@ -11,3 +11,11 @@ retreat_stall_ms = 1000
 cohort = enrolled_humans
 movement = approach
 first_after_ms = 1000
+
+[reactive_action.dominate]
+cohort = base_party
+order = cycling
+movement = hold
+first_after_ms = 9000
+range_mm = 12000
+absent_effect = effect.dominate

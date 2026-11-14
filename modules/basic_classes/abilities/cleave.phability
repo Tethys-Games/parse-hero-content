@@ -2,6 +2,7 @@ ability cleave
 
 [program]
 execution = staged
+ai_eligible = true
 category = melee
 
 [activation]

@@ -2,6 +2,7 @@ ability curse
 
 [program]
 execution = staged
+ai_eligible = true
 category = spell
 
 [activation]

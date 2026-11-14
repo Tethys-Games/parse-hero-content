@@ -2,6 +2,7 @@ ability recover
 
 [program]
 execution = staged
+ai_eligible = true
 category = utility
 
 

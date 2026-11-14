@@ -16,10 +16,10 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This Garr S01 / Lucifron S02 candidate requires the unpublished compiler/capability44 application
+This Garr S01 / Lucifron S03 candidate requires the unpublished compiler/capability45 application
 reader. The public gate and `tools/validator.json` remain compiler41 and may reject
 the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md) or
-[play the Lucifron utility candidate](docs/lucifron.md).
+[play the Lucifron control candidate](docs/lucifron.md).
 
 Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
@@ -47,8 +47,8 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use the changed application reader for this candidate: compiler/capability44, semantic
-contract44 and identity algorithm4. Transport compatibility is owned by the application.
+Use the changed application reader for this candidate: compiler/capability45, semantic
+contract45 and identity algorithm4. Transport compatibility is owned by the application.
 `tools/validator.json` continues to identify the public compiler41 distribution.
 Its presence does not establish publication or activation; the external workflow remains
 the required gate. Local checks do not replace that gate.
