@@ -34,7 +34,8 @@ new file intentionally changes module identity; validation/import do not make th
 
 Grant practices use direct encounter ability grants, interaction-only acquisition,
 entitlement cooldowns, explicit friendly/self targeting, held protection, Interrupt,
-Dispel and reactive NPC priorities. They require the compatible compiler41 reader.
+Dispel and reactive NPC priorities. The public compiler41 release supports that practice
+contract; this branch's shared Basic changes and Lucifron require the candidate compiler45 reader.
 Each play admits both Basic roots. Practice / Your class / Start practice selects a
 personal initial class without changing the shared Session identity; only its exact
 validated player and additional-class roots are offered.
@@ -140,9 +141,10 @@ permission or origin access. Verified cached bytes can be reused in both directi
 
 ## Availability
 
-This source revision requires compiler/capability41 and the compatible validator
-identified by `tools/validator.json`. The selected content PR records the coordinated
-transition's review and activation status. An externally
+This candidate requires compiler/capability/semantic45 from the changed application.
+The public compiler41 validator identified by `tools/validator.json`, trusted workflow
+and public main remain unchanged. The selected content PR records local candidate
+validation and installation; it does not authorize public activation. An externally
 selected older validator can reject newer content until its reviewed pin changes;
 keep that result visible and do not disable or bypass the gate. Local candidate
 validation is a separate result. Application integration, deployment and workshop
