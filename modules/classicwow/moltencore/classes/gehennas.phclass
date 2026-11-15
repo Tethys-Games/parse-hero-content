@@ -1,0 +1,16 @@
+class gehennas
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.rain_of_fire]
+definition = ability.rain_of_fire
+
+[action.gehennas_curse]
+definition = ability.gehennas_curse
+
+[action.shadow_bolt]
+definition = ability.shadow_bolt

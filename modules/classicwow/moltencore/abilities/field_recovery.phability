@@ -1,0 +1,31 @@
+ability field_recovery
+
+[program]
+execution = staged
+category = utility
+ai_eligible = false
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 1500
+cost = 0
+cooldown_ms = 12000
+locomotion = root_translation
+
+[target]
+kind = actor
+relation = friendly_or_self
+range_metric = body_midpoint_3d
+range_mm = 12000
+
+[delivery]
+kind = direct
+
+[payload]
+operation = heal
+amount = 400
+
+[presentation]
+impact = flash
+tint = green

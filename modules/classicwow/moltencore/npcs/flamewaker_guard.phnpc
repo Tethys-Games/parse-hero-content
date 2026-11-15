@@ -1,0 +1,7 @@
+npc flamewaker_guard
+archetype_key = installed.npc.basic_walker_pool
+behavior = flamewaker_guard
+kit = class.flamewaker_guard
+health = 250
+radius_mm = 450
+height_mm = 2000

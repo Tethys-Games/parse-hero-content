@@ -73,6 +73,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-gehennas",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.gehennas",
+      "map": "classicwow_moltencore/map.gehennas",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

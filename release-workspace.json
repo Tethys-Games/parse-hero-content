@@ -30,6 +30,11 @@
       "id": "classicwow-moltencore-magmadar",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-magmadar"
+    },
+    {
+      "id": "classicwow-moltencore-gehennas",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-gehennas"
     }
   ]
 }

@@ -1,0 +1,40 @@
+map gehennas
+
+[ground_region.chamber]
+top_height_mm = 0
+points_xz_mm = [(-18000, -18000), (18000, -18000), (18000, 18000), (-18000, 18000)]
+
+[spawn.player_one]
+position_xyz_mm = (-700, 0, 8000)
+yaw_centi_deg = 0
+
+[spawn.player_two]
+position_xyz_mm = (700, 0, 8000)
+yaw_centi_deg = 0
+
+[encounter_placement.gehennas]
+encounter_id = gehennas
+position_xyz_mm = (0, 0, 0)
+yaw_centi_deg = 18000
+trigger = trigger.gehennas
+
+[encounter_placement.guard_left]
+encounter_id = gehennas
+position_xyz_mm = (-2500, 0, 1500)
+yaw_centi_deg = 18000
+trigger = trigger.gehennas
+
+[encounter_placement.guard_right]
+encounter_id = gehennas
+position_xyz_mm = (2500, 0, 1500)
+yaw_centi_deg = 18000
+trigger = trigger.gehennas
+
+[encounter_placement.gehennas_proxy]
+encounter_id = gehennas
+position_xyz_mm = (-3500, 0, 3500)
+yaw_centi_deg = 27000
+trigger = trigger.gehennas
+
+[trigger.gehennas]
+kind = encounter_start
