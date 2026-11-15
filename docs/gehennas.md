@@ -2,8 +2,10 @@
 
 Select `classicwow-moltencore-gehennas` with the matching unpublished compiler48
 application. Both Basic Melee and Ranged use this play. The other six catalog
-entries remain available. This candidate is undergoing local execution; source
-validation alone does not establish a completed installed play.
+entries remain available. Native Melee and shipping-AOT Ranged solo victories and
+local two-client healing, shared Retry and normal release are complete at the
+products recorded in the application workshop runbook. Independent access to the
+original local observations remains pending; source/CI acceptance is separate.
 
 Right-click the Remove Curse and Field Recovery pedestals to opt in, then Pull.
 Field Recovery casts for 1.5 seconds and restores up to 400 health to the exact
