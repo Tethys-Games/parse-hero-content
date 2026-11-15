@@ -1,0 +1,23 @@
+ability fear_break
+
+[program]
+execution = staged
+category = utility
+
+[activation]
+kind = instant
+cost = 0
+cooldown_ms = 60000
+
+[target]
+kind = self
+
+[delivery]
+kind = direct
+
+[payload]
+operation = fear_break
+
+[presentation]
+impact = flash
+tint = cyan

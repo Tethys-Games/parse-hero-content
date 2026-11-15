@@ -11,3 +11,9 @@ definition = ability.lava_bomb
 
 [action.lava_breath]
 definition = ability.lava_breath
+
+[action.panic]
+definition = ability.panic
+
+[action.frenzy]
+definition = ability.frenzy

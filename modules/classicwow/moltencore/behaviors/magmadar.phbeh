@@ -18,8 +18,9 @@ variation_offset = 3
 [mode.breath]
 intent = hold
 action = lava_breath
-start_after_ms = 1000
+start_after_ms = 4000
 repeat_after_ms = 6000
+cadence_action = frenzy
 facing = anchor
 facing_anchor = 3
 variation = reference_turn
@@ -31,7 +32,41 @@ order = 1
 condition = elapsed
 comparison = eq
 value = true
-after_ms = 5000
+after_ms = 4000
+next = panic
+
+[mode.panic]
+intent = hold
+action = panic
+start_after_ms = 500
+repeat_after_ms = 30000
+facing = anchor
+facing_anchor = 3
+
+[transition]
+mode = panic
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 3500
+next = frenzy
+
+[mode.frenzy]
+intent = hold
+action = frenzy
+start_after_ms = 500
+repeat_after_ms = 30000
+facing = anchor
+facing_anchor = 3
+
+[transition]
+mode = frenzy
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 2000
 next = breath
 
 [transition]
@@ -40,5 +75,5 @@ order = 1
 condition = elapsed
 comparison = eq
 value = true
-after_ms = 18000
+after_ms = 20500
 next = bomb

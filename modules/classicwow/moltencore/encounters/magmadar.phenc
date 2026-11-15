@@ -39,6 +39,52 @@ access = public_interaction
 eligibility = live_avatar_in_range
 link_lifetime = exact_owned_generation
 
+[grant.fear_break]
+definition = ability.fear_break
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.fear_break]
+grant = fear_break
+after_ms = 0
+position_xz_mm = (-1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.tranquilize]
+definition = ability.tranquilize
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.tranquilize]
+grant = tranquilize
+after_ms = 0
+position_xz_mm = (1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
 [anchor.north]
 capture = immutable_world_position/v1
 support = canonical_destination/v1

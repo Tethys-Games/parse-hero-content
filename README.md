@@ -16,10 +16,10 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This Garr S01 / Lucifron S03 / Magmadar S04 candidate requires the unpublished compiler/capability46 application
+This Garr S01 / Lucifron S03 / Magmadar S05 candidate requires the unpublished compiler/capability47 application
 reader. The public gate and `tools/validator.json` remain compiler41 and may reject
 the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md) or
-[play the Lucifron control candidate](docs/lucifron.md) or [play the Magmadar floor-and-facing candidate](docs/magmadar.md).
+[play the Lucifron control candidate](docs/lucifron.md) or [play the Magmadar fear/Frenzy candidate](docs/magmadar.md).
 
 Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,

@@ -35,7 +35,7 @@ new file intentionally changes module identity; validation/import do not make th
 Grant practices use direct encounter ability grants, interaction-only acquisition,
 entitlement cooldowns, explicit friendly/self targeting, held protection, Interrupt,
 Dispel and reactive NPC priorities. The public compiler41 release supports that practice
-contract; this branch's shared Basic changes, Lucifron and Magmadar require the candidate compiler46 reader.
+contract; this branch's shared Basic changes, Lucifron and Magmadar require the candidate compiler47 reader.
 Each play admits both Basic roots. Practice / Your class / Start practice selects a
 personal initial class without changing the shared Session identity; only its exact
 validated player and additional-class roots are offered.

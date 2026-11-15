@@ -1,0 +1,26 @@
+ability frenzy
+
+[program]
+execution = staged
+ai_eligible = true
+category = spell
+potency = definition_only
+
+[activation]
+kind = instant
+cost = 0
+cooldown_ms = 0
+
+[target]
+kind = self
+
+[delivery]
+kind = direct
+
+[payload]
+operation = apply_effect
+effect = effect.frenzy
+
+[presentation]
+impact = flash
+tint = red
