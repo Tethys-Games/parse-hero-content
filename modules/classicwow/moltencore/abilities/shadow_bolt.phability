@@ -24,7 +24,7 @@ kind = direct
 
 [payload]
 operation = damage
-amount = 110
+amount = 100
 
 [presentation]
 impact = flash

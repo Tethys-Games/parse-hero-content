@@ -29,8 +29,10 @@ actions, including Fear Break. Existing independent deliveries continue.
 The boss uses one finite mode program: Rain, cycling Curse, then cycling exact
 Shadow Bolts. Rain locks its sites during a two-second warning and persists for
 eight seconds. Site count is `min(3, ceil(N / 2))`, with separated sites and
-supported escape paths. The nominal cycle is 30 seconds. Bolt pressure is 110
+supported escape paths. The nominal cycle is 30 seconds. Bolt pressure is 100
 damage per accepted delivery, with six-second opportunities in its finite mode.
+The boss starts at 1,250 health, adding 500 per additional frozen human. These
+values retain room for both Basic classes' recovery and movement decisions.
 Already committed Rain and Stun survive source death until their finite end.
 
 The frozen roster supports 100 humans numerically; this does not promise 100

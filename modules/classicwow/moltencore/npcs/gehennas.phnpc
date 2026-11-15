@@ -2,6 +2,6 @@ npc gehennas
 archetype_key = installed.npc.basic_walker_pool
 behavior = gehennas
 kit = class.gehennas
-health = 1400
+health = 1250
 radius_mm = 600
 height_mm = 2400
