@@ -1,0 +1,13 @@
+behavior flamewaker_guard_right
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 0
+initial_mode = fist
+
+[mode.fist]
+intent = hold
+action = fist_of_ragnaros
+start_after_ms = 7500
+repeat_after_ms = 12000
+facing = stable
+heading_128 = 64

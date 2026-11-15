@@ -13,7 +13,7 @@ stable_actor_key = actor.guard_left
 
 [spawn]
 placement = encounter_placement.guard_right
-npc_template = flamewaker_guard
+npc_template = flamewaker_guard_right
 stable_actor_key = actor.guard_right
 
 [spawn]
