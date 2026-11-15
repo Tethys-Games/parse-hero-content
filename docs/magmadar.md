@@ -42,6 +42,9 @@ schedule progress and the current breath's 1.8-second warning. A distant player 
 legitimately avoid the breath and choose not to spend the tool. The cycle leaves a
 visible response window before the first accelerated breath.
 
+The boss has 1800 base health plus 600 per additional frozen human. The first S05
+native observation left 25 of the former 2400 health after 120 seconds; this health
+tuning aims for about 90 seconds and three useful cycles without extending timers.
 The encounter retains both Basics, one shared private Magmadar/proxy kit, a 150-second
 deadline and shared Retry. It preserves the other five catalog entries. Compiler47
 is an unpublished local candidate; public compiler41 and the required public gate
