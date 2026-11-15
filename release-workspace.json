@@ -25,6 +25,11 @@
       "id": "classicwow-moltencore-lucifron",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-lucifron"
+    },
+    {
+      "id": "classicwow-moltencore-magmadar",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-magmadar"
     }
   ]
 }

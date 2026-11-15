@@ -1,0 +1,7 @@
+npc magmadar_proxy
+archetype_key = installed.npc.basic_walker_pool
+behavior = magmadar_proxy
+kit = class.magmadar
+health = 1000
+radius_mm = 350
+height_mm = 1800

@@ -1,0 +1,7 @@
+npc magmadar
+archetype_key = installed.npc.basic_walker_pool
+behavior = magmadar
+kit = class.magmadar
+health = 2400
+radius_mm = 800
+height_mm = 2600

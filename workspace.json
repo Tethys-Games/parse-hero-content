@@ -64,6 +64,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-magmadar",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.magmadar",
+      "map": "classicwow_moltencore/map.magmadar",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }
