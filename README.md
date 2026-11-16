@@ -16,7 +16,7 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This Garr S08 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability50 application
+This Garr S09 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability51 application
 reader. The public gate and `tools/validator.json` remain compiler41 and may reject
 the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md) or
 [play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), or [work on Sulfuron's heal coverage](docs/sulfuron.md).

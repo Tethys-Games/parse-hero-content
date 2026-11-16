@@ -1,4 +1,4 @@
-# Garr S08 control and positioning candidate
+# Garr S09 death consequence candidate
 
 Select `classicwow-moltencore-garr` from `workspace.json`. Both Basic Melee and
 Basic Ranged belong to the same Session and each participant chooses independently.
@@ -18,6 +18,26 @@ on the final enemy's death cut. Party Retry clears progress and acquired utiliti
 and returns everyone to fresh Preparation after old work settles. Class changes
 after Pull reject; a new human cannot join the frozen fight. Leave uses normal
 session teardown. Numbers are provisional balance for this scoped milestone.
+
+Firesworn show a dangerous-finisher warning at or below 25% of their actual frozen
+maximum health. Each genuine defeat starts a three-second fuse at that add's
+actual death position. The four-metre blast deals 200 damage and a 1.8-metre planar
+outward impulse to current in-range hostile humans. Moving out before it fires
+works; late entry can be hit. All eight adds can retain separate sites and fuses.
+The finishing attacker does not own the enemy's blast. Garr has 1,000 base health
+and each Firesworn has 300; existing per-additional-human scaling remains.
+
+The common fuse is the same for Melee and Ranged. Basic Melee's 2.5-metre attack
+does not root movement. Ordinary speed is 4.8 m/s, or 2.64 m/s under 55% Shackles;
+three seconds permits 7.92 metres before collision/route constraints. Prepare a
+clear route, finish, then move immediately. An occupied cast or obstructed route
+still matters. Clearing Shackles helps but is not required by the escape design.
+These calculations await the selected installed S09 observations.
+
+Final objective credit is timely even if a fuse extends beyond the combat
+deadline. Victory waits for owed blasts and displacement. All humans defeated
+still fails during settlement; exact Failure/Retry retirement may cancel remaining
+fuses. Source-body cleanup and Garr's death cannot cancel them.
 
 Banish is an 800 ms cast lasting ten seconds on a living hostile permitted
 Elemental Firesworn. Garr is Elemental but is not permitted. Active reapplication
@@ -48,19 +68,25 @@ future routine intervals, capped at eight. Both kill orders remain valid.
 
 This branch is a local candidate. The public compiler41 validator and required
 workflow remain unchanged and cannot validate the new Pull vocabulary. Build the
-compiler50 application reader and use its maintained workshop `author check`,
+compiler51 application reader and use its maintained workshop `author check`,
 `inspect`, `emit` and `verify` commands. Install that emitted selection through
 ordinary local authoring; use candidate mode for a locally served browser build.
 Ordinary public Lobby Play still acquires public main's three practices.
 
-This is the S08 control/position candidate: complete source checking and the exact
+The prior S08 checkpoint (`745ec09f`, preserving gameplay `b2703d4c`) has complete source checking and the exact
 139-file application snapshot pass. The actual joint N100 case encodes 22,949 bytes
 and reserves 64,461, with 100 independent Focus, eight Banish and 20 Clear holders
 within 128 entitlements. Native Melee and shipping-AOT Ranged victories, bounded
 mechanic subcases, automated independent two-client receiving, shared Retry and
 normal release are recorded at their exact products in the application runbook.
-Human-operated cooperation and final required CI remain pending; automated clients
-do not establish the selected human mistake/response. Earlier evaluator and startup
-failures remain at their original producers.
-S09 will add death fuses and explosion settlement to this same encounter. S08
-does not claim death-explosion safety or full Garr completion.
+The owner has deferred human-operated multiplayer playtesting for this workshop;
+automated results establish functionality only. Application CI43837776630 passed
+pure/tooling and retained an unexplained native timeout. Earlier evaluator and
+startup failures remain at their original producers.
+
+S09 source preparation is in progress. The shared compiler51 validator checked
+the complete eight-entry candidate in local `s09-check236`. Exact full-snapshot
+installation, selected runtime/envelope checks and native/shipping-AOT observations
+remain to be completed. Windows Smart App Control blocked a new application
+Runtime assembly during `s09-pure235`; the policy owner was asked to review it.
+No S09 installed completion, independent acceptance or public publication is claimed.

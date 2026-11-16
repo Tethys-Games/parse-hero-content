@@ -2,7 +2,7 @@ npc firesworn
 archetype_key = installed.npc.basic_walker_pool
 behavior = firesworn
 kit = class.firesworn
-health = 180
+health = 300
 radius_mm = 400
 height_mm = 1800
 
