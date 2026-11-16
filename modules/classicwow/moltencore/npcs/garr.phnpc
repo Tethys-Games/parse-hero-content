@@ -1,7 +1,10 @@
 npc garr
 archetype_key = installed.npc.basic_walker_pool
-behavior = elemental
-kit = class.elemental
-health = 600
+behavior = garr
+kit = class.garr
+health = 700
 radius_mm = 600
 height_mm = 2400
+
+creature = elemental
+banish_allowed = false

@@ -1,0 +1,18 @@
+effect practice_focus
+disposition = beneficial
+dispel_category = magic
+storage = independent_self
+refresh = reject_active
+[modifier]
+boundary = source_potency
+operation = scale_permille
+value = 1500
+units = permille
+quantization = truncate_toward_zero
+overflow = clamp_health_units
+order = 1
+duration_ms = 16000
+[presentation]
+persistent = ring
+removal = fade
+tint = cyan

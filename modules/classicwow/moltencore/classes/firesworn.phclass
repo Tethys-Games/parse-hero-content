@@ -1,0 +1,13 @@
+class firesworn
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.firesworn_strike]
+definition = ability.firesworn_strike
+
+[action.firesworn_immolate]
+definition = ability.firesworn_immolate

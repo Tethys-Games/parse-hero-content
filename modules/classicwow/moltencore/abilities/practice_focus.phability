@@ -1,0 +1,22 @@
+ability practice_focus
+[program]
+execution = staged
+category = spell
+potency = definition_only
+[activation]
+kind = cast
+cast_ms = 800
+cost = 0
+cooldown_ms = 0
+locomotion = unrestricted
+[target]
+kind = self
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.practice_focus
+[presentation]
+windup = beam
+impact = flash
+tint = cyan

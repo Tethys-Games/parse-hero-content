@@ -50,6 +50,7 @@ stable_actor_key = actor.firesworn_8
 start = pull_frozen_humans/v1
 roster_placements = [encounter_placement.garr, encounter_placement.firesworn_1, encounter_placement.firesworn_2, encounter_placement.firesworn_3, encounter_placement.firesworn_4, encounter_placement.firesworn_5, encounter_placement.firesworn_6, encounter_placement.firesworn_7, encounter_placement.firesworn_8]
 roster_min_humans = [1, 1, 1, 1, 2, 3, 4, 5, 6]
+roster_health_per_additional_human = [600, 180, 180, 180, 180, 180, 180, 180, 180]
 deadline_ms = 120000
 completion = required_roster_defeated/v1
 after_completion = retain_for_retry/v1
@@ -64,3 +65,97 @@ range_mm = 2500
 access = public_interaction
 eligibility = live_avatar_in_range
 link_lifetime = exact_owned_generation
+
+[critical_cast_group.immolate]
+maximum_slots = 3
+spacing_ms = 7000
+
+[grant.banish]
+definition = ability.banish
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.banish]
+grant = banish
+after_ms = 0
+position_xz_mm = (-1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.clear_shackles]
+definition = ability.clear_shackles
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.clear_shackles]
+grant = clear_shackles
+after_ms = 0
+position_xz_mm = (1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.practice_focus]
+definition = ability.practice_focus
+scope = participant
+slot = 3
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.practice_focus]
+grant = practice_focus
+after_ms = 0
+position_xz_mm = (0, 10000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[anchor.south]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, 12500)
+
+[anchor.east]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (15000, 0)
+
+[anchor.west]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-15000, 0)
+
+[anchor.north]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, -15000)

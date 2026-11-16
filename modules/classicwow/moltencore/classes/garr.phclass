@@ -1,0 +1,16 @@
+class garr
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.garr_strike]
+definition = ability.garr_strike
+
+[action.magma_shackles]
+definition = ability.magma_shackles
+
+[action.antimagic_pulse]
+definition = ability.antimagic_pulse

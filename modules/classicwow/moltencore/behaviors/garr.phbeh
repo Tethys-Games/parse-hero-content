@@ -1,0 +1,72 @@
+behavior garr
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = shackles
+
+[navigation]
+reference = placement_origin
+terminal = loop
+tether_radius_mm = 10000
+pursuit_radius_mm = 7000
+stall_ms = 1000
+[waypoint]
+order = 1
+offset_x_mm = -500
+offset_z_mm = -500
+[waypoint]
+order = 2
+offset_x_mm = 500
+offset_z_mm = 500
+
+[defeat_cadence.strengthening]
+roles = [encounter_placement.firesworn_1, encounter_placement.firesworn_2, encounter_placement.firesworn_3, encounter_placement.firesworn_4, encounter_placement.firesworn_5, encounter_placement.firesworn_6, encounter_placement.firesworn_7, encounter_placement.firesworn_8]
+per_defeat_permille = 150
+maximum_count = 8
+[mode.shackles]
+intent = hold
+action = magma_shackles
+start_after_ms = 1200
+repeat_after_ms = 30000
+[mode.pressure]
+intent = hold
+action = garr_strike
+start_after_ms = 1000
+repeat_after_ms = 3000
+facing = anchor
+facing_anchor = 1
+cadence_defeats = strengthening
+[mode.purge]
+intent = hold
+action = antimagic_pulse
+start_after_ms = 1000
+repeat_after_ms = 30000
+
+[transition]
+mode = shackles
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 3500
+next = pressure
+
+
+[transition]
+mode = pressure
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 14000
+next = purge
+
+
+[transition]
+mode = purge
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 3500
+next = shackles

@@ -16,7 +16,7 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This Garr S01 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability49 application
+This Garr S08 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability50 application
 reader. The public gate and `tools/validator.json` remain compiler41 and may reject
 the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md) or
 [play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), or [work on Sulfuron's heal coverage](docs/sulfuron.md).
@@ -29,7 +29,7 @@ definition needs no source-list edit. The three source modules are:
 `basic_classes` owns Melee/Ranged, their four paid offensive abilities, free recovery and shared Curse;
 `training_encounters` owns the dummy and both opponent practices, private NPC kits and
 variants, grant utilities and shared Slow. NPC Curse imports `basics/effect.curse`.
-`classicwow_moltencore` adds Garr and Firesworn with a private ordinary NPC kit at
+`classicwow_moltencore` adds Garr and Firesworn with two private ordinary NPC kits at
 `modules/classicwow/moltencore`, without a dependency on Training Encounters.
 The three retained public entries are `training-dummy` (Training Dummy),
 `grant-practice-melee` (Melee Opponent Practice) and `grant-practice-ranged` (Ranged
@@ -47,8 +47,8 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use the changed application reader for this candidate: compiler/capability48, semantic
-contract48 and identity algorithm4. Transport compatibility is owned by the application.
+Use the changed application reader for this candidate: compiler/capability50, semantic
+contract50 and identity algorithm4. Transport compatibility is owned by the application.
 `tools/validator.json` continues to identify the public compiler41 distribution.
 Its presence does not establish publication or activation; the external workflow remains
 the required gate. Local checks do not replace that gate.
