@@ -1,10 +1,11 @@
 # Sulfuron: heal coverage, proximity and displacement
 
-Select `classicwow-moltencore-sulfuron` with the unpublished compiler49 application.
+Select `classicwow-moltencore-sulfuron` with the current unpublished compiler50 application.
 This is the eighth catalog entry. Both Basic classes, Sulfuron and the Priest use
-four kits. Source preparation, both selected solo victories and local two-client
-cooperation are complete at the exact products recorded in the application workshop
-runbook. Shared Retry and normal release pass in a bounded follow-up. The compiled
+four kits. Source preparation, both selected solo victories and automated two-client
+behavior are recorded at the original compiler49 products in the application workshop
+runbook. Human-operated cooperation is still pending; automated clients do not satisfy
+that requirement. Shared Retry and normal release pass in a bounded follow-up. The compiled
 N100 joint cut encodes 19,244 bytes and reserves 63,055 bytes; this is a numeric
 case, not 100 active clients. Required application CI disposition remains separate.
 
@@ -61,4 +62,5 @@ Earlier observations remain attributed to their original content in the applicat
 This is a compressed practice adaptation without tank threat, scripted teammate
 help or hidden heal coverage. Public compiler41, the validator, protected workflow
 and public content main remain unchanged. S08 and S09 evolve the existing Garr
-after this slice's complete local milestone; they are not implemented here yet.
+on the same branch. S08 source and automated observations are recorded separately;
+S09 remains unstarted pending the selected human evidence.

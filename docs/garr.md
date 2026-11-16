@@ -53,7 +53,14 @@ compiler50 application reader and use its maintained workshop `author check`,
 ordinary local authoring; use candidate mode for a locally served browser build.
 Ordinary public Lobby Play still acquires public main's three practices.
 
-This is the S08 source-preparation checkpoint: complete source checking passes;
-selected installed observations and joint-capacity evidence are still in progress.
+This is the S08 control/position candidate: complete source checking and the exact
+139-file application snapshot pass. The actual joint N100 case encodes 22,949 bytes
+and reserves 64,461, with 100 independent Focus, eight Banish and 20 Clear holders
+within 128 entitlements. Native Melee and shipping-AOT Ranged victories, bounded
+mechanic subcases, automated independent two-client receiving, shared Retry and
+normal release are recorded at their exact products in the application runbook.
+Human-operated cooperation and final required CI remain pending; automated clients
+do not establish the selected human mistake/response. Earlier evaluator and startup
+failures remain at their original producers.
 S09 will add death fuses and explosion settlement to this same encounter. S08
 does not claim death-explosion safety or full Garr completion.
