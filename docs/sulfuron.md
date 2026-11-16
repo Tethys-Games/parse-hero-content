@@ -2,8 +2,11 @@
 
 Select `classicwow-moltencore-sulfuron` with the unpublished compiler49 application.
 This is the eighth catalog entry. Both Basic classes, Sulfuron and the Priest use
-four kits. Source preparation is complete; installed observations and the final
-combined envelope remain in progress in the application workshop runbook.
+four kits. Source preparation, both selected solo victories and local two-client
+cooperation are complete at the exact products recorded in the application workshop
+runbook. Shared Retry and normal release pass in a bounded follow-up. The compiled
+N100 joint cut encodes 19,244 bytes and reserves 63,055 bytes; this is a numeric
+case, not 100 active clients. Required application CI disposition remains separate.
 
 Choose Melee or Ranged, then right-click the Interrupt pedestal and optionally
 Cleanse Magic before Pull. Interrupt reaches 2.5 metres and has a six-second
