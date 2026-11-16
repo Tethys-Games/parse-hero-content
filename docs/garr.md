@@ -37,7 +37,10 @@ source potency for sixteen seconds. Active recasts reject. Garr's Antimagic Puls
 removes the actual nearby beneficial Magic occurrences; the tool remains usable
 for a new cast. No Focus is applied automatically.
 
-Firesworn use bounded routes and pursuit. Outside six metres from Garr, Separation
+Firesworn use bounded routes and pursuit; routine strikes select the nearest exact
+hostile human within 3.5 metres, with ordinary facing and reach checks. Their exact
+strikes do not consume the four shared ground-warning slots needed by boss areas.
+Outside six metres from Garr, Separation
 Anxiety accelerates their routine attack cadence to 175%; returning removes the
 live contribution without resetting progress. After Garr dies, the reference is
 his actual final frame. Each genuine Firesworn defeat adds 150 permille to Garr's

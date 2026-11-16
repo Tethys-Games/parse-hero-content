@@ -37,8 +37,6 @@ intent = hold
 action = firesworn_strike
 start_after_ms = 1000
 repeat_after_ms = 4000
-facing = anchor
-facing_anchor = 1
 cadence_proximity = anxiety
 
 [transition]
@@ -66,3 +64,9 @@ order = cycling
 movement = hold
 range_mm = 12000
 absent_effect = effect.immolate
+
+[reactive_action.firesworn_strike]
+cohort = enrolled_humans
+order = nearest
+movement = approach
+range_mm = 3500

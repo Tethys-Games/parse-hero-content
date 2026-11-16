@@ -14,12 +14,11 @@ cooldown_ms = 0
 locomotion = root_translation
 
 [target]
-kind = captured_cone
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
 range_mm = 3500
 facing_degrees = 90
-maximum_targets = 512
-exit_anchors = [1, 2, 3, 4]
-corridor_step_mm = 250
 
 [delivery]
 kind = direct
@@ -29,7 +28,7 @@ operation = damage
 amount = 10
 
 [presentation]
-windup = cone_sector
+windup = beam
 impact = flash
 tint = red
 
