@@ -27,3 +27,7 @@ amount = 40
 
 impact = flash
 tint = cyan
+
+[classification]
+form = utility
+contact = non_contact

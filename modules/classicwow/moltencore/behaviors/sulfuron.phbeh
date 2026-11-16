@@ -1,0 +1,82 @@
+behavior sulfuron
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = hand
+
+[navigation]
+reference = placement_origin
+terminal = loop
+tether_radius_mm = 10000
+pursuit_radius_mm = 7000
+stall_ms = 1000
+[waypoint]
+order = 1
+offset_x_mm = -1000
+offset_z_mm = 0
+[waypoint]
+order = 2
+offset_x_mm = 1000
+offset_z_mm = 0
+
+[mode.hand]
+intent = hold
+action = hand_of_ragnaros
+start_after_ms = 1200
+repeat_after_ms = 30000
+
+[mode.shout]
+intent = hold
+action = demoralizing_shout
+start_after_ms = 500
+repeat_after_ms = 30000
+
+[mode.spear]
+intent = hold
+action = flame_spear
+start_after_ms = 500
+repeat_after_ms = 30000
+
+[mode.pressure]
+intent = hold
+action = sulfuron_strike
+start_after_ms = 1000
+repeat_after_ms = 4000
+facing = anchor
+facing_anchor = 3
+
+[transition]
+mode = hand
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 4000
+next = shout
+
+[transition]
+mode = shout
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 2500
+next = spear
+
+[transition]
+mode = spear
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 3500
+next = pressure
+
+[transition]
+mode = pressure
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 12000
+next = hand

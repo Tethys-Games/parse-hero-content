@@ -33,3 +33,9 @@ windup = beam
 flight = orb
 impact = flash
 tint = cyan
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = arcane

@@ -26,3 +26,9 @@ amount = 50
 [presentation]
 impact = flash
 tint = amber
+
+[classification]
+form = weapon
+contact = weapon_contact
+damage_family = physical
+damage_school = physical

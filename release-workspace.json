@@ -35,6 +35,11 @@
       "id": "classicwow-moltencore-gehennas",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-gehennas"
+    },
+    {
+      "id": "classicwow-moltencore-sulfuron",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-sulfuron"
     }
   ]
 }

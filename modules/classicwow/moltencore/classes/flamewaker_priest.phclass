@@ -1,0 +1,19 @@
+class flamewaker_priest
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.dark_mending]
+definition = ability.dark_mending
+
+[action.immolate]
+definition = ability.immolate
+
+[action.shadow_word_pain]
+definition = ability.shadow_word_pain
+
+[action.priest_strike]
+definition = ability.priest_strike

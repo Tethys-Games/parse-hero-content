@@ -1,0 +1,19 @@
+class sulfuron
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.hand_of_ragnaros]
+definition = ability.hand_of_ragnaros
+
+[action.demoralizing_shout]
+definition = ability.demoralizing_shout
+
+[action.flame_spear]
+definition = ability.flame_spear
+
+[action.sulfuron_strike]
+definition = ability.sulfuron_strike

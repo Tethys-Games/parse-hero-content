@@ -82,6 +82,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-sulfuron",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.sulfuron",
+      "map": "classicwow_moltencore/map.sulfuron",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

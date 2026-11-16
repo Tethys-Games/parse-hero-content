@@ -25,3 +25,9 @@ effect = effect.curse
 [presentation]
 impact = flash
 tint = violet
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = shadow

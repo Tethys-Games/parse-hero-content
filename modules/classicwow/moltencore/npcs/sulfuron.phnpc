@@ -1,0 +1,7 @@
+npc sulfuron
+archetype_key = installed.npc.basic_walker_pool
+behavior = sulfuron
+kit = class.sulfuron
+health = 1100
+radius_mm = 650
+height_mm = 2400

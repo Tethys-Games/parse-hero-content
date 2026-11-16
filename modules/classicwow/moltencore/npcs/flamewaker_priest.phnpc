@@ -1,0 +1,7 @@
+npc flamewaker_priest
+archetype_key = installed.npc.basic_walker_pool
+behavior = flamewaker_priest
+kit = class.flamewaker_priest
+health = 450
+radius_mm = 450
+height_mm = 2400
