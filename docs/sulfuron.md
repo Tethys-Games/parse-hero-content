@@ -46,10 +46,14 @@ is an Arcane spell, independently of its seeking delivery. Classification comes
 from the definitions, not class names or distance. Immolate and Shadow Word Pain
 are finite harmful Magic periodic effects and can be cleansed.
 
-The initial tuning has 1,100 boss health and 450 per priest, increasing by 500 and
+The current tuning has 500 boss health and 450 per priest, increasing by 500 and
 100 respectively per additional frozen human. The deadline is 180 seconds. A
 personal defeat leaves surviving teammates able to finish. Retry is shared and
 starts a fresh attempt; reclaim tools afterward. Normal Leave retires local work.
+The original1,100-health boss made the finish too long after Ranged cleared the
+priests. The500-health base keeps the selected short finish; priest health,
+critical windows, healing amounts, population scaling and deadlines are unchanged.
+Earlier observations remain attributed to their original content in the application runbook.
 
 This is a compressed practice adaptation without tank threat, scripted teammate
 help or hidden heal coverage. Public compiler41, the validator, protected workflow
