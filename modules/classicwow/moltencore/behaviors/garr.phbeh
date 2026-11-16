@@ -39,7 +39,7 @@ cadence_defeats = strengthening
 [mode.purge]
 intent = hold
 action = antimagic_pulse
-start_after_ms = 1000
+start_after_ms = 1800
 repeat_after_ms = 30000
 
 [transition]
