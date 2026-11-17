@@ -34,7 +34,7 @@ variants, grant utilities and shared Slow. NPC Curse imports `basics/effect.curs
 The three retained public entries are `training-dummy` (Training Dummy),
 `grant-practice-melee` (Melee Opponent Practice) and `grant-practice-ranged` (Ranged
 Opponent Practice). Each retains both Basics in one immutable Session. A participant's
-personal choice does not change that Session's identity. The new candidate entry
+personal choice does not change that Session's identity. The candidate entries
 `classicwow-moltencore-garr`, `classicwow-moltencore-lucifron`, `classicwow-moltencore-magmadar`, `classicwow-moltencore-gehennas` and `classicwow-moltencore-sulfuron` also admit both Basics in one Session. The candidate catalog has eight entries.
 Lucifron selects both Basics, one shared enemy kit and one solo-proxy kit; retained Garr
 definitions validate without occupying another active kit.
