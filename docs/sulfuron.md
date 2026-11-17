@@ -1,13 +1,15 @@
 # Sulfuron: heal coverage, proximity and displacement
 
-Select `classicwow-moltencore-sulfuron` with the current unpublished compiler50 application.
+Select `classicwow-moltencore-sulfuron` with the current unpublished compiler51 application.
 This is the eighth catalog entry. Both Basic classes, Sulfuron and the Priest use
 four kits. Source preparation, both selected solo victories and automated two-client
 behavior are recorded at the original compiler49 products in the application workshop
-runbook. Human-operated cooperation is still pending; automated clients do not satisfy
-that requirement. Shared Retry and normal release pass in a bounded follow-up. The compiled
-N100 joint cut encodes 19,244 bytes and reserves 63,055 bytes; this is a numeric
-case, not 100 active clients. Required application CI disposition remains separate.
+runbook. The November 16 owner decision defers human-operated cooperation, feel and
+balance throughout this workshop; automated clients establish functionality only.
+Shared Retry and normal release pass in the recorded bounded follow-up. The original
+compiled N100 joint cut encoded 19,244 bytes and reserved 63,055 bytes at its recorded
+producer; those historical measurements are not a current candidate capacity result
+or 100 active clients. Required application CI disposition remains separate.
 
 Choose Melee or Ranged, then right-click the Interrupt pedestal and optionally
 Cleanse Magic before Pull. Interrupt reaches 2.5 metres and has a six-second
@@ -63,4 +65,7 @@ This is a compressed practice adaptation without tank threat, scripted teammate
 help or hidden heal coverage. Public compiler41, the validator, protected workflow
 and public content main remain unchanged. S08 and S09 evolve the existing Garr
 on the same branch. S08 source and automated observations are recorded separately;
-S09 remains unstarted pending the selected human evidence.
+The November 17 intermission corrects shared retained cast coverage and authoring;
+S09 is selected and partial until its actual due closure, independent receiving and
+local installed observations pass. The application workshop runbook is the current
+status pointer. S10 is not selected.

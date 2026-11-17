@@ -2,7 +2,6 @@ effect magma_shackles
 disposition = harmful
 dispel_category = magic
 storage = shared_cohort
-cohort_refresh = replace_exact_source_definition
 [movement]
 duration_ms = 8000
 movement_permille = 550

@@ -2,7 +2,6 @@ effect demoralizing_shout
 disposition = harmful
 dispel_category = none
 storage = shared_cohort
-cohort_refresh = replace_exact_source_definition
 [modifier]
 boundary = source_potency
 operation = scale_permille

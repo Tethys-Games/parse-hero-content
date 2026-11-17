@@ -5,7 +5,6 @@ stop_distance_mm = 150
 initial_mode = shackles
 
 [navigation]
-reference = placement_origin
 terminal = loop
 tether_radius_mm = 10000
 pursuit_radius_mm = 7000

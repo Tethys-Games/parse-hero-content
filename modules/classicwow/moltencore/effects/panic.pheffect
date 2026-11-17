@@ -5,12 +5,7 @@ dispel_category = none
 [constraint]
 kind = fear
 duration_ms = 4000
-interruption = foreground
-recipient_policy = frozen_humans_and_declared_roles
 role_mask = 2
-source_lifetime = committed_independent
-overlap = oldest_occurrence
-routing = supported_eight_directions
 
 [presentation]
 persistent = ring

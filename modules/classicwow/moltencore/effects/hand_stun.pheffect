@@ -5,12 +5,7 @@ dispel_category = none
 [constraint]
 kind = stun
 duration_ms = 1500
-interruption = foreground
-recipient_policy = frozen_humans_and_declared_roles
 role_mask = 0
-source_lifetime = committed_independent
-overlap = oldest_occurrence
-routing = zero_voluntary
 
 [presentation]
 persistent = ring

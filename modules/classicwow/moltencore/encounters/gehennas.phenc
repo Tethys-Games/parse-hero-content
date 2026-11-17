@@ -97,25 +97,25 @@ eligibility = live_avatar_in_range
 link_lifetime = exact_owned_generation
 
 [anchor.north]
-capture = immutable_world_position/v1
-support = canonical_destination/v1
-missing = reject_no_retarget/v1
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
 position_xz_mm = (0, -12500)
 
 [anchor.east]
-capture = immutable_world_position/v1
-support = canonical_destination/v1
-missing = reject_no_retarget/v1
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
 position_xz_mm = (12500, 0)
 
 [anchor.south]
-capture = immutable_world_position/v1
-support = canonical_destination/v1
-missing = reject_no_retarget/v1
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
 position_xz_mm = (0, 12500)
 
 [anchor.west]
-capture = immutable_world_position/v1
-support = canonical_destination/v1
-missing = reject_no_retarget/v1
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
 position_xz_mm = (-12500, 0)

@@ -47,17 +47,17 @@ npc_template = firesworn
 stable_actor_key = actor.firesworn_8
 
 [composition]
-start = pull_frozen_humans/v1
+start = pull_frozen_humans
 roster_placements = [encounter_placement.garr, encounter_placement.firesworn_1, encounter_placement.firesworn_2, encounter_placement.firesworn_3, encounter_placement.firesworn_4, encounter_placement.firesworn_5, encounter_placement.firesworn_6, encounter_placement.firesworn_7, encounter_placement.firesworn_8]
 roster_min_humans = [1, 1, 1, 1, 2, 3, 4, 5, 6]
 roster_health_per_additional_human = [600, 180, 180, 180, 180, 180, 180, 180, 180]
 roster_health_threshold_permille = [0, 250, 250, 250, 250, 250, 250, 250, 250]
 roster_latch_health_threshold = [false, true, true, true, true, true, true, true, true]
 deadline_ms = 120000
-completion = required_roster_defeated/v1
-after_completion = retain_for_retry/v1
-failure = deadline_or_cohort_defeat/v1
-reset = settle_owned_then_fresh_attempt/v1
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
 
 [defeat_consequence.eruption]
 roles = [encounter_placement.firesworn_1, encounter_placement.firesworn_2, encounter_placement.firesworn_3, encounter_placement.firesworn_4, encounter_placement.firesworn_5, encounter_placement.firesworn_6, encounter_placement.firesworn_7, encounter_placement.firesworn_8]
@@ -65,10 +65,9 @@ fuse_ms = 3000
 radius_mm = 4000
 damage = 200
 impulse_mm = 1800
-lifetime = exact_role_defeat_until_settled/v1
 
 [object.pull]
-purpose = pull/v1
+purpose = pull
 after_ms = 0
 position_xz_mm = (0, 7000)
 range_mm = 2500

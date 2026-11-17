@@ -1,5 +1,14 @@
 # Garr S09 death consequence candidate
 
+Current status (November 17): intermission corrections and local S09 completion are
+selected; S09 remains partial. The corrected compiler51 reader checks all eight
+entries. Typed short policies and the selected invariant omissions emit exactly
+the same 137 files as explicit assertions under that reader. Complete due closure,
+independent receiving and current native/AOT observations remain to be proved.
+The [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md)
+owns the current evidence and required CI disposition. Human multiplayer is deferred;
+S10 is not selected.
+
 Select `classicwow-moltencore-garr` from `workspace.json`. Both Basic Melee and
 Basic Ranged belong to the same Session and each participant chooses independently.
 The module retains `encounter.garr` and `map.garr`. Both Basics and the separate
@@ -84,7 +93,7 @@ automated results establish functionality only. Application CI43837776630 passed
 pure/tooling and retained an unexplained native timeout. Earlier evaluator and
 startup failures remain at their original producers.
 
-S09 source preparation is in progress. The shared compiler51 validator checked
+Historical November 16 source preparation: the shared compiler51 validator checked
 the complete eight-entry candidate in local `s09-check236`. Exact full-snapshot
 installation, selected runtime/envelope checks and native/shipping-AOT observations
 remain to be completed. Windows Smart App Control blocked a new application

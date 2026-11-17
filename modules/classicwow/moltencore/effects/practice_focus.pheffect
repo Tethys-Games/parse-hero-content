@@ -2,7 +2,6 @@ effect practice_focus
 disposition = beneficial
 dispel_category = magic
 storage = independent_self
-refresh = reject_active
 [modifier]
 boundary = source_potency
 operation = scale_permille

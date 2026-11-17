@@ -4,11 +4,6 @@ dispel_category = none
 [constraint]
 kind = banish
 duration_ms = 10000
-interruption = foreground
-recipient_policy = exact_permitted_elemental
-source_lifetime = target_owned
-overlap = reject_active
-routing = zero_voluntary
 [presentation]
 persistent = ring
 removal = fade

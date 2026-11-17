@@ -5,7 +5,6 @@ stop_distance_mm = 150
 initial_mode = immolate
 
 [navigation]
-reference = placement_origin
 terminal = loop
 tether_radius_mm = 10000
 pursuit_radius_mm = 7500
@@ -23,8 +22,8 @@ offset_z_mm = 2500
 source_role = encounter_placement.garr
 radius_mm = 6000
 rate_permille = 1750
-boundary = outside/v1
-reference = retain_defeat_frame/v1
+boundary = outside
+reference = retain_defeat_frame
 [mode.immolate]
 intent = hold
 action = firesworn_immolate
