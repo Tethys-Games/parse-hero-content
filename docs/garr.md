@@ -1,12 +1,16 @@
 # Garr S09 death consequence candidate
 
-Current status (November 17): intermission corrections and local S09 completion are
-selected; S09 remains partial. The corrected compiler51 reader checks all eight
+Current status (November 17): the selected intermission corrections and local S09
+observations are implemented. The corrected compiler51 reader checks all eight
 entries. Typed short policies and the selected invariant omissions emit exactly
-the same 137 files as explicit assertions under that reader. Complete due closure,
-independent receiving and current native/AOT observations remain to be proved.
+the same 137 files as explicit assertions under that reader. Actual compiled due
+closure and independent receiving pass, as do full-health native Melee and shipping-AOT
+Ranged victories, blast/escape/settlement, and automated two-client divided tools,
+consequence/movement receiving, shared Retry and normal release. Their gameplay source
+is committed `74ba8666`; this documentation follow-up changes no authored bytes.
 The [application workshop runbook](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/runbooks/authoring-workshop.md)
-owns the current evidence and required CI disposition. Human multiplayer is deferred;
+and its linked current work record own exact producers and the required CI disposition;
+local observations alone do not establish the application gate. Human multiplayer is deferred;
 S10 is not selected.
 
 Select `classicwow-moltencore-garr` from `workspace.json`. Both Basic Melee and
@@ -30,8 +34,9 @@ session teardown. Numbers are provisional balance for this scoped milestone.
 
 Firesworn show a dangerous-finisher warning at or below 25% of their actual frozen
 maximum health. Each genuine defeat starts a three-second fuse at that add's
-actual death position. The four-metre blast deals 200 damage and a 1.8-metre planar
-outward impulse to current in-range hostile humans. Moving out before it fires
+actual death position. The four-metre blast deals 200 damage and knocks current
+in-range hostile humans outward. Its authored 1,800 mm impulse feeds the common
+movement/collision system; it is not a limit of 1.8 metres on total travel. Moving out before it fires
 works; late entry can be hit. All eight adds can retain separate sites and fuses.
 The finishing attacker does not own the enemy's blast. Garr has 1,000 base health
 and each Firesworn has 300; existing per-additional-human scaling remains.
@@ -41,7 +46,8 @@ does not root movement. Ordinary speed is 4.8 m/s, or 2.64 m/s under 55% Shackle
 three seconds permits 7.92 metres before collision/route constraints. Prepare a
 clear route, finish, then move immediately. An occupied cast or obstructed route
 still matters. Clearing Shackles helps but is not required by the escape design.
-These calculations await the selected installed S09 observations.
+The selected full-health solo observations now demonstrate actual death-site escapes;
+they establish functionality, while human learning and balance remain deferred.
 
 Final objective credit is timely even if a fuse extends beyond the combat
 deadline. Victory waits for owed blasts and displacement. All humans defeated
