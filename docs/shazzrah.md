@@ -4,10 +4,13 @@ The selected play is `classicwow-moltencore-shazzrah`, using the unpublished com
 reader on application Draft PR527. Both Basics are available. The ten-entry catalog
 preserves all previous plays. Shared behavior, authoring, receiving and measured bounds
 are implemented. Ordinary native Basic Melee victory, settlement, Retry and normal
-release pass. A shipping-AOT acquisition fault before combat currently holds the Ranged
-victory and automated-party observations; its cause is unresolved. The application
-workshop runbook records exact producers, first failures and the required gate. This
-is not a completed S11 milestone. Public compiler41 and publication remain separate.
+release pass at the original tuning. The owner explicitly selected finishing observations
+while retaining the pre-combat shipping-AOT acquisition fault as an unresolved incident.
+The corrected application now settles deadline failure truthfully. Ranged06 dealt 622 of
+650 health before that deadline; 560 x N is selected for the specified roughly 90-second
+practice target. Both solo victories and party evidence are required on this tuning.
+The application workshop runbook records exact producers, first failures and the required
+gate. This is not yet a completed S11 milestone. Public compiler41 and publication remain separate.
 
 Pull freezes the human roster. One human gets one movement-only spatial proxy with no
 health, kit, combat or utility actions. Parties get no proxy. Remove Curse remains the
@@ -16,7 +19,7 @@ hostile beneficial-Magic removal: instant, zero cost, eight-second cooldown, twe
 range, one occurrence. Solo can acquire both. The separate 128-record grant, owner and
 origin limits remain; N=100 does not promise 200 simultaneous entitlements.
 
-Starting practice tuning is 650 x N boss health, 1,000 human health and a 100-second
+Current practice tuning is 560 x N boss health, 1,000 human health and a 100-second
 deadline. Visible nondispellable Practice Durability applies 400-permille incoming
 damage for 60 seconds, with final-Arming setup and one retained 55–59-second renewal
 opportunity. This is explicit practice normalization. Deaden Magic applies a beneficial
