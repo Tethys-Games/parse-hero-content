@@ -16,7 +16,7 @@ second renewal window use the normal staged modifier action; accepted casts fini
 before renewal, which has priority over new offense. This is practice normalization.
 
 Positive WeaponContact outcomes against the protected life add independent Splash
-stacks, up to eight. Each stack adds 10 Fire per three-second pulse and 50 permille
+stacks, up to eight. Each stack adds 6 Fire per three-second pulse and 50 permille
 Physical incoming vulnerability; refreshed expiry is 12 seconds. The child is Magical,
 Fire and NonContact, distinct from its triggering ancestor. Pausing qualifying attacks
 allows a real reset. The shorter expiry and incoming vulnerability adapt the source's
@@ -38,8 +38,16 @@ relationship. Ragers have a one-health floor and bounded half-health restoration
 the exact boss life dies; that death permanently destroys their linked lives. Already
 committed harm still settles. Reduced roster, local positioning, recovery, durability
 and compressed timings are disclosed practice adaptations; faster legitimate clears
-remain valid. These values await installed observation, not a balance claim.
+remain valid. These values are practice tuning, not human balance acceptance.
 
-The shared check passed at `C:/ph-data/s10-s11/s10-author28`, preserving all eight older
-entries. Original parser failures remain at author26/27. Use the maintained application
+The first native observation on application3e3f151f/contente5188c9 ended in human
+defeat with the boss at30/650. Both Field Recovery uses, the scheduled recovery,
+renewal and genuine10% threshold occurred; normal release left no process residue.
+Its sustained contact pressure dominated the damage. The candidate reduces only
+Splash's starting10 Fire per stack to6, keeping its clocks, cap and Physical
+vulnerability. The failed original remains at native-s10-observe01; tuned installed
+evidence is pending.
+
+The shared nine-entry check passed at `C:/ph-data/s10-s11/s10-author33`, preserving all eight older
+entries before this tuning. Original parser failures remain at author26/27. Use the maintained application
 snapshot tool for emission; do not edit generated offline inputs by hand.
