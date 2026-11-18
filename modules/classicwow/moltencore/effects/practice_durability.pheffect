@@ -1,0 +1,15 @@
+effect practice_durability
+disposition = beneficial
+[modifier]
+boundary = incoming_health
+operation = scale_permille
+value = 400
+units = permille
+quantization = truncate_toward_zero
+overflow = clamp_health_units
+order = 1
+duration_ms = 60000
+[presentation]
+persistent = ring
+removal = fade
+tint = cyan

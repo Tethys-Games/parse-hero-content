@@ -1,0 +1,90 @@
+encounter golemagg
+player_health = 1000
+[spawn]
+placement = encounter_placement.golemagg
+npc_template = golemagg
+stable_actor_key = actor.golemagg
+[spawn]
+placement = encounter_placement.rager_left
+npc_template = core_rager
+stable_actor_key = actor.rager_left
+[spawn]
+placement = encounter_placement.rager_right
+npc_template = core_rager
+stable_actor_key = actor.rager_right
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.golemagg, encounter_placement.rager_left, encounter_placement.rager_right]
+roster_min_humans = [1, 1, 2]
+roster_required = [true, false, false]
+roster_health_per_additional_human = [650, 0, 0]
+roster_health_threshold_permille = [100, 0, 0]
+roster_latch_health_threshold = [true, false, false]
+roster_linked_to = [none, encounter_placement.golemagg, encounter_placement.golemagg]
+deadline_ms = 100000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+choice_policy = sparse_event_hash
+choice_seed = 18108
+choice_chance_permille = 250
+choice_maximum_deviations = 1
+choice_spacing_ms = 20000
+[damage_reaction.magma_splash]
+protected_role = encounter_placement.golemagg
+duration_ms = 12000
+pulse_ms = 3000
+stack_cap = 8
+pulse_amount = 10
+incoming_per_stack_permille = 50
+trigger_filter_contact = weapon_contact
+child_form = spell
+child_damage_family = magical
+child_damage_school = fire
+child_contact = non_contact
+filter_damage_family = physical
+[recovery_schedule.practice_recovery]
+after_ms = 30000
+delay_ms = 6000
+potency = 250
+[scheduled_action.durability_setup]
+timing = final_arming
+placement = encounter_placement.golemagg
+ability = practice_durability
+[scheduled_action.durability_renewal]
+timing = running_window
+placement = encounter_placement.golemagg
+ability = practice_durability
+after_ms = 55000
+until_ms = 59000
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 6500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+[grant.field_recovery]
+uses_per_attempt = 2
+definition = ability.field_recovery
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.field_recovery]
+grant = field_recovery
+after_ms = 0
+position_xz_mm = (1800, 6500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation

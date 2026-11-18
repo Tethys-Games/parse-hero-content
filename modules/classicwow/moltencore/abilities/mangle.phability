@@ -1,0 +1,37 @@
+ability mangle
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = source_at_commit
+[activation]
+kind = cast
+cast_ms = 500
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 3500
+[delivery]
+kind = direct
+[payload]
+operation = damage
+amount = 30
+[payload]
+operation = apply_effect
+effect = effect.mangle_bleed
+[payload]
+operation = apply_effect
+effect = effect.mangle_slow
+[presentation]
+windup = beam
+impact = flash
+tint = red
+[classification]
+form = weapon
+contact = weapon_contact
+damage_family = physical
+damage_school = physical

@@ -1,0 +1,28 @@
+behavior golemagg
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = pyroblast
+[mode.pyroblast]
+intent = hold
+action = pyroblast
+start_after_ms = 12000
+repeat_after_ms = 18000
+[mode.earthquake]
+intent = hold
+action = earthquake
+start_after_ms = 1
+repeat_after_ms = 3000
+[transition]
+mode = pyroblast
+order = 1
+condition = health_latched
+comparison = eq
+value = true
+after_ms = 1
+next = earthquake
+[reactive_action.pyroblast]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000

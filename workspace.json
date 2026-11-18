@@ -91,6 +91,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-golemagg",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.golemagg",
+      "map": "classicwow_moltencore/map.golemagg",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

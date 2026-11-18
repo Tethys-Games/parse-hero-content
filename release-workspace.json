@@ -40,6 +40,11 @@
       "id": "classicwow-moltencore-sulfuron",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-sulfuron"
+    },
+    {
+      "id": "classicwow-moltencore-golemagg",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-golemagg"
     }
   ]
 }

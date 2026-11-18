@@ -1,0 +1,15 @@
+effect pyroblast_burn
+disposition = harmful
+[periodic]
+duration_ms = 12000
+pulse_ms = 3000
+pulse_amount = 15
+grouping = source_target_definition
+refresh = preserve_cadence_capture
+source_lifetime = target_owned
+periodic_cost = application_paid
+[presentation]
+persistent = ring
+pulse = flash
+removal = fade
+tint = red
