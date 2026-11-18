@@ -3,14 +3,21 @@
 The selected play is `classicwow-moltencore-shazzrah`, using the unpublished compiler53
 reader on application Draft PR527. Both Basics are available. The ten-entry catalog
 preserves all previous plays. Shared behavior, authoring, receiving and measured bounds
-are implemented. Ordinary native Basic Melee victory, settlement, Retry and normal
-release pass at the original tuning. The owner explicitly selected finishing observations
-while retaining the pre-combat shipping-AOT acquisition fault as an unresolved incident.
-The corrected application now settles deadline failure truthfully. Ranged06 dealt 622 of
-650 health before that deadline; 560 x N is selected for the specified roughly 90-second
-practice target. Both solo victories and party evidence are required on this tuning.
-The application workshop runbook records exact producers, first failures and the required
-gate. This is not yet a completed S11 milestone. Public compiler41 and publication remain separate.
+are implemented. On the final 560 x N tuning, ordinary native Basic Melee03 wins in
+69.7 seconds and shipping-AOT Basic Ranged07 wins in 84.8667 seconds. Both pass settlement,
+Retry and normal release. Automated party02's saved gameplay passes corrected evaluation120:
+independent receiving, physical work under Deaden, divided/cross-target utilities and
+actual unselected-human Blink exposure. Tail03 passes shared Retry and normal release
+of both clients, authority and operator. Human multiplayer feel remains deferred.
+
+The owner selected finishing these observations while retaining the S10 party02 and
+S11 browser04 startup faults as separate unresolved incidents. Neither later success nor
+application-only tracing establishes their cause. The application retirement correction
+now settles deadline failure truthfully. Ranged06 dealt 622 of 650 health before that
+deadline, motivating the final tuning for the specified roughly 90-second target.
+The application workshop runbook and Draft PR527 own exact producers, first failures and
+the normal required gate. The selected S11 implementation and installed evidence are
+complete for independent review. Public compiler41, approval and publication remain separate.
 
 Pull freezes the human roster. One human gets one movement-only spatial proxy with no
 health, kit, combat or utility actions. Parties get no proxy. Remove Curse remains the
