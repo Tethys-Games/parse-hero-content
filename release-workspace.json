@@ -45,6 +45,11 @@
       "id": "classicwow-moltencore-golemagg",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-golemagg"
+    },
+    {
+      "id": "classicwow-moltencore-shazzrah",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-shazzrah"
     }
   ]
 }

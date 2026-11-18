@@ -100,6 +100,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-shazzrah",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.shazzrah",
+      "map": "classicwow_moltencore/map.shazzrah",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

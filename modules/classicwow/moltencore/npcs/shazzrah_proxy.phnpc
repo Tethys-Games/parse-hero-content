@@ -1,0 +1,5 @@
+npc shazzrah_proxy
+archetype_key = installed.npc.basic_walker_pool
+behavior = shazzrah_proxy
+radius_mm = 350
+height_mm = 1800

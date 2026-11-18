@@ -16,10 +16,10 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This Golemagg S10 / Garr S09 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability52 application
+This Shazzrah S11 / Golemagg S10 / Garr S09 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability53 application
 reader. The public gate and `tools/validator.json` remain compiler41 and may reject
 the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md) or
-[play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), or [inspect the Golemagg candidate](docs/golemagg.md).
+[play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), [inspect Golemagg](docs/golemagg.md), or [work on Shazzrah](docs/shazzrah.md).
 
 Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
@@ -35,7 +35,7 @@ The three retained public entries are `training-dummy` (Training Dummy),
 `grant-practice-melee` (Melee Opponent Practice) and `grant-practice-ranged` (Ranged
 Opponent Practice). Each retains both Basics in one immutable Session. A participant's
 personal choice does not change that Session's identity. The candidate entries
-`classicwow-moltencore-garr`, `classicwow-moltencore-lucifron`, `classicwow-moltencore-magmadar`, `classicwow-moltencore-gehennas`, `classicwow-moltencore-sulfuron` and `classicwow-moltencore-golemagg` also admit both Basics in one Session. The candidate catalog has nine entries.
+`classicwow-moltencore-garr`, `classicwow-moltencore-lucifron`, `classicwow-moltencore-magmadar`, `classicwow-moltencore-gehennas`, `classicwow-moltencore-sulfuron`, `classicwow-moltencore-golemagg` and `classicwow-moltencore-shazzrah` also admit both Basics in one Session. The candidate catalog has ten entries.
 Lucifron selects both Basics, one shared enemy kit and one solo-proxy kit; retained Garr
 definitions validate without occupying another active kit.
 The production dummy retains 60,000 health and a three-second respawn. Older Training,

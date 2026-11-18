@@ -1,0 +1,7 @@
+npc shazzrah
+archetype_key = installed.npc.basic_walker_pool
+behavior = shazzrah
+kit = class.shazzrah
+health = 650
+radius_mm = 400
+height_mm = 1800

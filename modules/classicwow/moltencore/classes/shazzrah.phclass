@@ -1,0 +1,18 @@
+class shazzrah
+player_selectable = false
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+[action.arcane_explosion]
+definition = ability.arcane_explosion
+[action.counterspell]
+definition = ability.counterspell
+[action.shazzrah_curse]
+definition = ability.shazzrah_curse
+[action.deaden_magic]
+definition = ability.deaden_magic
+[action.practice_durability]
+definition = ability.practice_durability
+[action.blink]
+definition = ability.blink

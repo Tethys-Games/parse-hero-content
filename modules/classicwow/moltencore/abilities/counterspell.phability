@@ -1,0 +1,31 @@
+ability counterspell
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = definition_only
+[activation]
+kind = cast
+cast_ms = 1500
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+[target]
+kind = captured_cone
+relation = hostile
+range_mm = 12000
+facing_degrees = 90
+maximum_targets = 512
+exit_anchors = [1, 2, 3, 4]
+corridor_step_mm = 250
+[delivery]
+kind = direct
+[payload]
+operation = interrupt
+[presentation]
+windup = cone_sector
+impact = flash
+tint = violet
+[classification]
+form = spell
+contact = non_contact
