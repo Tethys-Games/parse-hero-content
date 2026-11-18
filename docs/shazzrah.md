@@ -2,9 +2,12 @@
 
 The selected play is `classicwow-moltencore-shazzrah`, using the unpublished compiler53
 reader on application Draft PR527. Both Basics are available. The ten-entry catalog
-preserves all previous plays. This is an implementation checkpoint; installed play,
-receiving, measured bounds and the required gate are recorded in the application
-workshop runbook as they complete. Public compiler41 and publication remain separate.
+preserves all previous plays. Shared behavior, authoring, receiving and measured bounds
+are implemented. Ordinary native Basic Melee victory, settlement, Retry and normal
+release pass. A shipping-AOT acquisition fault before combat currently holds the Ranged
+victory and automated-party observations; its cause is unresolved. The application
+workshop runbook records exact producers, first failures and the required gate. This
+is not a completed S11 milestone. Public compiler41 and publication remain separate.
 
 Pull freezes the human roster. One human gets one movement-only spatial proxy with no
 health, kit, combat or utility actions. Parties get no proxy. Remove Curse remains the
