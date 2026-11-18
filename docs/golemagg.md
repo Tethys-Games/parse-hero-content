@@ -16,7 +16,7 @@ second renewal window use the normal staged modifier action; accepted casts fini
 before renewal, which has priority over new offense. This is practice normalization.
 
 Positive WeaponContact outcomes against the protected life add independent Splash
-stacks, up to eight. Each stack adds 6 Fire per three-second pulse and 50 permille
+stacks, up to eight. Each stack adds 4 Fire per three-second pulse and 50 permille
 Physical incoming vulnerability; refreshed expiry is 12 seconds. The child is Magical,
 Fire and NonContact, distinct from its triggering ancestor. Pausing qualifying attacks
 allows a real reset. The shorter expiry and incoming vulnerability adapt the source's
@@ -47,6 +47,15 @@ Its sustained contact pressure dominated the damage. The candidate reduces only
 Splash's starting10 Fire per stack to6, keeping its clocks, cap and Physical
 vulnerability. The failed original remains at native-s10-observe01; tuned installed
 evidence is pending.
+
+The corrected full-reset Melee observation03 on application3ca0412d/contentc8f57bdb
+defeats Golemagg after71.1 seconds, with7 human health remaining. Committed burn then
+defeats the human during settlement; this remains a failed observation with normal
+release. Both400-point Field Recovery uses restored400, and the delayed scheduled
+recovery, actual full Splash reset, Rager restoration/Mangle and renewal occurred.
+The next candidate reduces only Splash6 to4 Fire per stack to provide room for that
+finite settlement tail. It preserves the meaningful clocks, cap, Physical
+vulnerability and outcome precedence. Installed victory remains to be established.
 
 The shared nine-entry check passed at `C:/ph-data/s10-s11/s10-author33`, preserving all eight older
 entries before this tuning. Original parser failures remain at author26/27. Use the maintained application
