@@ -60,3 +60,25 @@ vulnerability and outcome precedence. Installed victory remains to be establishe
 The shared nine-entry check passed at `C:/ph-data/s10-s11/s10-author33`, preserving all eight older
 entries before this tuning. Original parser failures remain at author26/27. Use the maintained application
 snapshot tool for emission; do not edit generated offline inputs by hand.
+
+The 4-Fire candidate at `1f9843cf38a4c8f99a27312502f54a4dd1c3726a` now passes the
+full nine-entry check (author97) and both ordinary solo victories. Native Melee04
+uses application3ca0412d/native96 and reaches Success after82.63 seconds with328
+health; shipping-AOT Ranged04 uses applicationf7096064/AOT105 and reaches Success
+after88 seconds with705 health. Both prove sustainable Basic resources, real
+threshold/linked destruction, finite settlement, delayed shared recovery, ordinary
+durability renewal, fresh Retry and normal release without residue. Native additionally
+proves a full Splash reset/new occurrence, actual Mangle and linked restoration.
+The Ranged status popup visibly shows the nondispellable400-permille durability.
+These are automated local functionality observations, not human balance acceptance.
+
+The exact emitted package is
+`package.selected_75264c25c0ed353fbca7af1d3d50e28ce48d6c744f3566fa604631d4892dce8b`,
+SHA256 `64c1192107b17477ea90655d56124c6b7f5d9e992858da764a9d441534bdb1a0`.
+The application snapshot has155 exact files. Automated party06 also passes independent
+native/browser receiving, cross-target400 healing, complete shared recovery arithmetic,
+useful survivor play after one human's defeat, shared Retry and normal release without
+residue on those same products/content. Earlier failed observations retain their
+original products; the application workshop runbook owns the newly captured browser
+startup incident, its required disposition before S11, and the final gate disposition.
+No Shazzrah content or public compatibility activation is included in this checkpoint.
