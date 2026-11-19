@@ -1,6 +1,7 @@
 npc resonator
 archetype_key = installed.npc.basic_walker_pool
 behavior = resonator
+kit = class.resonator
 health = 900
 radius_mm = 350
 height_mm = 1600
