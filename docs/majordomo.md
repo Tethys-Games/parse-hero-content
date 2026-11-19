@@ -1,7 +1,7 @@
 # Majordomo Executus practice
 
 Choose `classicwow-moltencore-majordomo` with Basic Melee or Basic Ranged.
-This partial S12 checkpoint is the eleventh play for candidate compiler55. At preparation, take Polymorph, Interrupt or both. To control a Healer, select its body and complete the 0.8-second Polymorph cast within 12 m. A successful cast costs no resource, has no cooldown and holds that Healer for up to 20 seconds. A successful refresh restarts the clock. Positive damage breaks the hold, so direct attacks and incidental area damage both matter. Installed solo and party observations are pending.
+This partial S12 checkpoint is the eleventh play for candidate compiler55. At preparation, take Polymorph, Interrupt or both. To control a Healer, select its body and complete the 0.8-second Polymorph cast within 12 m. A successful cast costs no resource, has no cooldown and holds that Healer for up to 20 seconds. A successful refresh restarts the clock. Positive damage breaks the hold, so direct attacks and incidental area damage both matter. The installed Basic Melee path has reached surrender and completed Retry and Leave/Quit. The first shipping-AOT Basic Ranged observation ended during selected-content acquisition, before combat. The local party observation is pending.
 
 | Classic encounter | Practice decision |
 | --- | --- |
@@ -13,4 +13,4 @@ This partial S12 checkpoint is the eleventh play for candidate compiler55. At pr
 | Damage Shield and a 50% spell reflection chance | The selected S13 design uses deterministic alternating windows. Physical-family retaliation includes ranged physical hits. Initial harmful spells can reflect once. Those shield mechanics are pending. |
 | Raid organization, threat, healing and summoning | Both paths retain the ordinary Basics. There is no solo proxy, automatic control or healing, or full raid logistics. |
 
-The starting practice profile gives each human 1,000 health. Each selected add has 350 health plus 150 for each additional frozen human. Executus has 1,000 health. The attempt deadline is 150 seconds from actual combat start. Strike the selected adds to bring about surrender and leave the coals promptly after a teleport. The ordinary Recover action restores the Basic's resource.
+The starting practice profile gives each human 1,000 health. Each selected add has 350 health plus 150 for each additional frozen human. Executus has 1,000 health. The attempt deadline is 150 seconds from actual combat start. Strike the selected adds to bring about surrender. After a teleport, leave the coals toward a living target so the return route stays clear of the field. The ordinary Recover action restores the Basic's resource.
