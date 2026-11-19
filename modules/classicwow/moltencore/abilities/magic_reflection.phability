@@ -1,0 +1,26 @@
+ability magic_reflection
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = definition_only
+[activation]
+kind = cast
+cast_ms = 3000
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+[target]
+kind = self
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.magic_reflection
+[presentation]
+windup = beam
+impact = flash
+tint = violet
+[classification]
+form = utility
+contact = non_contact

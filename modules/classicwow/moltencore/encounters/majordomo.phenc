@@ -183,3 +183,27 @@ ability = coal_teleport
 after_ms = 72000
 until_ms = 73000
 retain_result = false
+
+[scheduled_action.damage_shield_first]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = damage_shield
+after_ms = 17000
+until_ms = 18000
+retain_result = false
+
+[scheduled_action.magic_reflection]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = magic_reflection
+after_ms = 47000
+until_ms = 48000
+retain_result = false
+
+[scheduled_action.damage_shield_second]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = damage_shield
+after_ms = 77000
+until_ms = 78000
+retain_result = false

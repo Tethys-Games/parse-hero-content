@@ -14,3 +14,9 @@ definition = ability.coals
 
 [action.coal_teleport]
 definition = ability.coal_teleport
+
+[action.damage_shield]
+definition = ability.damage_shield
+
+[action.magic_reflection]
+definition = ability.magic_reflection
