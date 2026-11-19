@@ -1,0 +1,16 @@
+class flamewaker_guardian
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.fire_blast]
+definition = ability.fire_blast
+
+[action.blast_wave]
+definition = ability.blast_wave
+
+[action.flamewaker_shadow_bolt]
+definition = ability.flamewaker_shadow_bolt

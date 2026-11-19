@@ -1,0 +1,45 @@
+behavior flamewaker_elite
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = blast
+
+[mode.blast]
+intent = hold
+action = fire_blast
+start_after_ms = 1500
+repeat_after_ms = 14000
+critical_group = dangerous
+admission_window_ms = 1500
+
+[mode.wave]
+intent = hold
+action = blast_wave
+start_after_ms = 1500
+repeat_after_ms = 14000
+critical_group = dangerous
+admission_window_ms = 1500
+
+[transition]
+mode = blast
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 7000
+next = wave
+
+[transition]
+mode = wave
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 7000
+next = blast
+
+[reactive_action.fire_blast]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000

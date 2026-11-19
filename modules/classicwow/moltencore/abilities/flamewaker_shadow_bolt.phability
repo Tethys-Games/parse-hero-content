@@ -1,0 +1,38 @@
+ability flamewaker_shadow_bolt
+
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 1800
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 70
+
+[presentation]
+impact = flash
+windup = beam
+tint = violet
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = shadow

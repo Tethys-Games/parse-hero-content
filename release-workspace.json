@@ -50,6 +50,11 @@
       "id": "classicwow-moltencore-shazzrah",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-shazzrah"
+    },
+    {
+      "id": "classicwow-moltencore-majordomo",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-majordomo"
     }
   ]
 }

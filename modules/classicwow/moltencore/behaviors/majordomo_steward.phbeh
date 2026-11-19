@@ -1,0 +1,39 @@
+behavior majordomo_steward
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = observe
+
+[mode.observe]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+
+[mode.coals]
+intent = hold
+action = coals
+start_after_ms = 1
+repeat_after_ms = 40000
+
+[transition]
+mode = observe
+order = 1
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = coals
+window_after_ms = 29000
+window_repeat_ms = 40000
+window_count = 2
+window_duration_ms = 1000
+
+[transition]
+mode = coals
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 2000
+next = observe

@@ -109,6 +109,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-majordomo",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.majordomo",
+      "map": "classicwow_moltencore/map.majordomo",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

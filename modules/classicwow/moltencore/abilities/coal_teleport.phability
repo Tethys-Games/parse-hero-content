@@ -1,0 +1,15 @@
+ability coal_teleport
+anchor_context = object_anchor
+
+[program]
+execution = encounter_world_action
+operation = teleport_recipient_anchor
+capture = frozen_party_recipient_at_press
+anchor = public_anchor
+failure = preserve_committed_prefix
+support = canonical_destination
+placement_height_band_mm = 6000
+cost = 0
+cooldown_ms = 0
+ai_eligible = true
+preserve_velocity = false
