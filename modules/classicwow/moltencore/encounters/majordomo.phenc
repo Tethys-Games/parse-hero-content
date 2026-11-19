@@ -49,6 +49,7 @@ stable_actor_key = actor.healer_north
 [composition]
 start = pull_frozen_humans
 roster_placements = [encounter_placement.majordomo_steward, encounter_placement.elite_west, encounter_placement.healer_west, encounter_placement.elite_east, encounter_placement.healer_east, encounter_placement.elite_center, encounter_placement.healer_center, encounter_placement.elite_north, encounter_placement.healer_north]
+roster_halfway_roles = [outside, member, polymorph_before_half, member, polymorph_before_half, member, polymorph_before_half, member, polymorph_before_half]
 roster_min_humans = [1, 1, 1, 1, 1, 2, 2, 3, 3]
 roster_max_humans = [100, 100, 100, 100, 100, 100, 100, 100, 100]
 roster_required = [false, true, true, true, true, true, true, true, true]
@@ -89,6 +90,28 @@ retain_result = false
 purpose = pull
 after_ms = 0
 position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.polymorph]
+definition = ability.polymorph
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.polymorph]
+grant = polymorph
+after_ms = 0
+position_xz_mm = (1800, 8500)
 range_mm = 2500
 access = public_interaction
 eligibility = live_avatar_in_range

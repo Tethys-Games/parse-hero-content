@@ -1,0 +1,10 @@
+effect polymorph
+disposition = harmful
+dispel_category = magic
+[constraint]
+kind = polymorph
+duration_ms = 20000
+[presentation]
+persistent = ring
+removal = fade
+tint = cyan

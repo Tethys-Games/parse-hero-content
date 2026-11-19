@@ -16,7 +16,7 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This partial Majordomo S12 / Shazzrah S11 / Golemagg S10 / Garr S09 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability54 application
+This partial Majordomo S12 / Shazzrah S11 / Golemagg S10 / Garr S09 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability55 application
 reader. The public gate and `tools/validator.json` remain compiler41 and may reject
 the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md) or
 [play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), [inspect Golemagg](docs/golemagg.md), [work on Shazzrah](docs/shazzrah.md), or [inspect the partial Majordomo encounter](docs/majordomo.md).
