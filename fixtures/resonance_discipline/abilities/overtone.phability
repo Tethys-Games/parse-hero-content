@@ -1,0 +1,49 @@
+ability overtone
+
+[program]
+execution = staged
+category = spell
+
+[activation]
+kind = cast
+cast_ms = 1500
+payment_interval_ms = 500
+locomotion = interrupt_voluntary
+cost = 18
+cooldown_ms = 500
+
+[target]
+kind = actor
+range_metric = body_midpoint_3d
+range_mm = 12000
+facing_degrees = 120
+
+[delivery]
+kind = seeking
+speed_mm_per_second = 3200
+radius_mm = 125
+lifetime_ms = 6000
+
+[payload]
+operation = apply_effect
+effect = effect.resonance
+
+[payload]
+operation = damage
+amount = 25
+
+[payload]
+operation = apply_effect
+effect = effect.ringing
+
+[presentation]
+windup = beam
+flight = orb
+impact = flash
+tint = cyan
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = arcane

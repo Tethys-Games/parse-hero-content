@@ -1,0 +1,38 @@
+ability forked_quarrel
+
+[program]
+execution = staged
+category = melee
+projectile_properties = damage_mutable
+shared_impact = opposing_circle_split
+shared_radius_mm = 2500
+shared_maximum_targets = 3
+
+[activation]
+kind = instant
+cost = 9
+cooldown_ms = 1000
+
+[target]
+kind = facing_trajectory
+
+[delivery]
+kind = linear
+speed_mm_per_second = 9000
+radius_mm = 180
+lifetime_ms = 2400
+
+[payload]
+operation = damage
+amount = 36
+
+[presentation]
+flight = orb
+impact = flash
+tint = amber
+
+[classification]
+form = weapon
+contact = non_contact
+damage_family = physical
+damage_school = physical

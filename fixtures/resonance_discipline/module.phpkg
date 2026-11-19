@@ -1,0 +1,3 @@
+module resonance_discipline
+edition = workshop_1
+exports = [class.wavebinder]

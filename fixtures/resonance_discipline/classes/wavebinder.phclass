@@ -1,0 +1,27 @@
+class wavebinder
+player_selectable = true
+
+[resource.resonance/bounded_int]
+maximum = 90
+initial = 72
+reset = initial
+
+[action.forked_quarrel]
+definition = ability.forked_quarrel
+[action.sound_edge]
+definition = ability.sound_edge
+[action.overtone]
+definition = ability.overtone
+[action.reground]
+definition = ability.reground
+[action.damp_echo]
+definition = ability.damp_echo
+
+[binding.1]
+action = forked_quarrel
+[binding.2]
+action = sound_edge
+[binding.3]
+action = overtone
+[binding.4]
+action = reground

@@ -16,10 +16,18 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This partial Majordomo S12 / Shazzrah S11 / Golemagg S10 / Garr S09 / Lucifron S03 / Magmadar S05 / Gehennas S06 / Sulfuron S07 candidate requires the unpublished compiler/capability55 application
-reader. The public gate and `tools/validator.json` remain compiler41 and may reject
-the new syntax; no public activation is selected. [Play Garr locally](docs/garr.md) or
-[play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), [inspect Golemagg](docs/golemagg.md), [work on Shazzrah](docs/shazzrah.md), or [inspect the partial Majordomo encounter](docs/majordomo.md).
+The eleven-entry candidate through Majordomo S13 uses the unpublished
+compiler/capability 56 reader. The public gate uses compiler 41.
+[Play Garr locally](docs/garr.md) or
+[play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), [inspect Golemagg](docs/golemagg.md), [work on Shazzrah](docs/shazzrah.md), or [inspect Majordomo](docs/majordomo.md).
+
+For class composition tests, select a named play from
+`composition-workspace.json` with the workshop author command. Each play pairs
+Wavebinder and Ranged with the release play's encounter and map. Wavebinder's
+four bindings spend resonance on split Physical bolts, a Magical contact strike
+and a three-installment seeking Spell, then recover resource and remove its own
+resonance modifier. Its fifth declared action removes the applying life's ringing
+effect from a selected target. The release workspace continues to select both Basics.
 
 Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
@@ -35,7 +43,7 @@ The three retained public entries are `training-dummy` (Training Dummy),
 `grant-practice-melee` (Melee Opponent Practice) and `grant-practice-ranged` (Ranged
 Opponent Practice). Each retains both Basics in one immutable Session. A participant's
 personal choice does not change that Session's identity. The candidate entries
-`classicwow-moltencore-garr`, `classicwow-moltencore-lucifron`, `classicwow-moltencore-magmadar`, `classicwow-moltencore-gehennas`, `classicwow-moltencore-sulfuron`, `classicwow-moltencore-golemagg` and `classicwow-moltencore-shazzrah` also admit both Basics in one Session. The candidate catalog has ten entries.
+`classicwow-moltencore-garr`, `classicwow-moltencore-lucifron`, `classicwow-moltencore-magmadar`, `classicwow-moltencore-gehennas`, `classicwow-moltencore-sulfuron`, `classicwow-moltencore-golemagg`, `classicwow-moltencore-shazzrah` and `classicwow-moltencore-majordomo` also admit both Basics in one Session.
 Lucifron selects both Basics, one shared enemy kit and one solo-proxy kit; retained Garr
 definitions validate without occupying another active kit.
 The production dummy retains 60,000 health and a three-second respawn. Older Training,
@@ -47,8 +55,8 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use the changed application reader for this candidate: compiler/capability51, semantic
-contract51 and identity algorithm4. Transport compatibility is owned by the application.
+The candidate reader uses semantic contract 56 and identity algorithm 4.
+Transport compatibility is owned by the application.
 `tools/validator.json` continues to identify the public compiler41 distribution.
 Its presence does not establish publication or activation; the external workflow remains
 the required gate. Local checks do not replace that gate.
