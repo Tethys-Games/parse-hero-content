@@ -1,0 +1,48 @@
+ability standing_wave
+
+[program]
+execution = staged
+ai_eligible = false
+category = spell
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 500
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+
+[target]
+kind = ground_sites
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 8
+
+[emitter]
+shape = fixed_ground_cylinder
+lifetime = stationary_channel
+contact = complete_opposing_cohort
+placement = source_floor
+radius_mm = 3000
+height_mm = 4000
+duration_ms = 2000
+pulse_ms = 500
+pulse_damage_step = 3
+range_mm = 12000
+exit_anchors = [1, 2]
+corridor_step_mm = 250
+
+[presentation]
+impact = flash
+tint = cyan
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = arcane

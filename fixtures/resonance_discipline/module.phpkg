@@ -1,3 +1,3 @@
 module resonance_discipline
 edition = workshop_1
-exports = [class.wavebinder]
+exports = [class.wavebinder, encounter.resonance_trial, map.resonance_trial]

@@ -1,0 +1,15 @@
+effect lifting_chord
+disposition = harmful
+dispel_category = none
+[following_burst]
+fuse_ms = 2000
+radius_mm = 1700
+height_mm = 4000
+damage = 28
+vertical_impulse_mm_per_s = 5000
+
+[presentation]
+persistent = ring
+pulse = flash
+removal = fade
+tint = cyan

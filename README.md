@@ -22,12 +22,16 @@ compiler/capability 56 reader. The public gate uses compiler 41.
 [play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), [inspect Golemagg](docs/golemagg.md), [work on Shazzrah](docs/shazzrah.md), or [inspect Majordomo](docs/majordomo.md).
 
 For class composition tests, select a named play from
-`composition-workspace.json` with the workshop author command. Each play pairs
+`composition-workspace.json` with the workshop author command. Each release encounter in this workspace pairs
 Wavebinder and Ranged with the release play's encounter and map. Wavebinder's
 four bindings spend resonance on split Physical bolts, a Magical contact strike
 and a three-installment seeking Spell, then recover resource and remove its own
 resonance modifier. Its fifth declared action removes the applying life's ringing
 effect from a selected target. The release workspace continues to select both Basics.
+The separate `resonance-trial` selects its own practice floor and moving
+resonator. A player can acquire Lifting Chord and Standing Wave there. These
+context actions exercise a following expiry and a finite escalating channel
+through ordinary supplemental bindings.
 
 Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,

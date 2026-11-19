@@ -1,0 +1,86 @@
+encounter resonance_trial
+player_health = 1000
+[spawn]
+placement = encounter_placement.resonator
+npc_template = resonator
+stable_actor_key = actor.resonator
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.resonator]
+roster_min_humans = [1]
+roster_max_humans = [100]
+roster_required = [true]
+roster_alliances = [enemy]
+roster_health_per_additional_human = [0]
+deadline_ms = 120000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 2200)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.lifting_chord]
+definition = ability.lifting_chord
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.lifting_chord]
+grant = lifting_chord
+after_ms = 0
+position_xz_mm = (-1600, 2200)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.standing_wave]
+definition = ability.standing_wave
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.standing_wave]
+grant = standing_wave
+after_ms = 0
+position_xz_mm = (1600, 2200)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[anchor.east]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (6000, 0)
+
+[anchor.west]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-6000, 0)

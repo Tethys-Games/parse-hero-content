@@ -131,6 +131,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "resonance-trial",
+      "player": "resonance_discipline/class.wavebinder",
+      "encounter": "resonance_discipline/encounter.resonance_trial",
+      "map": "resonance_discipline/map.resonance_trial",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }
