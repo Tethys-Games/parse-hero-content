@@ -22,6 +22,12 @@ action = living_bomb
 start_after_ms = 1
 repeat_after_ms = 600000
 
+[mode.inferno]
+intent = hold
+action = inferno
+start_after_ms = 1
+repeat_after_ms = 600000
+
 [transition]
 mode = hold
 order = 1
@@ -64,6 +70,28 @@ condition = elapsed
 comparison = eq
 value = true
 after_ms = 1000
+next = hold
+
+[transition]
+mode = hold
+order = 3
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = inferno
+window_after_ms = 1000
+window_repeat_ms = 71000
+window_count = 2
+window_duration_ms = 500
+
+[transition]
+mode = inferno
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 10500
 next = hold
 
 [reactive_action.ignite]

@@ -9,3 +9,6 @@ definition = ability.ignite
 
 [action.living_bomb]
 definition = ability.living_bomb
+
+[action.inferno]
+definition = ability.inferno
