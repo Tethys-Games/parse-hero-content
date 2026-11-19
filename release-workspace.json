@@ -55,6 +55,11 @@
       "id": "classicwow-moltencore-majordomo",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-majordomo"
+    },
+    {
+      "id": "classicwow-moltencore-geddon",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-geddon"
     }
   ]
 }

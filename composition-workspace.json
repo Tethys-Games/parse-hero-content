@@ -122,6 +122,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-geddon",
+      "player": "resonance_discipline/class.wavebinder",
+      "encounter": "classicwow_moltencore/encounter.geddon",
+      "map": "classicwow_moltencore/map.geddon",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

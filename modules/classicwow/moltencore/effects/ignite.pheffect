@@ -1,0 +1,17 @@
+effect ignite
+disposition = harmful
+dispel_category = magic
+[periodic]
+duration_ms = 12000
+pulse_ms = 2000
+pulse_resource_drain = 10
+pulse_amount = 20
+grouping = source_target_definition
+refresh = preserve_cadence_capture
+source_lifetime = target_owned
+periodic_cost = application_paid
+[presentation]
+persistent = ring
+pulse = flash
+removal = fade
+tint = red

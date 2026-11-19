@@ -118,6 +118,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-geddon",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.geddon",
+      "map": "classicwow_moltencore/map.geddon",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

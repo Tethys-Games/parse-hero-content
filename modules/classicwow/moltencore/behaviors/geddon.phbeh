@@ -1,0 +1,47 @@
+behavior geddon
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = hold
+
+[mode.hold]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+
+[mode.ignite]
+intent = hold
+action = ignite
+start_after_ms = 1
+repeat_after_ms = 600000
+
+[transition]
+mode = hold
+order = 1
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = ignite
+window_after_ms = 22000
+window_repeat_ms = 24000
+window_count = 5
+window_duration_ms = 500
+
+[transition]
+mode = ignite
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1000
+next = hold
+
+[reactive_action.ignite]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000
+group_maximum = 1
+group_humans_per_recipient = 1

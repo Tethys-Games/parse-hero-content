@@ -1,0 +1,31 @@
+ability ignite
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = definition_only
+[activation]
+kind = instant
+cast_ms = 0
+cost = 0
+cooldown_ms = 0
+locomotion = unrestricted
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.ignite
+[presentation]
+impact = flash
+tint = red
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = fire

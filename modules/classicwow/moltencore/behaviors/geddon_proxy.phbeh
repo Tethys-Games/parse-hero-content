@@ -1,0 +1,27 @@
+behavior geddon_proxy
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = route
+[mode.route]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+[navigation]
+terminal = loop
+tether_radius_mm = 12000
+pursuit_radius_mm = 0
+stall_ms = 1000
+[waypoint]
+order = 1
+offset_x_mm = -6000
+offset_z_mm = -3500
+[waypoint]
+order = 2
+offset_x_mm = 2500
+offset_z_mm = 4500
+[waypoint]
+order = 3
+offset_x_mm = 5000
+offset_z_mm = -3500

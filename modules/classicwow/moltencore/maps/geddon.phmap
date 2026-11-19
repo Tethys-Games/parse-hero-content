@@ -1,0 +1,27 @@
+map geddon
+[ground_region.chamber]
+top_height_mm = 0
+points_xz_mm = [(-10000, -10000), (10000, -10000), (10000, 10000), (-10000, 10000)]
+[spawn.player_one]
+position_xyz_mm = (-600, 0, 7000)
+yaw_centi_deg = 0
+[spawn.player_two]
+position_xyz_mm = (600, 0, 7000)
+yaw_centi_deg = 0
+[encounter_placement.geddon]
+encounter_id = geddon
+position_xyz_mm = (0, 0, 0)
+yaw_centi_deg = 18000
+trigger = trigger.geddon
+[encounter_placement.west_proxy]
+encounter_id = geddon
+position_xyz_mm = (-3000, 0, 0)
+yaw_centi_deg = 18000
+trigger = trigger.geddon
+[encounter_placement.east_proxy]
+encounter_id = geddon
+position_xyz_mm = (3000, 0, 0)
+yaw_centi_deg = 18000
+trigger = trigger.geddon
+[trigger.geddon]
+kind = encounter_start
