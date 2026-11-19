@@ -6,3 +6,6 @@ initial = 100
 reset = initial
 [action.ignite]
 definition = ability.ignite
+
+[action.living_bomb]
+definition = ability.living_bomb
