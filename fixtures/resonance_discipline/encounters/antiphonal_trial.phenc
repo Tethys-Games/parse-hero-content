@@ -33,4 +33,3 @@ range_mm = 2500
 access = public_interaction
 eligibility = live_avatar_in_range
 link_lifetime = exact_owned_generation
-
