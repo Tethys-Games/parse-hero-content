@@ -7,6 +7,9 @@ radius_mm = 1700
 height_mm = 4000
 damage = 28
 vertical_impulse_mm_per_s = 5000
+landing_safe_mm_per_s = 3000
+landing_mm_per_s_per_health = 100
+landing_max_damage = 150
 
 [presentation]
 persistent = ring

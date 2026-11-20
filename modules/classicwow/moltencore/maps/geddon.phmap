@@ -2,6 +2,14 @@ map geddon
 [ground_region.chamber]
 top_height_mm = 0
 points_xz_mm = [(-10000, -10000), (10000, -10000), (10000, 10000), (-10000, 10000)]
+[obstacle.west_alcove]
+position_xz_mm = (-5100, 7200)
+half_extents_xz_mm = (2000, 2000)
+underside_mm = 1600
+[obstacle.east_alcove]
+position_xz_mm = (5100, 7200)
+half_extents_xz_mm = (2000, 2000)
+underside_mm = 1600
 [spawn.player_one]
 position_xyz_mm = (-600, 0, 7000)
 yaw_centi_deg = 0
