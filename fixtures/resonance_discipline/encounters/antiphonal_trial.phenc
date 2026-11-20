@@ -8,17 +8,21 @@ stable_actor_key = actor.resonator
 placement = encounter_placement.answer
 npc_template = resonator
 stable_actor_key = actor.answer
+[spawn]
+placement = encounter_placement.countervoice
+npc_template = resonator
+stable_actor_key = actor.countervoice
 [composition]
 start = pull_frozen_humans
-roster_placements = [encounter_placement.resonator, encounter_placement.answer]
-roster_min_humans = [1, 1]
-roster_max_humans = [100, 100]
-roster_required = [true, true]
-roster_alliances = [enemy, enemy]
-roster_health_per_additional_human = [0, 0]
+roster_placements = [encounter_placement.resonator, encounter_placement.answer, encounter_placement.countervoice]
+roster_min_humans = [1, 1, 1]
+roster_max_humans = [100, 100, 100]
+roster_required = [true, true, false]
+roster_alliances = [enemy, enemy, enemy]
+roster_health_per_additional_human = [0, 0, 0]
 intermission_after_ms = 3000
 intermission_duration_ms = 3000
-roster_intermission_roles = [guarded, late]
+roster_intermission_roles = [guarded, late, continuing]
 deadline_ms = 24000
 completion = required_roster_defeated
 after_completion = retain_for_retry
@@ -29,6 +33,29 @@ reset = settle_owned_then_fresh_attempt
 purpose = pull
 after_ms = 0
 position_xz_mm = (0, 2200)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.lifting_chord]
+definition = ability.lifting_chord
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.lifting_chord]
+grant = lifting_chord
+after_ms = 0
+position_xz_mm = (-1600, 2200)
 range_mm = 2500
 access = public_interaction
 eligibility = live_avatar_in_range
