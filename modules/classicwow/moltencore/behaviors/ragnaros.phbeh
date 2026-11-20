@@ -14,6 +14,19 @@ action = elemental_fire
 start_after_ms = 1
 repeat_after_ms = 600000
 
+
+[mode.wrath]
+intent = hold
+action = wrath
+start_after_ms = 1
+repeat_after_ms = 600000
+
+[mode.erupting_flame]
+intent = hold
+action = erupting_flame
+start_after_ms = 1
+repeat_after_ms = 600000
+
 [transition]
 mode = hold
 order = 1
@@ -41,15 +54,84 @@ window_count = 2
 window_duration_ms = 500
 
 [transition]
+mode = hold
+order = 3
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = erupting_flame
+window_after_ms = 22000
+window_repeat_ms = 1000
+window_count = 1
+window_duration_ms = 500
+
+[transition]
+mode = hold
+order = 4
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = erupting_flame
+window_after_ms = 98000
+window_repeat_ms = 28000
+window_count = 2
+window_duration_ms = 500
+
+[transition]
 mode = fire
+order = 1
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = wrath
+window_after_ms = 12000
+window_repeat_ms = 22000
+window_count = 2
+window_duration_ms = 500
+
+[transition]
+mode = fire
+order = 2
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = wrath
+window_after_ms = 90000
+window_repeat_ms = 22000
+window_count = 2
+window_duration_ms = 500
+
+[transition]
+mode = wrath
 order = 1
 condition = elapsed
 comparison = eq
 value = true
-after_ms = 1500
+after_ms = 2000
 next = hold
+
+[transition]
+mode = erupting_flame
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1000
+next = hold
+
 [reactive_action.elemental_fire]
 cohort = enrolled_humans
 order = cycling
 movement = hold
 range_mm = 12000
+
+[reactive_action.erupting_flame]
+cohort = base_party
+order = cycling
+movement = hold
+range_mm = 12000
+absent_effect = effect.erupting_flame
