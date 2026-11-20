@@ -60,6 +60,11 @@
       "id": "classicwow-moltencore-geddon",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-geddon"
+    },
+    {
+      "id": "classicwow-moltencore-ragnaros",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-ragnaros"
     }
   ]
 }

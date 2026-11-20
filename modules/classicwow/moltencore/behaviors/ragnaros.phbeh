@@ -1,0 +1,55 @@
+behavior ragnaros
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = hold
+[mode.hold]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+[mode.fire]
+intent = hold
+action = elemental_fire
+start_after_ms = 1
+repeat_after_ms = 600000
+
+[transition]
+mode = hold
+order = 1
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = fire
+window_after_ms = 8000
+window_repeat_ms = 22000
+window_count = 2
+window_duration_ms = 500
+
+[transition]
+mode = hold
+order = 2
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = fire
+window_after_ms = 86000
+window_repeat_ms = 22000
+window_count = 2
+window_duration_ms = 500
+
+[transition]
+mode = fire
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1500
+next = hold
+[reactive_action.elemental_fire]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000

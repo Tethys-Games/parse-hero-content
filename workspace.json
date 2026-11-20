@@ -127,6 +127,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "classicwow-moltencore-ragnaros",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_moltencore/encounter.ragnaros",
+      "map": "classicwow_moltencore/map.ragnaros",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

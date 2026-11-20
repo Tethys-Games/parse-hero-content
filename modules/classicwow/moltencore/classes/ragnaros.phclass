@@ -1,0 +1,8 @@
+class ragnaros
+player_selectable = false
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+[action.elemental_fire]
+definition = ability.elemental_fire

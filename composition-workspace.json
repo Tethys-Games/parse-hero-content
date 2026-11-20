@@ -133,6 +133,15 @@
       ]
     },
     {
+      "name": "classicwow-moltencore-ragnaros",
+      "player": "resonance_discipline/class.wavebinder",
+      "encounter": "classicwow_moltencore/encounter.ragnaros",
+      "map": "classicwow_moltencore/map.ragnaros",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
       "name": "resonance-trial",
       "player": "resonance_discipline/class.wavebinder",
       "encounter": "resonance_discipline/encounter.resonance_trial",
