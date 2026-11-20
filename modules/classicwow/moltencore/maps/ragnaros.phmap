@@ -1,7 +1,13 @@
 map ragnaros
+[ground_region.basin]
+top_height_mm = -240
+points_xz_mm = [(-12000, -12000), (12000, -12000), (12000, 12000), (-12000, 12000)]
+[ground_region.northern_step]
+top_height_mm = -120
+points_xz_mm = [(-12000, -5000), (12000, -5000), (12000, -3800), (-12000, -3800)]
 [ground_region.chamber]
 top_height_mm = 0
-points_xz_mm = [(-12000, -12000), (12000, -12000), (12000, 12000), (-12000, 12000)]
+points_xz_mm = [(-12000, -4000), (12000, -4000), (12000, 12000), (-12000, 12000)]
 [spawn.player_one]
 position_xyz_mm = (-700, 0, 7000)
 yaw_centi_deg = 0
@@ -29,7 +35,7 @@ trigger = trigger.ragnaros
 
 [encounter_placement.son_2]
 encounter_id = ragnaros
-position_xyz_mm = (0, 0, -4200)
+position_xyz_mm = (0, 0, -3500)
 yaw_centi_deg = 18000
 trigger = trigger.ragnaros
 
