@@ -149,6 +149,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "antiphonal-trial",
+      "player": "resonance_discipline/class.wavebinder",
+      "encounter": "resonance_discipline/encounter.antiphonal_trial",
+      "map": "resonance_discipline/map.antiphonal_trial",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }

@@ -1,0 +1,36 @@
+encounter antiphonal_trial
+player_health = 1000
+[spawn]
+placement = encounter_placement.resonator
+npc_template = resonator
+stable_actor_key = actor.resonator
+[spawn]
+placement = encounter_placement.answer
+npc_template = resonator
+stable_actor_key = actor.answer
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.resonator, encounter_placement.answer]
+roster_min_humans = [1, 1]
+roster_max_humans = [100, 100]
+roster_required = [true, true]
+roster_alliances = [enemy, enemy]
+roster_health_per_additional_human = [0, 0]
+intermission_after_ms = 3000
+intermission_duration_ms = 4500
+roster_intermission_roles = [guarded, late]
+deadline_ms = 24000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 2200)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
