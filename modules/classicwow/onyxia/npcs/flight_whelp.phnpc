@@ -1,0 +1,7 @@
+npc flight_whelp
+archetype_key = installed.npc.basic_walker_pool
+behavior = whelp
+kit = class.whelp
+health = 140
+radius_mm = 350
+height_mm = 1200

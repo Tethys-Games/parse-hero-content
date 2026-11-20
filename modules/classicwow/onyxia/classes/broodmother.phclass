@@ -17,3 +17,12 @@ definition = ability.wing_buffet
 
 [action.tail_sweep]
 definition = ability.tail_sweep
+
+[action.fireball]
+definition = ability.fireball
+
+[action.deep_breath]
+definition = ability.deep_breath
+
+[action.bellowing_roar]
+definition = ability.bellowing_roar

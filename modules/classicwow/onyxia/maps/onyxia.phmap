@@ -48,5 +48,65 @@ position_xyz_mm = (0, 0, 3600)
 yaw_centi_deg = 18000
 trigger = trigger.onyxia
 
+[encounter_placement.flight_north_center]
+encounter_id = onyxia
+position_xyz_mm = (0, 0, -9000)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_east_inner]
+encounter_id = onyxia
+position_xyz_mm = (8900, 0, 0)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_west_inner]
+encounter_id = onyxia
+position_xyz_mm = (-8900, 0, 0)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_north_west]
+encounter_id = onyxia
+position_xyz_mm = (-1050, 0, -9000)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_east_center]
+encounter_id = onyxia
+position_xyz_mm = (8900, 0, 1050)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_west_center]
+encounter_id = onyxia
+position_xyz_mm = (-8900, 0, 1050)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_north_east]
+encounter_id = onyxia
+position_xyz_mm = (1050, 0, -9000)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_east_outer]
+encounter_id = onyxia
+position_xyz_mm = (8900, 0, -1050)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_west_outer]
+encounter_id = onyxia
+position_xyz_mm = (-8900, 0, -1050)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.flight_north_far]
+encounter_id = onyxia
+position_xyz_mm = (2100, 0, -9000)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
 [trigger.onyxia]
 kind = encounter_start

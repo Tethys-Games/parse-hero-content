@@ -2,6 +2,6 @@ npc onyxia
 archetype_key = installed.npc.basic_walker_pool
 behavior = ground_watch
 kit = class.broodmother
-health = 650
+health = 900
 radius_mm = 1500
 height_mm = 2400
