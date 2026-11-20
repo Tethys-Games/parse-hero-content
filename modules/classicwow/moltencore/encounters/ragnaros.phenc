@@ -92,3 +92,69 @@ range_mm = 2500
 access = public_interaction
 eligibility = live_avatar_in_range
 link_lifetime = exact_owned_generation
+
+[grant.bind]
+definition = ability.bind
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.bind]
+grant = bind
+after_ms = 0
+position_xz_mm = (-1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.release_bind]
+definition = ability.release_bind
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.release_bind]
+grant = release_bind
+after_ms = 0
+position_xz_mm = (1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.tempering_chill]
+definition = ability.tempering_chill
+scope = participant
+slot = 3
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.tempering_chill]
+grant = tempering_chill
+after_ms = 0
+position_xz_mm = (0, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
