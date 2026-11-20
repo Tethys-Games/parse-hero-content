@@ -1,0 +1,27 @@
+class rangefinder
+player_selectable = true
+
+[resource.resonance/bounded_int]
+maximum = 90
+initial = 72
+reset = initial
+
+[action.longbow]
+definition = ability.longbow
+[action.sound_edge]
+definition = ability.sound_edge
+[action.overtone]
+definition = ability.overtone
+[action.lifting_chord]
+definition = ability.lifting_chord
+[action.damp_echo]
+definition = ability.damp_echo
+
+[binding.1]
+action = longbow
+[binding.2]
+action = sound_edge
+[binding.3]
+action = overtone
+[binding.4]
+action = lifting_chord

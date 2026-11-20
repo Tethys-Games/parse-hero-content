@@ -1,0 +1,35 @@
+ability resounding_call
+
+[program]
+execution = staged
+ai_eligible = true
+category = spell
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 2000
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+
+[target]
+kind = captured_cone
+relation = hostile
+range_mm = 6000
+height_band_mm = 2100
+facing_degrees = 360
+maximum_targets = 512
+coverage = complete_radial
+
+[delivery]
+kind = direct
+
+[payload]
+operation = apply_effect
+effect = effect.resounding_fear
+
+[presentation]
+windup = cone_sector
+impact = flash
+tint = violet

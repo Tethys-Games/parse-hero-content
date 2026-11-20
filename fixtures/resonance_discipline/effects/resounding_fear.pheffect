@@ -1,0 +1,13 @@
+effect resounding_fear
+disposition = harmful
+dispel_category = none
+
+[constraint]
+kind = fear
+duration_ms = 1000
+role_mask = 0
+
+[presentation]
+persistent = ring
+removal = fade
+tint = violet

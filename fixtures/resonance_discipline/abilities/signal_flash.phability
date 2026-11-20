@@ -1,0 +1,48 @@
+ability signal_flash
+
+[program]
+execution = staged
+ai_eligible = true
+category = spell
+potency = definition_only
+
+[activation]
+kind = instant
+cost = 0
+cooldown_ms = 0
+
+[target]
+kind = ground_sites
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 12
+
+[emitter]
+shape = fixed_ground_cylinder
+lifetime = paid_at_lock
+contact = complete_opposing_cohort
+placement = rotating_reference_floor
+nearby_x_mm = 3200
+nearby_z_mm = 800
+radius_mm = 1200
+height_mm = 3000
+warning_ms = 500
+duration_ms = 33
+pulse_ms = 33
+range_mm = 12000
+exit_anchors = [1, 2]
+corridor_step_mm = 250
+
+[presentation]
+impact = flash
+tint = amber
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = fire

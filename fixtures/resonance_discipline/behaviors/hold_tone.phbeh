@@ -1,0 +1,10 @@
+behavior hold_tone
+behavior_kind = finite_modes
+target_xz_mm = (1500, -1000)
+stop_distance_mm = 150
+initial_mode = hold
+[mode.hold]
+intent = hold
+action = signal_flash
+start_after_ms = 60000
+repeat_after_ms = 60000
