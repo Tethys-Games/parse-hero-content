@@ -16,10 +16,10 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-The eleven-entry candidate through Majordomo S13 uses the unpublished
-compiler/capability 56 reader. The public gate uses compiler 41.
+The thirteen-entry candidate through Ragnaros uses the unpublished
+compiler/capability 62 reader. The public gate uses compiler 41.
 [Play Garr locally](docs/garr.md) or
-[play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), [inspect Golemagg](docs/golemagg.md), [work on Shazzrah](docs/shazzrah.md), or [inspect Majordomo](docs/majordomo.md).
+[play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), [inspect Golemagg](docs/golemagg.md), [work on Shazzrah](docs/shazzrah.md), [inspect Majordomo](docs/majordomo.md), [play Geddon](docs/geddon.md), or [play Ragnaros](docs/ragnaros.md).
 
 For class composition tests, select a named play from
 `composition-workspace.json` with the workshop author command. Each release encounter in this workspace pairs
@@ -31,7 +31,7 @@ effect from a selected target. The release workspace continues to select both Ba
 The separate `resonance-trial` selects its own practice floor and moving
 resonator. A player can acquire Lifting Chord and Standing Wave there. These
 context actions exercise a following expiry and a finite escalating channel
-through ordinary supplemental bindings.
+through ordinary supplemental bindings. The unrelated `antiphonal-trial` changes availability of the same resonator on a three-second interval. Its exact clocks expose paid windups, attached modifiers and resource pulses across both boundaries.
 
 Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
