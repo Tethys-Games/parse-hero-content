@@ -1,9 +1,9 @@
 map ragnaros
 [ground_region.basin]
-top_height_mm = -240
+top_height_mm = -160
 points_xz_mm = [(-12000, -12000), (12000, -12000), (12000, 12000), (-12000, 12000)]
 [ground_region.northern_step]
-top_height_mm = -120
+top_height_mm = -80
 points_xz_mm = [(-12000, -5000), (12000, -5000), (12000, -3800), (-12000, -3800)]
 [ground_region.chamber]
 top_height_mm = 0
