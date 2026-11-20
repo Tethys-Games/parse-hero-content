@@ -21,6 +21,10 @@
     {
       "name": "resonance_discipline",
       "path": "fixtures/resonance_discipline/module.phpkg"
+    },
+    {
+      "name": "classicwow_onyxia",
+      "path": "modules/classicwow/onyxia/module.phpkg"
     }
   ],
   "plays": [
@@ -155,6 +159,15 @@
       "player": "resonance_discipline/class.wavebinder",
       "encounter": "resonance_discipline/encounter.antiphonal_trial",
       "map": "resonance_discipline/map.antiphonal_trial",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "classicwow-onyxia",
+      "player": "resonance_discipline/class.wavebinder",
+      "encounter": "classicwow_onyxia/encounter.onyxia",
+      "map": "classicwow_onyxia/map.onyxia",
       "additional_classes": [
         "basic_classes/class.ranged"
       ]

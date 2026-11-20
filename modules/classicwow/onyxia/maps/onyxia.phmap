@@ -1,0 +1,52 @@
+map onyxia
+
+[ground_region.chamber]
+top_height_mm = 0
+points_xz_mm = [(-12000, -12000), (12000, -12000), (12000, 12000), (-12000, 12000)]
+
+[spawn.player_one]
+position_xyz_mm = (-700, 0, 8000)
+yaw_centi_deg = 0
+
+[spawn.player_two]
+position_xyz_mm = (700, 0, 8000)
+yaw_centi_deg = 0
+
+[encounter_placement.onyxia]
+encounter_id = onyxia
+position_xyz_mm = (0, 0, 0)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.west_outer]
+encounter_id = onyxia
+position_xyz_mm = (-6750, 0, -4000)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.west_inner]
+encounter_id = onyxia
+position_xyz_mm = (-5850, 0, -5000)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.east_inner]
+encounter_id = onyxia
+position_xyz_mm = (5850, 0, -5000)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.east_outer]
+encounter_id = onyxia
+position_xyz_mm = (6750, 0, -4000)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[encounter_placement.spacing_proxy]
+encounter_id = onyxia
+position_xyz_mm = (0, 0, 3600)
+yaw_centi_deg = 18000
+trigger = trigger.onyxia
+
+[trigger.onyxia]
+kind = encounter_start

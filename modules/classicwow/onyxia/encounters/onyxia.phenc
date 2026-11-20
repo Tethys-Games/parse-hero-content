@@ -1,0 +1,89 @@
+encounter onyxia
+player_health = 1000
+
+[spawn]
+placement = encounter_placement.onyxia
+npc_template = onyxia
+stable_actor_key = actor.onyxia
+
+[spawn]
+placement = encounter_placement.west_outer
+npc_template = egg_whelp
+stable_actor_key = actor.west_outer
+
+[spawn]
+placement = encounter_placement.west_inner
+npc_template = egg_whelp
+stable_actor_key = actor.west_inner
+
+[spawn]
+placement = encounter_placement.east_inner
+npc_template = egg_whelp
+stable_actor_key = actor.east_inner
+
+[spawn]
+placement = encounter_placement.east_outer
+npc_template = egg_whelp
+stable_actor_key = actor.east_outer
+
+[spawn]
+placement = encounter_placement.spacing_proxy
+npc_template = spacing_proxy
+stable_actor_key = actor.spacing_proxy
+
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.onyxia, encounter_placement.west_outer, encounter_placement.west_inner, encounter_placement.east_inner, encounter_placement.east_outer, encounter_placement.spacing_proxy]
+roster_min_humans = [1, 1, 1, 1, 1, 1]
+roster_max_humans = [100, 100, 100, 100, 100, 1]
+roster_required = [true, false, false, false, false, false]
+roster_alliances = [enemy, enemy, enemy, enemy, enemy, party]
+roster_health_per_additional_human = [500, 8, 8, 8, 8, 0]
+deadline_ms = 120000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[anchor.north]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, -10250)
+
+[anchor.east]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (10250, 0)
+
+[anchor.south]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, 10250)
+
+[anchor.west]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-10250, 0)
+
+[contact_group.west]
+minimum_xyz_mm = (-7750, 0, -6000)
+maximum_xyz_mm = (-5250, 750, -3500)
+roles = [encounter_placement.west_outer, encounter_placement.west_inner]
+
+[contact_group.east]
+minimum_xyz_mm = (5250, 0, -6000)
+maximum_xyz_mm = (7750, 750, -3500)
+roles = [encounter_placement.east_inner, encounter_placement.east_outer]

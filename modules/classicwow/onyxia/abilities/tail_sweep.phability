@@ -1,0 +1,45 @@
+ability tail_sweep
+
+[program]
+execution = staged
+ai_eligible = true
+category = melee
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 1500
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+
+[target]
+kind = captured_rear_cone
+relation = hostile
+range_mm = 7000
+facing_degrees = 120
+maximum_targets = 512
+exit_anchors = [1, 2, 3, 4]
+corridor_step_mm = 250
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 30
+
+[payload]
+operation = recipient_planar_impulse
+amount = 150
+
+[presentation]
+windup = cone_sector
+impact = flash
+tint = amber
+
+[classification]
+form = weapon
+contact = weapon_contact
+damage_family = physical
+damage_school = physical

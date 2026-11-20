@@ -1,0 +1,39 @@
+ability whelp_bite
+
+[program]
+execution = staged
+ai_eligible = true
+category = melee
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 600
+cost = 0
+cooldown_ms = 900
+locomotion = root_translation
+
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 2000
+facing_degrees = 90
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 15
+
+[presentation]
+windup = beam
+impact = flash
+tint = red
+
+[classification]
+form = weapon
+contact = weapon_contact
+damage_family = physical
+damage_school = physical

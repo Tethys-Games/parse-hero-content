@@ -17,6 +17,10 @@
     {
       "name": "classicwow_moltencore",
       "path": "modules/classicwow/moltencore/module.phpkg"
+    },
+    {
+      "name": "classicwow_onyxia",
+      "path": "modules/classicwow/onyxia/module.phpkg"
     }
   ],
   "plays": [
@@ -133,6 +137,15 @@
       "player": "basic_classes/class.melee",
       "encounter": "classicwow_moltencore/encounter.ragnaros",
       "map": "classicwow_moltencore/map.ragnaros",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "classicwow-onyxia",
+      "player": "basic_classes/class.melee",
+      "encounter": "classicwow_onyxia/encounter.onyxia",
+      "map": "classicwow_onyxia/map.onyxia",
       "additional_classes": [
         "basic_classes/class.ranged"
       ]

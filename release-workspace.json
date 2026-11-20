@@ -65,6 +65,11 @@
       "id": "classicwow-moltencore-ragnaros",
       "workspace": "workspace.json",
       "play": "classicwow-moltencore-ragnaros"
+    },
+    {
+      "id": "classicwow-onyxia",
+      "workspace": "workspace.json",
+      "play": "classicwow-onyxia"
     }
   ]
 }
