@@ -37,7 +37,7 @@
       "name": "ground-warning",
       "player": "resonance_discipline/class.rangefinder",
       "encounter": "resonance_discipline/encounter.ground_warning",
-      "map": "resonance_discipline/map.hover_trial",
+      "map": "resonance_discipline/map.ground_warning",
       "additional_classes": [
         "basic_classes/class.ranged"
       ]

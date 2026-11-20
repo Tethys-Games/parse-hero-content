@@ -1,0 +1,19 @@
+map ground_warning
+[ground_region.studio]
+top_height_mm = 0
+points_xz_mm = [(-8000, -8000), (8000, -8000), (8000, 8000), (-8000, 8000)]
+[spawn.performer]
+position_xyz_mm = (0, 0, 2200)
+yaw_centi_deg = 0
+[encounter_placement.conductor]
+encounter_id = ground_warning
+position_xyz_mm = (1500, 0, -1000)
+yaw_centi_deg = 18000
+trigger = trigger.trial
+[encounter_placement.answer]
+encounter_id = ground_warning
+position_xyz_mm = (5400, 0, -4100)
+yaw_centi_deg = 0
+trigger = trigger.trial
+[trigger.trial]
+kind = encounter_start
