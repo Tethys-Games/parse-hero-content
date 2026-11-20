@@ -1,0 +1,15 @@
+effect erupting_flame
+disposition = harmful
+dispel_category = none
+[following_burst]
+fuse_ms = 1500
+radius_mm = 2500
+height_mm = 4000
+damage = 50
+outward_impulse_mm_per_tick = 100
+
+[presentation]
+persistent = ring
+pulse = flash
+removal = fade
+tint = red

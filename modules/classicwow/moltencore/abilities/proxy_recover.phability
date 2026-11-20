@@ -1,0 +1,28 @@
+ability proxy_recover
+
+[program]
+execution = staged
+category = utility
+ai_eligible = true
+
+[activation]
+kind = instant
+
+cost = 0
+cooldown_ms = 6000
+
+
+[target]
+kind = self
+
+[delivery]
+kind = direct
+
+[payload]
+operation = recover_resource
+amount = 40
+
+[presentation]
+
+impact = flash
+tint = cyan

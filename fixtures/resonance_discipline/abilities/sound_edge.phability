@@ -1,0 +1,37 @@
+ability sound_edge
+
+[program]
+execution = staged
+category = melee
+
+[activation]
+kind = instant
+cost = 8
+cooldown_ms = 2000
+
+[target]
+kind = actor
+range_metric = body_midpoint_3d
+range_mm = 2500
+facing_degrees = 120
+
+[delivery]
+kind = direct
+
+[payload]
+operation = apply_effect
+effect = effect.resonance
+
+[payload]
+operation = damage
+amount = 16
+
+[presentation]
+impact = flash
+tint = violet
+
+[classification]
+form = weapon
+contact = weapon_contact
+damage_family = magical
+damage_school = arcane

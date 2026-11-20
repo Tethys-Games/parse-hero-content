@@ -1,0 +1,68 @@
+behavior gehennas
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 0
+initial_mode = rain
+
+[mode.rain]
+intent = hold
+action = rain_of_fire
+start_after_ms = 1000
+repeat_after_ms = 30000
+facing = anchor
+facing_anchor = 3
+variation = proxy_offset
+variation_role = 4
+variation_offset = 3
+
+[mode.curse]
+intent = hold
+action = gehennas_curse
+start_after_ms = 500
+repeat_after_ms = 30000
+
+[mode.bolts]
+intent = hold
+action = shadow_bolt
+start_after_ms = 1000
+repeat_after_ms = 6000
+
+[transition]
+mode = rain
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 4000
+next = curse
+
+[transition]
+mode = curse
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 3000
+next = bolts
+
+[transition]
+mode = bolts
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 23000
+next = rain
+
+[reactive_action.gehennas_curse]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000
+absent_effect = effect.gehennas_curse
+
+[reactive_action.shadow_bolt]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000

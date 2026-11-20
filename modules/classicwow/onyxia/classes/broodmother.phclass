@@ -1,0 +1,28 @@
+class broodmother
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.cleave]
+definition = ability.cleave
+
+[action.flame_breath]
+definition = ability.flame_breath
+
+[action.wing_buffet]
+definition = ability.wing_buffet
+
+[action.tail_sweep]
+definition = ability.tail_sweep
+
+[action.fireball]
+definition = ability.fireball
+
+[action.deep_breath]
+definition = ability.deep_breath
+
+[action.bellowing_roar]
+definition = ability.bellowing_roar

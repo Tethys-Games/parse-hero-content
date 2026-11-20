@@ -1,0 +1,31 @@
+ability firesworn_immolate
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+[activation]
+kind = cast
+cast_ms = 1800
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.immolate
+[presentation]
+windup = beam
+impact = flash
+tint = red
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = fire

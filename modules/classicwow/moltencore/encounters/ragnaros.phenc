@@ -1,0 +1,160 @@
+encounter ragnaros
+player_health = 1000
+
+[spawn]
+placement = encounter_placement.ragnaros
+npc_template = ragnaros
+stable_actor_key = actor.ragnaros
+
+[spawn]
+placement = encounter_placement.cinder_proxy
+npc_template = geddon_proxy
+stable_actor_key = actor.cinder_proxy
+
+[spawn]
+placement = encounter_placement.son_1
+npc_template = son_of_flame
+stable_actor_key = actor.son_1
+
+[spawn]
+placement = encounter_placement.son_2
+npc_template = son_of_flame
+stable_actor_key = actor.son_2
+
+[spawn]
+placement = encounter_placement.son_3
+npc_template = son_of_flame
+stable_actor_key = actor.son_3
+
+[spawn]
+placement = encounter_placement.son_4
+npc_template = son_of_flame
+stable_actor_key = actor.son_4
+
+[spawn]
+placement = encounter_placement.son_5
+npc_template = son_of_flame
+stable_actor_key = actor.son_5
+
+[spawn]
+placement = encounter_placement.son_6
+npc_template = son_of_flame
+stable_actor_key = actor.son_6
+
+[spawn]
+placement = encounter_placement.son_7
+npc_template = son_of_flame
+stable_actor_key = actor.son_7
+
+[spawn]
+placement = encounter_placement.son_8
+npc_template = son_of_flame
+stable_actor_key = actor.son_8
+
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.ragnaros, encounter_placement.cinder_proxy, encounter_placement.son_1, encounter_placement.son_2, encounter_placement.son_3, encounter_placement.son_4, encounter_placement.son_5, encounter_placement.son_6, encounter_placement.son_7, encounter_placement.son_8]
+roster_min_humans = [1, 1, 1, 1, 1, 2, 3, 4, 5, 6]
+roster_max_humans = [100, 1, 100, 100, 100, 100, 100, 100, 100, 100]
+roster_required = [true, false, true, true, true, true, true, true, true, true]
+roster_alliances = [enemy, party, enemy, enemy, enemy, enemy, enemy, enemy, enemy, enemy]
+roster_health_per_additional_human = [600, 0, 20, 20, 20, 20, 20, 20, 20, 20]
+floor_lifetime = encounter_active
+floor_center_x_mm = 0
+floor_center_z_mm = -8000
+floor_half_x_mm = 12000
+floor_half_z_mm = 4000
+floor_level_mm = -160
+floor_interval_ms = 1000
+floor_damage = 20
+floor_damage_family = magical
+floor_damage_school = fire
+floor_contact = non_contact
+aura_source_roles = 1020
+aura_radius_mm = 3000
+aura_height_mm = 4000
+aura_interval_ms = 1000
+aura_resource_drain = 5
+intermission_after_ms = 45000
+intermission_duration_ms = 30000
+roster_intermission_roles = [guarded, continuing, late, late, late, late, late, late, late, late]
+deadline_ms = 150000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.bind]
+definition = ability.bind
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.bind]
+grant = bind
+after_ms = 0
+position_xz_mm = (-1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.release_bind]
+definition = ability.release_bind
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.release_bind]
+grant = release_bind
+after_ms = 0
+position_xz_mm = (1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.tempering_chill]
+definition = ability.tempering_chill
+scope = participant
+slot = 3
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.tempering_chill]
+grant = tempering_chill
+after_ms = 0
+position_xz_mm = (0, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation

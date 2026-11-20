@@ -1,0 +1,7 @@
+npc golemagg
+archetype_key = installed.npc.basic_walker_pool
+behavior = golemagg
+kit = class.golemagg
+health = 650
+radius_mm = 400
+height_mm = 1800

@@ -1,0 +1,26 @@
+behavior gehennas_proxy
+behavior_kind = finite_modes
+target_xz_mm = (3500, 3500)
+stop_distance_mm = 150
+initial_mode = cross_route
+
+[mode.cross_route]
+intent = move_to_point
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+
+[mode.wait]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+
+[transition]
+mode = cross_route
+order = 1
+condition = arrived
+comparison = eq
+value = true
+after_ms = 100
+next = wait

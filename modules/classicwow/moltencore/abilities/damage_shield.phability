@@ -1,0 +1,26 @@
+ability damage_shield
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = definition_only
+[activation]
+kind = cast
+cast_ms = 3000
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+[target]
+kind = self
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.damage_shield
+[presentation]
+windup = beam
+impact = flash
+tint = amber
+[classification]
+form = utility
+contact = non_contact

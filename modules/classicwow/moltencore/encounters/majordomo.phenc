@@ -1,0 +1,209 @@
+encounter majordomo
+player_health = 1000
+
+[spawn]
+placement = encounter_placement.majordomo_steward
+npc_template = majordomo_steward
+stable_actor_key = actor.majordomo_steward
+
+[spawn]
+placement = encounter_placement.elite_west
+npc_template = flamewaker_elite
+stable_actor_key = actor.elite_west
+
+[spawn]
+placement = encounter_placement.healer_west
+npc_template = flamewaker_healer
+stable_actor_key = actor.healer_west
+
+[spawn]
+placement = encounter_placement.elite_east
+npc_template = flamewaker_elite
+stable_actor_key = actor.elite_east
+
+[spawn]
+placement = encounter_placement.healer_east
+npc_template = flamewaker_healer
+stable_actor_key = actor.healer_east
+
+[spawn]
+placement = encounter_placement.elite_center
+npc_template = flamewaker_elite
+stable_actor_key = actor.elite_center
+
+[spawn]
+placement = encounter_placement.healer_center
+npc_template = flamewaker_healer
+stable_actor_key = actor.healer_center
+
+[spawn]
+placement = encounter_placement.elite_north
+npc_template = flamewaker_elite
+stable_actor_key = actor.elite_north
+
+[spawn]
+placement = encounter_placement.healer_north
+npc_template = flamewaker_healer
+stable_actor_key = actor.healer_north
+
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.majordomo_steward, encounter_placement.elite_west, encounter_placement.healer_west, encounter_placement.elite_east, encounter_placement.healer_east, encounter_placement.elite_center, encounter_placement.healer_center, encounter_placement.elite_north, encounter_placement.healer_north]
+roster_halfway_roles = [outside, member, polymorph_before_half, member, polymorph_before_half, member, polymorph_before_half, member, polymorph_before_half]
+roster_min_humans = [1, 1, 1, 1, 1, 2, 2, 3, 3]
+roster_max_humans = [100, 100, 100, 100, 100, 100, 100, 100, 100]
+roster_required = [false, true, true, true, true, true, true, true, true]
+roster_alliances = [enemy, enemy, enemy, enemy, enemy, enemy, enemy, enemy, enemy]
+roster_health_per_additional_human = [0, 150, 150, 150, 150, 150, 150, 150, 150]
+deadline_ms = 150000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[critical_cast_group.dangerous]
+maximum_slots = 3
+spacing_ms = 750
+
+[scheduled_action.aegis_setup]
+timing = final_arming
+placement = encounter_placement.majordomo_steward
+ability = personal_aegis
+
+[scheduled_action.aegis_first]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = personal_aegis
+after_ms = 55000
+until_ms = 59000
+retain_result = false
+
+[scheduled_action.aegis_second]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = personal_aegis
+after_ms = 110000
+until_ms = 114000
+retain_result = false
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.polymorph]
+definition = ability.polymorph
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.polymorph]
+grant = polymorph
+after_ms = 0
+position_xz_mm = (1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.interrupt]
+definition = ability.interrupt
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.interrupt]
+grant = interrupt
+after_ms = 0
+position_xz_mm = (-1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+
+[anchor.coals]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, 2700)
+
+[anchor.east]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (6500, 3000)
+
+[anchor.west]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-6500, 3000)
+
+[anchor.south]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, 8500)
+
+[class_context]
+class = class.majordomo_steward
+anchor = coals
+
+[scheduled_action.coal_first]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = coal_teleport
+after_ms = 32000
+until_ms = 33000
+retain_result = false
+
+[scheduled_action.coal_second]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = coal_teleport
+after_ms = 72000
+until_ms = 73000
+retain_result = false
+
+[scheduled_action.damage_shield_first]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = damage_shield
+after_ms = 17000
+until_ms = 18000
+retain_result = false
+
+[scheduled_action.magic_reflection]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = magic_reflection
+after_ms = 47000
+until_ms = 48000
+retain_result = false
+
+[scheduled_action.damage_shield_second]
+timing = running_window
+placement = encounter_placement.majordomo_steward
+ability = damage_shield
+after_ms = 77000
+until_ms = 78000
+retain_result = false

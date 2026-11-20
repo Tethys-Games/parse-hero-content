@@ -1,0 +1,13 @@
+effect magic_reflection
+disposition = beneficial
+dispel_category = none
+
+[reaction_shield]
+kind = initial_harmful_spell
+duration_ms = 10000
+role_mask = 510
+
+[presentation]
+persistent = ring
+removal = fade
+tint = violet

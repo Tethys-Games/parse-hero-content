@@ -1,0 +1,22 @@
+class majordomo_steward
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.personal_aegis]
+definition = ability.personal_aegis
+
+[action.coals]
+definition = ability.coals
+
+[action.coal_teleport]
+definition = ability.coal_teleport
+
+[action.damage_shield]
+definition = ability.damage_shield
+
+[action.magic_reflection]
+definition = ability.magic_reflection

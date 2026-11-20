@@ -1,0 +1,8 @@
+behavior elemental
+behavior_kind = reactive
+target_xz_mm = (0, 7000)
+stop_distance_mm = 150
+reactive_actions = [strike]
+retreat_distance_mm = 0
+retreat_region_radius_mm = 17000
+retreat_stall_ms = 1000

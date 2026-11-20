@@ -1,3 +1,3 @@
 module basic_classes
 edition = workshop_1
-exports = [class.melee, class.ranged, ability.melee_attack, ability.cleave, ability.ranged_attack, ability.curse, effect.curse]
+exports = [class.melee, class.ranged, ability.melee_attack, ability.cleave, ability.ranged_attack, ability.curse, effect.curse, ability.recover]

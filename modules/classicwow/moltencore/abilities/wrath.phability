@@ -1,0 +1,44 @@
+ability wrath
+
+[program]
+execution = staged
+ai_eligible = true
+category = spell
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 1500
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+
+[target]
+kind = captured_cone
+relation = hostile
+range_mm = 4000
+facing_degrees = 360
+maximum_targets = 512
+coverage = complete_radial
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 40
+
+[payload]
+operation = recipient_planar_impulse
+amount = 150
+
+[presentation]
+windup = cone_sector
+impact = flash
+tint = amber
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = fire

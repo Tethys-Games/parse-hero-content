@@ -1,0 +1,27 @@
+map golemagg
+[ground_region.chamber]
+top_height_mm = 0
+points_xz_mm = [(-8000, -8000), (8000, -8000), (8000, 8000), (-8000, 8000)]
+[spawn.player_one]
+position_xyz_mm = (-600, 0, 7000)
+yaw_centi_deg = 0
+[spawn.player_two]
+position_xyz_mm = (600, 0, 7000)
+yaw_centi_deg = 0
+[encounter_placement.golemagg]
+encounter_id = golemagg
+position_xyz_mm = (0, 0, 0)
+yaw_centi_deg = 18000
+trigger = trigger.golemagg
+[encounter_placement.rager_left]
+encounter_id = golemagg
+position_xyz_mm = (-3500, 0, -1000)
+yaw_centi_deg = 18000
+trigger = trigger.golemagg
+[encounter_placement.rager_right]
+encounter_id = golemagg
+position_xyz_mm = (3500, 0, -1000)
+yaw_centi_deg = 18000
+trigger = trigger.golemagg
+[trigger.golemagg]
+kind = encounter_start

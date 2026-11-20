@@ -1,0 +1,79 @@
+behavior magmadar
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 0
+initial_mode = bomb
+
+[mode.bomb]
+intent = hold
+action = lava_bomb
+start_after_ms = 1000
+repeat_after_ms = 30000
+facing = anchor
+facing_anchor = 3
+variation = proxy_offset
+variation_role = 2
+variation_offset = 3
+
+[mode.breath]
+intent = hold
+action = lava_breath
+start_after_ms = 4000
+repeat_after_ms = 6000
+cadence_action = frenzy
+facing = anchor
+facing_anchor = 3
+variation = reference_turn
+variation_anchor = 2
+
+[transition]
+mode = bomb
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 4000
+next = panic
+
+[mode.panic]
+intent = hold
+action = panic
+start_after_ms = 500
+repeat_after_ms = 30000
+facing = anchor
+facing_anchor = 3
+
+[transition]
+mode = panic
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 3500
+next = frenzy
+
+[mode.frenzy]
+intent = hold
+action = frenzy
+start_after_ms = 500
+repeat_after_ms = 30000
+facing = anchor
+facing_anchor = 3
+
+[transition]
+mode = frenzy
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 2000
+next = breath
+
+[transition]
+mode = breath
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 20500
+next = bomb

@@ -1,0 +1,15 @@
+class golemagg
+player_selectable = false
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.pyroblast]
+definition = ability.pyroblast
+
+[action.earthquake]
+definition = ability.earthquake
+
+[action.practice_durability]
+definition = ability.practice_durability

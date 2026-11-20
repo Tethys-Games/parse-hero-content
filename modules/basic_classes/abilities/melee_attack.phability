@@ -2,11 +2,12 @@ ability melee_attack
 
 [program]
 execution = staged
+ai_eligible = true
 category = melee
 
 [activation]
 kind = instant
-cost = 0
+cost = 8
 cooldown_ms = 2000
 
 [target]
@@ -25,3 +26,9 @@ amount = 50
 [presentation]
 impact = flash
 tint = amber
+
+[classification]
+form = weapon
+contact = weapon_contact
+damage_family = physical
+damage_school = physical

@@ -1,0 +1,22 @@
+behavior spacing_proxy
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 100
+initial_mode = wait
+
+[mode.wait]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+
+[navigation]
+terminal = hold
+tether_radius_mm = 1000
+pursuit_radius_mm = 0
+stall_ms = 1000
+
+[waypoint]
+order = 1
+offset_x_mm = 0
+offset_z_mm = 0

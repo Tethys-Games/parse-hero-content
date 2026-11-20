@@ -1,0 +1,13 @@
+effect hand_stun
+disposition = harmful
+dispel_category = none
+
+[constraint]
+kind = stun
+duration_ms = 1500
+role_mask = 0
+
+[presentation]
+persistent = ring
+removal = fade
+tint = amber

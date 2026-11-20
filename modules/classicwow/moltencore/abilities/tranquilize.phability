@@ -1,0 +1,28 @@
+ability tranquilize
+
+[program]
+execution = staged
+category = utility
+
+[activation]
+kind = instant
+cost = 0
+cooldown_ms = 10000
+
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+
+[delivery]
+kind = direct
+
+[payload]
+operation = cleanse
+maximum_count = 1
+dispel_category = enrage
+
+[presentation]
+impact = flash
+tint = cyan

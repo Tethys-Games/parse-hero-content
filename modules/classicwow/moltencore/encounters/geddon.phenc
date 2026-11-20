@@ -1,0 +1,110 @@
+encounter geddon
+player_health = 1000
+[spawn]
+placement = encounter_placement.geddon
+npc_template = geddon
+stable_actor_key = actor.geddon
+[spawn]
+placement = encounter_placement.west_proxy
+npc_template = geddon_proxy
+stable_actor_key = actor.west_proxy
+[spawn]
+placement = encounter_placement.east_proxy
+npc_template = geddon_proxy
+stable_actor_key = actor.east_proxy
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.geddon, encounter_placement.west_proxy, encounter_placement.east_proxy]
+roster_min_humans = [1, 1, 1]
+roster_max_humans = [100, 2, 1]
+roster_required = [true, false, false]
+roster_alliances = [enemy, party, party]
+roster_health_per_additional_human = [600, 0, 0]
+roster_health_threshold_permille = [100, 0, 0]
+roster_latch_health_threshold = [true, false, false]
+roster_finish_window_ms = [8000, 0, 0]
+deadline_ms = 120000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.dispel_magic]
+definition = ability.dispel_magic
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.dispel_magic]
+grant = dispel_magic
+after_ms = 0
+position_xz_mm = (-1800, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.field_recovery]
+uses_per_attempt = 2
+definition = ability.field_recovery
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.field_recovery]
+grant = field_recovery
+after_ms = 0
+position_xz_mm = (1800, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[anchor.north]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, -7500)
+
+[anchor.east]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (7500, 0)
+
+[anchor.south]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, 7500)
+
+[anchor.west]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-7500, 0)

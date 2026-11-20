@@ -1,0 +1,24 @@
+behavior son_of_flame
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = follow
+[mode.follow]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+[navigation]
+terminal = loop
+tether_radius_mm = 16000
+pursuit_radius_mm = 12000
+speed_mm_per_second = 1200
+stall_ms = 1000
+[waypoint]
+order = 1
+offset_x_mm = -500
+offset_z_mm = 0
+[waypoint]
+order = 2
+offset_x_mm = 500
+offset_z_mm = 0

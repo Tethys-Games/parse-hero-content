@@ -1,0 +1,4 @@
+behavior resonator
+behavior_kind = move_to_point
+target_xz_mm = (900, 0)
+stop_distance_mm = 200

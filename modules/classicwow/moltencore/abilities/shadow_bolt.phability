@@ -1,0 +1,31 @@
+ability shadow_bolt
+
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 1000
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 100
+
+[presentation]
+impact = flash
+tint = violet

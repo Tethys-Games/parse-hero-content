@@ -1,0 +1,3 @@
+module classicwow_onyxia
+edition = workshop_1
+exports = [encounter.onyxia, map.onyxia]

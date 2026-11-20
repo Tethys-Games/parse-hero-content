@@ -1,0 +1,28 @@
+ability dominate
+
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+
+[activation]
+kind = instant
+cost = 0
+cooldown_ms = 30000
+
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+
+[delivery]
+kind = direct
+
+[payload]
+operation = apply_effect
+effect = effect.dominate
+
+[presentation]
+impact = flash
+tint = violet

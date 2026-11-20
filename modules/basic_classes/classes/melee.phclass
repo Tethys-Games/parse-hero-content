@@ -18,3 +18,9 @@ action = melee_attack
 
 [binding.2]
 action = cleave
+
+[action.recover]
+definition = ability.recover
+
+[binding.3]
+action = recover

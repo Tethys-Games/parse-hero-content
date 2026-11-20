@@ -1,0 +1,18 @@
+effect lucifron_doom
+disposition = harmful
+dispel_category = magic
+
+[periodic]
+duration_ms = 8000
+pulse_ms = 8000
+pulse_amount = 600
+grouping = source_target_definition
+refresh = preserve_cadence_capture
+source_lifetime = target_owned
+periodic_cost = application_paid
+
+[presentation]
+persistent = ring
+pulse = flash
+removal = fade
+tint = red

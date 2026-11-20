@@ -1,0 +1,7 @@
+npc core_rager
+archetype_key = installed.npc.basic_walker_pool
+behavior = core_rager
+kit = class.core_rager
+health = 300
+radius_mm = 400
+height_mm = 1800

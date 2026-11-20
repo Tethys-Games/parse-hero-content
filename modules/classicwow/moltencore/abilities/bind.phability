@@ -1,0 +1,25 @@
+ability bind
+[program]
+execution = staged
+category = spell
+potency = definition_only
+[activation]
+kind = cast
+cast_ms = 500
+cost = 0
+cooldown_ms = 10000
+locomotion = unrestricted
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.bind
+[presentation]
+windup = beam
+impact = flash
+tint = cyan

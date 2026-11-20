@@ -1,0 +1,17 @@
+effect deaden_magic
+disposition = beneficial
+dispel_category = magic
+[modifier]
+boundary = incoming_health
+operation = scale_permille
+value = 500
+units = permille
+quantization = truncate_toward_zero
+overflow = clamp_health_units
+order = 2
+duration_ms = 12000
+filter_damage_family = magical
+[presentation]
+persistent = ring
+removal = fade
+tint = cyan

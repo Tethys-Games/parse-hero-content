@@ -1,0 +1,10 @@
+effect mangle_slow
+disposition = harmful
+[movement]
+duration_ms = 8000
+movement_permille = 750
+group = 1
+[presentation]
+persistent = ring
+removal = fade
+tint = amber

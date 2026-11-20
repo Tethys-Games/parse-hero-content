@@ -1,0 +1,122 @@
+encounter sulfuron
+player_health = 1000
+
+[spawn]
+placement = encounter_placement.sulfuron
+npc_template = sulfuron
+stable_actor_key = actor.sulfuron
+
+[spawn]
+placement = encounter_placement.priest_west
+npc_template = flamewaker_priest
+stable_actor_key = actor.priest_west
+
+[spawn]
+placement = encounter_placement.priest_east
+npc_template = flamewaker_priest
+stable_actor_key = actor.priest_east
+
+[spawn]
+placement = encounter_placement.priest_northwest
+npc_template = flamewaker_priest
+stable_actor_key = actor.priest_northwest
+
+[spawn]
+placement = encounter_placement.priest_northeast
+npc_template = flamewaker_priest
+stable_actor_key = actor.priest_northeast
+
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.sulfuron, encounter_placement.priest_west, encounter_placement.priest_east, encounter_placement.priest_northwest, encounter_placement.priest_northeast]
+roster_min_humans = [1, 1, 1, 2, 3]
+roster_max_humans = [100, 100, 100, 100, 100]
+roster_required = [true, true, true, true, true]
+roster_alliances = [enemy, enemy, enemy, enemy, enemy]
+roster_health_per_additional_human = [500, 100, 100, 100, 100]
+deadline_ms = 180000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[critical_cast_group.dark_mending]
+maximum_slots = 3
+spacing_ms = 8000
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.interrupt]
+definition = ability.interrupt
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.interrupt]
+grant = interrupt
+after_ms = 0
+position_xz_mm = (-1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.dispel_magic]
+definition = ability.dispel_magic
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.dispel_magic]
+grant = dispel_magic
+after_ms = 0
+position_xz_mm = (1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[anchor.north]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, -12500)
+
+[anchor.east]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (12500, 0)
+
+[anchor.south]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, 12500)
+
+[anchor.west]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-12500, 0)

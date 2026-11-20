@@ -1,0 +1,10 @@
+effect bind
+disposition = harmful
+dispel_category = none
+[constraint]
+kind = bind
+duration_ms = 8000
+[presentation]
+persistent = ring
+removal = fade
+tint = cyan

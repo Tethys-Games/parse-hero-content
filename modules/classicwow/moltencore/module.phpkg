@@ -1,0 +1,3 @@
+module classicwow_moltencore
+edition = workshop_1
+exports = [encounter.garr, map.garr, encounter.lucifron, map.lucifron, encounter.magmadar, map.magmadar, encounter.gehennas, map.gehennas, encounter.sulfuron, map.sulfuron, encounter.golemagg, map.golemagg, encounter.shazzrah, map.shazzrah, encounter.majordomo, map.majordomo, encounter.geddon, map.geddon, encounter.ragnaros, map.ragnaros]

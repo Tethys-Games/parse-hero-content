@@ -1,0 +1,7 @@
+npc geddon
+archetype_key = installed.npc.basic_walker_pool
+behavior = geddon
+kit = class.geddon
+health = 600
+radius_mm = 400
+height_mm = 1800

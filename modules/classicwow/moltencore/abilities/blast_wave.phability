@@ -1,0 +1,33 @@
+ability blast_wave
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = definition_only
+[activation]
+kind = cast
+cast_ms = 1500
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+[target]
+kind = captured_cone
+relation = hostile
+range_mm = 4000
+facing_degrees = 360
+maximum_targets = 512
+coverage = complete_radial
+[delivery]
+kind = direct
+[payload]
+operation = damage
+amount = 70
+[presentation]
+windup = cone_sector
+impact = flash
+tint = amber
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = fire

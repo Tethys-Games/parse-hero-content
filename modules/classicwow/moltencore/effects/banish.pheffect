@@ -1,0 +1,10 @@
+effect banish
+disposition = harmful
+dispel_category = none
+[constraint]
+kind = banish
+duration_ms = 10000
+[presentation]
+persistent = ring
+removal = fade
+tint = cyan

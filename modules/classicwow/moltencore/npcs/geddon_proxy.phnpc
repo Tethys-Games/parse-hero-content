@@ -1,0 +1,6 @@
+npc geddon_proxy
+archetype_key = installed.npc.basic_walker_pool
+behavior = geddon_proxy
+health = 1000
+radius_mm = 350
+height_mm = 1800

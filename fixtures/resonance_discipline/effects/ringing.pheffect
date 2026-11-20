@@ -1,0 +1,19 @@
+effect ringing
+disposition = harmful
+dispel_category = magic
+
+[periodic]
+duration_ms = 4500
+pulse_ms = 1500
+pulse_resource_drain = 5
+pulse_amount = 4
+grouping = source_target_definition
+refresh = preserve_cadence_capture
+source_lifetime = target_owned
+periodic_cost = application_paid
+
+[presentation]
+persistent = ring
+pulse = flash
+removal = fade
+tint = cyan

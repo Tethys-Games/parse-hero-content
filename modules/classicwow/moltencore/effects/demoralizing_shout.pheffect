@@ -1,0 +1,18 @@
+effect demoralizing_shout
+disposition = harmful
+dispel_category = none
+storage = shared_cohort
+[modifier]
+boundary = source_potency
+operation = scale_permille
+value = 650
+units = permille
+quantization = truncate_toward_zero
+overflow = clamp_health_units
+order = 1
+duration_ms = 8000
+filter_form = weapon
+[presentation]
+persistent = ring
+removal = fade
+tint = amber

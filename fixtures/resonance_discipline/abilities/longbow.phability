@@ -1,0 +1,26 @@
+ability longbow
+[program]
+execution = staged
+category = melee
+[activation]
+kind = instant
+cost = 7
+cooldown_ms = 500
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+[delivery]
+kind = direct
+[payload]
+operation = damage
+amount = 23
+[classification]
+form = weapon
+contact = non_contact
+damage_family = physical
+damage_school = physical
+[presentation]
+impact = flash
+tint = amber

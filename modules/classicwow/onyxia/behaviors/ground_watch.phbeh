@@ -1,0 +1,103 @@
+behavior ground_watch
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 100
+initial_mode = front
+
+[mode.front]
+intent = hold
+action = cleave
+start_after_ms = 6000
+repeat_after_ms = 6000
+facing = anchor
+facing_anchor = 3
+
+[mode.flame]
+intent = hold
+action = flame_breath
+start_after_ms = 1
+repeat_after_ms = 600000
+facing = anchor
+facing_anchor = 3
+
+[mode.wing]
+intent = hold
+action = wing_buffet
+start_after_ms = 1
+repeat_after_ms = 600000
+facing = anchor
+facing_anchor = 3
+
+[mode.tail]
+intent = hold
+action = tail_sweep
+start_after_ms = 1
+repeat_after_ms = 600000
+facing = anchor
+facing_anchor = 3
+
+[transition]
+mode = front
+order = 1
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = flame
+window_after_ms = 12000
+window_repeat_ms = 24000
+window_count = 4
+window_duration_ms = 100
+
+[transition]
+mode = front
+order = 2
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = wing
+window_after_ms = 20000
+window_repeat_ms = 48000
+window_count = 2
+window_duration_ms = 100
+
+[transition]
+mode = front
+order = 3
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = tail
+window_after_ms = 28000
+window_repeat_ms = 24000
+window_count = 3
+window_duration_ms = 100
+
+[transition]
+mode = flame
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1600
+next = front
+
+[transition]
+mode = wing
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1600
+next = front
+
+[transition]
+mode = tail
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1600
+next = front

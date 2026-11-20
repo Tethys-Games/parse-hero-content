@@ -1,0 +1,34 @@
+behavior whelp
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = pursue
+
+[mode.pursue]
+intent = hold
+action = whelp_bite
+start_after_ms = 600
+repeat_after_ms = 1500
+
+[navigation]
+terminal = loop
+tether_radius_mm = 24000
+pursuit_radius_mm = 20000
+speed_mm_per_second = 1200
+stall_ms = 1000
+
+[waypoint]
+order = 1
+offset_x_mm = -500
+offset_z_mm = 0
+
+[waypoint]
+order = 2
+offset_x_mm = 500
+offset_z_mm = 0
+
+[reactive_action.whelp_bite]
+cohort = enrolled_humans
+order = nearest
+movement = approach
+range_mm = 2000

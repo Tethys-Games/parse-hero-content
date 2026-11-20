@@ -1,0 +1,7 @@
+npc majordomo_steward
+archetype_key = installed.npc.basic_walker_pool
+behavior = majordomo_steward
+kit = class.majordomo_steward
+health = 1000
+radius_mm = 400
+height_mm = 2000

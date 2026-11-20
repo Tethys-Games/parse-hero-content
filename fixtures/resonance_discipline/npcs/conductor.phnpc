@@ -1,0 +1,7 @@
+npc conductor
+archetype_key = installed.npc.basic_walker_pool
+behavior = hold_tone
+kit = class.conductor
+health = 900
+radius_mm = 350
+height_mm = 1600

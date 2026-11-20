@@ -1,0 +1,31 @@
+ability shadow_word_pain
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+[activation]
+kind = cast
+cast_ms = 1300
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.shadow_word_pain
+[presentation]
+windup = beam
+impact = flash
+tint = violet
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = shadow

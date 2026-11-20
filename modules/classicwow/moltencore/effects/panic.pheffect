@@ -1,0 +1,13 @@
+effect panic
+disposition = harmful
+dispel_category = none
+
+[constraint]
+kind = fear
+duration_ms = 4000
+role_mask = 2
+
+[presentation]
+persistent = ring
+removal = fade
+tint = violet

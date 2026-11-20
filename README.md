@@ -16,18 +16,40 @@ It validates the complete original candidate inventory without querying a moving
 Safe path moves preserve identity; excessive selected metadata or ancestor depth fails
 with a source diagnostic before public acceptance. Rate-limit availability is separate.
 
-This content revision requires compiler/capability41. Each `module` manifest declares
+The thirteen-entry candidate through Ragnaros uses the unpublished
+compiler/capability 62 reader. The public gate uses compiler 41.
+[Play Garr locally](docs/garr.md) or
+[play the Lucifron control candidate](docs/lucifron.md), [play the Magmadar fear/Frenzy candidate](docs/magmadar.md), [play the Gehennas healing/Stun candidate](docs/gehennas.md), [work on Sulfuron's heal coverage](docs/sulfuron.md), [inspect Golemagg](docs/golemagg.md), [work on Shazzrah](docs/shazzrah.md), [inspect Majordomo](docs/majordomo.md), [play Geddon](docs/geddon.md), or [play Ragnaros](docs/ragnaros.md).
+
+For class composition tests, select a named play from
+`composition-workspace.json` with the workshop author command. Each release encounter in this workspace pairs
+Wavebinder and Ranged with the release play's encounter and map. Wavebinder's
+four bindings spend resonance on split Physical bolts, a Magical contact strike
+and a three-installment seeking Spell, then recover resource and remove its own
+resonance modifier. Its fifth declared action removes the applying life's ringing
+effect from a selected target. The release workspace continues to select both Basics.
+The separate `resonance-trial` selects its own practice floor and moving
+resonator. A player can acquire Lifting Chord and Standing Wave there. These
+context actions exercise a following expiry and a finite escalating channel
+through ordinary supplemental bindings. The unrelated `antiphonal-trial` changes availability of the same resonator on a three-second interval. Its exact clocks expose paid windups, attached modifiers and resource pulses across both boundaries.
+
+Each `module` manifest declares
 `edition = workshop_1` exactly once. Definitions use declarations such as `class trainee`,
 named sections such as `[action.channel]`, and short policy names. Qualified current
 spellings assert the edition's contract and cannot override it. Adding a
-definition needs no source-list edit. Exactly two production modules remain:
-`basic_classes` owns Melee/Ranged, their four reusable player abilities and shared Curse;
+definition needs no source-list edit. The three source modules are:
+`basic_classes` owns Melee/Ranged, their four paid offensive abilities, free recovery and shared Curse;
 `training_encounters` owns the dummy and both opponent practices, private NPC kits and
 variants, grant utilities and shared Slow. NPC Curse imports `basics/effect.curse`.
-The three workspace plays and public entries are `training-dummy` (Training Dummy),
+`classicwow_moltencore` adds Garr and Firesworn with two private ordinary NPC kits at
+`modules/classicwow/moltencore`, without a dependency on Training Encounters.
+The three retained public entries are `training-dummy` (Training Dummy),
 `grant-practice-melee` (Melee Opponent Practice) and `grant-practice-ranged` (Ranged
 Opponent Practice). Each retains both Basics in one immutable Session. A participant's
-personal choice does not change that Session's identity.
+personal choice does not change that Session's identity. The candidate entries
+`classicwow-moltencore-garr`, `classicwow-moltencore-lucifron`, `classicwow-moltencore-magmadar`, `classicwow-moltencore-gehennas`, `classicwow-moltencore-sulfuron`, `classicwow-moltencore-golemagg`, `classicwow-moltencore-shazzrah` and `classicwow-moltencore-majordomo` also admit both Basics in one Session.
+Lucifron selects both Basics, one shared enemy kit and one solo-proxy kit; retained Garr
+definitions validate without occupying another active kit.
 The production dummy retains 60,000 health and a three-second respawn. Older Training,
 Context/Mobile Scout, Visitor/Frost and quick-dummy source now belongs to maintained
 application development fixtures, outside this production repository.
@@ -37,9 +59,9 @@ activate it or authorize execution.
 The [application Authoring Manual](https://github.com/Tethys-Games/parse-hero/blob/alpha/a3-a4-authoring-workshop/docs/authoring/README.md)
 is the maintained language reference.
 
-Use an application and validator compatible with compiler/capability41, semantic
-contract41 and identity algorithm4. Transport compatibility is owned by the application.
-`tools/validator.json` identifies this revision's exact compatible validator distribution.
+The candidate reader uses semantic contract 56 and identity algorithm 4.
+Transport compatibility is owned by the application.
+`tools/validator.json` continues to identify the public compiler41 distribution.
 Its presence does not establish publication or activation; the external workflow remains
 the required gate. Local checks do not replace that gate.
 The selected content PR records review and candidate status for the coordinated
@@ -52,7 +74,11 @@ Application deployment and workshop freeze remain separate. See the
 anonymous shared-NAT limits.
 
 Both grant practices start the player and enemy at 1,000 health. Right-click each
-pedestal to learn its utility on keys 5 and 6. Basic base actions remain on keys 1 and 2; keys 3 and 4 stay empty.
+pedestal to learn its utility on keys 5 and 6. Basic offense remains on keys 1 and 2;
+key 3 now recovers 40 resource with a six-second cooldown, including from depletion.
+Melee Attack/Cleave cost 8/16; Ranged Attack/Curse cost 12/12. Key 4 stays empty.
+Basic Curse retains its eight-second, four-pulse Magic DoT. The imported NPC Curse
+still uses that exact shared effect; private training attacks and utility grants stay free.
 Melee grants Slow (50% for five seconds; 12-second cooldown) and held Defend
 (one second, rooted and immune; 30-second cooldown). Ranged grants Interrupt
 (2,500 mm; six-second cooldown) and friendly/self Dispel (12,000 mm; eight-second cooldown).

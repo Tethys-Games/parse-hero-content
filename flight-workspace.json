@@ -1,0 +1,46 @@
+{
+  "schema_version": 5,
+  "modules": [
+    {
+      "name": "basic_classes",
+      "path": "modules/basic_classes/module.phpkg"
+    },
+    {
+      "name": "resonance_discipline",
+      "path": "fixtures/resonance_discipline/module.phpkg"
+    },
+    {
+      "name": "classicwow_onyxia",
+      "path": "modules/classicwow/onyxia/module.phpkg"
+    }
+  ],
+  "plays": [
+    {
+      "name": "hover-trial",
+      "player": "resonance_discipline/class.rangefinder",
+      "encounter": "resonance_discipline/encounter.hover_trial",
+      "map": "resonance_discipline/map.hover_trial",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "classicwow-onyxia",
+      "player": "resonance_discipline/class.rangefinder",
+      "encounter": "classicwow_onyxia/encounter.onyxia",
+      "map": "classicwow_onyxia/map.onyxia",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    },
+    {
+      "name": "ground-warning",
+      "player": "resonance_discipline/class.rangefinder",
+      "encounter": "resonance_discipline/encounter.ground_warning",
+      "map": "resonance_discipline/map.ground_warning",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
+    }
+  ]
+}

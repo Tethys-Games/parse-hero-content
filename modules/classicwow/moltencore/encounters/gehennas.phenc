@@ -1,0 +1,121 @@
+encounter gehennas
+player_health = 1000
+
+[spawn]
+placement = encounter_placement.gehennas
+npc_template = gehennas
+stable_actor_key = actor.gehennas
+
+[spawn]
+placement = encounter_placement.guard_left
+npc_template = flamewaker_guard
+stable_actor_key = actor.guard_left
+
+[spawn]
+placement = encounter_placement.guard_right
+npc_template = flamewaker_guard_right
+stable_actor_key = actor.guard_right
+
+[spawn]
+placement = encounter_placement.gehennas_proxy
+npc_template = gehennas_proxy
+stable_actor_key = actor.gehennas_proxy
+
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.gehennas, encounter_placement.guard_left, encounter_placement.guard_right, encounter_placement.gehennas_proxy]
+roster_min_humans = [1, 1, 2, 1]
+roster_max_humans = [100, 100, 100, 1]
+roster_required = [true, true, true, false]
+roster_alliances = [enemy, enemy, enemy, party]
+roster_health_per_additional_human = [500, 150, 150, 0]
+deadline_ms = 150000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+choice_policy = sparse_event_hash
+choice_seed = 16061
+choice_chance_permille = 160
+choice_maximum_deviations = 2
+choice_spacing_ms = 20000
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 7000)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.remove_curse]
+definition = ability.remove_curse
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.remove_curse]
+grant = remove_curse
+after_ms = 0
+position_xz_mm = (-1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[grant.field_recovery]
+uses_per_attempt = 2
+definition = ability.field_recovery
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+
+[object.field_recovery]
+grant = field_recovery
+after_ms = 0
+position_xz_mm = (1800, 8500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[anchor.north]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, -12500)
+
+[anchor.east]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (12500, 0)
+
+[anchor.south]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (0, 12500)
+
+[anchor.west]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-12500, 0)

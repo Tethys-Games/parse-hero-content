@@ -1,0 +1,14 @@
+effect damage_shield
+disposition = beneficial
+dispel_category = none
+
+[reaction_shield]
+kind = positive_physical_loss
+duration_ms = 10000
+role_mask = 510
+return_amount = 40
+
+[presentation]
+persistent = ring
+removal = fade
+tint = amber

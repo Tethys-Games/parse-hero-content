@@ -1,0 +1,110 @@
+behavior geddon
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = hold
+
+[mode.hold]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+
+[mode.ignite]
+intent = hold
+action = ignite
+start_after_ms = 1
+repeat_after_ms = 600000
+
+[mode.bomb]
+intent = hold
+action = living_bomb
+start_after_ms = 1
+repeat_after_ms = 600000
+
+[mode.inferno]
+intent = hold
+action = inferno
+start_after_ms = 1
+repeat_after_ms = 600000
+
+[transition]
+mode = hold
+order = 1
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = bomb
+window_after_ms = 12000
+window_repeat_ms = 28000
+window_count = 3
+window_duration_ms = 500
+
+[transition]
+mode = bomb
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1000
+next = hold
+
+[transition]
+mode = hold
+order = 2
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = ignite
+window_after_ms = 22000
+window_repeat_ms = 24000
+window_count = 5
+window_duration_ms = 500
+
+[transition]
+mode = ignite
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1000
+next = hold
+
+[transition]
+mode = hold
+order = 3
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = inferno
+window_after_ms = 1000
+window_repeat_ms = 71000
+window_count = 2
+window_duration_ms = 500
+
+[transition]
+mode = inferno
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 10500
+next = hold
+
+[reactive_action.ignite]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000
+group_maximum = 1
+group_humans_per_recipient = 1
+
+[reactive_action.living_bomb]
+cohort = base_party
+order = cycling
+movement = hold
+range_mm = 12000
+absent_effect = effect.living_bomb

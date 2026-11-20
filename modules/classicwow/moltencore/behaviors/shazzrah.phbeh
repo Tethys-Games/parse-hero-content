@@ -1,0 +1,118 @@
+behavior shazzrah
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = pulse
+[mode.pulse]
+intent = hold
+action = arcane_explosion
+start_after_ms = 2000
+repeat_after_ms = 6000
+facing = stable
+heading_128 = 64
+[mode.curse]
+intent = hold
+action = shazzrah_curse
+start_after_ms = 1
+repeat_after_ms = 1000
+[mode.frontal]
+intent = hold
+action = counterspell
+start_after_ms = 1
+repeat_after_ms = 600000
+facing = stable
+heading_128 = 64
+variation = reference_turn
+variation_anchor = 1
+variation_after_ms = 44000
+variation_until_ms = 50000
+[mode.recovery]
+intent = hold
+action = none
+start_after_ms = 0
+repeat_after_ms = 0
+[transition]
+mode = pulse
+order = 1
+condition = applied_relocation
+comparison = eq
+value = true
+after_ms = 1
+next = recovery
+
+[transition]
+mode = curse
+order = 1
+condition = applied_relocation
+comparison = eq
+value = true
+after_ms = 1
+next = recovery
+
+[transition]
+mode = frontal
+order = 1
+condition = applied_relocation
+comparison = eq
+value = true
+after_ms = 1
+next = recovery
+
+[transition]
+mode = pulse
+order = 2
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = frontal
+window_after_ms = 12000
+window_repeat_ms = 100000
+window_count = 1
+window_duration_ms = 500
+[transition]
+mode = pulse
+order = 3
+condition = combat_window
+comparison = eq
+value = true
+after_ms = 1
+next = curse
+window_after_ms = 14000
+window_repeat_ms = 25000
+window_count = 3
+window_duration_ms = 2500
+[transition]
+mode = curse
+order = 2
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 3000
+next = pulse
+
+[transition]
+mode = frontal
+order = 2
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 1600
+next = pulse
+
+[transition]
+mode = recovery
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 2000
+next = frontal
+
+[reactive_action.shazzrah_curse]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000
+group_maximum = 3
+group_humans_per_recipient = 2

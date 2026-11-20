@@ -1,0 +1,71 @@
+behavior firesworn
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = immolate
+
+[navigation]
+terminal = loop
+tether_radius_mm = 10000
+pursuit_radius_mm = 7500
+stall_ms = 1000
+[waypoint]
+order = 1
+offset_x_mm = -1000
+offset_z_mm = -2500
+[waypoint]
+order = 2
+offset_x_mm = 1000
+offset_z_mm = 2500
+
+[proximity_cadence.anxiety]
+source_role = encounter_placement.garr
+radius_mm = 6000
+rate_permille = 1750
+boundary = outside
+reference = retain_defeat_frame
+[mode.immolate]
+intent = hold
+action = firesworn_immolate
+start_after_ms = 2000
+repeat_after_ms = 30000
+critical_group = immolate
+admission_window_ms = 12000
+[mode.pressure]
+intent = hold
+action = firesworn_strike
+start_after_ms = 1000
+repeat_after_ms = 4000
+cadence_proximity = anxiety
+
+[transition]
+mode = immolate
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 17000
+next = pressure
+
+
+[transition]
+mode = pressure
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 10000
+next = immolate
+
+[reactive_action.firesworn_immolate]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000
+absent_effect = effect.immolate
+
+[reactive_action.firesworn_strike]
+cohort = enrolled_humans
+order = nearest
+movement = approach
+range_mm = 3500

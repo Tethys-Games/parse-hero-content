@@ -1,0 +1,10 @@
+class flamewaker_guard
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.fist_of_ragnaros]
+definition = ability.fist_of_ragnaros

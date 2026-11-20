@@ -1,0 +1,64 @@
+encounter hover_trial
+player_health = 1000
+[spawn]
+placement = encounter_placement.conductor
+npc_template = conductor
+stable_actor_key = actor.conductor
+[spawn]
+placement = encounter_placement.answer
+npc_template = resonator
+stable_actor_key = actor.answer
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.conductor, encounter_placement.answer]
+roster_min_humans = [1, 1]
+roster_max_humans = [100, 100]
+roster_required = [true, false]
+roster_alliances = [enemy, enemy]
+roster_health_per_additional_human = [0, 0]
+deadline_ms = 24000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 2200)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[anchor.left]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-5000, -4700)
+
+[anchor.right]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (6000, 5500)
+
+[flight_route]
+owner = encounter_placement.conductor
+displacement = exclusive_during_route
+ground_xyz_mm = (1500, 0, -1000)
+air_xyz_mm = (1500, 3000, -1000)
+near_xyz_mm = (1500, 3000, -3500)
+far_xyz_mm = (1500, 3000, 2500)
+landing_xyz_mm = (1500, 0, 2500)
+maximum_speed_mm_per_second = 6000
+announce_ms = 500
+takeoff_ms = 1000
+ascend_ms = 1000
+approach_after_ms = 1000
+approach_ms = 1000
+traverse_after_ms = 3500
+traverse_ms = 1000
+minimum_air_ms = 6500
+descend_ms = 1000
+recovery_ms = 500

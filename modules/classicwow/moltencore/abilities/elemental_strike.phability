@@ -1,0 +1,28 @@
+ability elemental_strike
+
+[program]
+execution = staged
+ai_eligible = true
+category = melee
+
+[activation]
+kind = instant
+cost = 0
+cooldown_ms = 3000
+
+[target]
+kind = actor
+range_metric = body_midpoint_3d
+range_mm = 2500
+facing_degrees = 90
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 10
+
+[presentation]
+impact = flash
+tint = amber

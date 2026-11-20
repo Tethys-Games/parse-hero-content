@@ -1,0 +1,41 @@
+map lucifron
+
+[ground_region.chamber]
+top_height_mm = 0
+points_xz_mm = [(-18000, -18000), (18000, -18000), (18000, 18000), (-18000, 18000)]
+
+[spawn.player_one]
+position_xyz_mm = (-600, 0, 8000)
+yaw_centi_deg = 0
+
+[spawn.player_two]
+position_xyz_mm = (600, 0, 8000)
+yaw_centi_deg = 0
+
+
+[encounter_placement.lucifron]
+encounter_id = lucifron
+position_xyz_mm = (0, 0, -3000)
+yaw_centi_deg = 18000
+trigger = trigger.lucifron
+
+[encounter_placement.protector_left]
+encounter_id = lucifron
+position_xyz_mm = (-2500, 0, -1000)
+yaw_centi_deg = 18000
+trigger = trigger.lucifron
+
+[encounter_placement.protector_right]
+encounter_id = lucifron
+position_xyz_mm = (2500, 0, -1000)
+yaw_centi_deg = 18000
+trigger = trigger.lucifron
+
+[encounter_placement.lucifron_proxy]
+encounter_id = lucifron
+position_xyz_mm = (0, 0, 1000)
+yaw_centi_deg = 18000
+trigger = trigger.lucifron
+
+[trigger.lucifron]
+kind = encounter_start

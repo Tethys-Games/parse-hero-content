@@ -1,0 +1,19 @@
+behavior flamewaker_healer
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = bolt
+
+[mode.bolt]
+intent = hold
+action = flamewaker_shadow_bolt
+start_after_ms = 4400
+repeat_after_ms = 12000
+critical_group = dangerous
+admission_window_ms = 1500
+
+[reactive_action.flamewaker_shadow_bolt]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000

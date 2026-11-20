@@ -1,0 +1,10 @@
+class elemental
+player_selectable = false
+
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+
+[action.strike]
+definition = ability.elemental_strike

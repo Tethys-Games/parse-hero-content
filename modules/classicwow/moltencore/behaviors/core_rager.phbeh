@@ -1,0 +1,35 @@
+behavior core_rager
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = mangle
+[navigation]
+terminal = loop
+tether_radius_mm = 2500
+pursuit_radius_mm = 2500
+stall_ms = 1000
+[waypoint]
+order = 1
+offset_x_mm = -1500
+offset_z_mm = 0
+[waypoint]
+order = 2
+offset_x_mm = 1500
+offset_z_mm = 0
+[proximity_cadence.trust]
+source_role = encounter_placement.golemagg
+radius_mm = 4000
+rate_permille = 1500
+potency_permille = 1500
+filter_damage_family = physical
+[mode.mangle]
+intent = hold
+action = mangle
+start_after_ms = 6000
+repeat_after_ms = 10000
+cadence_proximity = trust
+[reactive_action.mangle]
+cohort = enrolled_humans
+order = nearest
+movement = approach
+range_mm = 3500

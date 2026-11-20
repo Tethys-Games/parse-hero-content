@@ -1,0 +1,25 @@
+ability personal_aegis
+[program]
+execution = staged
+category = spell
+ai_eligible = true
+potency = definition_only
+[activation]
+kind = instant
+cast_ms = 0
+cost = 0
+cooldown_ms = 0
+locomotion = unrestricted
+[target]
+kind = self
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.personal_aegis
+[presentation]
+impact = flash
+tint = cyan
+[classification]
+form = utility
+contact = non_contact

@@ -1,0 +1,12 @@
+class conductor
+player_selectable = false
+[resource.energy/bounded_int]
+maximum = 100
+initial = 100
+reset = initial
+[action.signal_flash]
+definition = ability.signal_flash
+[action.sounding_line]
+definition = ability.sounding_line
+[action.resounding_call]
+definition = ability.resounding_call

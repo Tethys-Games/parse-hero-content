@@ -1,0 +1,25 @@
+ability banish
+[program]
+execution = staged
+category = spell
+potency = definition_only
+[activation]
+kind = cast
+cast_ms = 800
+cost = 0
+cooldown_ms = 3500
+locomotion = unrestricted
+[target]
+kind = actor
+relation = hostile
+range_metric = body_midpoint_3d
+range_mm = 12000
+[delivery]
+kind = direct
+[payload]
+operation = apply_effect
+effect = effect.banish
+[presentation]
+windup = beam
+impact = flash
+tint = cyan

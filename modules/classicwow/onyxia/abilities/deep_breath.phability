@@ -1,0 +1,47 @@
+ability deep_breath
+
+[program]
+execution = staged
+ai_eligible = true
+category = spell
+potency = definition_only
+
+[activation]
+kind = instant
+cost = 0
+cooldown_ms = 0
+
+[target]
+kind = ground_sites
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 180
+
+[emitter]
+shape = projected_ground_lane
+lifetime = paid_at_lock
+contact = complete_opposing_cohort
+placement = source_floor
+length_mm = 18000
+width_mm = 6000
+height_mm = 3000
+warning_ms = 3000
+duration_ms = 33
+pulse_ms = 33
+range_mm = 12000
+exit_anchors = [1, 2, 3, 4]
+corridor_step_mm = 250
+
+[presentation]
+impact = flash
+tint = amber
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = fire

@@ -1,0 +1,49 @@
+ability hand_of_ragnaros
+
+[program]
+execution = staged
+ai_eligible = true
+category = spell
+potency = definition_only
+
+[activation]
+kind = cast
+cast_ms = 2200
+cost = 0
+cooldown_ms = 0
+locomotion = root_translation
+
+[target]
+kind = captured_cone
+relation = hostile
+range_mm = 5000
+facing_degrees = 360
+maximum_targets = 512
+exit_anchors = [1, 2, 3, 4]
+corridor_step_mm = 250
+
+[delivery]
+kind = direct
+
+[payload]
+operation = damage
+amount = 40
+
+[payload]
+operation = apply_effect
+effect = effect.hand_stun
+
+[payload]
+operation = recipient_planar_impulse
+amount = 180
+
+[presentation]
+windup = cone_sector
+impact = flash
+tint = amber
+
+[classification]
+form = spell
+contact = non_contact
+damage_family = magical
+damage_school = fire

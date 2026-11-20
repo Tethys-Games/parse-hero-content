@@ -1,0 +1,13 @@
+effect fist_stun
+disposition = harmful
+dispel_category = none
+
+[constraint]
+kind = stun
+duration_ms = 2000
+role_mask = 8
+
+[presentation]
+persistent = ring
+removal = fade
+tint = amber

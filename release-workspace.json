@@ -15,6 +15,61 @@
       "id": "grant-practice-ranged",
       "workspace": "workspace.json",
       "play": "grant-practice-ranged"
+    },
+    {
+      "id": "classicwow-moltencore-garr",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-garr"
+    },
+    {
+      "id": "classicwow-moltencore-lucifron",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-lucifron"
+    },
+    {
+      "id": "classicwow-moltencore-magmadar",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-magmadar"
+    },
+    {
+      "id": "classicwow-moltencore-gehennas",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-gehennas"
+    },
+    {
+      "id": "classicwow-moltencore-sulfuron",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-sulfuron"
+    },
+    {
+      "id": "classicwow-moltencore-golemagg",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-golemagg"
+    },
+    {
+      "id": "classicwow-moltencore-shazzrah",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-shazzrah"
+    },
+    {
+      "id": "classicwow-moltencore-majordomo",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-majordomo"
+    },
+    {
+      "id": "classicwow-moltencore-geddon",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-geddon"
+    },
+    {
+      "id": "classicwow-moltencore-ragnaros",
+      "workspace": "workspace.json",
+      "play": "classicwow-moltencore-ragnaros"
+    },
+    {
+      "id": "classicwow-onyxia",
+      "workspace": "workspace.json",
+      "play": "classicwow-onyxia"
     }
   ]
 }

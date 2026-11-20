@@ -1,0 +1,150 @@
+encounter shazzrah
+player_health = 1000
+[spawn]
+placement = encounter_placement.shazzrah
+npc_template = shazzrah
+stable_actor_key = actor.shazzrah
+[spawn]
+placement = encounter_placement.shazzrah_proxy
+npc_template = shazzrah_proxy
+stable_actor_key = actor.shazzrah_proxy
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.shazzrah, encounter_placement.shazzrah_proxy]
+roster_min_humans = [1, 1]
+roster_max_humans = [100, 1]
+roster_required = [true, false]
+roster_alliances = [enemy, party]
+roster_health_per_additional_human = [560, 0]
+deadline_ms = 100000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+choice_policy = sparse_event_hash
+choice_seed = 18106
+choice_chance_permille = 250
+choice_maximum_deviations = 1
+choice_spacing_ms = 20000
+[scheduled_action.durability_setup]
+timing = final_arming
+placement = encounter_placement.shazzrah
+ability = practice_durability
+[scheduled_action.durability_renewal]
+timing = running_window
+placement = encounter_placement.shazzrah
+ability = practice_durability
+after_ms = 55000
+until_ms = 59000
+[scheduled_action.blink_1]
+timing = running_window
+placement = encounter_placement.shazzrah
+ability = blink
+after_ms = 20000
+until_ms = 21000
+retain_result = false
+[scheduled_action.blink_2]
+timing = running_window
+placement = encounter_placement.shazzrah
+ability = blink
+after_ms = 45000
+until_ms = 46000
+retain_result = false
+[scheduled_action.blink_3]
+timing = running_window
+placement = encounter_placement.shazzrah
+ability = blink
+after_ms = 70000
+until_ms = 71000
+retain_result = false
+[scheduled_action.deaden_magic_1]
+timing = running_window
+placement = encounter_placement.shazzrah
+ability = deaden_magic
+after_ms = 10000
+until_ms = 11000
+retain_result = false
+[scheduled_action.deaden_magic_2]
+timing = running_window
+placement = encounter_placement.shazzrah
+ability = deaden_magic
+after_ms = 35000
+until_ms = 36000
+retain_result = false
+[scheduled_action.deaden_magic_3]
+timing = running_window
+placement = encounter_placement.shazzrah
+ability = deaden_magic
+after_ms = 60000
+until_ms = 61000
+retain_result = false
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 6500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+[grant.remove_curse]
+definition = ability.remove_curse
+scope = participant
+slot = 1
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.remove_curse]
+grant = remove_curse
+after_ms = 0
+position_xz_mm = (-1800, 6500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+[grant.purge]
+definition = ability.purge
+scope = participant
+slot = 2
+placement = supplemental
+acquisition = interaction
+cooldown_owner = entitlement
+eligibility = avatar_only
+retirement = cancel_now
+resource_owner = actor_class
+context_access = none
+lifetime = encounter
+initial = false
+[object.purge]
+grant = purge
+after_ms = 0
+position_xz_mm = (1800, 6500)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+[anchor.empty_side]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (7000, -7000)
+[anchor.west]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-7000, -7000)
+[anchor.southwest]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-7000, 7000)
+[anchor.southeast]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (7000, 7000)

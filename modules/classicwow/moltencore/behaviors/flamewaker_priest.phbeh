@@ -1,0 +1,110 @@
+behavior flamewaker_priest
+behavior_kind = finite_modes
+target_xz_mm = (0, 0)
+stop_distance_mm = 150
+initial_mode = mending
+
+[navigation]
+terminal = loop
+tether_radius_mm = 8000
+pursuit_radius_mm = 0
+stall_ms = 1000
+[waypoint]
+order = 1
+offset_x_mm = -2000
+offset_z_mm = 0
+[waypoint]
+order = 2
+offset_x_mm = 2000
+offset_z_mm = 0
+
+[proximity_cadence.inspire]
+source_role = encounter_placement.sulfuron
+radius_mm = 4500
+rate_permille = 1750
+
+[mode.mending]
+intent = hold
+action = dark_mending
+start_after_ms = 5000
+repeat_after_ms = 30000
+critical_group = dark_mending
+admission_window_ms = 14000
+
+[mode.immolate]
+intent = hold
+action = immolate
+start_after_ms = 500
+repeat_after_ms = 30000
+
+[mode.pain]
+intent = hold
+action = shadow_word_pain
+start_after_ms = 500
+repeat_after_ms = 30000
+
+[mode.pressure]
+intent = hold
+action = priest_strike
+start_after_ms = 1000
+repeat_after_ms = 4000
+facing = anchor
+facing_anchor = 3
+cadence_proximity = inspire
+
+[transition]
+mode = mending
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 21000
+next = immolate
+
+[transition]
+mode = immolate
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 2500
+next = pain
+
+[transition]
+mode = pain
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 2500
+next = pressure
+
+[transition]
+mode = pressure
+order = 1
+condition = elapsed
+comparison = eq
+value = true
+after_ms = 10000
+next = mending
+
+[reactive_action.dark_mending]
+cohort = eligible_actors
+order = lowest_health_fraction
+movement = hold
+exclude_self = false
+range_mm = 12000
+
+[reactive_action.immolate]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000
+absent_effect = effect.immolate
+
+[reactive_action.shadow_word_pain]
+cohort = enrolled_humans
+order = cycling
+movement = hold
+range_mm = 12000
+absent_effect = effect.shadow_word_pain

@@ -1,0 +1,70 @@
+map garr
+
+[ground_region.chamber]
+top_height_mm = 0
+points_xz_mm = [(-18000, -18000), (18000, -18000), (18000, 18000), (-18000, 18000)]
+
+[spawn.player_one]
+position_xyz_mm = (-600, 0, 8000)
+yaw_centi_deg = 0
+
+[spawn.player_two]
+position_xyz_mm = (600, 0, 8000)
+yaw_centi_deg = 0
+
+[encounter_placement.garr]
+encounter_id = garr
+position_xyz_mm = (0, 0, -7000)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[encounter_placement.firesworn_1]
+encounter_id = garr
+position_xyz_mm = (-3500, 0, -4000)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[encounter_placement.firesworn_2]
+encounter_id = garr
+position_xyz_mm = (0, 0, -3500)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[encounter_placement.firesworn_3]
+encounter_id = garr
+position_xyz_mm = (3500, 0, -4000)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[encounter_placement.firesworn_4]
+encounter_id = garr
+position_xyz_mm = (-5000, 0, -6500)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[encounter_placement.firesworn_5]
+encounter_id = garr
+position_xyz_mm = (5000, 0, -6500)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[encounter_placement.firesworn_6]
+encounter_id = garr
+position_xyz_mm = (-3500, 0, -9000)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[encounter_placement.firesworn_7]
+encounter_id = garr
+position_xyz_mm = (3500, 0, -9000)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[encounter_placement.firesworn_8]
+encounter_id = garr
+position_xyz_mm = (0, 0, -11000)
+yaw_centi_deg = 18000
+trigger = trigger.garr
+
+[trigger.garr]
+kind = encounter_start
