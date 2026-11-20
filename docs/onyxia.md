@@ -6,4 +6,6 @@ Pull selects the boss, four possible egg whelps, and one unarmed spacing proxy f
 
 Fire damage uses ordinary practice rules. The design normalizes historical Fire immunity so a player's actual spell and weapon kit stays meaningful. Exact exceptional historical melee reach and Fireball threat behavior are uncertain. The encounter design assigns no clumping trigger to Deep Breath.
 
+The module also declares two private flight abilities for this play. Fireball locks one floor site for 1.5 seconds and applies 60 Fire damage in a 2.5 m radius. Deep Breath projects a captured 18 m by 6 m lane onto the floor for three seconds before one synchronous 180 Fire pulse. Ground Onyxia uses its four ground actions throughout this checkpoint.
+
 The selected flight continuation uses this same play. Its design calls for timed takeoff, a compact mandatory wave, a visible one-health floor through landing, a synchronous warned lane pulse, and an optional self Fear removal. The ground checkpoint supplies no flight observation.
