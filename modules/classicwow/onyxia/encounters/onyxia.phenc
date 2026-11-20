@@ -155,9 +155,6 @@ roles = [encounter_placement.east_inner, encounter_placement.east_outer]
 
 [flight_route]
 owner = encounter_placement.onyxia
-wave_roles = [encounter_placement.flight_north_center, encounter_placement.flight_east_inner, encounter_placement.flight_west_inner, encounter_placement.flight_north_west, encounter_placement.flight_east_center, encounter_placement.flight_west_center, encounter_placement.flight_north_east, encounter_placement.flight_east_outer, encounter_placement.flight_west_outer, encounter_placement.flight_north_far]
-splash_action = fireball
-breath_action = deep_breath
 ground_xyz_mm = (0, 0, 0)
 air_xyz_mm = (0, 6000, 0)
 near_xyz_mm = (-9000, 6000, 0)
@@ -169,19 +166,25 @@ takeoff_ms = 35000
 ascend_ms = 3000
 approach_after_ms = 18000
 approach_ms = 3000
-breath_after_ms = 22000
+traverse_after_ms = 22000
 traverse_ms = 3000
 minimum_air_ms = 35000
 descend_ms = 3000
 recovery_ms = 2000
-first_splash_ms = 5000
-second_splash_ms = 13000
-third_splash_ms = 31000
-repeat_splash_ms = 8000
 displacement = exclusive_during_route
-roar_action = bellowing_roar
-first_roar_ms = 10000
-second_roar_ms = 32000
+
+[route_milestones]
+wave_roles = [encounter_placement.flight_north_center, encounter_placement.flight_east_inner, encounter_placement.flight_west_inner, encounter_placement.flight_north_west, encounter_placement.flight_east_center, encounter_placement.flight_west_center, encounter_placement.flight_north_east, encounter_placement.flight_east_outer, encounter_placement.flight_west_outer, encounter_placement.flight_north_far]
+protect_health_until_supported = true
+require_support_for_victory = true
+
+[route_actions]
+air_action = fireball
+air_offsets_ms = [5000, 13000, 31000]
+air_repeat_ms = 8000
+traversal_action = deep_breath
+supported_action = bellowing_roar
+supported_offsets_ms = [10000, 32000]
 
 [grant.steady_footing]
 definition = ability.steady_footing

@@ -1,0 +1,60 @@
+encounter ground_warning
+player_health = 1000
+[spawn]
+placement = encounter_placement.conductor
+npc_template = conductor
+stable_actor_key = actor.conductor
+[spawn]
+placement = encounter_placement.answer
+npc_template = resonator
+stable_actor_key = actor.answer
+[composition]
+start = pull_frozen_humans
+roster_placements = [encounter_placement.conductor, encounter_placement.answer]
+roster_min_humans = [1, 1]
+roster_max_humans = [100, 100]
+roster_required = [true, false]
+roster_alliances = [enemy, enemy]
+roster_health_per_additional_human = [0, 0]
+floor_lifetime = pull_warning
+floor_warning_after_ms = 1000
+floor_center_x_mm = 0
+floor_second_x_mm = 3200
+floor_center_z_mm = 0
+floor_half_x_mm = 480
+floor_half_z_mm = 3600
+floor_level_mm = 0
+floor_height_mm = 1100
+floor_delay_ms = 1500
+floor_interval_ms = 500
+floor_pulses = 3
+floor_damage = 17
+floor_damage_family = magical
+floor_damage_school = fire
+floor_contact = non_contact
+deadline_ms = 24000
+completion = required_roster_defeated
+after_completion = retain_for_retry
+failure = deadline_or_cohort_defeat
+reset = settle_owned_then_fresh_attempt
+
+[object.pull]
+purpose = pull
+after_ms = 0
+position_xz_mm = (0, 2200)
+range_mm = 2500
+access = public_interaction
+eligibility = live_avatar_in_range
+link_lifetime = exact_owned_generation
+
+[anchor.left]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (-5000, -4700)
+
+[anchor.right]
+capture = immutable_world_position
+support = canonical_destination
+missing = reject_no_retarget
+position_xz_mm = (6000, 5500)

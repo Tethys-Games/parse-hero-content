@@ -32,6 +32,15 @@
       "additional_classes": [
         "basic_classes/class.ranged"
       ]
+    },
+    {
+      "name": "ground-warning",
+      "player": "resonance_discipline/class.rangefinder",
+      "encounter": "resonance_discipline/encounter.ground_warning",
+      "map": "resonance_discipline/map.hover_trial",
+      "additional_classes": [
+        "basic_classes/class.ranged"
+      ]
     }
   ]
 }
